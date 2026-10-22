@@ -1,0 +1,130 @@
+{
+  "method": "GPU compute-stream torch.cuda._sleep in backward pre-hooks; half attention/half owned routed experts; no communication function delay or clock change",
+  "requested_ms_per_microbatch_backward": 450,
+  "microbatches": 2,
+  "requested_ms_per_iteration": 900,
+  "each_case_steps": 25,
+  "cases": [
+    {
+      "rank": 0,
+      "host": "host2",
+      "local_gpu": 0,
+      "iterations": [
+        46,
+        70
+      ],
+      "calibration": [
+        {
+          "event": "calibration",
+          "rank": 0,
+          "requested_ms": 450,
+          "observed_ms": 445.59918212890625,
+          "cycles_per_ms": 1959739.01943524
+        }
+      ],
+      "injected_steps": 25,
+      "calibrated_ms_per_iteration_range": [
+        899.9999727046737,
+        899.9999727046737
+      ],
+      "hook_calls_range": [
+        408,
+        408
+      ],
+      "healthy_iteration_mean_ms": 767.4100433377492,
+      "fault_iteration_mean_ms": 1336.0364490002394,
+      "observed_iteration_degradation_pct": 74.09681572439737
+    },
+    {
+      "rank": 9,
+      "host": "host1",
+      "local_gpu": 1,
+      "iterations": [
+        106,
+        130
+      ],
+      "calibration": [
+        {
+          "event": "calibration",
+          "rank": 9,
+          "requested_ms": 450,
+          "observed_ms": 446.2413024902344,
+          "cycles_per_ms": 1963433.1234170997
+        }
+      ],
+      "injected_steps": 25,
+      "calibrated_ms_per_iteration_range": [
+        899.9999617632051,
+        899.9999617632051
+      ],
+      "hook_calls_range": [
+        408,
+        408
+      ],
+      "healthy_iteration_mean_ms": 747.3641024569848,
+      "fault_iteration_mean_ms": 1306.7188767623156,
+      "observed_iteration_degradation_pct": 74.84367692620411
+    },
+    {
+      "rank": 14,
+      "host": "host1",
+      "local_gpu": 6,
+      "iterations": [
+        166,
+        190
+      ],
+      "calibration": [
+        {
+          "event": "calibration",
+          "rank": 14,
+          "requested_ms": 450,
+          "observed_ms": 446.2697448730469,
+          "cycles_per_ms": 1963556.2932532455
+        }
+      ],
+      "injected_steps": 25,
+      "calibrated_ms_per_iteration_range": [
+        899.9999552200661,
+        899.9999552200661
+      ],
+      "hook_calls_range": [
+        376,
+        376
+      ],
+      "healthy_iteration_mean_ms": 737.5911121988403,
+      "fault_iteration_mean_ms": 1495.9551664348692,
+      "observed_iteration_degradation_pct": 102.81632217276346
+    },
+    {
+      "rank": 7,
+      "host": "host2",
+      "local_gpu": 7,
+      "iterations": [
+        226,
+        250
+      ],
+      "calibration": [
+        {
+          "event": "calibration",
+          "rank": 7,
+          "requested_ms": 450,
+          "observed_ms": 446.59222412109375,
+          "cycles_per_ms": 1964976.159291142
+        }
+      ],
+      "injected_steps": 25,
+      "calibrated_ms_per_iteration_range": [
+        899.9999311126361,
+        899.9999311126361
+      ],
+      "hook_calls_range": [
+        376,
+        376
+      ],
+      "healthy_iteration_mean_ms": 738.9097639758672,
+      "fault_iteration_mean_ms": 1497.635004715994,
+      "observed_iteration_degradation_pct": 102.68171808390214
+    }
+  ],
+  "wall_comparison": "All 25 fault steps including PROFILE vs entire preceding healthy interval excluding first12 warmup; observational, not an overhead estimate"
+}

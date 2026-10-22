@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import sys
 import socket
+import os
 
 import torch
 import torch.distributed as dist
@@ -28,9 +29,16 @@ def initialize_groups(output, expert_parallel_size=2, pipeline_parallel_size=1,
     # FLASH reports all actual group members below, synchronously. Replace only
     # the original fire-and-forget topology logger, not group construction.
     state.log_model_parallel_to_redis = lambda *args: None
-    state.initialize_model_parallel(tensor_model_parallel_size=tensor_parallel_size,
-                                    expert_model_parallel_size=expert_parallel_size,
-                                    pipeline_model_parallel_size=pipeline_parallel_size)
+    layout = os.environ.get('FLASH_PARALLEL_LAYOUT', 'legacy')
+    if layout not in ('legacy', 'node_local_pp'):
+        raise ValueError(f'unknown parallel layout: {layout}')
+    initialize = state.initialize_model_parallel
+    if layout == 'node_local_pp':
+        from flash_v1.rank_layout import initialize_node_local
+        initialize = lambda **kwargs: initialize_node_local(state, torch, **kwargs)
+    initialize(tensor_model_parallel_size=tensor_parallel_size,
+               expert_model_parallel_size=expert_parallel_size,
+               pipeline_model_parallel_size=pipeline_parallel_size)
     dense = state.get_data_parallel_group()
     # GREYHOUND exposes only combined TP×EP. Dispatch must hold TP fixed.
     ep = None
@@ -42,6 +50,9 @@ def initialize_groups(output, expert_parallel_size=2, pipeline_parallel_size=1,
                 members = [stage * stage_size +
                            (replica * expert_parallel_size + e) * tensor_parallel_size + tp_rank
                            for e in range(expert_parallel_size)]
+                if layout == 'node_local_pp':
+                    from flash_v1.rank_layout import physical_rank
+                    members = [physical_rank(rank) for rank in members]
                 group = dist.new_group(members)
                 if dist.get_rank() in members:
                     ep = group
@@ -68,8 +79,18 @@ def initialize_groups(output, expert_parallel_size=2, pipeline_parallel_size=1,
     dist.all_gather_object(gathered, dict(rank=dist.get_rank(), host=socket.gethostname(),
         tp_rank=dist.get_rank(tp), pp_rank=pp_rank, ep_rank=dist.get_rank(ep),
         expert_dp_rank=dist.get_rank(expert_dp), data_rank=dist.get_rank(dense), groups=reports))
+    if layout == 'node_local_pp':
+        hosts = {item['rank']: item['host'] for item in gathered}
+        assert len(set(hosts.values())) == 2
+        assert all(len({hosts[rank] for rank in range(base, base + 8)}) == 1
+                   for base in (0, 8)), 'expected contiguous eight-GPU nodes'
+        for item in gathered:
+            for group in item['groups']:
+                count = len({hosts[rank] for rank in group['members']})
+                assert count == (2 if group['name'] in ('dense_world', 'expert_dp') else 1), group
     if dist.get_rank() == 0:
         topology = build_topology(gathered, dist.get_world_size())
+        topology['parallel_layout'] = layout
         topology['backend'] = 'GREYHOUND Megatron parallel_state'
         (output / 'topology.json').write_text(json.dumps(topology, indent=2))
     return ep, expert_dp, dense

@@ -2,6 +2,8 @@
 
 当前2节点16卡采用真实TP2×PP2×EP2×Expert-DP2。新算法已接入自动检测→8步PROFILE→在线定位；rank6/10故障回归2/2正确、158健康步零触发；常驻MONITOR已优化，最终无探针ABBA平均耗时差−1.173%（本次平均开销点估计<1%，不作加速或长期保证），200步健康零误报，见[MONITOR优化与对照](flash_v1/MONITOR_OPTIMIZATION.md)。原接入过程见[在线报告](flash_v1/ONLINE16.md)。此前冻结离线盲测故障16/16、健康4/4正确，见[数据研究报告](flash_v1/DATA16_STUDY.md)。旧健康差分在线入口保持停用。
 
+新增PP节点内、DP跨节点布局：冻结算法在线快验4/4正确、163健康步零触发，见[布局验证](flash_v1/LAYOUT_LOCALPP.md)。
+
 从论文与GREYHOUND源码重新开始；未读取旧交接或旧FLASH实现。
 
 - [运行与实现](flash_v1/README.md)

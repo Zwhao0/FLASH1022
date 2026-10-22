@@ -1,0 +1,510 @@
+{
+  "session": "layout_localpp_01",
+  "scope": "four preselected representative single-GPU stream-delay faults, new node-local TP2/PP2/EP2 and cross-node DP layout; fixed model/thresholds",
+  "parallel_layout": "node_local_pp",
+  "fault_cases": [
+    {
+      "id": "fault0",
+      "target_rank": 0,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:0"
+      ],
+      "correct": true,
+      "host": "host2",
+      "local_gpu": 0,
+      "pp_stage": 0,
+      "tp_rank": 0,
+      "ep_rank": 0
+    },
+    {
+      "id": "fault1",
+      "target_rank": 9,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:9"
+      ],
+      "correct": true,
+      "host": "host1",
+      "local_gpu": 1,
+      "pp_stage": 0,
+      "tp_rank": 1,
+      "ep_rank": 0
+    },
+    {
+      "id": "fault2",
+      "target_rank": 14,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:14"
+      ],
+      "correct": true,
+      "host": "host1",
+      "local_gpu": 6,
+      "pp_stage": 1,
+      "tp_rank": 0,
+      "ep_rank": 1
+    },
+    {
+      "id": "fault3",
+      "target_rank": 7,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:7"
+      ],
+      "correct": true,
+      "host": "host2",
+      "local_gpu": 7,
+      "pp_stage": 1,
+      "tp_rank": 1,
+      "ep_rank": 1
+    }
+  ],
+  "correct_faults": 4,
+  "fault_denominator": 4,
+  "healthy_detection_count": 0,
+  "healthy_detections": [],
+  "healthy_iterations": 163,
+  "profile_windows": [
+    {
+      "epoch": 1,
+      "start": 50,
+      "end": 57,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:0",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 2,
+      "start": 110,
+      "end": 117,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:9",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 3,
+      "start": 170,
+      "end": 177,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:14",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 4,
+      "start": 230,
+      "end": 237,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:7",
+      "localization_before_training_end": true
+    }
+  ],
+  "localization_results": 4,
+  "ring_drops": 0,
+  "sampling_disabled_at_finish": true,
+  "injection_verified": true,
+  "inference_model_sha256": "1768d817430b9d2f20ed2ea8ce62c18ec195d1cbd7b6615c60938984826bf2f6",
+  "frozen_hash_checks": {
+    "flash_v1/wait_localize.py": true,
+    "flash_v1/offline.py": true,
+    "results/data16_models/wait_frozen.json": true
+  },
+  "topology_numeric_check": {
+    "checks": {
+      "tensor_parallel_host_placement": true,
+      "pipeline_host_placement": true,
+      "expert_parallel_host_placement": true,
+      "expert_dp_host_placement": true,
+      "dense_world_host_placement": true,
+      "all_16_numeric_passed": true
+    },
+    "groups": {
+      "tensor_parallel": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "pipeline": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "expert_parallel": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "expert_dp": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          7,
+          15
+        ]
+      ],
+      "dense_world": [
+        [
+          0,
+          2,
+          8,
+          10
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          4,
+          6,
+          12,
+          14
+        ],
+        [
+          5,
+          7,
+          13,
+          15
+        ]
+      ]
+    },
+    "rank_coordinates": [
+      {
+        "rank": 0,
+        "host": "gpu-02",
+        "tp_rank": 0,
+        "pp_rank": 0,
+        "ep_rank": 0,
+        "expert_dp_rank": 0,
+        "data_rank": 0
+      },
+      {
+        "rank": 1,
+        "host": "gpu-02",
+        "tp_rank": 1,
+        "pp_rank": 0,
+        "ep_rank": 0,
+        "expert_dp_rank": 0,
+        "data_rank": 0
+      },
+      {
+        "rank": 2,
+        "host": "gpu-02",
+        "tp_rank": 0,
+        "pp_rank": 0,
+        "ep_rank": 1,
+        "expert_dp_rank": 0,
+        "data_rank": 1
+      },
+      {
+        "rank": 3,
+        "host": "gpu-02",
+        "tp_rank": 1,
+        "pp_rank": 0,
+        "ep_rank": 1,
+        "expert_dp_rank": 0,
+        "data_rank": 1
+      },
+      {
+        "rank": 4,
+        "host": "gpu-02",
+        "tp_rank": 0,
+        "pp_rank": 1,
+        "ep_rank": 0,
+        "expert_dp_rank": 0,
+        "data_rank": 0
+      },
+      {
+        "rank": 5,
+        "host": "gpu-02",
+        "tp_rank": 1,
+        "pp_rank": 1,
+        "ep_rank": 0,
+        "expert_dp_rank": 0,
+        "data_rank": 0
+      },
+      {
+        "rank": 6,
+        "host": "gpu-02",
+        "tp_rank": 0,
+        "pp_rank": 1,
+        "ep_rank": 1,
+        "expert_dp_rank": 0,
+        "data_rank": 1
+      },
+      {
+        "rank": 7,
+        "host": "gpu-02",
+        "tp_rank": 1,
+        "pp_rank": 1,
+        "ep_rank": 1,
+        "expert_dp_rank": 0,
+        "data_rank": 1
+      },
+      {
+        "rank": 8,
+        "host": "gpu-01",
+        "tp_rank": 0,
+        "pp_rank": 0,
+        "ep_rank": 0,
+        "expert_dp_rank": 1,
+        "data_rank": 2
+      },
+      {
+        "rank": 9,
+        "host": "gpu-01",
+        "tp_rank": 1,
+        "pp_rank": 0,
+        "ep_rank": 0,
+        "expert_dp_rank": 1,
+        "data_rank": 2
+      },
+      {
+        "rank": 10,
+        "host": "gpu-01",
+        "tp_rank": 0,
+        "pp_rank": 0,
+        "ep_rank": 1,
+        "expert_dp_rank": 1,
+        "data_rank": 3
+      },
+      {
+        "rank": 11,
+        "host": "gpu-01",
+        "tp_rank": 1,
+        "pp_rank": 0,
+        "ep_rank": 1,
+        "expert_dp_rank": 1,
+        "data_rank": 3
+      },
+      {
+        "rank": 12,
+        "host": "gpu-01",
+        "tp_rank": 0,
+        "pp_rank": 1,
+        "ep_rank": 0,
+        "expert_dp_rank": 1,
+        "data_rank": 2
+      },
+      {
+        "rank": 13,
+        "host": "gpu-01",
+        "tp_rank": 1,
+        "pp_rank": 1,
+        "ep_rank": 0,
+        "expert_dp_rank": 1,
+        "data_rank": 2
+      },
+      {
+        "rank": 14,
+        "host": "gpu-01",
+        "tp_rank": 0,
+        "pp_rank": 1,
+        "ep_rank": 1,
+        "expert_dp_rank": 1,
+        "data_rank": 3
+      },
+      {
+        "rank": 15,
+        "host": "gpu-01",
+        "tp_rank": 1,
+        "pp_rank": 1,
+        "ep_rank": 1,
+        "expert_dp_rank": 1,
+        "data_rank": 3
+      }
+    ],
+    "numeric_reference": "four-layer FP32 full HF reference; one/two microbatches, full gradients/tied embeddings/SGD",
+    "numeric_session": "layout_localpp_verify_01"
+  },
+  "localizations": [
+    {
+      "epoch": 1,
+      "prediction": "rank:0",
+      "top_score_us": 19746.0,
+      "runner_up_us": 1146.0,
+      "top_to_runner_up_ratio": 17.230366492146597
+    },
+    {
+      "epoch": 2,
+      "prediction": "rank:9",
+      "top_score_us": 19746.75,
+      "runner_up_us": 1144.25,
+      "top_to_runner_up_ratio": 17.25737382564999
+    },
+    {
+      "epoch": 3,
+      "prediction": "rank:14",
+      "top_score_us": 19850.75,
+      "runner_up_us": 1266.5,
+      "top_to_runner_up_ratio": 15.673707066719306
+    },
+    {
+      "epoch": 4,
+      "prediction": "rank:7",
+      "top_score_us": 19878.75,
+      "runner_up_us": 1272.5,
+      "top_to_runner_up_ratio": 15.621807465618861
+    }
+  ],
+  "drains": {
+    "host1": {
+      "samples": 3584,
+      "dropped": [],
+      "cursors": {
+        "/dev/shm/flash_record_layout_localpp_01_10": 18374,
+        "/dev/shm/flash_record_layout_localpp_01_11": 18374,
+        "/dev/shm/flash_record_layout_localpp_01_8": 18587,
+        "/dev/shm/flash_record_layout_localpp_01_9": 18587,
+        "/dev/shm/flash_record_layout_localpp_01_12": 16161,
+        "/dev/shm/flash_record_layout_localpp_01_13": 16161,
+        "/dev/shm/flash_record_layout_localpp_01_14": 16806,
+        "/dev/shm/flash_record_layout_localpp_01_15": 16806
+      },
+      "snapshot": "producer_mutex_fresh_records",
+      "status": "complete"
+    },
+    "host2": {
+      "samples": 3584,
+      "dropped": [],
+      "cursors": {
+        "/dev/shm/flash_record_layout_localpp_01_0": 18572,
+        "/dev/shm/flash_record_layout_localpp_01_1": 18572,
+        "/dev/shm/flash_record_layout_localpp_01_2": 18443,
+        "/dev/shm/flash_record_layout_localpp_01_3": 18443,
+        "/dev/shm/flash_record_layout_localpp_01_4": 16122,
+        "/dev/shm/flash_record_layout_localpp_01_5": 16122,
+        "/dev/shm/flash_record_layout_localpp_01_6": 16848,
+        "/dev/shm/flash_record_layout_localpp_01_7": 16848
+      },
+      "snapshot": "producer_mutex_fresh_records",
+      "status": "complete"
+    }
+  }
+}

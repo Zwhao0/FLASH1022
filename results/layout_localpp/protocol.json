@@ -1,0 +1,122 @@
+{
+  "verify": {
+    "session_id": "layout_localpp_verify_01",
+    "role": "layout_numeric_verification",
+    "parallel_layout": "node_local_pp",
+    "online": false,
+    "probe_enabled": false,
+    "profile_enabled": false,
+    "seq_len": 16,
+    "seed": 202610223,
+    "intervals": [
+      {
+        "id": "verify",
+        "start": 1,
+        "end": 1,
+        "record_start": 1,
+        "target_ranks": [],
+        "delay_ms": 0
+      }
+    ]
+  },
+  "online": {
+    "session_id": "layout_localpp_01",
+    "role": "online_node_local_layout_quick_validation",
+    "parallel_layout": "node_local_pp",
+    "online": true,
+    "probe_enabled": true,
+    "profile_enabled": false,
+    "max_profiles": 5,
+    "seq_len": 16,
+    "seed": 202610223,
+    "fault_kind": "simulated_gpu_stream_delay",
+    "intervals": [
+      {
+        "id": "healthy_baseline",
+        "start": 1,
+        "end": 45,
+        "record_start": 1,
+        "target_ranks": [],
+        "delay_ms": 0
+      },
+      {
+        "id": "fault0",
+        "start": 46,
+        "end": 70,
+        "record_start": 46,
+        "target_ranks": [
+          0
+        ],
+        "delay_ms": 450
+      },
+      {
+        "id": "healthy_recovery0",
+        "start": 71,
+        "end": 105,
+        "record_start": 71,
+        "target_ranks": [],
+        "delay_ms": 0
+      },
+      {
+        "id": "fault1",
+        "start": 106,
+        "end": 130,
+        "record_start": 106,
+        "target_ranks": [
+          9
+        ],
+        "delay_ms": 450
+      },
+      {
+        "id": "healthy_recovery1",
+        "start": 131,
+        "end": 165,
+        "record_start": 131,
+        "target_ranks": [],
+        "delay_ms": 0
+      },
+      {
+        "id": "fault2",
+        "start": 166,
+        "end": 190,
+        "record_start": 166,
+        "target_ranks": [
+          14
+        ],
+        "delay_ms": 450
+      },
+      {
+        "id": "healthy_recovery2",
+        "start": 191,
+        "end": 225,
+        "record_start": 191,
+        "target_ranks": [],
+        "delay_ms": 0
+      },
+      {
+        "id": "fault3",
+        "start": 226,
+        "end": 250,
+        "record_start": 226,
+        "target_ranks": [
+          7
+        ],
+        "delay_ms": 450
+      },
+      {
+        "id": "healthy_recovery3",
+        "start": 251,
+        "end": 275,
+        "record_start": 251,
+        "target_ranks": [],
+        "delay_ms": 0
+      }
+    ]
+  },
+  "scope": "new physical PP-local/DP-cross-node layout; four representative ranks; frozen inference unchanged",
+  "inference_source_sha256": {
+    "flash_v1/wait_localize.py": "5bd53a0093c4ff46e9c3fcd18f32e631e49382aedeaeac7b18095ea769a0a16f",
+    "flash_v1/offline.py": "e228234225563abb087fcd3573af3205219b9d246075948d855abf6bd477ad83"
+  },
+  "model_sha256": "1768d817430b9d2f20ed2ea8ce62c18ec195d1cbd7b6615c60938984826bf2f6"
+}

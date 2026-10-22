@@ -1,0 +1,99 @@
+{
+  "session": "layout_localpp_01",
+  "scope": "real 16 GPU automatic closed-loop quick validation; 4 single-GPU stream-delay faults",
+  "parallel_layout": "node_local_pp",
+  "fault_cases": [
+    {
+      "id": "fault0",
+      "target_rank": 0,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:0"
+      ],
+      "correct": true
+    },
+    {
+      "id": "fault1",
+      "target_rank": 9,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:9"
+      ],
+      "correct": true
+    },
+    {
+      "id": "fault2",
+      "target_rank": 14,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:14"
+      ],
+      "correct": true
+    },
+    {
+      "id": "fault3",
+      "target_rank": 7,
+      "delay_ms_per_backward": 450,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:7"
+      ],
+      "correct": true
+    }
+  ],
+  "correct_faults": 4,
+  "fault_denominator": 4,
+  "healthy_detection_count": 0,
+  "healthy_detections": [],
+  "healthy_iterations": 163,
+  "profile_windows": [
+    {
+      "epoch": 1,
+      "start": 50,
+      "end": 57,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:0",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 2,
+      "start": 110,
+      "end": 117,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:9",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 3,
+      "start": 170,
+      "end": 177,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:14",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 4,
+      "start": 230,
+      "end": 237,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:7",
+      "localization_before_training_end": true
+    }
+  ],
+  "localization_results": 4,
+  "ring_drops": 0,
+  "sampling_disabled_at_finish": true,
+  "injection_verified": true,
+  "inference_model_sha256": "1768d817430b9d2f20ed2ea8ce62c18ec195d1cbd7b6615c60938984826bf2f6"
+}

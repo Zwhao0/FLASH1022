@@ -1,0 +1,94 @@
+{
+  "session_id": "layout_localpp_01",
+  "role": "online_node_local_layout_quick_validation",
+  "parallel_layout": "node_local_pp",
+  "online": true,
+  "probe_enabled": true,
+  "profile_enabled": false,
+  "max_profiles": 5,
+  "seq_len": 16,
+  "seed": 202610223,
+  "fault_kind": "simulated_gpu_stream_delay",
+  "intervals": [
+    {
+      "id": "healthy_baseline",
+      "start": 1,
+      "end": 45,
+      "record_start": 1,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "fault0",
+      "start": 46,
+      "end": 70,
+      "record_start": 46,
+      "target_ranks": [
+        0
+      ],
+      "delay_ms": 450
+    },
+    {
+      "id": "healthy_recovery0",
+      "start": 71,
+      "end": 105,
+      "record_start": 71,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "fault1",
+      "start": 106,
+      "end": 130,
+      "record_start": 106,
+      "target_ranks": [
+        9
+      ],
+      "delay_ms": 450
+    },
+    {
+      "id": "healthy_recovery1",
+      "start": 131,
+      "end": 165,
+      "record_start": 131,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "fault2",
+      "start": 166,
+      "end": 190,
+      "record_start": 166,
+      "target_ranks": [
+        14
+      ],
+      "delay_ms": 450
+    },
+    {
+      "id": "healthy_recovery2",
+      "start": 191,
+      "end": 225,
+      "record_start": 191,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "fault3",
+      "start": 226,
+      "end": 250,
+      "record_start": 226,
+      "target_ranks": [
+        7
+      ],
+      "delay_ms": 450
+    },
+    {
+      "id": "healthy_recovery3",
+      "start": 251,
+      "end": 275,
+      "record_start": 251,
+      "target_ranks": [],
+      "delay_ms": 0
+    }
+  ]
+}

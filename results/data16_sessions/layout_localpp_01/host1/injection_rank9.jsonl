@@ -1,0 +1,26 @@
+{"event": "calibration", "rank": 9, "requested_ms": 450, "observed_ms": 446.2413024902344, "cycles_per_ms": 1963433.1234170997}
+{"rank": 9, "iteration": 106, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 107, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 108, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 109, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 110, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 111, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 112, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 113, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 114, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 115, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 116, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 117, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 118, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 119, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 120, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 121, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 122, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 123, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 124, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 125, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 126, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 127, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 128, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 129, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}
+{"rank": 9, "iteration": 130, "hook_calls": 408, "injected_cycles": 1767089736, "calibrated_injected_ms": 899.9999617632051, "kind": "simulated_gpu_stream_delay"}

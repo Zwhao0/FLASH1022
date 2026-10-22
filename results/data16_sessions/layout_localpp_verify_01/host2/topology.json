@@ -1,0 +1,1514 @@
+{
+  "schema_version": 2,
+  "world_size": 16,
+  "groups": [
+    {
+      "name": "dense_world",
+      "label": "dense_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        0,
+        2,
+        8,
+        10
+      ],
+      "localization": true,
+      "reporters": [
+        0,
+        2,
+        8,
+        10
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP0",
+      "pp_stage": 0,
+      "members": [
+        0,
+        2
+      ],
+      "localization": false,
+      "reporters": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        0,
+        8
+      ],
+      "localization": true,
+      "reporters": [
+        0,
+        8
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP0",
+      "pp_stage": 0,
+      "localization": true,
+      "members": [
+        0,
+        1
+      ],
+      "reporters": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        0,
+        4
+      ],
+      "reporters": [
+        0,
+        4
+      ]
+    },
+    {
+      "name": "dense_world",
+      "label": "dense_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        1,
+        3,
+        9,
+        11
+      ],
+      "localization": true,
+      "reporters": [
+        1,
+        3,
+        9,
+        11
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP0",
+      "pp_stage": 0,
+      "members": [
+        1,
+        3
+      ],
+      "localization": false,
+      "reporters": [
+        1,
+        3
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        1,
+        9
+      ],
+      "localization": true,
+      "reporters": [
+        1,
+        9
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        1,
+        5
+      ],
+      "reporters": [
+        1,
+        5
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        2,
+        10
+      ],
+      "localization": true,
+      "reporters": [
+        2,
+        10
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP0",
+      "pp_stage": 0,
+      "localization": true,
+      "members": [
+        2,
+        3
+      ],
+      "reporters": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        2,
+        6
+      ],
+      "reporters": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP0",
+      "pp_stage": 0,
+      "members": [
+        3,
+        11
+      ],
+      "localization": true,
+      "reporters": [
+        3,
+        11
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        3,
+        7
+      ],
+      "reporters": [
+        3,
+        7
+      ]
+    },
+    {
+      "name": "dense_world",
+      "label": "dense_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        4,
+        6,
+        12,
+        14
+      ],
+      "localization": true,
+      "reporters": [
+        4,
+        6,
+        12,
+        14
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP1",
+      "pp_stage": 1,
+      "members": [
+        4,
+        6
+      ],
+      "localization": false,
+      "reporters": [
+        4,
+        6
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        4,
+        12
+      ],
+      "localization": true,
+      "reporters": [
+        4,
+        12
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP1",
+      "pp_stage": 1,
+      "localization": true,
+      "members": [
+        4,
+        5
+      ],
+      "reporters": [
+        4,
+        5
+      ]
+    },
+    {
+      "name": "dense_world",
+      "label": "dense_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        5,
+        7,
+        13,
+        15
+      ],
+      "localization": true,
+      "reporters": [
+        5,
+        7,
+        13,
+        15
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP1",
+      "pp_stage": 1,
+      "members": [
+        5,
+        7
+      ],
+      "localization": false,
+      "reporters": [
+        5,
+        7
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        5,
+        13
+      ],
+      "localization": true,
+      "reporters": [
+        5,
+        13
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        6,
+        14
+      ],
+      "localization": true,
+      "reporters": [
+        6,
+        14
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP1",
+      "pp_stage": 1,
+      "localization": true,
+      "members": [
+        6,
+        7
+      ],
+      "reporters": [
+        6,
+        7
+      ]
+    },
+    {
+      "name": "expert_dp",
+      "label": "Expert_DP_PP1",
+      "pp_stage": 1,
+      "members": [
+        7,
+        15
+      ],
+      "localization": true,
+      "reporters": [
+        7,
+        15
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP0",
+      "pp_stage": 0,
+      "members": [
+        8,
+        10
+      ],
+      "localization": false,
+      "reporters": [
+        8,
+        10
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP0",
+      "pp_stage": 0,
+      "localization": true,
+      "members": [
+        8,
+        9
+      ],
+      "reporters": [
+        8,
+        9
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        8,
+        12
+      ],
+      "reporters": [
+        8,
+        12
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP0",
+      "pp_stage": 0,
+      "members": [
+        9,
+        11
+      ],
+      "localization": false,
+      "reporters": [
+        9,
+        11
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        9,
+        13
+      ],
+      "reporters": [
+        9,
+        13
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP0",
+      "pp_stage": 0,
+      "localization": true,
+      "members": [
+        10,
+        11
+      ],
+      "reporters": [
+        10,
+        11
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        10,
+        14
+      ],
+      "reporters": [
+        10,
+        14
+      ]
+    },
+    {
+      "name": "pipeline",
+      "label": "PP",
+      "localization": false,
+      "members": [
+        11,
+        15
+      ],
+      "reporters": [
+        11,
+        15
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP1",
+      "pp_stage": 1,
+      "members": [
+        12,
+        14
+      ],
+      "localization": false,
+      "reporters": [
+        12,
+        14
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP1",
+      "pp_stage": 1,
+      "localization": true,
+      "members": [
+        12,
+        13
+      ],
+      "reporters": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "expert_parallel",
+      "label": "EP_PP1",
+      "pp_stage": 1,
+      "members": [
+        13,
+        15
+      ],
+      "localization": false,
+      "reporters": [
+        13,
+        15
+      ]
+    },
+    {
+      "name": "tensor_parallel",
+      "label": "TP_PP1",
+      "pp_stage": 1,
+      "localization": true,
+      "members": [
+        14,
+        15
+      ],
+      "reporters": [
+        14,
+        15
+      ]
+    }
+  ],
+  "rank_reports": [
+    {
+      "rank": 0,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2,
+            8,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            8
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3,
+            9,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            9
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2,
+            8,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            2,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3,
+            9,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            3,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            2,
+            3
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            3,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6,
+            12,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            12
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            4,
+            5
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7,
+            13,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            13
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            4,
+            5
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6,
+            12,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            6,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            6,
+            7
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7,
+            13,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            7,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            6,
+            7
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            3,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2,
+            8,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            8,
+            10
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            8
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3,
+            9,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            9,
+            11
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            9
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            9,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            0,
+            2,
+            8,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            8,
+            10
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            2,
+            10
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            10,
+            11
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            10,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            1,
+            3,
+            9,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP0",
+          "pp_stage": 0,
+          "members": [
+            9,
+            11
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP0",
+          "pp_stage": 0,
+          "members": [
+            3,
+            11
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP0",
+          "pp_stage": 0,
+          "localization": true,
+          "members": [
+            10,
+            11
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            11,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6,
+            12,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            12,
+            14
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            12
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            12,
+            13
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7,
+            13,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            13,
+            15
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            13
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            12,
+            13
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            9,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            4,
+            6,
+            12,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            12,
+            14
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            6,
+            14
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            14,
+            15
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            10,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3,
+      "groups": [
+        {
+          "name": "dense_world",
+          "label": "dense_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            5,
+            7,
+            13,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "expert_parallel",
+          "label": "EP_PP1",
+          "pp_stage": 1,
+          "members": [
+            13,
+            15
+          ],
+          "localization": false
+        },
+        {
+          "name": "expert_dp",
+          "label": "Expert_DP_PP1",
+          "pp_stage": 1,
+          "members": [
+            7,
+            15
+          ],
+          "localization": true
+        },
+        {
+          "name": "tensor_parallel",
+          "label": "TP_PP1",
+          "pp_stage": 1,
+          "localization": true,
+          "members": [
+            14,
+            15
+          ]
+        },
+        {
+          "name": "pipeline",
+          "label": "PP",
+          "localization": false,
+          "members": [
+            11,
+            15
+          ]
+        }
+      ]
+    }
+  ],
+  "parallel_layout": "node_local_pp",
+  "backend": "GREYHOUND Megatron parallel_state"
+}

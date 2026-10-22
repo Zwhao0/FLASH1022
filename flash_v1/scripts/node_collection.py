@@ -49,6 +49,9 @@ def main():
     output = Path('results/data16_sessions') / args.session
     output.mkdir(parents=True, exist_ok=False)
     plan = json.loads(Path(args.plan).read_text())
+    parallel_layout = plan.get('parallel_layout', 'legacy')
+    if parallel_layout not in ('legacy', 'node_local_pp'):
+        raise ValueError(f'unknown parallel layout: {parallel_layout}')
     online = bool(plan.get('online', False))
     probe_enabled = bool(plan.get('probe_enabled', True))
     if online and not probe_enabled:
@@ -63,6 +66,7 @@ def main():
         from flash_v1.monitor_channel import MonitorChannel
         MonitorChannel.create(output / 'monitor.bin').close()
     env = os.environ.copy()
+    env['FLASH_PARALLEL_LAYOUT'] = parallel_layout
     env.update(OMP_NUM_THREADS='1', MALLOC_ARENA_MAX='2', CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7',
         PYTHONPATH=str(Path.cwd()), NCCL_MAX_NCHANNELS='4', NCCL_BUFFSIZE='1048576',
         NCCL_CUMEM_HOST_ENABLE='0', NCCL_CUMEM_ENABLE='0', NCCL_NVLS_ENABLE='0', NCCL_DEBUG='WARN', NCCL_NET='Socket', NCCL_IB_DISABLE='1', NCCL_SOCKET_IFNAME='bond0', GLOO_SOCKET_IFNAME='bond0',
@@ -84,6 +88,8 @@ def main():
         '--format=csv,noheader'], text=True).splitlines()
     manifest['online'] = online
     manifest['probe_enabled'] = probe_enabled
+    manifest['configuration']['parallel_layout'] = parallel_layout
+    manifest['environment']['FLASH_PARALLEL_LAYOUT'] = parallel_layout
     if plan.get('monitor_benchmark'):
         manifest['configuration']['monitor_benchmark_blocks'] = plan['benchmark_blocks']
     manifest['status'] = 'starting'

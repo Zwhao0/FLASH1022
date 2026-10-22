@@ -2,6 +2,8 @@
 
 当前路线：2节点16卡、真实TP2×PP2×EP2×Expert-DP2。`wait_localize.py`已通过`online.py`接入自动检测与有界8步PROFILE，rank6/10故障在线回归2/2正确；常驻MONITOR已优化，真无探针ABBA平均耗时差−1.173%（本次平均开销点估计<1%），见[优化与实测边界](MONITOR_OPTIMIZATION.md)，接入命令见[在线报告](ONLINE16.md)。此前冻结离线盲测故障16/16、健康4/4正确，见[数据研究报告](DATA16_STUDY.md)。离线采集入口`python -m flash_v1.scripts.data16`保留，模板法失败与论文对照保留，旧`--reference-profile`入口仍禁用。下方4/8卡命令与校准结果为历史记录。
 
+新增`--parallel-layout node_local_pp`，每节点TP2×PP2×EP2、节点间Expert-DP2；冻结算法在线4/4正确，见[布局快验](LAYOUT_LOCALPP.md)。
+
 从论文第三章与原始 GREYHOUND 重新实现；不读取或沿用旧 FLASH 实现。
 仅检测/定位计算 Fail-Slow；支持真实 GPU 降频与经用户授权的GPU计算stream延迟模拟；不包含 Fail-Stop、通信故障或第四章 SHIFT。
 

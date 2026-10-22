@@ -1,0 +1,322 @@
+{
+  "checks": {
+    "tensor_parallel_host_placement": true,
+    "pipeline_host_placement": true,
+    "expert_parallel_host_placement": true,
+    "expert_dp_host_placement": true,
+    "dense_world_host_placement": true,
+    "all_16_numeric_passed": true
+  },
+  "groups": {
+    "tensor_parallel": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "pipeline": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        11,
+        15
+      ]
+    ],
+    "expert_parallel": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        15
+      ]
+    ],
+    "expert_dp": [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        7,
+        15
+      ]
+    ],
+    "dense_world": [
+      [
+        0,
+        2,
+        8,
+        10
+      ],
+      [
+        1,
+        3,
+        9,
+        11
+      ],
+      [
+        4,
+        6,
+        12,
+        14
+      ],
+      [
+        5,
+        7,
+        13,
+        15
+      ]
+    ]
+  },
+  "rank_coordinates": [
+    {
+      "rank": 0,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0
+    },
+    {
+      "rank": 1,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0
+    },
+    {
+      "rank": 2,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1
+    },
+    {
+      "rank": 3,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1
+    },
+    {
+      "rank": 4,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0
+    },
+    {
+      "rank": 5,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 0,
+      "data_rank": 0
+    },
+    {
+      "rank": 6,
+      "host": "gpu-02",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1
+    },
+    {
+      "rank": 7,
+      "host": "gpu-02",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 0,
+      "data_rank": 1
+    },
+    {
+      "rank": 8,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2
+    },
+    {
+      "rank": 9,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2
+    },
+    {
+      "rank": 10,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3
+    },
+    {
+      "rank": 11,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 0,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3
+    },
+    {
+      "rank": 12,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2
+    },
+    {
+      "rank": 13,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 0,
+      "expert_dp_rank": 1,
+      "data_rank": 2
+    },
+    {
+      "rank": 14,
+      "host": "gpu-01",
+      "tp_rank": 0,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3
+    },
+    {
+      "rank": 15,
+      "host": "gpu-01",
+      "tp_rank": 1,
+      "pp_rank": 1,
+      "ep_rank": 1,
+      "expert_dp_rank": 1,
+      "data_rank": 3
+    }
+  ],
+  "numeric_reference": "four-layer FP32 full HF reference; one/two microbatches, full gradients/tied embeddings/SGD",
+  "numeric_session": "layout_localpp_verify_01"
+}

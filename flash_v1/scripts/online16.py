@@ -84,7 +84,8 @@ def score(local):
                            detection_delay_iterations=matches[0]['iteration'] - interval['start'] if matches else None,
                            predicted=decisions, correct=expected in decisions and all(x == expected for x in decisions)))
     healthy_detections = [d for d in detections if not any(x['start'] <= d['iteration'] <= x['end'] for x in faults)]
-    report = dict(session=plan['session_id'], scope='real 16 GPU automatic closed-loop quick validation; two random single-GPU stream-delay faults',
+    report = dict(session=plan['session_id'], scope=f'real 16 GPU automatic closed-loop quick validation; {len(faults)} single-GPU stream-delay faults',
+                  parallel_layout=plan.get('parallel_layout', 'legacy'),
                   fault_cases=scored, correct_faults=sum(x['correct'] for x in scored), fault_denominator=len(scored),
                   healthy_detection_count=len(healthy_detections), healthy_detections=healthy_detections,
                   healthy_iterations=sum(not any(x['start'] <= row['iteration'] <= x['end'] for x in faults)
@@ -102,12 +103,14 @@ def main():
     parser.add_argument('--session', required=True)
     parser.add_argument('--seed', type=int)
     parser.add_argument('--timeout', type=int, default=900)
+    parser.add_argument('--parallel-layout', choices=('legacy', 'node_local_pp'), default='legacy')
     parser.add_argument('--score-only', action='store_true')
     args = parser.parse_args()
     if args.score_only:
         local = ROOT / 'results/data16_sessions' / args.session
     else:
         plan = make_online_plan(args.session, args.seed if args.seed is not None else secrets.randbits(32))
+        plan['parallel_layout'] = args.parallel_layout
         local = run(plan, timeout=args.timeout)
     score(local)
 
