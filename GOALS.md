@@ -2,7 +2,7 @@
 
 已完成：真实2节点16卡TP2×PP2×EP2×Expert-DP2；数据驱动定位接入自动检测/8步PROFILE/在线定位；常驻MONITOR优化和验证。结论与范围见flash_v1/MONITOR_OPTIMIZATION.md，继续工作先读handoff.md。
 
-当前用户要求：上传v1代码到Zwhao0/FLASH1022，然后只讨论算法普遍性/泛化能力；可用现有数据快速验证，不改算法/阈值，不新增GPU实验或优化。
+当前v1快照已发布到Zwhao0/FLASH1022，完成内容与有效范围见handoff.md。
 
 约束：
 - 仅当前flash_v1/results/论文/原Greyhound，不读旧FLASH、旧交接或Git旧历史，不恢复已删文件。
