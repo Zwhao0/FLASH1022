@@ -1,0 +1,32 @@
+{
+  "host2": {
+    "owned_processes": [],
+    "private_redis_port_closed": true,
+    "monopt_shm": [],
+    "gpus": [
+      "0, 1980 MHz, 5200 MiB",
+      "1, 1980 MHz, 5200 MiB",
+      "2, 1980 MHz, 5032 MiB",
+      "3, 1980 MHz, 5032 MiB",
+      "4, 1980 MHz, 5032 MiB",
+      "5, 1980 MHz, 5032 MiB",
+      "6, 1980 MHz, 5200 MiB",
+      "7, 1980 MHz, 5200 MiB"
+    ]
+  },
+  "host1": {
+    "owned_processes": [],
+    "private_redis_port_closed": true,
+    "monopt_shm": [],
+    "gpus": [
+      "0, 1980 MHz, 2458 MiB",
+      "1, 1980 MHz, 2458 MiB",
+      "2, 1980 MHz, 2290 MiB",
+      "3, 1980 MHz, 2290 MiB",
+      "4, 1980 MHz, 2290 MiB",
+      "5, 1980 MHz, 2290 MiB",
+      "6, 1980 MHz, 2458 MiB",
+      "7, 1980 MHz, 2458 MiB"
+    ]
+  }
+}

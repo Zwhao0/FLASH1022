@@ -1,0 +1,167 @@
+{
+  "order": "ABBA stage2; exact scalar-zero/Fill optimization, original stage1 retained",
+  "plans": [
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt2_a1_baseline",
+      "online": false,
+      "probe_enabled": false,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt2_b1_online",
+      "online": true,
+      "probe_enabled": true,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        },
+        {
+          "id": "fault0",
+          "start": 101,
+          "end": 135,
+          "record_start": 101,
+          "target_ranks": [
+            6
+          ],
+          "delay_ms": 640.328
+        },
+        {
+          "id": "recovery0",
+          "start": 136,
+          "end": 180,
+          "record_start": 136,
+          "target_ranks": [],
+          "delay_ms": 0
+        },
+        {
+          "id": "fault1",
+          "start": 181,
+          "end": 215,
+          "record_start": 181,
+          "target_ranks": [
+            10
+          ],
+          "delay_ms": 473.911
+        },
+        {
+          "id": "recovery1",
+          "start": 216,
+          "end": 240,
+          "record_start": 216,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt2_b2_online",
+      "online": true,
+      "probe_enabled": true,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt2_a2_baseline",
+      "online": false,
+      "probe_enabled": false,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    }
+  ],
+  "monitor_steps": [
+    13,
+    100
+  ],
+  "scope": "MONITOR vs no FLASH probe/controller, preserve common training, injection harness and ordinary logs",
+  "model_hash": "201cbfd42a8106368404bd1ee33c7a74640440897ad7fa9a746a37668f7b194d",
+  "inference_source_sha256": {
+    "flash_v1/wait_localize.py": "5bd53a0093c4ff46e9c3fcd18f32e631e49382aedeaeac7b18095ea769a0a16f",
+    "flash_v1/offline.py": "e228234225563abb087fcd3573af3205219b9d246075948d855abf6bd477ad83"
+  },
+  "profile_control_plan": {
+    "role": "monitor_overhead",
+    "seed": 1294713859,
+    "seq_len": 16,
+    "fault_kind": "simulated_gpu_stream_delay",
+    "profile_enabled": false,
+    "max_profiles": 3,
+    "session_id": "monopt2_c_profile_control",
+    "online": false,
+    "probe_enabled": false,
+    "intervals": [
+      {
+        "id": "healthy",
+        "start": 1,
+        "end": 100,
+        "record_start": 13,
+        "target_ranks": [],
+        "delay_ms": 0
+      },
+      {
+        "id": "fault0",
+        "start": 101,
+        "end": 135,
+        "record_start": 101,
+        "target_ranks": [
+          6
+        ],
+        "delay_ms": 640.328
+      }
+    ]
+  },
+  "profile_control_scope": "Matched same seed and first fault through135, no FLASH; compare actual first 8-step PROFILE window, not fault vs healthy."
+}

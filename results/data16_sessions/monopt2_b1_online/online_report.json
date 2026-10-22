@@ -1,0 +1,58 @@
+{
+  "session": "monopt2_b1_online",
+  "scope": "real 16 GPU automatic closed-loop quick validation; two random single-GPU stream-delay faults",
+  "fault_cases": [
+    {
+      "id": "fault0",
+      "target_rank": 6,
+      "delay_ms_per_backward": 640.328,
+      "detected": true,
+      "detection_delay_iterations": 2,
+      "predicted": [
+        "rank:6"
+      ],
+      "correct": true
+    },
+    {
+      "id": "fault1",
+      "target_rank": 10,
+      "delay_ms_per_backward": 473.911,
+      "detected": true,
+      "detection_delay_iterations": 3,
+      "predicted": [
+        "rank:10"
+      ],
+      "correct": true
+    }
+  ],
+  "correct_faults": 2,
+  "fault_denominator": 2,
+  "healthy_detection_count": 0,
+  "healthy_detections": [],
+  "healthy_iterations": 158,
+  "profile_windows": [
+    {
+      "epoch": 1,
+      "start": 105,
+      "end": 112,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:6",
+      "localization_before_training_end": true
+    },
+    {
+      "epoch": 2,
+      "start": 186,
+      "end": 193,
+      "complete_iteration_rank_coverage": true,
+      "samples": 1792,
+      "predicted": "rank:10",
+      "localization_before_training_end": true
+    }
+  ],
+  "localization_results": 2,
+  "ring_drops": 0,
+  "sampling_disabled_at_finish": true,
+  "injection_verified": true,
+  "inference_model_sha256": "1768d817430b9d2f20ed2ea8ce62c18ec195d1cbd7b6615c60938984826bf2f6"
+}

@@ -1,0 +1,16 @@
+{
+  "session": "monopt2_b2_online",
+  "classification": "post-training drain shutdown race; retained failed run, not silently rerun or relabeled",
+  "training_iterations": [
+    1,
+    100
+  ],
+  "exact_100_iteration_sequence": true,
+  "node_status": {
+    "host2": "completed",
+    "host1": "failed"
+  },
+  "root_cause": "node0 stopped Redis while node1 drain was still reading online_pending; node1 ConnectionRefusedError and no drain_status",
+  "fix": "controller-completion barrier followed by both node drains ACK before Redis shutdown",
+  "replacement_protocol": "protocol_stage3.json: entirely new four-run healthy ABBA, no failed-run substitution"
+}

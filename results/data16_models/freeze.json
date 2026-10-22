@@ -1,0 +1,43 @@
+{
+  "frozen_at": "2026-10-22T19:43:55.384359+08:00",
+  "selected_method": "paired_first_call_signed_wait_localization",
+  "model_file": "results/data16_models/wait_frozen.json",
+  "model_file_sha256": "1768d817430b9d2f20ed2ea8ce62c18ec195d1cbd7b6615c60938984826bf2f6",
+  "frozen_model_hash": "201cbfd42a8106368404bd1ee33c7a74640440897ad7fa9a746a37668f7b194d",
+  "inference_source_sha256": {
+    "flash_v1/wait_localize.py": "5bd53a0093c4ff46e9c3fcd18f32e631e49382aedeaeac7b18095ea769a0a16f",
+    "flash_v1/offline.py": "e228234225563abb087fcd3573af3205219b9d246075948d855abf6bd477ad83"
+  },
+  "selection_uses": "train and validation only",
+  "blind_test_protocol": {
+    "session": "blind16_s4",
+    "single_gpu_ranks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "order": "random permutation plus four healthy episodes",
+    "delay_ms": "independent uniform(100,650) per backward; sampled only after freeze",
+    "warmup_iterations": 12,
+    "settle_iterations": 2,
+    "profile_iterations": 8
+  },
+  "limitations": [
+    "fixed model/topology/single GPU stream-delay fault",
+    "conditional localization windows; not complete detection/profiling control loop",
+    "validation used for method development; not blind result"
+  ]
+}

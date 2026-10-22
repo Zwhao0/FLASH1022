@@ -1,0 +1,42 @@
+{
+  "sessions": [
+    "monopt2_b1_online",
+    "monopt2_c_profile_control"
+  ],
+  "scope": "same seed and identical fault; actual first PROFILE window vs no FLASH",
+  "windows": [
+    {
+      "iterations": [
+        13,
+        100
+      ],
+      "baseline_sum_ms": 72576.66333997622,
+      "online_sum_ms": 69207.81636796892,
+      "relative_pct": -4.641777145673354
+    },
+    {
+      "iterations": [
+        101,
+        135
+      ],
+      "baseline_sum_ms": 64058.40192385949,
+      "online_sum_ms": 63098.447737051174,
+      "relative_pct": -1.498560934987625
+    },
+    {
+      "iterations": [
+        105,
+        112
+      ],
+      "baseline_sum_ms": 14573.519335826859,
+      "online_sum_ms": 14483.006654074416,
+      "relative_pct": -0.6210763485929638
+    }
+  ],
+  "max_loss_difference": 0.0,
+  "configuration_aligned": true,
+  "source_sha256_aligned": true,
+  "model_sha256_aligned": true,
+  "environment_aligned": true,
+  "snapshot_sha256_aligned": true
+}

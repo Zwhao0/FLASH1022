@@ -1,0 +1,325 @@
+{
+  "status": "complete",
+  "sessions": [
+    "monopt3_a1_baseline",
+    "monopt3_b1_online",
+    "monopt3_b2_online",
+    "monopt3_a2_baseline"
+  ],
+  "checks": {
+    "monopt3_a1_baseline:exact_100_iterations": true,
+    "monopt3_a1_baseline:true_sgd": true,
+    "monopt3_a1_baseline:healthy_plan": true,
+    "monopt3_a1_baseline:no_profile_steps": true,
+    "monopt3_a1_baseline:runtime_mode": true,
+    "monopt3_a1_baseline/host2:completed": true,
+    "monopt3_a1_baseline/host2:mode": true,
+    "monopt3_a1_baseline/host1:completed": true,
+    "monopt3_a1_baseline/host1:mode": true,
+    "monopt3_b1_online:exact_100_iterations": true,
+    "monopt3_b1_online:true_sgd": true,
+    "monopt3_b1_online:healthy_plan": true,
+    "monopt3_b1_online:no_profile_steps": true,
+    "monopt3_b1_online:runtime_mode": true,
+    "monopt3_b1_online/host2:completed": true,
+    "monopt3_b1_online/host2:mode": true,
+    "monopt3_b1_online/host1:completed": true,
+    "monopt3_b1_online/host1:mode": true,
+    "monopt3_b1_online:no_detection_or_profile_events": true,
+    "monopt3_b1_online:all_channel_rows_consumed": true,
+    "monopt3_b1_online/host2:zero_drops": true,
+    "monopt3_b1_online/host2:sampling_disabled": true,
+    "monopt3_b1_online/host1:zero_drops": true,
+    "monopt3_b1_online/host1:sampling_disabled": true,
+    "monopt3_b2_online:exact_100_iterations": true,
+    "monopt3_b2_online:true_sgd": true,
+    "monopt3_b2_online:healthy_plan": true,
+    "monopt3_b2_online:no_profile_steps": true,
+    "monopt3_b2_online:runtime_mode": true,
+    "monopt3_b2_online/host2:completed": true,
+    "monopt3_b2_online/host2:mode": true,
+    "monopt3_b2_online/host1:completed": true,
+    "monopt3_b2_online/host1:mode": true,
+    "monopt3_b2_online:no_detection_or_profile_events": true,
+    "monopt3_b2_online:all_channel_rows_consumed": true,
+    "monopt3_b2_online/host2:zero_drops": true,
+    "monopt3_b2_online/host2:sampling_disabled": true,
+    "monopt3_b2_online/host1:zero_drops": true,
+    "monopt3_b2_online/host1:sampling_disabled": true,
+    "monopt3_a2_baseline:exact_100_iterations": true,
+    "monopt3_a2_baseline:true_sgd": true,
+    "monopt3_a2_baseline:healthy_plan": true,
+    "monopt3_a2_baseline:no_profile_steps": true,
+    "monopt3_a2_baseline:runtime_mode": true,
+    "monopt3_a2_baseline/host2:completed": true,
+    "monopt3_a2_baseline/host2:mode": true,
+    "monopt3_a2_baseline/host1:completed": true,
+    "monopt3_a2_baseline/host1:mode": true,
+    "same_seed": true,
+    "same_positive_learning_rate": true,
+    "aligned:source_sha256": true,
+    "aligned:configuration": true,
+    "aligned:model_sha256": true,
+    "aligned:environment": true,
+    "aligned:snapshot_sha256": true,
+    "online_probe_same_nonnull": true,
+    "baseline_no_probe": true,
+    "loss_matches": true,
+    "timing_valid": true
+  },
+  "failed_checks": [],
+  "runs": {
+    "monopt3_a1_baseline": {
+      "seed": 1294713859,
+      "learning_rate": 0.001,
+      "total_iterations": 100,
+      "plan_sha256": "b969d7133970c361e47e987f81e0270e6af7417ee5a436c9203acc3563f1ad2d",
+      "train_sha256": "aa53dc84a3782ff7d8aede91f26e667bdb798e093bfa897b4694842fe1e2f5d1"
+    },
+    "monopt3_b1_online": {
+      "seed": 1294713859,
+      "learning_rate": 0.001,
+      "total_iterations": 100,
+      "plan_sha256": "b5d95696c5b14c3e56cd8f07bda038da5865ff8f7deca8d7543645b308c50e82",
+      "train_sha256": "23aad5e838c66483840cd82f188c59a9e2ea5bb33b6ea2fe71d5b22bb239abe8"
+    },
+    "monopt3_b2_online": {
+      "seed": 1294713859,
+      "learning_rate": 0.001,
+      "total_iterations": 100,
+      "plan_sha256": "bab8727b420ee28eaca9f812d94a8572be8e114ed0b92e667a736082532ae214",
+      "train_sha256": "33785a0856821f70cd4f12c005383234780f6d18e9baa5303ee2db157f7a3213"
+    },
+    "monopt3_a2_baseline": {
+      "seed": 1294713859,
+      "learning_rate": 0.001,
+      "total_iterations": 100,
+      "plan_sha256": "6142eef481e57ca78d72d9b7d9ff311ee4e543f60ae38ae26b48d1e947042a83",
+      "train_sha256": "2389c8419d2021cfe25433fc85600397931a8c2b9c36a0471c03996d0fe52c50"
+    }
+  },
+  "alignment": {
+    "source_sha256": {
+      "monopt3_a1_baseline/host2": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_a1_baseline/host1": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_b1_online/host2": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_b1_online/host1": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_b2_online/host2": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_b2_online/host1": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_a2_baseline/host2": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b",
+      "monopt3_a2_baseline/host1": "7ec07bffba8873086d3b6152f9ceda9428689377b8934e8d11e498d989fe2f2b"
+    },
+    "configuration": {
+      "monopt3_a1_baseline/host2": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_a1_baseline/host1": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_b1_online/host2": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_b1_online/host1": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_b2_online/host2": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_b2_online/host1": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_a2_baseline/host2": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884",
+      "monopt3_a2_baseline/host1": "cc66cdb3446c326f66286ab83d4ab5ae7dbd1648aff6bc9ac372da77bb42f884"
+    },
+    "model_sha256": {
+      "monopt3_a1_baseline/host2": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_a1_baseline/host1": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_b1_online/host2": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_b1_online/host1": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_b2_online/host2": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_b2_online/host1": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_a2_baseline/host2": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b",
+      "monopt3_a2_baseline/host1": "c89e302660e758a920afa60404db5a4a77c9faebcedfd8b3b8b406a957aa034b"
+    },
+    "environment": {
+      "monopt3_a1_baseline/host2": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_a1_baseline/host1": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_b1_online/host2": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_b1_online/host1": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_b2_online/host2": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_b2_online/host1": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_a2_baseline/host2": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696",
+      "monopt3_a2_baseline/host1": "14bcae2e4c521cb04fe5b48d036b43256ce5261e3d5d334575ea2ffa937ab696"
+    },
+    "snapshot_sha256": {
+      "monopt3_a1_baseline/host2": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_a1_baseline/host1": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_b1_online/host2": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_b1_online/host1": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_b2_online/host2": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_b2_online/host1": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_a2_baseline/host2": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b",
+      "monopt3_a2_baseline/host1": "21d1c84a8f9990352291c8d60fcbf81270d52f096eff13cc071e9f03f465771b"
+    }
+  },
+  "probe_sha256": {
+    "monopt3_a1_baseline/host2": null,
+    "monopt3_a1_baseline/host1": null,
+    "monopt3_b1_online/host2": "95b033c729a7c4a5fae2354bb1668e591e8812fc3c480d4dcc07788bcc943d19",
+    "monopt3_b1_online/host1": "95b033c729a7c4a5fae2354bb1668e591e8812fc3c480d4dcc07788bcc943d19",
+    "monopt3_b2_online/host2": "95b033c729a7c4a5fae2354bb1668e591e8812fc3c480d4dcc07788bcc943d19",
+    "monopt3_b2_online/host1": "95b033c729a7c4a5fae2354bb1668e591e8812fc3c480d4dcc07788bcc943d19",
+    "monopt3_a2_baseline/host2": null,
+    "monopt3_a2_baseline/host1": null
+  },
+  "online_evidence": {
+    "monopt3_b1_online": {
+      "events": [],
+      "channel": {
+        "magic": "FLASHM01",
+        "written": 100,
+        "consumed": 100,
+        "request_epoch": 0,
+        "schedule_epoch": 0,
+        "start": 0,
+        "end": 0
+      },
+      "drains": {
+        "host2": {
+          "samples": 0,
+          "dropped": [],
+          "cursors": {},
+          "snapshot": "producer_mutex_fresh_records",
+          "status": "complete"
+        },
+        "host1": {
+          "samples": 0,
+          "dropped": [],
+          "cursors": {},
+          "snapshot": "producer_mutex_fresh_records",
+          "status": "complete"
+        }
+      }
+    },
+    "monopt3_b2_online": {
+      "events": [],
+      "channel": {
+        "magic": "FLASHM01",
+        "written": 100,
+        "consumed": 100,
+        "request_epoch": 0,
+        "schedule_epoch": 0,
+        "start": 0,
+        "end": 0
+      },
+      "drains": {
+        "host2": {
+          "samples": 0,
+          "dropped": [],
+          "cursors": {},
+          "snapshot": "producer_mutex_fresh_records",
+          "status": "complete"
+        },
+        "host1": {
+          "samples": 0,
+          "dropped": [],
+          "cursors": {},
+          "snapshot": "producer_mutex_fresh_records",
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "loss_validation": {
+    "all_finite": true,
+    "max_absolute_cross_run_difference": 0.0,
+    "tolerance": 0.0001
+  },
+  "monitor_timing": {
+    "iterations": [
+      13,
+      100
+    ],
+    "positions_per_run": 88,
+    "aggregate_ratio": 0.988270001816577,
+    "aggregate_overhead_pct": -1.1729998183423018,
+    "online_sum_ms": 147015.69782407023,
+    "baseline_sum_ms": 148760.66009677015,
+    "paired_overhead_pct": {
+      "B1_A1": -0.06772763057751874,
+      "B2_A2": -2.3073865576287766
+    },
+    "iteration_ratio_median": 0.9807113772750085,
+    "iteration_ratio_p95": 1.0425350338714565,
+    "iteration_overhead_median_pct": -1.9288622724991544,
+    "iteration_overhead_p95_pct": 4.253503387145652,
+    "eight_step_blocks": [
+      {
+        "start": 13,
+        "end": 20,
+        "ratio": 1.0135659119709912
+      },
+      {
+        "start": 21,
+        "end": 28,
+        "ratio": 0.9738938295306302
+      },
+      {
+        "start": 29,
+        "end": 36,
+        "ratio": 0.9945276984990107
+      },
+      {
+        "start": 37,
+        "end": 44,
+        "ratio": 0.9899281028022896
+      },
+      {
+        "start": 45,
+        "end": 52,
+        "ratio": 0.9749260853514126
+      },
+      {
+        "start": 53,
+        "end": 60,
+        "ratio": 0.9985710993820902
+      },
+      {
+        "start": 61,
+        "end": 68,
+        "ratio": 0.9849755111230107
+      },
+      {
+        "start": 69,
+        "end": 76,
+        "ratio": 0.9765556886830643
+      },
+      {
+        "start": 77,
+        "end": 84,
+        "ratio": 0.9740892801512825
+      },
+      {
+        "start": 85,
+        "end": 92,
+        "ratio": 1.0083572373430172
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "ratio": 0.9804098716665872
+      }
+    ],
+    "eight_step_ratio_range": [
+      0.9738938295306302,
+      1.0135659119709912
+    ],
+    "measured_aggregate_below_one_percent": true
+  },
+  "independent_accuracy_reference": {
+    "session": "monopt2_b1_online",
+    "path": "/Users/henry/Desktop/FLASH1022/results/data16_sessions/monopt2_b1_online/online_report.json",
+    "available": true,
+    "correct_faults": 2,
+    "fault_denominator": 2,
+    "healthy_detection_count": 0,
+    "validated_two_of_two": true,
+    "included_in_healthy_overhead_qualification": false
+  },
+  "qualified_total_overhead_point_estimate_below_one_percent": true,
+  "scope": "Full online MONITOR versus no-FLASH baseline, healthy true-SGD ABBA; all positions 13..100 retained.",
+  "limitations": [
+    "The <1% qualification is a point estimate for these four healthy runs, not a long-term guarantee.",
+    "Shared-GPU serial run drift remains visible in paired and block statistics; no lowest-run selection.",
+    "Separate fault accuracy is referenced rather than inferred from the healthy timing experiment.",
+    "PROFILE overhead is not measured here."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "plans": [
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt3_a1_baseline",
+      "online": false,
+      "probe_enabled": false,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt3_b1_online",
+      "online": true,
+      "probe_enabled": true,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt3_b2_online",
+      "online": true,
+      "probe_enabled": true,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    },
+    {
+      "role": "monitor_overhead",
+      "seed": 1294713859,
+      "seq_len": 16,
+      "fault_kind": "simulated_gpu_stream_delay",
+      "profile_enabled": false,
+      "max_profiles": 3,
+      "session_id": "monopt3_a2_baseline",
+      "online": false,
+      "probe_enabled": false,
+      "intervals": [
+        {
+          "id": "healthy",
+          "start": 1,
+          "end": 100,
+          "record_start": 13,
+          "target_ranks": [],
+          "delay_ms": 0
+        }
+      ]
+    }
+  ],
+  "order": "ABBA; all healthy100 realSGD; exclude12 warmup; same seed/config; final lifecycle patch",
+  "scope": "full no-FLASH baseline, all positions retained; accuracy independently verified monopt2_b1_online with frozen detector/model"
+}

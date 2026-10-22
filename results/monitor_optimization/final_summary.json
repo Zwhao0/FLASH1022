@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "scope": "current fixed 2-node16GPU MoE workload; measured mean overhead, not per-window or long-term guarantee",
+  "monitor_no_flash_abba_pct": -1.1729998183423018,
+  "monitor_same_process_incremental_pct": -1.0959092338318488,
+  "negative_differences_are_not_claimed_as_speedups": true,
+  "profile_matched_fault_window_pct": -0.6210763485929638,
+  "accuracy_regression": {
+    "ranks": [
+      6,
+      10
+    ],
+    "correct": 2,
+    "total": 2,
+    "healthy_steps_no_trigger": 158,
+    "frozen_model_unchanged": true
+  },
+  "final_healthy_monitor_runs": {
+    "steps": 200,
+    "false_detections": 0,
+    "max_loss_difference": 0
+  },
+  "reports": {
+    "total_monitor": "report_stage3.json",
+    "crossover": "../data16_sessions/monopt_crossover_01/monitor_crossover_report.json",
+    "profile": "profile_control_stage2.json",
+    "freeze": "freeze_check.json",
+    "cleanup": "cleanup.json",
+    "retained_failed_stages": [
+      "report_stage1.json",
+      "report_stage2.json",
+      "stage2_failure.json"
+    ]
+  }
+}

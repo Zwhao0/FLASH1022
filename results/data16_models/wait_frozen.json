@@ -1,0 +1,194 @@
+{
+  "algorithm": "paired_first_call_signed_wait_localization",
+  "config": {
+    "calls_per_block": 3,
+    "expected_blocks": 2,
+    "phases_per_rank": 12,
+    "pp": 2,
+    "sampling_stride": 8,
+    "score_floor_us": 1.0,
+    "total_layers": 24,
+    "tp": 2,
+    "world_size": 16
+  },
+  "description": "Interpretable FLASH late-arriving communication extension; not the original paper algorithm.",
+  "feature_spec": {
+    "coverage": "all 16 ranks, 12 phases per rank, 2 paired microbatch calls per phase",
+    "excluded": [
+      "fault_rank",
+      "fault logs",
+      "declared delay",
+      "clique",
+      "group_id",
+      "timestamp_us"
+    ],
+    "identity": [
+      "TP members",
+      "semantic topology group/tag",
+      "phase_code",
+      "kind",
+      "count",
+      "dtype"
+    ],
+    "layer_aggregation": "median across 12 local attention-backward phases",
+    "microbatch_aggregation": "median of two verified first-call pairs",
+    "pair_key": [
+      "iteration",
+      "phase_code",
+      "operation_index",
+      "TP members"
+    ],
+    "score": "peer_duration_us - rank_duration_us"
+  },
+  "frozen_model_hash": "201cbfd42a8106368404bd1ee33c7a74640440897ad7fa9a746a37668f7b194d",
+  "healthy_calibration_counts": {
+    "phases_per_rank": 12,
+    "ranks_per_run": 16,
+    "runs": 12,
+    "sessions": [
+      "train16_s1",
+      "train16_s2",
+      "validation16_s3"
+    ],
+    "train_runs": 8,
+    "validation_runs": 4
+  },
+  "model_version": 1,
+  "source_code_hash": "5bd53a0093c4ff46e9c3fcd18f32e631e49382aedeaeac7b18095ea769a0a16f",
+  "source_hash": "39ac29e6028282b4350829cad20604a0b7b498df51873b53e3def6b79a904292",
+  "source_runs": [
+    {
+      "files": {
+        "manifest.json": "a0287f361e1ddc57d5f62762607b86821983b3bb319d834d63c72b9f3bc40354",
+        "profile.json": "79714f1e7b0b8662f2412b30aecdcefb7d64a77db2be795585d2ac06e0ef39cf",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s1_episode02",
+      "session_id": "train16_s1"
+    },
+    {
+      "files": {
+        "manifest.json": "26a3b3193c34539e8c82d383e58003d7b68465b1b6f149f84c43036594772e8d",
+        "profile.json": "4771724dd3d3954465ef3a3c177ffa784043b95599aa98d8dbe7b9fb2bb65d67",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s1_episode04",
+      "session_id": "train16_s1"
+    },
+    {
+      "files": {
+        "manifest.json": "a503e6b9fe4487bbf378dda54db53f4a3b4ca9641166b588daf6a7aea90cc7cb",
+        "profile.json": "3452d0b3d4c978e198a1eef5d3c920f1bb980e89c0e5a45834a8735967af7a40",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s1_episode18",
+      "session_id": "train16_s1"
+    },
+    {
+      "files": {
+        "manifest.json": "a6b76fbf43a3dbd8ed511b980c5a9764b872b31df9a203d1cdb1e38028ebeb54",
+        "profile.json": "d1659cd56f06854b2eabc92fe226f5e059673b0a9edc64cf61072259c49720f3",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s1_episode19",
+      "session_id": "train16_s1"
+    },
+    {
+      "files": {
+        "manifest.json": "cb1e60f8650c2ed110928bbba31e1e0baa562e0f461872cbbfb56400e32c10af",
+        "profile.json": "0f196c9448a095519aa2d030501d3c4431d4195411671e2ce172e599c2027f94",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s2_episode11",
+      "session_id": "train16_s2"
+    },
+    {
+      "files": {
+        "manifest.json": "d5d0d7308888b35de4f19e3c38a6961a5597cbf4c895ec309a71abf0ed4b842d",
+        "profile.json": "db6daeb93194a0dfefb0c801c6c5cb1a1c9545b3fba445d5645d995b42ac127a",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s2_episode14",
+      "session_id": "train16_s2"
+    },
+    {
+      "files": {
+        "manifest.json": "37137930e51fdee7f858eae46482494b37657e36f3cef8cc840f6ebbd924a839",
+        "profile.json": "9c771c7c4de76cda967949aff3aec7404ec04dca49e477fb5afd07434f30afcf",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s2_episode16",
+      "session_id": "train16_s2"
+    },
+    {
+      "files": {
+        "manifest.json": "b516ac198f997cc774b77850a0b8e7b53365b03e6807891b4d1805a9f72e6bbf",
+        "profile.json": "08404b7ae0fb3893d13f624dcbb5e90a9937335e791a85840037021bf577a335",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "train",
+      "run_id": "train16_s2_episode17",
+      "session_id": "train16_s2"
+    },
+    {
+      "files": {
+        "manifest.json": "142f1156130d7fad7a0c64182617db8ba910ba266cd168bc424478d29434e8a1",
+        "profile.json": "97b21e688b222fd5af0760275efad8ceac5dbcbff38dbb467712237354982696",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "validation",
+      "run_id": "validation16_s3_episode05",
+      "session_id": "validation16_s3"
+    },
+    {
+      "files": {
+        "manifest.json": "1e6defea343974205c7dbb85393ac3aef6aa29897dd978cc65ffe5e8cd72deb4",
+        "profile.json": "ec99da2778ba85b2d493f56088ade75a77b9f1c964d4e395f1e66f0c45714666",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "validation",
+      "run_id": "validation16_s3_episode11",
+      "session_id": "validation16_s3"
+    },
+    {
+      "files": {
+        "manifest.json": "0d27e1a41d0d0ab5be13ec4cae2b6a93de1ae36186ffa04fb761e7c0962639e6",
+        "profile.json": "d328ddcfe4ba2544ed7b74ffa02b2bfb673f5a68455b294aa0cc792e0bdaa351",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "validation",
+      "run_id": "validation16_s3_episode14",
+      "session_id": "validation16_s3"
+    },
+    {
+      "files": {
+        "manifest.json": "1f9afcfdea604dc152d8c2af19886135c74a7259363725e42293fc7dfb8bf176",
+        "profile.json": "8c2ca561a84e43b096b5361555bb2a983411e825b076144f4ff1d63a4b7ae1db",
+        "topology.json": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f"
+      },
+      "role": "validation",
+      "run_id": "validation16_s3_episode17",
+      "session_id": "validation16_s3"
+    }
+  ],
+  "thresholds": {
+    "fault_limit_multiplier": 2.0,
+    "fault_limit_us": 2824.5,
+    "healthy_limit_multiplier": 1.25,
+    "healthy_limit_us": 1765.3125,
+    "healthy_positive_max_us": 1412.25,
+    "healthy_runs_used": 12,
+    "healthy_train_runs_used": 8,
+    "healthy_validation_runs_used": 4,
+    "minimum_top_to_runner_up_ratio": 2.0,
+    "ratio_denominator_floor_us": 1.0,
+    "scale_h_us": 1412.25
+  }
+}

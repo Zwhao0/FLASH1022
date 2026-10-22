@@ -1,0 +1,15 @@
+server.md
+服务器.md
+*.pdf
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+*.so
+*.whl
+build/
+dist/
+results/
+models/
+datasets/

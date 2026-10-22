@@ -1,0 +1,5 @@
+# Python 3.12; tested with NGC pytorch:25.03-py3 (torch 2.7.0a0 CUDA12.8).
+transformers==4.53.2
+redis==5.0.5
+Rbeast==0.1.25
+numpy==1.26.4

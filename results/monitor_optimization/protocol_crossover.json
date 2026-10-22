@@ -1,0 +1,137 @@
+{
+  "session_id": "monopt_crossover_01",
+  "role": "monitor_controlled_benchmark",
+  "online": true,
+  "monitor_benchmark": true,
+  "benchmark_blocks": [
+    {
+      "block": 1,
+      "mode": "A",
+      "start": 13,
+      "end": 44
+    },
+    {
+      "block": 2,
+      "mode": "B",
+      "start": 45,
+      "end": 76
+    },
+    {
+      "block": 3,
+      "mode": "B",
+      "start": 77,
+      "end": 108
+    },
+    {
+      "block": 4,
+      "mode": "A",
+      "start": 109,
+      "end": 140
+    },
+    {
+      "block": 5,
+      "mode": "B",
+      "start": 141,
+      "end": 172
+    },
+    {
+      "block": 6,
+      "mode": "A",
+      "start": 173,
+      "end": 204
+    },
+    {
+      "block": 7,
+      "mode": "A",
+      "start": 205,
+      "end": 236
+    },
+    {
+      "block": 8,
+      "mode": "B",
+      "start": 237,
+      "end": 268
+    }
+  ],
+  "probe_enabled": true,
+  "profile_enabled": false,
+  "max_profiles": 3,
+  "seq_len": 16,
+  "seed": 20261022,
+  "fault_kind": "none_controlled_measurement",
+  "intervals": [
+    {
+      "id": "warmup",
+      "start": 1,
+      "end": 12,
+      "record_start": 1,
+      "target_ranks": [],
+      "delay_ms": 0,
+      "warmup": true
+    },
+    {
+      "id": "block1_A",
+      "start": 13,
+      "end": 44,
+      "record_start": 13,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block2_B",
+      "start": 45,
+      "end": 76,
+      "record_start": 45,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block3_B",
+      "start": 77,
+      "end": 108,
+      "record_start": 77,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block4_A",
+      "start": 109,
+      "end": 140,
+      "record_start": 109,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block5_B",
+      "start": 141,
+      "end": 172,
+      "record_start": 141,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block6_A",
+      "start": 173,
+      "end": 204,
+      "record_start": 173,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block7_A",
+      "start": 205,
+      "end": 236,
+      "record_start": 205,
+      "target_ranks": [],
+      "delay_ms": 0
+    },
+    {
+      "id": "block8_B",
+      "start": 237,
+      "end": 268,
+      "record_start": 237,
+      "target_ranks": [],
+      "delay_ms": 0
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "audit_version": 1,
+  "inputs": {
+    "blind_report": "results/data16_models/wait_blind.json",
+    "frozen_model": "results/data16_models/wait_frozen.json",
+    "localizer": "flash_v1/wait_localize.py::localize_scores",
+    "frozen_model_hash": "201cbfd42a8106368404bd1ee33c7a74640440897ad7fa9a746a37668f7b194d",
+    "score_unit": "us",
+    "frozen_thresholds_us": {
+      "healthy_limit": 1765.3125,
+      "fault_limit": 2824.5,
+      "minimum_top_to_runner_up_ratio": 2.0,
+      "ratio_denominator_floor": 1.0
+    }
+  },
+  "rank_relabeling": {
+    "ranks": "0..15",
+    "permutations_per_run": 100,
+    "runs": 20,
+    "random_seed": 20261022,
+    "prediction_and_top_rank_equivariant": 2000,
+    "checks": 2000,
+    "failures": 0,
+    "interpretation": "Bijective relabelings preserved healthy/inconclusive outcomes and renamed every rank:N outcome and top_rank by the same permutation."
+  },
+  "score_scale_sensitivity": {
+    "thresholds_held_fixed": true,
+    "factors": {
+      "0.5": {
+        "correct_decisions": 17,
+        "decision_counts": {
+          "fault_rank": 13,
+          "healthy": 4,
+          "inconclusive": 3
+        },
+        "changed_runs": [
+          {
+            "run_id": "blind16_s4_retry2_episode10",
+            "true_label": "rank:8",
+            "scaled_decision": "inconclusive",
+            "reason": "hysteresis_band"
+          },
+          {
+            "run_id": "blind16_s4_retry2_episode14",
+            "true_label": "rank:14",
+            "scaled_decision": "inconclusive",
+            "reason": "hysteresis_band"
+          },
+          {
+            "run_id": "blind16_s4_retry2_episode15",
+            "true_label": "rank:9",
+            "scaled_decision": "inconclusive",
+            "reason": "hysteresis_band"
+          }
+        ]
+      },
+      "1": {
+        "correct_decisions": 20,
+        "decision_counts": {
+          "fault_rank": 16,
+          "healthy": 4,
+          "inconclusive": 0
+        },
+        "changed_runs": []
+      },
+      "2": {
+        "correct_decisions": 19,
+        "decision_counts": {
+          "fault_rank": 16,
+          "healthy": 3,
+          "inconclusive": 1
+        },
+        "changed_runs": [
+          {
+            "run_id": "blind16_s4_retry2_episode09",
+            "true_label": "healthy",
+            "scaled_decision": "inconclusive",
+            "reason": "hysteresis_band"
+          }
+        ]
+      }
+    },
+    "interpretation": "This rescales the existing score vectors while keeping thresholds fixed; it is numeric sensitivity only and does not simulate a new workload or constitute workload extrapolation."
+  },
+  "blind_evidence": {
+    "session": "blind16_s4_retry2",
+    "runs": 20,
+    "run_accuracy": "20/20",
+    "healthy_controls": 4,
+    "healthy_false_positives": "0/4",
+    "faulted_runs": 16,
+    "faulted_ranks_covered": "each rank 0..15 once",
+    "inconclusive_runs": 0,
+    "session_seed": 962716088,
+    "model": {
+      "id": "bayliner1980/Qwen2.5-0.5B-MoE-A0.3B",
+      "revision": "4b89028ef7376d0e92acbbc4a7f560c2374aeec0"
+    },
+    "configuration": {
+      "world_size": 16,
+      "nodes": 2,
+      "tp": 2,
+      "pp": 2,
+      "ep": 2,
+      "expert_dp": 2,
+      "sequence_length": 16,
+      "microbatches": 2,
+      "batch_size": 1,
+      "collective": "AllReduce",
+      "fault_kind": "simulated_gpu_stream_delay",
+      "sampling_stride": 8
+    },
+    "topology": {
+      "backend": "GREYHOUND Megatron parallel_state",
+      "topology_hash": "9f862bdcfcba20bd74eb9cbf00649008b4043dcacedd02268d7b8803f18ae35f",
+      "hosts": [
+        "gpu-01",
+        "gpu-02"
+      ],
+      "rank_placement": "ranks 0..7 on gpu-02; ranks 8..15 on gpu-01"
+    },
+    "injected_delay_ms": {
+      "faulted_run_count": 16,
+      "distinct_values": 16,
+      "min": 107.818,
+      "max": 641.34,
+      "healthy_control_delay": 0
+    },
+    "injection_verification": "All 16 faulted runs observed 8/8 expected step records; four healthy controls recorded 0/0.",
+    "coverage_per_run": {
+      "ranks_expected_observed": "16/16",
+      "rank_phases_expected_observed": "192/192",
+      "microbatch_pairs_expected_observed": "384/384",
+      "complete_runs": "20/20"
+    },
+    "calibration_context": {
+      "healthy_runs": 12,
+      "train_validation_split": "8 train across train16_s1/train16_s2; 4 validation in validation16_s3",
+      "calibration_topology_hash_matches_blind": true
+    }
+  },
+  "score_ranges_us": {
+    "faulted_top_score_min_median_max": [
+      4598.75,
+      14463.75,
+      27346.25
+    ],
+    "healthy_top_score_min_median_max": [
+      578.75,
+      754.75,
+      978.5
+    ]
+  },
+  "supports": [
+    "On this held-out session and fixed 16-rank configuration, the frozen model correctly localized all 16 injected target ranks and classified all four healthy controls.",
+    "Rank output labels are equivariant under the 2,000 tested bijective renamings.",
+    "The original decisions are robust to the tested numeric score factor 1; factor 0.5 creates three abstentions and factor 2 creates one healthy abstention with thresholds frozen."
+  ],
+  "does_not_establish": [
+    "Generalization to another model or checkpoint, world size, TP/PP/EP layout, node count, hardware, topology, or backend.",
+    "Generalization across random seeds: all blind manifests use one seed.",
+    "Generalization to delays outside the tested 107.818..641.34 ms range, other fault mechanisms, or unsimulated production incidents.",
+    "Workload extrapolation from score multiplication; those transformed scores do not represent reruns at different workload sizes."
+  ]
+}

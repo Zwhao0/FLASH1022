@@ -1,0 +1,17 @@
+{
+  "scope": "CPU mocks, not end-to-end GPU overhead",
+  "profile_calls": 672,
+  "profile_records": 576,
+  "profile_records_and_event_sequence_equal": true,
+  "event_api_calls": 96,
+  "synchronizations": 47,
+  "monitor_calls": 1000000,
+  "monitor_additional_allocations": 0,
+  "monitor_additional_instrumentation_calls": 0,
+  "test": "python3 flash_v1/tests/probe_cpu_mock.py --baseline results/monitor_optimization/probe_before.cpp",
+  "baseline_source_sha256": "14c0b054df3b829450fa85cc9a18d19d97accd1a29dcae0cbc18d0089d643109",
+  "optimized_source_sha256": "042b2c300e1c019e44cc575e3283583e5a32f13f14ef9a0a6e1c2626f02ef8eb",
+  "monitor_channel_and_online_cpu_tests": 8,
+  "latest_control_channel_and_finish_cpu_tests": 9,
+  "latest_test_command": "python3 -m unittest flash_v1.tests.test_online flash_v1.tests.test_monitor_channel flash_v1.tests.test_node_finish"
+}
