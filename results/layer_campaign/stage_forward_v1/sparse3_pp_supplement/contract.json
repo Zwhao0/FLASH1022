@@ -1,0 +1,149 @@
+{
+  "all_C_windows": 6,
+  "all_runs_required": true,
+  "bootstrap": {
+    "block_length": 2,
+    "confidence": 0.95,
+    "existing_function": "score_sparse3._pooled (alias bootstrap_ratio_of_sums)",
+    "replicates": 10000,
+    "resampling": "All six run/order strata retained; paired circular logical8 positions resampled independently within each stratum, summed numerator/denominator across six strata; no trimming or selection",
+    "seed": 20261024
+  },
+  "execution_API": "After new gate and original freeze checks: owned_runner.freeze=original_freeze; owned_runner.check_sources(); owned_runner.detached_run(each repeat plan). Owner writes completion paths; this helper never launches GPU.",
+  "interpretation": "Independent training processes with identical declared input, not additional blind accuracy tests. Show original and both repeats per run/order points and CIs, order-pooled and six-stratum pooled. Preserve original PP CI crossing5 as inconclusive; no retrospective pass or minimum selection.",
+  "layout": "node_local_pp",
+  "max_additional_sessions": 2,
+  "original_contract_sha256": "65c15794a1d358b1b6922b17344e92f02f7cafdd0fc70bfa624a9e9b8b67dd4e",
+  "original_freeze_path": "results/layer_campaign/stage_forward_v1/sparse3_gc_draft/freeze.json",
+  "original_freeze_sha256": "1ab4acf3fe158f070d40ae9e299daff93d1c265c668511c273799222c2332ca2",
+  "original_score_sha256": "da5f68a64dc9a67ef2f8fb73d8c08c063aca37bc0e8d6587dfe51adfd33ec5ab",
+  "protocol": "sparse3_PP_fixed_two_repeats_six_windows_v1",
+  "requires_NEW_fixed_reg8_gate": true,
+  "runs": [
+    {
+      "kind": "original_completed_run",
+      "plan_path": "results/layer_campaign/stage_forward_v1/sparse3_gc_draft/node_local_pp_plan.json",
+      "plan_sha256": "eaf5d6261cb3afb164a4ba7284fda0553a03cf1f58c3ab876893b0091e83add6",
+      "run": 1,
+      "session_id": "v2s_sparse3_gc_profile_node_local_pp_01"
+    },
+    {
+      "kind": "fixed_predeclared_process_repeat",
+      "plan_path": "results/layer_campaign/stage_forward_v1/sparse3_pp_supplement/repeat_02_plan.json",
+      "plan_sha256": "be77b22e2db40be840fe5a693137cd9ad87b1c1fe688e8a6cc6b93521b70bb2c",
+      "run": 2,
+      "session_id": "v2s_sparse3_gc_profile_node_local_pp_repeat_02"
+    },
+    {
+      "kind": "fixed_predeclared_process_repeat",
+      "plan_path": "results/layer_campaign/stage_forward_v1/sparse3_pp_supplement/repeat_03_plan.json",
+      "plan_sha256": "705e0c46273a9b1635d45b543e4df61fbb82fe71911e644c4943789cfb219e45",
+      "run": 3,
+      "session_id": "v2s_sparse3_gc_profile_node_local_pp_repeat_03"
+    }
+  ],
+  "scorer_path": "results/layer_campaign/stage_forward_v1/sparse3_gc_draft/score_sparse3.py",
+  "scorer_sha256": "ce7a62421687b111374df1b3f9c031203caa1d1ea95615e89b734f8e09412576",
+  "seed": 1348533921,
+  "source_and_plan_rule": "Only session_id changes; same source/model/input/SGD/window/callback context as original cost; optional NEWreg8 diagnostic source is excluded",
+  "status": "CPU_prepared_after_NEWreg8_gate_only",
+  "steps_per_run": 140,
+  "strata": [
+    {
+      "B": 1,
+      "C": 2,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "cold",
+      "run": 1
+    },
+    {
+      "B": 4,
+      "C": 3,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "warm",
+      "run": 1
+    },
+    {
+      "B": 1,
+      "C": 2,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "cold",
+      "run": 2
+    },
+    {
+      "B": 4,
+      "C": 3,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "warm",
+      "run": 2
+    },
+    {
+      "B": 1,
+      "C": 2,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "cold",
+      "run": 3
+    },
+    {
+      "B": 4,
+      "C": 3,
+      "logical": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "order": "warm",
+      "run": 3
+    }
+  ]
+}

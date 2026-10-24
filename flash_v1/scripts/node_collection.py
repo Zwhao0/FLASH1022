@@ -54,11 +54,17 @@ def main():
         raise ValueError(f'unknown parallel layout: {parallel_layout}')
     online = bool(plan.get('online', False))
     probe_enabled = bool(plan.get('probe_enabled', True))
-    if online and not probe_enabled:
+    semantic_only = plan.get('profile_backend') == 'semantic_only'
+    if semantic_only and (probe_enabled or ((online or plan.get('profile_enabled', True))
+                                          and not plan.get('evidence_enabled', False))):
+        raise ValueError('semantic_only requires evidence and disables the native probe')
+    if online and semantic_only and not plan.get('evidence_model'):
+        raise ValueError('online semantic_only requires an explicit v2 model')
+    if online and not probe_enabled and not semantic_only:
         raise ValueError('online localization requires its on-demand probe')
     (output / 'plan.json').write_text(json.dumps(plan, indent=2))
     state = output / 'state.bin'
-    state.write_bytes(int(not online and plan.get('profile_enabled', True)).to_bytes(4, sys.byteorder))
+    state.write_bytes(int(probe_enabled and not online and plan.get('profile_enabled', True)).to_bytes(4, sys.byteorder))
     contexts = output / 'contexts'; contexts.mkdir()
     for rank in range(args.node_rank * 8, (args.node_rank + 1) * 8):
         (contexts / f'{rank}.bin').write_bytes(b'\0' * 16)
@@ -74,21 +80,71 @@ def main():
     manifest = dict(session_id=args.session, node_rank=args.node_rank, plan=plan,
         configuration=dict(tp=2, pp=2, ep=2, expert_dp=2, nnodes=2, world_size=16,
             sequence_length=plan.get('seq_len', 16), microbatches=2, batch_size=1,
-            fault_kind='simulated_gpu_stream_delay', collectives='AllReduce', sample_stride=8, profile_phase='attention-backward-plus-first-per-comm', model_id='bayliner1980/Qwen2.5-0.5B-MoE-A0.3B',
+            fault_kind=plan.get('fault_kind', 'simulated_gpu_stream_delay'), collectives='AllReduce', sample_stride=8, profile_phase='attention-backward-plus-first-per-comm', model_id='bayliner1980/Qwen2.5-0.5B-MoE-A0.3B',
             model_revision='4b89028ef7376d0e92acbbc4a7f560c2374aeec0'),
         source_sha256={str(f): hashlib.sha256(f.read_bytes()).hexdigest()
-            for f in sorted(Path('flash_v1').rglob('*')) if f.suffix in ('.py', '.cpp')},
+            for f in sorted(Path('flash_v1').rglob('*')) if f.suffix in ('.py', '.cpp', '.cu')},
         environment={k: v for k, v in env.items() if k.startswith(('NCCL_', 'TORCH_NCCL_', 'PYTORCH_'))},
         probe_sha256=hashlib.sha256(Path('flash_v1/build/libflashprobe.so').read_bytes()).hexdigest() if not args.verify and probe_enabled else None,
         start_time=time.time())
     manifest['model_sha256'] = {f.name: hashlib.sha256(f.read_bytes()).hexdigest()
         for f in sorted(Path('models/qwen_moe').glob('*')) if f.suffix in ('.json', '.safetensors')}
+    if plan.get('evidence_model'):
+        manifest['evidence_model_sha256'] = hashlib.sha256(
+            Path(plan['evidence_model']).read_bytes()).hexdigest()
     manifest['snapshot_sha256'] = hashlib.sha256(Path('flash_v1/build/libflashsnapshot.so').read_bytes()).hexdigest() if not args.verify else None
+    if any(row.get('fault_mode') in ('attention_bwd_compute', 'whole_compute') for row in plan['intervals']):
+        manifest['compute_workload_sha256'] = hashlib.sha256(
+            Path('flash_v1/build/libflashcompute.so').read_bytes()).hexdigest()
     manifest['gpu_before'] = sp.check_output(['nvidia-smi', '--query-gpu=index,name,uuid,memory.total,memory.free,clocks.sm',
         '--format=csv,noheader'], text=True).splitlines()
     manifest['online'] = online
     manifest['probe_enabled'] = probe_enabled
+    if plan.get('scoped_compute_enabled', False):
+        manifest['configuration']['scoped_compute'] = dict(
+            enabled=True, catalog_only=bool(plan.get('scoped_catalog_only', False)),
+            observer_independent=True, training_scope='schedule_only')
+    if semantic_only:
+        manifest['native_profile_coverage'] = 'not_applicable_semantic_only'
     manifest['configuration']['parallel_layout'] = parallel_layout
+    if 'monitor_confirm_recent_three' in plan:
+        if type(plan['monitor_confirm_recent_three']) is not bool:
+            raise ValueError('monitor_confirm_recent_three must be boolean')
+        manifest['configuration']['monitor_confirm_recent_three'] = plan['monitor_confirm_recent_three']
+    if 'monitor_profile_transition' in plan:
+        if type(plan['monitor_profile_transition']) is not bool:
+            raise ValueError('monitor_profile_transition must be boolean')
+        manifest['configuration']['monitor_profile_transition'] = plan['monitor_profile_transition']
+        manifest['configuration']['training_steps'] = plan.get('steps',plan['intervals'][-1]['end'])
+    if 'stage_forward_aux_enabled' in plan and type(plan['stage_forward_aux_enabled']) is not bool:
+        raise ValueError('stage_forward_aux_enabled must be boolean')
+    if plan.get('stage_forward_aux_enabled', False):
+        manifest['configuration']['stage_forward_aux_enabled'] = True
+        if plan.get('stage_forward_aux_model'):
+            manifest['configuration']['stage_forward_aux_model'] = plan['stage_forward_aux_model']
+            manifest['stage_forward_aux_model_sha256'] = hashlib.sha256(
+                Path(plan['stage_forward_aux_model']).read_bytes()).hexdigest()
+    if plan.get('stage_forward_aux_enabled', False) and plan.get('stage_forward_aux_context_binding'):
+        binding_path=Path(plan['stage_forward_aux_context_binding'])
+        manifest['configuration']['stage_forward_aux_context_binding']=str(binding_path)
+        manifest['stage_forward_aux_context_binding_file_sha256']=hashlib.sha256(binding_path.read_bytes()).hexdigest()
+    if plan.get('evidence_enabled', False):
+        manifest['configuration']['evidence'] = dict(
+            enabled=True, schema_version=1,
+            selection_index=plan.get('evidence_selection_index', 0),
+            output='evidence_rankN.jsonl',
+            activation='PROFILE only')
+    if plan.get('stage_forward_aux_sampling') is not None:
+        from flash_v1.stage_forward_sampling import CONFIG
+        if (plan['stage_forward_aux_sampling'] != CONFIG or not online
+                or not plan.get('stage_forward_aux_enabled', False)):
+            raise ValueError('sparse3 requires explicit online auxiliary sampling contract')
+        manifest['configuration']['stage_forward_aux_sampling'] = plan['stage_forward_aux_sampling']
+    if 'startup_gc_fixed_model' in plan or plan.get('startup_gc_policy') is not None:
+        from flash_v1.startup_gc import validate_plan
+        manifest['configuration']['startup_gc_fixed_model'] = validate_plan(plan)
+        if manifest['configuration']['startup_gc_fixed_model']:
+            manifest['configuration']['startup_gc_policy'] = plan['startup_gc_policy']
     manifest['environment']['FLASH_PARALLEL_LAYOUT'] = parallel_layout
     if plan.get('monitor_benchmark'):
         manifest['configuration']['monitor_benchmark_blocks'] = plan['benchmark_blocks']
@@ -125,8 +181,9 @@ def main():
                 else:
                     raise RuntimeError('private Redis unavailable')
                 if online:
-                    spawn([sys.executable, '-m', 'flash_v1.online', '--output', str(output),
-                           '--redis-port', str(port), '--model', 'results/data16_models/wait_frozen.json',
+                    controller_module = ('flash_v1.online_v2' if plan.get('evidence_model') else 'flash_v1.online')
+                    spawn([sys.executable, '-m', controller_module, '--output', str(output),
+                           '--redis-port', str(port), '--model', plan.get('evidence_model', 'results/data16_models/wait_frozen.json'),
                            '--warmup', '12', '--max-profiles', str(plan.get('max_profiles', 3))], 'online.log')
             drain_process = None
             drain_command = [sys.executable, '-m', 'flash_v1.scripts.drain_collection',
@@ -159,8 +216,24 @@ def main():
             if plan.get('monitor_benchmark'):
                 command.append('--monitor-benchmark')
         train = spawn(command, 'training.log', training_env)
+        evidence_publisher = auxiliary_publisher = None
+        if online and plan.get('evidence_enabled', False):
+            import redis
+            from flash_v1.scripts.v2_transport import EvidencePublisher
+            evidence_client = redis.Redis(host=args.master_addr, port=port,
+                                          socket_timeout=5, socket_connect_timeout=5)
+            evidence_publisher = EvidencePublisher(output, args.node_rank, evidence_client,
+                                                   publish_completion=semantic_only)
+            if plan.get('stage_forward_aux_enabled', False):
+                auxiliary_publisher = EvidencePublisher(output, args.node_rank, evidence_client,
+                    filename='stage_forward_aux_rank{rank}.jsonl', key_prefix='online_stage_forward_aux_node',
+                    completed_record='stage_forward_aux', completion_prefix='online_stage_forward_drained_node')
         deadline = time.monotonic() + args.timeout
         while train.poll() is None:
+            if auxiliary_publisher is not None:
+                auxiliary_publisher.publish()
+            if evidence_publisher is not None:
+                evidence_publisher.publish()
             if (output / 'STOP').exists():
                 raise InterruptedError('session STOP requested')
             if time.monotonic() > deadline:
@@ -170,6 +243,21 @@ def main():
             time.sleep(.5)
         if train.returncode:
             raise RuntimeError(f'torchrun exited {train.returncode}')
+        if auxiliary_publisher is not None:
+            auxiliary_publisher.publish()
+            if any(auxiliary_publisher.partial.values()):
+                raise RuntimeError('incomplete final stage forward auxiliary JSONL record')
+            (output / 'stage_forward_transport.json').write_text(json.dumps(dict(
+                published=auxiliary_publisher.published,
+                partial_bytes=sum(len(x) for x in auxiliary_publisher.partial.values()))))
+        if evidence_publisher is not None:
+            evidence_publisher.publish()
+            if any(evidence_publisher.partial.values()):
+                raise RuntimeError('incomplete final evidence JSONL record')
+            (output / 'evidence_transport.json').write_text(json.dumps(dict(
+                published=evidence_publisher.published,
+                partial_bytes=sum(len(x) for x in evidence_publisher.partial.values()))))
+            evidence_client.close()
         if not args.verify:
             if online and args.node_rank == 0:
                 finish_deadline = time.monotonic() + 30

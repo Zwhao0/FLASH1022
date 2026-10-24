@@ -1,0 +1,55 @@
+{
+  "base_collector_sha256": "57c7cd2d49e231448354521d51eaeb12d078b7e242ddc22f34c088fd5766a204",
+  "candidate_compute_files": {
+    "collector.py": "9de2cbdb32b94e7f6b2d8702963bc864661ef8ddab4a7303d11b0972a4fde3b6",
+    "online_v2_sparse.py": "c6a33d1ad83141378c698abf4c13fadb4f6e1074f79df0b6a5f2712d65e9f49c",
+    "sampling.py": "39753ec6d85f687a90bb850d40e545f52e202367db738b62b4722ee2916588b7",
+    "sparse_math.py": "7a70b490e407e2dd9e1c31d44b44c1e8d3cea2334c4e1af80be0dfc488884f1b",
+    "sparse_peer.py": "de6d10d197295063f97fc81b5290ec368b89e1a17c9a308311041b86854aa9bc",
+    "train_pipeline_cost.py": "523c77d1278b9f4e79f0aab14b36ca982ddb203c5603eb9a283bbab2d288c873"
+  },
+  "candidate_contract_sha256": "65c15794a1d358b1b6922b17344e92f02f7cafdd0fc70bfa624a9e9b8b67dd4e",
+  "candidate_freeze_sha256": "1ab4acf3fe158f070d40ae9e299daff93d1c265c668511c273799222c2332ca2",
+  "metadata_or_token_or_query_pool_change": false,
+  "patch_sha256": "de9beadee78c14fac7456a1cd302bb7d177cc8ba039f2e95e59d2794d190c488",
+  "peer_model_code_sha256": "d5a2b0c4b0bd8ed43573ec8d7419d106bf9e2f27aa926193e5fee77d1d4dfada",
+  "production_files": {
+    "flash_v1/online_v2.py": {
+      "after_sha256": "d7653617fc604f4f514b0c5a6fe65eecdfc166e2ac493d2f877f0bad4f55690a",
+      "before_sha256": "59df259914b94b01d38abdf34e401426f7b90d5eff4528c24e8dcee03513af5a"
+    },
+    "flash_v1/scripts/data16.py": {
+      "after_sha256": "8437d36addafd7a03528ae8f13d0877f4e013a2b6d9b82d46e8eabcd057aed9c",
+      "before_sha256": "33c9f42a5b4b8c3fce526adf7a3be13b08c0db6d91f33d4a0f5524d43864c354"
+    },
+    "flash_v1/scripts/node_collection.py": {
+      "after_sha256": "dff248e5557aa7cb1a04949a56377635b90c6c70ee46d221e87845cec6005e90",
+      "before_sha256": "34bb767f6d7238a435f2d9dae8b01f4123d57b310ecd1fe0d758ad6bdf4cb4af"
+    },
+    "flash_v1/stage_forward_sampling.py": {
+      "after_sha256": "39753ec6d85f687a90bb850d40e545f52e202367db738b62b4722ee2916588b7",
+      "before_sha256": null
+    },
+    "flash_v1/stage_forward_sparse_collector.py": {
+      "after_sha256": "d203050bcc65d3b74eb35acea6c8040060d7d3992ceb3861fada6b8a019c57f4",
+      "before_sha256": null
+    },
+    "flash_v1/stage_forward_sparse_math.py": {
+      "after_sha256": "7a70b490e407e2dd9e1c31d44b44c1e8d3cea2334c4e1af80be0dfc488884f1b",
+      "before_sha256": null
+    },
+    "flash_v1/stage_forward_sparse_peer.py": {
+      "after_sha256": "544921b61ea3ead63c58cdc47c33cfcca5d01db35cd558ed938989a90f0b7419",
+      "before_sha256": null
+    },
+    "flash_v1/startup_gc.py": {
+      "after_sha256": "43de5cedb18c3f8d4f1ffcd4d938d1a2e89c413257522d274a8e26f4623eda59",
+      "before_sha256": null
+    },
+    "flash_v1/train_pipeline.py": {
+      "after_sha256": "cb22f32feb0b4dd39535b0d1d818f0e6701eb9504b2a767c64111c47b05c9067",
+      "before_sha256": "9104564ae23aa79d6671aaec642d9e959f18d1bc03d67245573a19e5e7d64336"
+    }
+  },
+  "status": "CPU_draft_not_applied"
+}

@@ -1,0 +1,16 @@
+{
+  "authorization": "root-authorized exactly one node_local_pp repeat after original PP268; original and repeat retained; no adaptive repeats",
+  "no_retries": true,
+  "no_truth_before_public_snapshot": true,
+  "only_plan_difference": "session_id",
+  "original_plan_sha256": "0f7b2edbc91b2762575659beef2833a16c224db8b298010249c624a4da9e80d1",
+  "original_session": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_02",
+  "protocol": "monitor_gc_268_fixed_node_local_pp_repeat_v1",
+  "recovery_amendment_sha256": "46423945c070c96f4bf5c75ec9e94f38d59ba24a5b4baff7f454aef20f241507",
+  "repeat_plan_sha256": "875b8012cbed79caf20cd6f87f3116fa53e2a757ad270ff7e7d93fc38e0fe0f4",
+  "repeat_session": "v2s_sparse3_gc_monitor268_node_local_pp_repeat_01",
+  "seed": 1348533921,
+  "source_freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+  "steps": 268,
+  "supplement_contract_sha256": "ed301cbad43a6ee390231901e7edf4a96056469bb50cfeae150da989452e7b50"
+}

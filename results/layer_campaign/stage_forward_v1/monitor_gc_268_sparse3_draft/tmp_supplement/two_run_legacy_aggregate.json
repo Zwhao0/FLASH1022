@@ -1,0 +1,271 @@
+{
+  "aggregation_script_sha256": "8a5df69fba6e62b6ef095708618e107d08381f9eca3a2e584c4e554a40dd9ef2",
+  "average_budget_gate": "within_budget",
+  "combined_all": {
+    "baseline_total_ms": 96727.60381456465,
+    "ci95_percent": [
+      -0.5402294068412872,
+      -0.06434178000112632
+    ],
+    "delta_percent": -0.29909079078026535,
+    "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+    "profiled_total_ms": 96438.30045941286
+  },
+  "combined_by_order": {
+    "AB": {
+      "baseline_total_ms": 48615.11103902012,
+      "ci95_percent": [
+        -1.0711262498700387,
+        -0.2852203532867054
+      ],
+      "delta_percent": -0.6707890958386975,
+      "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+      "profiled_total_ms": 48289.0061752405
+    },
+    "BA": {
+      "baseline_total_ms": 48112.492775544524,
+      "ci95_percent": [
+        -0.18662159846987963,
+        0.3530101251566291
+      ],
+      "delta_percent": 0.07649054643565911,
+      "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+      "profiled_total_ms": 48149.294284172356
+    }
+  },
+  "contract_sha256": "ed301cbad43a6ee390231901e7edf4a96056469bb50cfeae150da989452e7b50",
+  "fixed_runs": 2,
+  "layout": "legacy",
+  "no_further_adaptive_repeats": true,
+  "original_gate_unchanged": true,
+  "original_result": {
+    "completion_sha256": "923467615d520e1f6acd76c24c591eee9c887095f5f672db370717b49d16a3b3",
+    "estimand": "maximum full_step_wall_ms across ranks 0..15 at each physical position; compare logical positions 33..64; monitor-vs-bare B/A ratio; ABBA order strata kept separate",
+    "events": {
+      "children": 0,
+      "file_absent": true,
+      "manual_requests": 0,
+      "natural_candidates": 0,
+      "profile_steps": 0,
+      "sealed_public_event_count": 0
+    },
+    "layout": "legacy",
+    "orders": {
+      "AB": {
+        "baseline_total_ms": 24177.015928085893,
+        "bootstrap": {
+          "block_length": 2,
+          "method": "circular paired logical-position block bootstrap",
+          "replicates": 10000,
+          "seed": 20261024
+        },
+        "ci95_percent": [
+          -0.19255064790085125,
+          1.1616275204789432
+        ],
+        "delta_percent": 0.48550599368806235,
+        "label": "AB B/A monitor delta",
+        "paired_position_delta_percent": [
+          0.11397229878757908,
+          0.5070063188426621,
+          -0.9132739525088862,
+          1.4910094443385535,
+          0.62846380587529,
+          -1.0966156358546253,
+          -0.489378723776035,
+          0.6959400722603482,
+          -1.1575694232496825,
+          -1.4509032050313508,
+          2.98534767759957,
+          3.8013613136085977,
+          1.1902428251687747,
+          2.033857937285255,
+          0.5235336137498381,
+          -4.270924679901745,
+          -1.586747389979315,
+          2.3670025553640395,
+          1.6315118466166068,
+          1.981871951737113,
+          -0.6412039638036937,
+          2.9897827798193832,
+          0.508290714689319,
+          -2.2997251869570023,
+          0.26686329082730165,
+          2.3515678219257596,
+          1.258408366111019,
+          1.3367259588924485,
+          -1.4369336065524596,
+          -1.7583270634258796,
+          3.468495577240649,
+          0.9847394743225824
+        ],
+        "profiled_total_ms": 24294.396789511666
+      },
+      "BA": {
+        "baseline_total_ms": 24174.602629151195,
+        "bootstrap": {
+          "block_length": 2,
+          "method": "circular paired logical-position block bootstrap",
+          "replicates": 10000,
+          "seed": 20261024
+        },
+        "ci95_percent": [
+          -0.7232547546403378,
+          0.09636113346509932
+        ],
+        "delta_percent": -0.30989813857733584,
+        "label": "BA B/A monitor delta",
+        "paired_position_delta_percent": [
+          0.18013938264598295,
+          0.5350237149656545,
+          1.003887847867957,
+          -2.5922427558195404,
+          0.7712051035001277,
+          0.6881072923499598,
+          -0.7938628174908313,
+          -0.5431214634588177,
+          1.073146259064206,
+          0.08861593845483906,
+          -0.7374577297118656,
+          -1.313313260725013,
+          -1.9979253277848885,
+          -1.420166575488424,
+          -0.8914336525398414,
+          -0.626161673783332,
+          -1.8657744733311499,
+          -2.091171443991202,
+          -0.0288810493929037,
+          2.1508926828503805,
+          -0.0018385659036002089,
+          -0.5439207774351695,
+          0.5540565926613672,
+          0.46417640944109717,
+          -1.1714603923765443,
+          -0.5737331366363785,
+          -0.9225390347872287,
+          -1.2149552052974522,
+          0.750398394386842,
+          1.0301770690230638,
+          0.5405531929554508,
+          -0.2588995257642557
+        ],
+        "profiled_total_ms": 24099.685985594988
+      }
+    },
+    "physical_blocks": {
+      "A1_measured": [
+        45,
+        76
+      ],
+      "A4_measured": [
+        237,
+        268
+      ],
+      "B2_measured": [
+        109,
+        140
+      ],
+      "B3_measured": [
+        173,
+        204
+      ]
+    },
+    "plan_sha256": "07703a5baac114a7e63b460dd3500f23256c24bf3a49a8a994e2c2af628228d4",
+    "pooled": {
+      "baseline_total_ms": 48351.61855723709,
+      "ci95_percent": [
+        -0.3065576933954678,
+        0.4788272970882482
+      ],
+      "delta_percent": 0.08782377743838943,
+      "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+      "profiled_total_ms": 48394.08277510665
+    },
+    "prediction_sha256": "22a30853695d148297b16eec99b7ca2303e140d195a4b8b609cc48f8c2594da4",
+    "replay_rows": {
+      "parameter_update_all_blocks": true,
+      "rank_count": 16,
+      "rank_replay_sha256": {
+        "0": "a83bdde14137f7c428653e5e722a4302c5007899af6b72b86e58e4107376a57a",
+        "1": "6c9ea12d4c18b6b6431bf40f90984914f0277ccd459818e5382afc076f2f417a",
+        "10": "3ad7286fb43e3a994456c2d9d68770b9c0c629945d7801f67f2e798c42361d49",
+        "11": "16e48a97e26ff16a86d8cf52c7a321ecf2e5851360ae57f674040e03c11f6b67",
+        "12": "dc3cac055ba6e7ee96b78ff4862e78a6ab875d5f3d614fb95b000092602dae0d",
+        "13": "06bd375515f723392273dc0b82b1588cb5c1daeecaf71410ce835090e4814d80",
+        "14": "cb86622a8cd49767f1475baa997c65ced1f7a9a65775cc3ce60ba52c109c800b",
+        "15": "bb05a32203b5ad080fc94c9798aa2f60ee11260209adc8531d65c4b335806c07",
+        "2": "24efdf2676f1575777c71fb6171906078ddb834cf1cfab33684a3b5683bb7df5",
+        "3": "23fe13932e059a94bfa708fb5d46661be33531b9332f0b7d3865192d8aa2f80f",
+        "4": "87f5e253f8af3400d0723952e618d4c74ee67590a5aa844492ad0fa5faa7b9e3",
+        "5": "8ed21102c82930b26742c8dedef63ceb54f24d7a03e343b7a0491bac5c553001",
+        "6": "b8e36fe9cb6210b7f368b33afa30ff969a90b513afcdf9ceb3d1c8eb2be653ac",
+        "7": "86d135df9c640052a5cb9704b8ffccb63599ddfa5be86a09de34692e92fdf32c",
+        "8": "8135272644c14d386f7d18e4078b2b21b5681241ea923e1ea9e447b7710fa260",
+        "9": "b2634f20cd00820b27e7d71c80c2c554a6f49fbc64bf20ba79b1ff58ca266b4c"
+      },
+      "rows_per_rank": 268,
+      "true_sgd_lr": 0.001
+    },
+    "seed": 1348533921,
+    "session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_02",
+    "source_freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+    "status": "audited_complete",
+    "steps": 268
+  },
+  "original_result_sha256": "4a92b87bc75e4141328567797a082685f88dcb490d4644b2b2922615d1069dad",
+  "original_strict_per_order_gate": "within_budget",
+  "per_run": [
+    {
+      "orders": {
+        "AB": {
+          "baseline_total_ms": 24177.015928085893,
+          "ci95_percent": [
+            -0.19255064790085125,
+            1.1616275204789432
+          ],
+          "delta_percent": 0.48550599368806235,
+          "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+          "profiled_total_ms": 24294.396789511666
+        },
+        "BA": {
+          "baseline_total_ms": 24174.602629151195,
+          "ci95_percent": [
+            -0.7232547546403378,
+            0.09636113346509932
+          ],
+          "delta_percent": -0.30989813857733584,
+          "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+          "profiled_total_ms": 24099.685985594988
+        }
+      },
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_legacy_recovery_02",
+      "snapshot_source_mode": "snapshot_hashes_verified"
+    },
+    {
+      "orders": {
+        "AB": {
+          "baseline_total_ms": 24438.095110934228,
+          "ci95_percent": [
+            -2.208886198121233,
+            -1.42677959747276
+          ],
+          "delta_percent": -1.8147311531125254,
+          "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+          "profiled_total_ms": 23994.609385728836
+        },
+        "BA": {
+          "baseline_total_ms": 23937.89014639333,
+          "ci95_percent": [
+            0.12074795147091422,
+            0.819820631872266
+          ],
+          "delta_percent": 0.46670007883242715,
+          "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+          "profiled_total_ms": 24049.60829857737
+        }
+      },
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_legacy_repeat_01",
+      "snapshot_source_mode": "snapshot_hashes_verified"
+    }
+  ]
+}

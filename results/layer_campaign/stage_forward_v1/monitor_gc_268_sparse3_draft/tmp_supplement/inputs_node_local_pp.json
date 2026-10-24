@@ -1,0 +1,17 @@
+{
+  "layout": "node_local_pp",
+  "original_result": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_node_local_pp_independent_cost_audit.json",
+  "runs": [
+    {
+      "completion": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_complete_node_local_pp.json",
+      "public_snapshot": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_node_local_pp_predictions_without_truth.json",
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_node_local_pp_recovery_02"
+    },
+    {
+      "completion": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/repeat_node_local_pp_complete.json",
+      "public_snapshot": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/repeat_node_local_pp_predictions_without_truth.json",
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_node_local_pp_repeat_01"
+    }
+  ],
+  "source_freeze": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/freeze.json"
+}

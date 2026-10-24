@@ -84,6 +84,16 @@ class MonitorChannel:
         finally:
             self._unlock()
 
+    def latest_completed_iteration(self):
+        """Read the latest publication without consuming any monitor rows."""
+        self._lock()
+        try:
+            written = _HEADER.unpack_from(self.memory)[1]
+            return (_ROW.unpack_from(self.memory, _HEADER.size + (written - 1) % CAPACITY * _ROW.size)[0]
+                    if written else 0)
+        finally:
+            self._unlock()
+
     def set_request(self, epoch):
         self._lock()
         try:

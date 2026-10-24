@@ -1,0 +1,601 @@
+{
+  "candidate_population_note": "one eligible, healthy-executed FWD ATen overload slot per rank; exact overload and slot_id retained; family-stratified quota; not a CUDA-kernel identity claim",
+  "controlled_profile_requests": [],
+  "design_sha256": "5d5f745f2459fd8fe129f83da7c7d4e373f6e2514f9176b1d4b9b69dba9109d9",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "formal",
+  "fault_kind": "operator_compute",
+  "fixed_denominator": 32,
+  "freeze_manifest_sha256": "3eb4b97a56c125039e09f203636fbf25eddaa19b9abd84a4fe659423da717e61",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "intervals": [
+    {
+      "end": 12,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    },
+    {
+      "end": 42,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_gate",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-routing_index-0-a77f537e",
+      "end": 74,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.2.mlp|fwd|aten.eq.Scalar|8"
+      },
+      "id": "l4-node_local_pp-routing_index-0-a77f537e",
+      "phase": "fwd",
+      "rank": 0,
+      "record_start": 43,
+      "segment": "fault",
+      "slowdown_extra_ratio": 13992.983013,
+      "start": 43,
+      "target_ranks": [
+        0
+      ]
+    },
+    {
+      "end": 104,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-routing_index-0-a77f537e",
+      "record_start": 75,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 75,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-elementwise_activation-1-8ca93c7d",
+      "end": 136,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.7.input_layernorm|fwd|aten.mul.Tensor|0"
+      },
+      "id": "l4-node_local_pp-elementwise_activation-1-8ca93c7d",
+      "phase": "fwd",
+      "rank": 1,
+      "record_start": 105,
+      "segment": "fault",
+      "slowdown_extra_ratio": 18621.250904,
+      "start": 105,
+      "target_ranks": [
+        1
+      ]
+    },
+    {
+      "end": 166,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-elementwise_activation-1-8ca93c7d",
+      "record_start": 137,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 137,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-elementwise_activation-2-a8680bc5",
+      "end": 198,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.7.mlp.experts.17|fwd|aten.mul.Tensor|0"
+      },
+      "id": "l4-node_local_pp-elementwise_activation-2-a8680bc5",
+      "phase": "fwd",
+      "rank": 2,
+      "record_start": 167,
+      "segment": "fault",
+      "slowdown_extra_ratio": 15006.723269,
+      "start": 167,
+      "target_ranks": [
+        2
+      ]
+    },
+    {
+      "end": 228,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-elementwise_activation-2-a8680bc5",
+      "record_start": 199,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 199,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-reduction_normalization-3-790d0baf",
+      "end": 260,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.7.input_layernorm|fwd|aten.rsqrt.default|0"
+      },
+      "id": "l4-node_local_pp-reduction_normalization-3-790d0baf",
+      "phase": "fwd",
+      "rank": 3,
+      "record_start": 229,
+      "segment": "fault",
+      "slowdown_extra_ratio": 21545.036937,
+      "start": 229,
+      "target_ranks": [
+        3
+      ]
+    },
+    {
+      "end": 290,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-reduction_normalization-3-790d0baf",
+      "record_start": 261,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 261,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-routing_index-4-746718a9",
+      "end": 322,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.1.mlp|fwd|aten.eq.Scalar|3"
+      },
+      "id": "l4-node_local_pp-routing_index-4-746718a9",
+      "phase": "fwd",
+      "rank": 4,
+      "record_start": 291,
+      "segment": "fault",
+      "slowdown_extra_ratio": 14891.065318,
+      "start": 291,
+      "target_ranks": [
+        4
+      ]
+    },
+    {
+      "end": 352,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-routing_index-4-746718a9",
+      "record_start": 323,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 323,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "end": 384,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.0.mlp.experts.9.down_proj|fwd|aten.mm.default|0"
+      },
+      "id": "l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "phase": "fwd",
+      "rank": 5,
+      "record_start": 353,
+      "segment": "fault",
+      "slowdown_extra_ratio": 13945.235575,
+      "start": 353,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "end": 414,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "record_start": 385,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 385,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-softmax-6-3f730b2e",
+      "end": 446,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.0.mlp|fwd|aten._softmax.default|0"
+      },
+      "id": "l4-node_local_pp-softmax-6-3f730b2e",
+      "phase": "fwd",
+      "rank": 6,
+      "record_start": 415,
+      "segment": "fault",
+      "slowdown_extra_ratio": 21441.992205,
+      "start": 415,
+      "target_ranks": [
+        6
+      ]
+    },
+    {
+      "end": 476,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-softmax-6-3f730b2e",
+      "record_start": 447,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 447,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-routing_index-7-8ae91495",
+      "end": 508,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.1.mlp|fwd|aten.eq.Scalar|15"
+      },
+      "id": "l4-node_local_pp-routing_index-7-8ae91495",
+      "phase": "fwd",
+      "rank": 7,
+      "record_start": 477,
+      "segment": "fault",
+      "slowdown_extra_ratio": 10070.613658,
+      "start": 477,
+      "target_ranks": [
+        7
+      ]
+    },
+    {
+      "end": 538,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-routing_index-7-8ae91495",
+      "record_start": 509,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 509,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-reduction_normalization-8-e60b0b22",
+      "end": 570,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.input_layernorm|fwd|aten.rsqrt.default|0"
+      },
+      "id": "l4-node_local_pp-reduction_normalization-8-e60b0b22",
+      "phase": "fwd",
+      "rank": 8,
+      "record_start": 539,
+      "segment": "fault",
+      "slowdown_extra_ratio": 20224.273357,
+      "start": 539,
+      "target_ranks": [
+        8
+      ]
+    },
+    {
+      "end": 600,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-reduction_normalization-8-e60b0b22",
+      "record_start": 571,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 571,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-matrix_multiply-9-dcd7742e",
+      "end": 632,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.1.mlp.experts.0.gate_proj|fwd|aten.mm.default|0"
+      },
+      "id": "l4-node_local_pp-matrix_multiply-9-dcd7742e",
+      "phase": "fwd",
+      "rank": 9,
+      "record_start": 601,
+      "segment": "fault",
+      "slowdown_extra_ratio": 8717.78464,
+      "start": 601,
+      "target_ranks": [
+        9
+      ]
+    },
+    {
+      "end": 662,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-matrix_multiply-9-dcd7742e",
+      "record_start": 633,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 633,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-matrix_multiply-10-83a87db8",
+      "end": 694,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.8.mlp.experts.18.down_proj|fwd|aten.mm.default|0"
+      },
+      "id": "l4-node_local_pp-matrix_multiply-10-83a87db8",
+      "phase": "fwd",
+      "rank": 10,
+      "record_start": 663,
+      "segment": "fault",
+      "slowdown_extra_ratio": 12371.764729,
+      "start": 663,
+      "target_ranks": [
+        10
+      ]
+    },
+    {
+      "end": 724,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-matrix_multiply-10-83a87db8",
+      "record_start": 695,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 695,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-fused_sdpa_attention-11-1c6d88ae",
+      "end": 756,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.self_attn|fwd|aten._scaled_dot_product_flash_attention.default|0"
+      },
+      "id": "l4-node_local_pp-fused_sdpa_attention-11-1c6d88ae",
+      "phase": "fwd",
+      "rank": 11,
+      "record_start": 725,
+      "segment": "fault",
+      "slowdown_extra_ratio": 6362.695162,
+      "start": 725,
+      "target_ranks": [
+        11
+      ]
+    },
+    {
+      "end": 786,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-fused_sdpa_attention-11-1c6d88ae",
+      "record_start": 757,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 757,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-fused_sdpa_attention-12-ec7da9b2",
+      "end": 818,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.2.self_attn|fwd|aten._scaled_dot_product_flash_attention.default|0"
+      },
+      "id": "l4-node_local_pp-fused_sdpa_attention-12-ec7da9b2",
+      "phase": "fwd",
+      "rank": 12,
+      "record_start": 787,
+      "segment": "fault",
+      "slowdown_extra_ratio": 6350.015626,
+      "start": 787,
+      "target_ranks": [
+        12
+      ]
+    },
+    {
+      "end": 848,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-fused_sdpa_attention-12-ec7da9b2",
+      "record_start": 819,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 819,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-elementwise_activation-13-fa58c896",
+      "end": 880,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.9.self_attn|fwd|aten.mul.Tensor|0"
+      },
+      "id": "l4-node_local_pp-elementwise_activation-13-fa58c896",
+      "phase": "fwd",
+      "rank": 13,
+      "record_start": 849,
+      "segment": "fault",
+      "slowdown_extra_ratio": 12855.696686,
+      "start": 849,
+      "target_ranks": [
+        13
+      ]
+    },
+    {
+      "end": 910,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-elementwise_activation-13-fa58c896",
+      "record_start": 881,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 881,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-elementwise_activation-14-0b58b8ab",
+      "end": 942,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.8.mlp|fwd|aten.mul.Tensor|0"
+      },
+      "id": "l4-node_local_pp-elementwise_activation-14-0b58b8ab",
+      "phase": "fwd",
+      "rank": 14,
+      "record_start": 911,
+      "segment": "fault",
+      "slowdown_extra_ratio": 9909.811377,
+      "start": 911,
+      "target_ranks": [
+        14
+      ]
+    },
+    {
+      "end": 972,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-elementwise_activation-14-0b58b8ab",
+      "record_start": 943,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 943,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l4-node_local_pp-matrix_multiply-15-0f879d22",
+      "end": 1004,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.mlp.experts.29.down_proj|fwd|aten.mm.default|0"
+      },
+      "id": "l4-node_local_pp-matrix_multiply-15-0f879d22",
+      "phase": "fwd",
+      "rank": 15,
+      "record_start": 973,
+      "segment": "fault",
+      "slowdown_extra_ratio": 16871.482828,
+      "start": 973,
+      "target_ranks": [
+        15
+      ]
+    },
+    {
+      "end": 1034,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l4-node_local_pp-matrix_multiply-15-0f879d22",
+      "record_start": 1005,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1005,
+      "target_ranks": []
+    },
+    {
+      "end": 1049,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_tail",
+      "record_start": 1035,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1035,
+      "target_ranks": []
+    }
+  ],
+  "layer": "L4",
+  "layout": "node_local_pp",
+  "max_profiles": 40,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "operator_family_quotas_per_layout": {
+    "elementwise_activation": 4,
+    "fused_sdpa_attention": 2,
+    "matrix_multiply": 4,
+    "reduction_normalization": 2,
+    "routing_index": 3,
+    "softmax": 1
+  },
+  "operator_population_phase": "fwd",
+  "parallel_layout": "node_local_pp",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "peer_v1_l4_formal_v1",
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "peer_l4_formal",
+  "schema_version": 1,
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_catalog_node_local_pp_02",
+  "seed": 2032905414,
+  "seq_len": 16,
+  "session_id": "v2s_peer_l4_formal_node_local_pp_01",
+  "stage_forward_aux_binding_file_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped.json",
+  "stage_forward_aux_model_file_sha256": "639280cbc08daf5e5579f100aeb194d304fd1a01d911f9be0909056d061ce4a5",
+  "steps": 1049,
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_node_local_pp_02"
+}

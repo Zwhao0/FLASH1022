@@ -1,0 +1,226 @@
+{
+  "candidate_population_note": "fixed previously passing cases; no new sampling or dose selection; all categories remain outside inference inputs",
+  "component_operator_population_phase": "fwd",
+  "controlled_profile_requests": [],
+  "design_sha256": "e5e019bf4b9236b809fe01cbd49d783d98da9dfbde70bb481711d917890d936b",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "formal",
+  "fault_kind": "mixed_scoped_compute_regression",
+  "fixed_denominator": 8,
+  "formal_execution_gate": "8 fixed cases; complete public and auxiliary evidence; aux corruption cannot be masked by dc89 fallback",
+  "freeze_manifest_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/source_freeze.json",
+  "freeze_manifest_sha256": "9072531ec4083ec4150fcff15179f96bd735958d8cf46dc56b1681ac3037a94d",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "gc_callbacks_diagnostic": true,
+  "intervals": [
+    {
+      "end": 12,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    },
+    {
+      "end": 42,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_gate",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+      "end": 74,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole"
+      },
+      "id": "reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+      "rank": 4,
+      "record_start": 43,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.461105,
+      "start": 43,
+      "target_ranks": [
+        4
+      ]
+    },
+    {
+      "end": 104,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+      "record_start": 75,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 75,
+      "target_ranks": []
+    },
+    {
+      "case_id": "reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+      "end": 136,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "stage",
+        "phase": "bwd"
+      },
+      "id": "reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+      "phase": "bwd",
+      "rank": 5,
+      "record_start": 105,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3.704119,
+      "start": 105,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "end": 166,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+      "record_start": 137,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 137,
+      "target_ranks": []
+    },
+    {
+      "case_id": "reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+      "end": 198,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.10.input_layernorm"
+      },
+      "id": "reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+      "phase": "fwd",
+      "rank": 14,
+      "record_start": 167,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2495.610686,
+      "start": 167,
+      "target_ranks": [
+        14
+      ]
+    },
+    {
+      "end": 228,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+      "record_start": 199,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 199,
+      "target_ranks": []
+    },
+    {
+      "case_id": "reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "end": 260,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "operator",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.0.mlp.experts.9.down_proj|fwd|aten.mm.default|0"
+      },
+      "id": "reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "phase": "fwd",
+      "rank": 5,
+      "record_start": 229,
+      "segment": "fault",
+      "slowdown_extra_ratio": 13945.235575,
+      "start": 229,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "end": 290,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+      "record_start": 261,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 261,
+      "target_ranks": []
+    },
+    {
+      "end": 305,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_tail",
+      "record_start": 291,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 291,
+      "target_ranks": []
+    }
+  ],
+  "layer": "reg8_fixed_case_regression",
+  "layout": "node_local_pp",
+  "max_profiles": 40,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_cost_timing": true,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "parallel_layout": "node_local_pp",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "peer_priority_reg8_fixed_case_collector_regression_v1",
+  "regression_case_mix_per_layout": {
+    "backward_stage": 1,
+    "nonfirst_normalization_component": 1,
+    "operator": 1,
+    "whole_compute": 1
+  },
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "component_blind8_formal",
+  "schema_version": 1,
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_guard_catalog_node_local_pp_01",
+  "seed": 2032905414,
+  "seq_len": 16,
+  "session_id": "v2s_peer_priority_reg8_sparse3_gc_diag_node_local_pp_01",
+  "stage_forward_aux_binding_file_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped.json",
+  "stage_forward_aux_model_file_sha256": "639280cbc08daf5e5579f100aeb194d304fd1a01d911f9be0909056d061ce4a5",
+  "stage_forward_aux_sampling": {
+    "core_evidence_steps": 8,
+    "expected_aux_rows": 48,
+    "sample_offsets": [
+      1,
+      3,
+      7
+    ],
+    "schema": "flash_stage_forward_sparse3_v1",
+    "window_size": 8
+  },
+  "steps": 305,
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_node_local_pp_02"
+}

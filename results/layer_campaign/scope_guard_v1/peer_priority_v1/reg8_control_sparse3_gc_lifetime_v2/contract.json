@@ -1,0 +1,34 @@
+{
+  "design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/design.json",
+  "design_sha256": "cf00f7ce1a55917341bb53ba27d657a3883401ff97f2c794bc2538e3d79b8659",
+  "exact_case_intervals": true,
+  "execution_order": [
+    "legacy",
+    "node_local_pp"
+  ],
+  "fixed_denominator": 8,
+  "gc_callbacks_diagnostic": true,
+  "monitor_cost_timing": true,
+  "no_automatic_retry": true,
+  "no_live_source_change": true,
+  "parent_baseline_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline/summary.json",
+  "parent_baseline_summary_sha256": "0cac68d050e1f4e12ce0fe0a896c250ac267be30e8e9f615a4deb8fbd87287a2",
+  "prediction_before_truth": true,
+  "schema": "peer_priority_reg8_sparse3_gcdiag_contract_v1",
+  "seed": 2032905414,
+  "source_freeze_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/source_freeze.json",
+  "source_freeze_sha256": "9072531ec4083ec4150fcff15179f96bd735958d8cf46dc56b1681ac3037a94d",
+  "stage_forward_aux_sampling": {
+    "core_evidence_steps": 8,
+    "expected_aux_rows": 48,
+    "sample_offsets": [
+      1,
+      3,
+      7
+    ],
+    "schema": "flash_stage_forward_sparse3_v1",
+    "window_size": 8
+  },
+  "startup_gc_fixed_model": true,
+  "steps_per_layout": 305
+}

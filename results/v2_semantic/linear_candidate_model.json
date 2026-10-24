@@ -1,0 +1,145 @@
+{
+  "model_type": "flash_local_v2_linear",
+  "schema_version": 1,
+  "world_size": 16,
+  "allow_token_interpolation": true,
+  "fit_sessions": [
+    "/Users/henry/Desktop/FLASH1022/results/data16_sessions/v2s_hfit_legacy_01"
+  ],
+  "calibration_sessions": [
+    "/Users/henry/Desktop/FLASH1022/results/data16_sessions/v2s_hcal_legacy_01"
+  ],
+  "baselines": {
+    "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]": {
+      "median_us": 682.5920045375824,
+      "scale_us": 102.38880068063736,
+      "count": 768
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]": {
+      "median_us": 274.0800008177757,
+      "scale_us": 41.11200012266636,
+      "count": 108
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]": {
+      "median_us": 264.1439884901047,
+      "scale_us": 138.27319331914185,
+      "count": 108
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]": {
+      "median_us": 366.03204905986786,
+      "scale_us": 257.7589241668582,
+      "count": 768
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]": {
+      "median_us": 272.65600115060806,
+      "scale_us": 40.89840017259121,
+      "count": 50
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]": {
+      "median_us": 329.5839950442314,
+      "scale_us": 49.43759925663471,
+      "count": 50
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]": {
+      "median_us": 177.05599963665009,
+      "scale_us": 26.558399945497513,
+      "count": 362
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]": {
+      "median_us": 218.39997917413712,
+      "scale_us": 38.57133914530277,
+      "count": 362
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]": {
+      "median_us": 272.8159949183464,
+      "scale_us": 40.92239923775196,
+      "count": 82
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]": {
+      "median_us": 329.6319991350174,
+      "scale_us": 56.88441018909216,
+      "count": 82
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[6,896],\"torch.bfloat16\"]": {
+      "median_us": 271.4559957385063,
+      "scale_us": 40.71839936077595,
+      "count": 40
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[6,896],\"torch.bfloat16\"]": {
+      "median_us": 229.8240289092064,
+      "scale_us": 188.49179972112177,
+      "count": 40
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[5,896],\"torch.bfloat16\"]": {
+      "median_us": 267.15200394392014,
+      "scale_us": 40.07280059158802,
+      "count": 34
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[5,896],\"torch.bfloat16\"]": {
+      "median_us": 272.5120037794113,
+      "scale_us": 230.21813845150172,
+      "count": 34
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[4,896],\"torch.bfloat16\"]": {
+      "median_us": 273.45599234104156,
+      "scale_us": 41.018398851156235,
+      "count": 20
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[4,896],\"torch.bfloat16\"]": {
+      "median_us": 261.1839920282364,
+      "scale_us": 141.40445731580257,
+      "count": 20
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[9,896],\"torch.bfloat16\"]": {
+      "median_us": 263.7599930167198,
+      "scale_us": 39.56399895250797,
+      "count": 14
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[9,896],\"torch.bfloat16\"]": {
+      "median_us": 196.48000411689281,
+      "scale_us": 212.2845882821828,
+      "count": 14
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[7,896],\"torch.bfloat16\"]": {
+      "median_us": 267.7759826183319,
+      "scale_us": 40.166397392749786,
+      "count": 26
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[7,896],\"torch.bfloat16\"]": {
+      "median_us": 303.1679838895798,
+      "scale_us": 91.80259511768817,
+      "count": 26
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[8,896],\"torch.bfloat16\"]": {
+      "median_us": 261.1039951443672,
+      "scale_us": 39.16559927165508,
+      "count": 16
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[8,896],\"torch.bfloat16\"]": {
+      "median_us": 333.31198990345,
+      "scale_us": 49.9967984855175,
+      "count": 16
+    },
+    "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[10,896],\"torch.bfloat16\"]": {
+      "median_us": 263.15201818943024,
+      "scale_us": 39.472802728414536,
+      "count": 8
+    },
+    "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[10,896],\"torch.bfloat16\"]": {
+      "median_us": 194.17598843574524,
+      "scale_us": 208.60773713886738,
+      "count": 8
+    }
+  },
+  "min_score": 6.0,
+  "margin": 2.0,
+  "noise_rule": {
+    "relative_floor": 0.15,
+    "absolute_floor_us": 1.0,
+    "mad_multiplier": 1.4826
+  },
+  "metric": "shape-standardized additive duration z; median per phase/slot across >=3 iterations; maximum over roles",
+  "max_healthy_score": 3.04743655776577,
+  "calibration_windows": 6,
+  "sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300"
+}

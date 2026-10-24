@@ -1,0 +1,53 @@
+{
+  "authorized_by": "root",
+  "authorized_utc": "2026-10-24T15:31:18Z",
+  "decision": "One recovery after pretraining container exit; original monitoring windows, plan semantics, algorithm, model, seed, and order unchanged.",
+  "failure_artifact": "execution_failure_legacy.json",
+  "failure_artifact_sha256": "b7e9b3f3bd7e64946ebed30ed6651d34b86a0f2b0f0e55d7b20393c1aec4a192",
+  "fixed_measurement_count": 2,
+  "mappings": {
+    "legacy": {
+      "changed_plan_fields": [
+        "session_id"
+      ],
+      "original_session_id": "v2s_sparse3_gc_monitor268_legacy_01",
+      "recovery_session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_01"
+    },
+    "node_local_pp": {
+      "changed_plan_fields": [
+        "session_id"
+      ],
+      "original_session_id": "v2s_sparse3_gc_monitor268_node_local_pp_01",
+      "recovery_session_id": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_01"
+    }
+  },
+  "no_automatic_retry": true,
+  "original_attempt_has_measurement": false,
+  "original_attempt_has_train_or_evidence": false,
+  "original_attempt_status": {
+    "container_exit_code": 137,
+    "legacy_finish_utc": "2026-10-24T15:27:20.087800189Z",
+    "oom_killed": false,
+    "pp_finish_utc": "2026-10-24T15:28:21.699583116Z"
+  },
+  "preserve_original_failure_and_plan": true,
+  "protocol": "monitor_gc_268_infrastructure_recovery_v1",
+  "recovery_plans": {
+    "legacy": {
+      "original_plan_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/legacy_plan.json",
+      "original_plan_sha256": "4e3ebe4028446a6583d1409fec2e4b6a40325b5fb4cee6f65f3ba8706206a263",
+      "path": "recovery_legacy_plan.json",
+      "session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_01",
+      "sha256": "786cd980f6499b03daa1ddf9015b15e634dd9ce171d0399d162b9ae7c4c700d2"
+    },
+    "node_local_pp": {
+      "original_plan_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/node_local_pp_plan.json",
+      "original_plan_sha256": "73bb12a1b78e61d1a7a0bcf1337745c3e9c908d5e3386d93c8a72330ded3328e",
+      "path": "recovery_node_local_pp_plan.json",
+      "session_id": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_01",
+      "sha256": "c55035dc57f3a6a9e47b13311d3d9c3d69e1bba723ca971767db3826aca07733"
+    }
+  },
+  "source_freeze_path": "freeze.json",
+  "source_freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e"
+}

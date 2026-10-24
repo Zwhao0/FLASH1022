@@ -1,11 +1,8 @@
-# FLASH第三章 v1 当前状态
+# FLASH v2 当前任务
 
-已完成：真实2节点16卡TP2×PP2×EP2×Expert-DP2；数据驱动定位接入自动检测/8步PROFILE/在线定位；常驻MONITOR优化和验证。结论与范围见flash_v1/MONITOR_OPTIMIZATION.md，继续工作先读handoff.md。
+冻结范围内四层计算慢结果、显式sparse3+startupGC模式及完整ABBA平均预算已核验，见[结果与边界](flash_v1/COMPUTE_V2.md)。当前由主窗口提交GitHub；随后按提交commit一次冻结N∈{4,5,6}及seed/两布局/rank/scope/剂量/随机onset，自动MONITOR→PROFILE→定位，完成小数量随机抽查。
 
-v1基础快照已发布到Zwhao0/FLASH1022；新增PP节点内/DP跨节点布局已完成4/4在线快验，新增布局代码和测试结果已更新到GitHub main。完成内容与有效范围见handoff.md。
-
-约束：
-- 仅当前flash_v1/results/论文/原Greyhound，不读旧FLASH、旧交接或Git旧历史，不恢复已删文件。
-- 不做Fail-Stop、通信故障或第四章SHIFT；保留真实失败/未触发/inconclusive，不通过改阈值制造成功。
-- 共享服务器保留其他任务，不改其时钟/进程；每次只运行一个本实验训练作业，完工清理自身资源。
-- 遵守简洁AGENTS.md和handoff.md；当前没有后台训练或待续实验。
+- 原逐序严格门、弱例/漏检/拒判/失败不改写；平均预算通过不保证所有短窗或总体性能。
+- 每次只一GPU故障；健康预热与恢复≥30步，先封存公开预测后读truth，不重抽逃结果。
+- 只读当前flash_v1/results/论文/原Greyhound，不查旧FLASH或Git历史，不恢复删除文件；不扩Fail-Stop/通信故障/第四章SHIFT。
+- 不干扰共享服务器其他任务；GPU执行由唯一owner协调，保留既有原始证据与失败。继续工作先读handoff.md。

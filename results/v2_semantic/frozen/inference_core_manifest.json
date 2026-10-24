@@ -1,0 +1,48 @@
+{
+  "protocol": "v2_blind64_core",
+  "status": "frozen",
+  "validated": true,
+  "validation_scope": "Numerical and measurement integrity verified; reported accuracy and cost limits accepted to proceed by user/root, not all criteria passed.",
+  "files": {
+    "flash_v1/localize_v2.py": "91999205daf960769d6e1fe7513688524c217ae070221743ee3c0487d3d0190e",
+    "flash_v1/localize_v2_linear.py": "4deb87cff9921d43fb72ea2fbd7dddd64af477155513242ba707866dc329b52a",
+    "flash_v1/online_v2.py": "464cf3879fce980955b6c9afae7b08fdbb1622068d6ff2a1a252e01454912298",
+    "flash_v1/online.py": "fdc02511bc11a155936b921596a0df485bd3944f5009ef92e90053a288c23ab4",
+    "flash_v1/analysis.py": "a72fd79b5b6c596a53e8e71a358b27a16daa5bb7494cc7922532414a265e3c37",
+    "flash_v1/evidence.py": "a52f46637a0881f7cec869777e5c8dbf653fff819cb73d2b4ded8ac0fb51e674",
+    "flash_v1/tensor_parallel.py": "4f7b21c5a962eae5eb39c517885a32690142a2dcfbf736d95e3d14d2ecb35e60",
+    "flash_v1/monitor_channel.py": "ccb5758bf0f09f3009a4c25033383db04256b45e2beb7542823b33cc577300b8",
+    "results/v2_semantic/linear_candidate_model.json": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b"
+  },
+  "model_file": "results/v2_semantic/linear_candidate_model.json",
+  "model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "algorithm_sha256": "33296e7293708c321037a7ea043f28456f644793a242d828788bfeb5b39644ee",
+  "validation_files": {
+    "results/v2_semantic/numerical_01.json": "1d9ac21c1ec144e381c79b9ade0eaa283ceb60efbcf6d35ef29ee2001136d67b",
+    "results/v2_semantic/health_integrity_01.json": "1c4657006ba60fdca4cc57522120ddc823fce8f4dc39c6d3b895531d8d1f85ff",
+    "results/v2_semantic/dev_legacy_02_score_modeldc89.json": "da73f99761bd3ac71321ed33fefe456669fba7314b8fb0169af4a02a1b217c77",
+    "results/v2_semantic/dev_node_local_pp_02_score_modeldc89.json": "e2025e1de130240b8d4272a41e5469f5da150c0dd3acd692c397d9eb1d2d56e1",
+    "results/v2_semantic/cost_summary_01.json": "7afbe0b15586d29e7c79767f6282668970db3b12a5e47e5f2a4d3b88f7570a81",
+    "results/v2_semantic/monitor_cpu_path_audit.json": "8439619d6c5b22832f5c3a90db3553a18056ef9fe3ef8070193efda6242525f6",
+    "results/v2_semantic/legacy_b1_validation_failure.json": "5408afad955e66a9d426d68eda878b7ab666f2decc2d6d8de3c99f86e09f2546"
+  },
+  "observer": {
+    "backend": "semantic_only",
+    "selection_index": 0,
+    "profile_steps": 8,
+    "native_profile": "not_applicable",
+    "monitor_hooks": false
+  },
+  "rules": {
+    "threshold_sigma": 6,
+    "unique_margin_sigma": 2,
+    "min_repeated_iterations": 3
+  },
+  "limitations": [
+    "Legacy expert rank3 at step110\u2013117 detected but rejected: observed tokens10\u201319 exceed trained0\u201310; no refit, dose/threshold change, rerun or replacement.",
+    "Legacy pure MONITOR point estimate4.3286pct exceeds1pct goal; node-local point\u22128.9628pct has strong shared-GPU temporal drift and is not acceleration.",
+    "PROFILE8step timing excludes result-tail latency; full-training wall includes the concurrent CPU path.",
+    "Arbitrary component/operator site population is independently sampled after validated catalog; unobserved/invalid sites remain in fixed64 denominator."
+  ],
+  "blind_design_generated": false
+}

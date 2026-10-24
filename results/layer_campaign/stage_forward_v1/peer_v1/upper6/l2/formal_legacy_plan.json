@@ -1,0 +1,140 @@
+{
+  "controlled_profile_requests": [],
+  "design_sha256": "968dc4e8f5fcbecc5bb2443bdebf9671948ca58041a140174f25f31e3fb218ec",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "formal",
+  "fault_kind": "phase_compute",
+  "fixed_denominator": 4,
+  "freeze_manifest_sha256": "c46c7b8acd7606a8b2f97df50d130640220293742ff55e72531ff097ce0590d5",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "intervals": [
+    {
+      "end": 12,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    },
+    {
+      "end": 42,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_gate",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "upper6-l2-legacy-fwd-5-de1dc6b3",
+      "end": 74,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "stage",
+        "phase": "fwd"
+      },
+      "id": "upper6-l2-legacy-fwd-5-de1dc6b3",
+      "phase": "fwd",
+      "rank": 5,
+      "record_start": 43,
+      "segment": "fault",
+      "slowdown_extra_ratio": 11.072063,
+      "start": 43,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "end": 104,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_upper6-l2-legacy-fwd-5-de1dc6b3",
+      "record_start": 75,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 75,
+      "target_ranks": []
+    },
+    {
+      "case_id": "upper6-l2-legacy-bwd-15-c90e132c",
+      "end": 136,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "stage",
+        "phase": "bwd"
+      },
+      "id": "upper6-l2-legacy-bwd-15-c90e132c",
+      "phase": "bwd",
+      "rank": 15,
+      "record_start": 105,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3.117525,
+      "start": 105,
+      "target_ranks": [
+        15
+      ]
+    },
+    {
+      "end": 166,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_upper6-l2-legacy-bwd-15-c90e132c",
+      "record_start": 137,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 137,
+      "target_ranks": []
+    },
+    {
+      "end": 181,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_tail",
+      "record_start": 167,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 167,
+      "target_ranks": []
+    }
+  ],
+  "layout": "legacy",
+  "max_profiles": 16,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "parallel_layout": "legacy",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "upper6_l2_formal_v1",
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "upper6_l2_formal",
+  "schema_version": 1,
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_catalog_legacy_02",
+  "seed": 747330049,
+  "seq_len": 16,
+  "session_id": "v2s_peer_upper6_l2_formal_legacy_01",
+  "stage_forward_aux_binding_file_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped.json",
+  "stage_forward_aux_model_file_sha256": "639280cbc08daf5e5579f100aeb194d304fd1a01d911f9be0909056d061ce4a5",
+  "steps": 181,
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_legacy_02"
+}

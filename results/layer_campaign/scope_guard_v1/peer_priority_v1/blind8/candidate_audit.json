@@ -1,0 +1,674 @@
+{
+  "catalog_lineage": {
+    "active_catalog_session_suffix": "v2s_scope_guard_catalog_{layout}_01",
+    "amendment_path": "results/layer_campaign/scope_guard_v1/catalog_source_amendment.json",
+    "amendment_sha256": "01784f92724db7c99f4cc5680eac3fc1cdf0b3afbe94baf78ffdde1d82fb0646",
+    "new_gpu_validation_claimed": false,
+    "population_traces_times_and_signatures_preserved": true
+  },
+  "dose_policy_predeclared": "per-site healthy catalog estimate uses 3-step total / 3; target fraction U(0.40,0.80); one time-only confirmation; no retune/replacement or localization-informed selection",
+  "draws_seed": false,
+  "layouts": {
+    "legacy": {
+      "candidate_family_coverage": {
+        "attention": {
+          "candidate_sites": 960,
+          "eligible_family_rows_before_work_filter": 960,
+          "example_sites": [
+            {
+              "example_operator": "aten.addmm.default",
+              "framed_fwd_work_operator_sites": 13,
+              "module_class": "Qwen2MoeSdpaAttention",
+              "path": "decoder.layers.0.self_attn",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.addmm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.self_attn.k_proj",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.self_attn.o_proj",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 3264,
+          "max_initial_ratio_at_target_fraction_0_80": 16337.273039,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "moe_block_router": {
+          "candidate_sites": 1512,
+          "eligible_family_rows_before_work_filter": 1512,
+          "example_sites": [
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 113,
+              "module_class": "Qwen2MoeSparseMoeBlock",
+              "path": "decoder.layers.0.mlp",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "Linear",
+              "path": "decoder.layers.0.mlp.gate",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 5,
+              "module_class": "Qwen2MoeMLP",
+              "path": "decoder.layers.0.mlp.shared_expert",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 22828,
+          "max_initial_ratio_at_target_fraction_0_80": 97658.56203,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "normalization": {
+          "candidate_sites": 392,
+          "eligible_family_rows_before_work_filter": 392,
+          "example_sites": [
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.0.input_layernorm",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.0.post_attention_layernorm",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.1.input_layernorm",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 2352,
+          "max_initial_ratio_at_target_fraction_0_80": 5769.267987,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "routed_expert_mlp": {
+          "candidate_sites": 11910,
+          "eligible_family_rows_before_work_filter": 14720,
+          "example_sites": [
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 5,
+              "module_class": "Qwen2MoeMLP",
+              "path": "decoder.layers.0.mlp.experts.0",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "SiLU",
+              "path": "decoder.layers.0.mlp.experts.0.act_fn",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.mlp.experts.0.down_proj",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 21438,
+          "max_initial_ratio_at_target_fraction_0_80": 53870.205333,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      },
+      "catalog_references": {
+        "0": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank0.json",
+          "catalog_sha256": "dd6a3121e691242b6e420eb0c47c9ef8b4569e2127a61469957e185402e21181",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank0.json",
+          "proof_sha256": "9637883c9d2aaf70a8cbcc99745a93430b0f0fd78c6722d98c45951f06d823da"
+        },
+        "1": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank1.json",
+          "catalog_sha256": "144c4e12fb616a04a4c9e739fcbb5426cedbcc8b67224b9afeb8cff8c62b80da",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank1.json",
+          "proof_sha256": "abb49475687e27b5bedc129aedc39d92a1169ff4e35cf34a9f585c8e839178f9"
+        },
+        "2": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank2.json",
+          "catalog_sha256": "789aa43a4b644a1ecd2ccdddd860cb29cc96138ff8b57829cbbfe8c2e58acd59",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank2.json",
+          "proof_sha256": "2e3a55b8c4d68baf33560317399b61eead0d22cb11f849b59c1d0bf9fc1369aa"
+        },
+        "3": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank3.json",
+          "catalog_sha256": "87c3dd9ceb33aa80ed3c40bb807aa440ce3ac225b921a7d7d8e79c2c0445fd38",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank3.json",
+          "proof_sha256": "3378e162c8f1e639b8238e67890de93040ae6c03323fc46a0fd09fb1fafcb1a3"
+        },
+        "4": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank4.json",
+          "catalog_sha256": "4e410573ec7670af8d7b9c86a841627fa93aea81f706c468a3022288f2d785f1",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank4.json",
+          "proof_sha256": "e8a75e04dfd68ae09fbdb61c15fc7ef85e16441aabce81cfb66d22ae3c58315c"
+        },
+        "5": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank5.json",
+          "catalog_sha256": "d2468ac9c525e30c7da5adecf9873ef07881ba61b20c2960a5f0359727abaeb6",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank5.json",
+          "proof_sha256": "68301875b629c9d4f2ab7ffdcc619e543a4955b7fdc9ee3d99dc11aae875c127"
+        },
+        "6": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank6.json",
+          "catalog_sha256": "50d1683f8473b40fba24e4dc87f9e8c0539e1a11bb1cb32effe3fac2ab23a0a2",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank6.json",
+          "proof_sha256": "fb990d96c11a6a769170771ce15dc5192a435381f0ea76bad3fce69be640c0fa"
+        },
+        "7": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank7.json",
+          "catalog_sha256": "c1f2f6d2bce9f36f5d9402528dff27d14e36c76f6769634d68ea21ae775a31ef",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank7.json",
+          "proof_sha256": "f8b0d653cd0e84fa6879a37d6c027fd3ea84c7a0b3929e91f3ff0d0257ab51f2"
+        },
+        "8": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank8.json",
+          "catalog_sha256": "8d14299cfbf6c0592737ce477d5b0e72301427c988d1e0d12d585c5926624a04",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank8.json",
+          "proof_sha256": "f773eb4388228159f00ccc8b889ad0c2867e6cdb2c0c46dc5ed1908e7e1537d1"
+        },
+        "9": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank9.json",
+          "catalog_sha256": "c3edc433b99bb7525693754f06ef58d34c023413fdf417692504a13d09d09bb8",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank9.json",
+          "proof_sha256": "b69737601bdaeb11d04aea1904fed62969450f12efe71e8874c2fc9775ac5b25"
+        },
+        "10": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank10.json",
+          "catalog_sha256": "ed0b4798656ea8cb4e1f43d7c53576df5d5f92786dfc3de3dc19ff1552410f11",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank10.json",
+          "proof_sha256": "f732f9b37b30497e5ddf80ce192f55283d86eb0f0c286b40df31915c4d5a6173"
+        },
+        "11": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank11.json",
+          "catalog_sha256": "38ae9d7dfc3191d49b7e3f4f74a89114eda814459972496595da0e72c96f3cf1",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank11.json",
+          "proof_sha256": "4c5bd4b0d2d6f9c038c9747ebd0eb5906e0df56acd229bbd5c258d1e088bfb60"
+        },
+        "12": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank12.json",
+          "catalog_sha256": "35da92016bdd72f0675835e0f1dfd863a14654c5c59c08087ff337b62b9be607",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank12.json",
+          "proof_sha256": "8450dd1cc42e529917bd0cb08cafd349e4f6db78b8b051f14b0717c48c15c50d"
+        },
+        "13": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank13.json",
+          "catalog_sha256": "3a41d5c27a7d952401e4b35a0580324933bec4723505c16e0c8bc3929eea5de2",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank13.json",
+          "proof_sha256": "ca2d7b614c218c0b9a9e88d323f396869d31ecd83dd45f85ef4424b0fa893db1"
+        },
+        "14": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank14.json",
+          "catalog_sha256": "2c39e72ab3aa70d2499a808ae4f05809d2a614e727a31763f5dda9615cd10967",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank14.json",
+          "proof_sha256": "aac245c40294c61953a574c3bc4cbae8823b5245f7f942a2c6a8acd3151a50ec"
+        },
+        "15": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank15.json",
+          "catalog_sha256": "97e241ef8be48e7e460b7b615f35a9cfe0e39698dfb9fdbcd7495a9edaf1ce0f",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank15.json",
+          "proof_sha256": "a5c84cb9f4d44ae94e84c4919a19f1630ed0b4c9593b96f21acd5848361d0f09"
+        }
+      },
+      "component_operator_phases": [
+        "fwd"
+      ],
+      "noncandidate_operator_rows_excluded_for_signature_or_timing": {
+        "no_nonzero_tensor_signature": 3372
+      },
+      "rank_count": 16,
+      "reference_healthy_wall_ms": 1398.4705701004714
+    },
+    "node_local_pp": {
+      "candidate_family_coverage": {
+        "attention": {
+          "candidate_sites": 960,
+          "eligible_family_rows_before_work_filter": 960,
+          "example_sites": [
+            {
+              "example_operator": "aten.addmm.default",
+              "framed_fwd_work_operator_sites": 13,
+              "module_class": "Qwen2MoeSdpaAttention",
+              "path": "decoder.layers.0.self_attn",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.addmm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.self_attn.k_proj",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.self_attn.o_proj",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 3264,
+          "max_initial_ratio_at_target_fraction_0_80": 14602.264543,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "moe_block_router": {
+          "candidate_sites": 1512,
+          "eligible_family_rows_before_work_filter": 1512,
+          "example_sites": [
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 125,
+              "module_class": "Qwen2MoeSparseMoeBlock",
+              "path": "decoder.layers.0.mlp",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "Linear",
+              "path": "decoder.layers.0.mlp.gate",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 5,
+              "module_class": "Qwen2MoeMLP",
+              "path": "decoder.layers.0.mlp.shared_expert",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 24244,
+          "max_initial_ratio_at_target_fraction_0_80": 88402.90258,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "normalization": {
+          "candidate_sites": 392,
+          "eligible_family_rows_before_work_filter": 392,
+          "example_sites": [
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.0.input_layernorm",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.0.post_attention_layernorm",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.add.Tensor",
+              "framed_fwd_work_operator_sites": 6,
+              "module_class": "Qwen2MoeRMSNorm",
+              "path": "decoder.layers.1.input_layernorm",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 2352,
+          "max_initial_ratio_at_target_fraction_0_80": 5018.268441,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "routed_expert_mlp": {
+          "candidate_sites": 13090,
+          "eligible_family_rows_before_work_filter": 14720,
+          "example_sites": [
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 5,
+              "module_class": "Qwen2MoeMLP",
+              "path": "decoder.layers.0.mlp.experts.0",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.silu.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "SiLU",
+              "path": "decoder.layers.0.mlp.experts.0.act_fn",
+              "rank": 0
+            },
+            {
+              "example_operator": "aten.mm.default",
+              "framed_fwd_work_operator_sites": 1,
+              "module_class": "ShardedLinear",
+              "path": "decoder.layers.0.mlp.experts.0.down_proj",
+              "rank": 0
+            }
+          ],
+          "framed_fwd_work_operator_site_count": 23562,
+          "max_initial_ratio_at_target_fraction_0_80": 36155.938899,
+          "rank_count": 16,
+          "ranks_with_sites": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      },
+      "catalog_references": {
+        "0": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank0.json",
+          "catalog_sha256": "d57e843461c0b17c4ee45dcaf2fde6d634b69751a0dfd19b8b4edcc2dcfb7c56",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank0.json",
+          "proof_sha256": "822b952e6dee9bf5eb780a2ad0bc000548e862221151c62f733df98141eb9347"
+        },
+        "1": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank1.json",
+          "catalog_sha256": "9ef68955411b132001dc50b0070d4c3f8f72110813beffc7468998cbfe7e5b07",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank1.json",
+          "proof_sha256": "fb97ccf3ccf7beae94999bc4aa8bb9ac058e11642aa74282178d8e38a344debe"
+        },
+        "2": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank2.json",
+          "catalog_sha256": "cca14dfe0fd5885f597226cbce2e5658e574ef558448c819bb36d1cc212d1555",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank2.json",
+          "proof_sha256": "efc46dce915148dbb837ea51980743f2347225aa010e7e5a8eebd71e515cc551"
+        },
+        "3": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank3.json",
+          "catalog_sha256": "43c1fd910cd8d947c0e313abb3ada38c1ec490be60fbae2dae347580234dc611",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank3.json",
+          "proof_sha256": "5731b7998e44cf23a6d2c104d4919b5acf5bf08619d687523b098610487303a9"
+        },
+        "4": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank4.json",
+          "catalog_sha256": "c1a73c2bbce1499de6e4838297cd1a3339d2dbeadda54965dbe7cab751a0e7d6",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank4.json",
+          "proof_sha256": "ec3065f0b9a84a73efd5ac0c8a6d0db703a2545e297803afd03e29c9fd389261"
+        },
+        "5": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank5.json",
+          "catalog_sha256": "4f32ec0d1acaa85a73e9c692959522b988ca4d5c04659ef32bdee4202804a4e0",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank5.json",
+          "proof_sha256": "c2d08508b3e45a765186e653a84b007851bf1c94d1c9f2cb347ad3d160173f31"
+        },
+        "6": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank6.json",
+          "catalog_sha256": "2d94554bedeaa9851a168eeb91a56fdbbfd32a8ace8b2fed3c305a4ec60ffc3f",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank6.json",
+          "proof_sha256": "006ebd5d272008b904cbd82538ff8cbecc1c8f2e9656738b65400f8eecb4263a"
+        },
+        "7": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank7.json",
+          "catalog_sha256": "dfdca7ba03dc988c596b895c1aad9c07f2228d50be91a8035db2238aada0f0ea",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank7.json",
+          "proof_sha256": "dc2e6a0cd64c8f09148c10e6f915e5c00de24656602f3ff9c21a1d812daa0bc2"
+        },
+        "8": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank8.json",
+          "catalog_sha256": "ea0daec152404e1f951eed8ba45bcbf6def6024ab0915269a07c10f9668807c4",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank8.json",
+          "proof_sha256": "ce4fcd07d3fe878a99ec2aba80370fb71536899a55ee1b056b50bd9070081f89"
+        },
+        "9": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank9.json",
+          "catalog_sha256": "5395b77202983930a96acf0ebccb6ad4f8c81524390e73e7d97e572899f6a170",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank9.json",
+          "proof_sha256": "8e6e347edea504a8eb2a8174db9e526c52e8bae3c97fd8f2b80bc6a02dfe8eb7"
+        },
+        "10": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank10.json",
+          "catalog_sha256": "68a90423feb91f029db083a4f5450c0f1ea8350f3c3eba40886bea1ccc73dbfd",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank10.json",
+          "proof_sha256": "1355fdbd3933bd8d3581e6d058c531660d0eeac0fbf2c1a72335149a96fd6880"
+        },
+        "11": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank11.json",
+          "catalog_sha256": "a85494ea6f15072fcc8127e3952cf22e13f2a7ca1574c97113435d53bdfec0c8",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank11.json",
+          "proof_sha256": "014f0afdf828377498047e4cc9a39c250f37f95ea450db9417c5223490b43468"
+        },
+        "12": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank12.json",
+          "catalog_sha256": "7c5126d4274d0473910f837c82c52cef702786021cc13fe03b30c82c2a0d7b0a",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank12.json",
+          "proof_sha256": "9425155e6a2ee38fc237b58013c1c1217713d2927f0b704bc64b4ae20226f67f"
+        },
+        "13": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank13.json",
+          "catalog_sha256": "6c3a49ce16e51f6dd159aa60307c9e0f18bd27e7aef178e85a84a5c594b3f4ab",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank13.json",
+          "proof_sha256": "88fdffff61b764eeaf3f84425c17f57e7bcbd0bce99b166cbc625a70573154c9"
+        },
+        "14": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank14.json",
+          "catalog_sha256": "72d49b8ec0e80d89d0a9ed1da7ced869941267edd8b34d65246ca8a6561224ca",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank14.json",
+          "proof_sha256": "40b341f822fb96903292b7c640d98254442ae44a384f7eb3eabd352162255d37"
+        },
+        "15": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank15.json",
+          "catalog_sha256": "dccaa80b07bc61ef27c5edacd154085d04c20bf4f571290234f1c389f66bb0b7",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank15.json",
+          "proof_sha256": "5acda08c2d364efa427815b436b78d92ab6264bbc30f6fa11d9d103cddceaf28"
+        }
+      },
+      "component_operator_phases": [
+        "fwd"
+      ],
+      "noncandidate_operator_rows_excluded_for_signature_or_timing": {
+        "no_nonzero_tensor_signature": 1956
+      },
+      "rank_count": 16,
+      "reference_healthy_wall_ms": 1308.3629379980266
+    }
+  },
+  "planned_gate": {
+    "fixed_denominator": 8,
+    "report_separately": [
+      "core vs peer source",
+      "healthy triggers/wrong GPU",
+      "peer support coverage",
+      "actual continuation-child count",
+      "time-only effect"
+    ],
+    "scoring_basis": "fault-window trigger, correct target, complete 8-step evidence/profile, valid scope/FMA; retain reject, miss, weak and invalid cases",
+    "strict_success_required": 8
+  },
+  "population_contract": {
+    "cases_per_layout": 4,
+    "component_operator_population_phase": "fwd_only",
+    "excludes_whole_model_stage_model_and_structural_containers": true,
+    "families_per_layout": [
+      "attention",
+      "routed_expert_mlp",
+      "moe_block_router",
+      "normalization"
+    ],
+    "family_interpretation_limit": "catalog component scopes can be parent modules or descendants; labels are sampling strata, not claims of complete semantic blocks",
+    "fixed_denominator_two_layouts": 8,
+    "nonzero_signature_boundary_examples": {
+      "empty_token_gemm_with_nonzero_weight": false,
+      "positive_matrix_multiply": true,
+      "scalar_tensor": true
+    },
+    "quota_per_family_per_layout": {
+      "attention": 1,
+      "moe_block_router": 1,
+      "normalization": 1,
+      "routed_expert_mlp": 1
+    },
+    "requires_fwd_framed_descendant_aten_site_with_timed_positive_tensor_signature": true,
+    "sample_unit": "one eligible FWD component scope per semantic family per layout",
+    "selection_independent_of_PROFILE_and_localizer_truth": true
+  },
+  "protocol": "peer_priority_v1_component_blind8_candidate_audit",
+  "schedule": {
+    "case_count_per_layout": 4,
+    "formal": "42 healthy + 4*(32 fault + 30 healthy) + 15 tail",
+    "formal_steps_per_layout": 305,
+    "timeonly": "12 warmup + 30 healthy + 4*(5 healthy + 5 fault) + 5 tail",
+    "timeonly_steps_per_layout": 87
+  },
+  "source_freeze": {
+    "core_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+    "path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/source_freeze.json",
+    "remote_source_check": "results/layer_campaign/scope_guard_v1/peer_priority_v1/remote_source_check.json",
+    "scoped_peer_binding_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+    "scoped_peer_model_sha256": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+    "sha256": "3eb4b97a56c125039e09f203636fbf25eddaa19b9abd84a4fe659423da717e61"
+  },
+  "status": "candidate_population_and_schedule_audited_no_design_drawn",
+  "writes_random_design": false
+}

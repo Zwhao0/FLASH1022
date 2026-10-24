@@ -1,0 +1,7 @@
+{
+  "contract_sha256": "3c7d5269fb21df276c6f30dc51dfbdd59850571d50fece64bd608ff0567a646a",
+  "no_GPU_started": true,
+  "runner_sha256": "d06d2e9f5d466647218182021eda05437ff9a5d61a22f5f36fb94925c9141cbc",
+  "source_freeze_sha256": "d5f7c464647c62beedb62075a49ab8193c59c8a6c7226f6492b2b5bd676bb260",
+  "status": "CPU_ready_only_after_NEWreg8_gate_and_production_apply"
+}

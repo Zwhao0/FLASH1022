@@ -19,6 +19,26 @@ class Client:
 
 
 class OnlineTests(unittest.TestCase):
+    def test_recent_confirmation_restores_cp_and_requires_actual_consecutive_steps(self):
+        from collections import deque
+        from flash_v1.online import add_monitor_sample
+        class Detector:
+            degradation = .2
+            last_cp = 7
+            samples = deque([(8, 90), (9, 110)])
+            def add(self, iteration, duration):
+                self.samples.append((iteration, duration))
+                self.last_cp = 9
+                return dict(baseline_mean=100)
+        d = Detector()
+        self.assertIsNone(add_monitor_sample(d, 10, 150, True))
+        self.assertEqual(d.last_cp, 7)
+        self.assertIsNotNone(add_monitor_sample(d, 11, 150, True))
+        self.assertEqual(d.last_cp, 9)
+        d.last_cp = 7
+        self.assertIsNone(add_monitor_sample(d, 20, 150, True))
+        self.assertEqual(d.last_cp, 7)
+
     def test_exactly_eight_steps_and_next_request(self):
         client = Client()
         with tempfile.TemporaryDirectory() as output:
@@ -89,6 +109,42 @@ class OnlineTests(unittest.TestCase):
         self.assertEqual([row['event'] for row in events], ['detection', 'localization', 'quota_exhausted'])
         self.assertEqual(client.get('online_pending'), '0')
         self.assertIsNotNone(client.get('online_completed_1'))
+
+    def test_opt_in_resume_keeps_backlog_and_cp_but_breaks_profile_gap(self):
+        from collections import deque
+        class Training(Client):
+            polls = 0
+            def exists(self, key):
+                return key == 'shutdown' and self.polls >= 4
+            def set(self, key, value):
+                super().set(key, value)
+                if key == 'online_request':
+                    self.values['online_schedule_1'] = json.dumps(dict(epoch=1, start=2, end=9))
+            def lrange(self, key, start, end):
+                self.polls += 1
+                last = 1 if self.polls == 1 else 10 if self.polls == 2 else 11
+                return [json.dumps(dict(iteration=i, wall_iteration_ms=100,
+                        profile_epoch=1 if 2 <= i <= 9 else 0)) for i in range(1,last+1)]
+        seen, instances = [], []
+        class Detector:
+            def __init__(self, warmup):
+                self.samples, self.last_cp = deque(), None
+                instances.append(self)
+            def add(self, iteration, duration):
+                seen.append((iteration, list(self.samples), self.last_cp))
+                self.samples.append(iteration)
+                if iteration == 1:
+                    self.last_cp = 1
+                    return dict(iteration=1)
+        with tempfile.TemporaryDirectory() as output:
+            (Path(output)/'configuration.json').write_text(json.dumps(dict(monitor_resume='contiguous')))
+            with patch('flash_v1.online.WindowDetector', Detector), \
+                    patch('flash_v1.online.drains_after', return_value=True), \
+                    patch('flash_v1.online.diagnose', return_value=dict(predicted='inconclusive')), \
+                    patch('flash_v1.online.time.sleep'):
+                controller(Training(), output, {}, max_profiles=3)
+        self.assertEqual(len(instances), 1)
+        self.assertEqual(seen, [(1, [], None), (10, [], 1), (11, [10], 1)])
 
     def test_training_end_handles_missing_truncated_and_late_complete_schedule(self):
         for schedule, expected, calls in [

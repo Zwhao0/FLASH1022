@@ -1,0 +1,10 @@
+{
+  "consumer_tests_passed": 19,
+  "default_optimized": false,
+  "network_commands_executed": 0,
+  "patch_sha256": "de9beadee78c14fac7456a1cd302bb7d177cc8ba039f2e95e59d2794d190c488",
+  "plan_explicit_config_and_policy": true,
+  "real_entry_called": "flash_v1.scripts.data16.run(plan,startup_gc_fixed_model=True)",
+  "source": "live",
+  "status": "passed_CPU_no_network_GPU"
+}

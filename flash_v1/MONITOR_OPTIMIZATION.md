@@ -1,5 +1,6 @@
 # 常驻 MONITOR 优化（2026-10-22）
 
+当前semantic-only成本复核见`MONITOR_COST_V3.md`；以下为2026-10-22历史结果，原报告保留。
 目标：PROFILE 平均开销约5%以内；常驻 MONITOR 平均开销小于1%，保留逐步检测和原定位精度。范围为当前2节点16卡 TP2×PP2×EP2×Expert-DP2、真实完整Qwen派生MoE、seq16/2微批、随机token系统实验；不是其他模型/负载的开销保证。
 
 ## 实现

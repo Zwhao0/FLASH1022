@@ -1,0 +1,87 @@
+{
+  "case_count": {
+    "distribution": "Uniform{4,5,6}",
+    "draw_after_submitted_commit": true,
+    "one_shot_no_redraw": true
+  },
+  "cases_per_layout": "at least2 each; draw legacy count uniformly from2..N-2, PP receives remainder",
+  "dose": {
+    "formula": "one uniform target per case; ratio = target * healthy median whole-step ms / healthy selected-compute estimate per step",
+    "no_replacement_or_retuning": true,
+    "source": "existing healthy calibration/catalog only; preserve estimation uncertainty and actual FMA attestation",
+    "target_extra_fraction": [
+      0.5,
+      0.7
+    ],
+    "zero_estimate": "retain as preflight-invalid; do not redraw site or seed"
+  },
+  "execution": {
+    "artifacts_required_after_commit": [
+      "formal_legacy_plan.json",
+      "formal_node_local_pp_plan.json",
+      "contract.json",
+      "source_freeze.json",
+      "ready.json"
+    ],
+    "entry": "existing production data16.run(plan,startup_gc_fixed_model=True)",
+    "no_GPU_now": true,
+    "no_automatic_retry": true,
+    "no_source_application": true,
+    "no_upload": true,
+    "source": "submitted commit plus actual deployed source hashes; no change after draw"
+  },
+  "layouts": [
+    "legacy",
+    "node_local_pp"
+  ],
+  "predictions": "seal public events/hash for both sessions before any truth scoring",
+  "protocol": "postcommit_compute_v2_random_4to6_v1",
+  "randomization": {
+    "L2_phase": "uniform fwd/bwd",
+    "L3": "FWD only; uniform eligible family then eligible component site from frozen healthy catalog",
+    "L4": "FWD framed-ATen only; uniform eligible operator family then eligible site from frozen healthy catalog",
+    "assignment": "draw N, layout counts and tier allocation once from frozen seed; N5/6 not forced equal split",
+    "population": "all currently supported eligible healthy-catalog sites; freeze population and hashes before draw; never select by old pass/fail",
+    "rank": "uniform integer0..15 independently per case, then uniformly choose eligible supported site for that rank; freeze eligibility audit before draw",
+    "when": "only after root supplies submitted commit; draw one seed once, persist before selection"
+  },
+  "report": {
+    "cost": "cite final same-source measured budgets; fault wall is not PROFILE overhead",
+    "each_case": true,
+    "healthy_candidates": true,
+    "healthy_wrong_gpu": true,
+    "not_population_accuracy": true,
+    "profile_fault_overlap_explicit": true,
+    "weak_miss_reject_in_denominator": true
+  },
+  "schedule": {
+    "aux_offsets": [
+      1,
+      3,
+      7
+    ],
+    "core_window": 8,
+    "fault_length": 32,
+    "first_fault_start": "Uniform integer43..58 (>=30 real monitored healthy steps after warmup)",
+    "healthy_tail_min": 30,
+    "min3_unchanged": true,
+    "no_overlapping_fault_intervals": true,
+    "single_fault_gpu_at_a_time": true,
+    "subsequent_fault_start": "previous fault end +31+Uniform integer0..15 (>=30 complete healthy recovery steps)",
+    "warmup": [
+      1,
+      12
+    ]
+  },
+  "seed": null,
+  "status": "CPU_draft_waiting_for_committed_source_no_seed_draw",
+  "submitted_commit": null,
+  "tiers": "each of L1/L2/L3/L4 at least1; remaining N-4 tiers drawn uniformly then all tiers shuffled across layout slots",
+  "unknown_detection_contract": {
+    "current_source_audit": "online.py/online_v2.py do not read plan.json; node_collection controller argv has no --plan; no production modification required",
+    "detector": "normal production BEAST MONITOR -> automatically requested PROFILE -> localization; continuation remains core-only",
+    "future_public_view": "if future source reads full plan, stop source-binding preflight and report before modifying production; never silently introduce a modified controller",
+    "manual_requests": [],
+    "truth_access": "fault schedule/labels only injector and post-seal scorer; controller consumes configuration/topology/models/observed evidence, not plan or truth logs"
+  }
+}

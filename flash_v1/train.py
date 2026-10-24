@@ -5,6 +5,7 @@ replicate the corresponding experts (expert DP=2). No layers are removed.
 """
 import argparse
 import copy
+from contextlib import contextmanager
 import json
 import math
 import os
@@ -21,6 +22,20 @@ from flash_v1.topology import build_topology
 
 REVISION = "4b89028ef7376d0e92acbbc4a7f560c2374aeec0"
 MODEL_ID = "bayliner1980/Qwen2.5-0.5B-MoE-A0.3B"
+
+_stage_forward_aux = None
+
+
+@contextmanager
+def stage_forward_observer(observer):
+    """PROFILE-only observer; restore its previous binding on every exit."""
+    global _stage_forward_aux
+    previous = _stage_forward_aux
+    _stage_forward_aux = observer
+    try:
+        yield
+    finally:
+        _stage_forward_aux = previous
 
 
 class VariableAllToAll(torch.autograd.Function):
@@ -55,8 +70,13 @@ def ep_forward(self, x):
     order = torch.argsort(owners, stable=True)
     send_count = torch.bincount(owners, minlength=self._ep_size)
     receive_count = torch.empty_like(send_count)
-    dist.all_to_all_single(receive_count, send_count, group=self._ep_group)
-    send, receive = send_count.tolist(), receive_count.tolist()
+    if _stage_forward_aux is None:
+        dist.all_to_all_single(receive_count, send_count, group=self._ep_group)
+        send, receive = send_count.tolist(), receive_count.tolist()
+    else:
+        with _stage_forward_aux.ep_metadata():
+            dist.all_to_all_single(receive_count, send_count, group=self._ep_group)
+            send, receive = send_count.tolist(), receive_count.tolist()
     dispatched = flat_x[order // indices.shape[-1]]
     received = VariableAllToAll.apply(dispatched, send, receive, self._ep_group)
     received_ids = flat_indices.new_empty(sum(receive))

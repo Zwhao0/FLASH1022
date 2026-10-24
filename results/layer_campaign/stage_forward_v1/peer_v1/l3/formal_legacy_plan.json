@@ -1,0 +1,599 @@
+{
+  "candidate_population_note": "one eligible FWD component slot per rank; family quota 4 each; excludes structural/model containers",
+  "component_family_quotas_per_layout": {
+    "attention": 4,
+    "moe_block_router": 4,
+    "normalization": 4,
+    "routed_expert_mlp": 4
+  },
+  "component_operator_population_phase": "fwd",
+  "controlled_profile_requests": [],
+  "design_sha256": "50c167a31e13a4212b0da5998eb635275dff543b1e7db8dd36c36aeb65631730",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "formal",
+  "fault_kind": "component_compute",
+  "fixed_denominator": 32,
+  "freeze_manifest_sha256": "c46c7b8acd7606a8b2f97df50d130640220293742ff55e72531ff097ce0590d5",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "intervals": [
+    {
+      "end": 12,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    },
+    {
+      "end": 42,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_gate",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-attention-0-c8350bb8",
+      "end": 74,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.2.self_attn.q_proj"
+      },
+      "id": "l3-legacy-attention-0-c8350bb8",
+      "phase": "fwd",
+      "rank": 0,
+      "record_start": 43,
+      "segment": "fault",
+      "slowdown_extra_ratio": 7674.676315,
+      "start": 43,
+      "target_ranks": [
+        0
+      ]
+    },
+    {
+      "end": 104,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-attention-0-c8350bb8",
+      "record_start": 75,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 75,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-routed_expert_mlp-1-3a162785",
+      "end": 136,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.3.mlp.experts.7.up_proj"
+      },
+      "id": "l3-legacy-routed_expert_mlp-1-3a162785",
+      "phase": "fwd",
+      "rank": 1,
+      "record_start": 105,
+      "segment": "fault",
+      "slowdown_extra_ratio": 7612.480368,
+      "start": 105,
+      "target_ranks": [
+        1
+      ]
+    },
+    {
+      "end": 166,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-routed_expert_mlp-1-3a162785",
+      "record_start": 137,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 137,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-moe_block_router-2-b720b85e",
+      "end": 198,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.0.mlp.shared_expert_gate"
+      },
+      "id": "l3-legacy-moe_block_router-2-b720b85e",
+      "phase": "fwd",
+      "rank": 2,
+      "record_start": 167,
+      "segment": "fault",
+      "slowdown_extra_ratio": 60777.428882,
+      "start": 167,
+      "target_ranks": [
+        2
+      ]
+    },
+    {
+      "end": 228,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-moe_block_router-2-b720b85e",
+      "record_start": 199,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 199,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-normalization-3-5789298b",
+      "end": 260,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.2.post_attention_layernorm"
+      },
+      "id": "l3-legacy-normalization-3-5789298b",
+      "phase": "fwd",
+      "rank": 3,
+      "record_start": 229,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3155.855705,
+      "start": 229,
+      "target_ranks": [
+        3
+      ]
+    },
+    {
+      "end": 290,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-normalization-3-5789298b",
+      "record_start": 261,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 261,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-attention-4-168c55a9",
+      "end": 322,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.0.self_attn.o_proj"
+      },
+      "id": "l3-legacy-attention-4-168c55a9",
+      "phase": "fwd",
+      "rank": 4,
+      "record_start": 291,
+      "segment": "fault",
+      "slowdown_extra_ratio": 10426.159336,
+      "start": 291,
+      "target_ranks": [
+        4
+      ]
+    },
+    {
+      "end": 352,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-attention-4-168c55a9",
+      "record_start": 323,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 323,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-routed_expert_mlp-5-505f8cd8",
+      "end": 384,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.9.mlp.experts.13.down_proj"
+      },
+      "id": "l3-legacy-routed_expert_mlp-5-505f8cd8",
+      "phase": "fwd",
+      "rank": 5,
+      "record_start": 353,
+      "segment": "fault",
+      "slowdown_extra_ratio": 18710.443162,
+      "start": 353,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "end": 414,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-routed_expert_mlp-5-505f8cd8",
+      "record_start": 385,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 385,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-routed_expert_mlp-6-c1b4297d",
+      "end": 446,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.3.mlp.experts.16.up_proj"
+      },
+      "id": "l3-legacy-routed_expert_mlp-6-c1b4297d",
+      "phase": "fwd",
+      "rank": 6,
+      "record_start": 415,
+      "segment": "fault",
+      "slowdown_extra_ratio": 6595.741126,
+      "start": 415,
+      "target_ranks": [
+        6
+      ]
+    },
+    {
+      "end": 476,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-routed_expert_mlp-6-c1b4297d",
+      "record_start": 447,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 447,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-moe_block_router-7-457fb312",
+      "end": 508,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.mlp.shared_expert"
+      },
+      "id": "l3-legacy-moe_block_router-7-457fb312",
+      "phase": "fwd",
+      "rank": 7,
+      "record_start": 477,
+      "segment": "fault",
+      "slowdown_extra_ratio": 1707.922166,
+      "start": 477,
+      "target_ranks": [
+        7
+      ]
+    },
+    {
+      "end": 538,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-moe_block_router-7-457fb312",
+      "record_start": 509,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 509,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-normalization-8-4e89a414",
+      "end": 570,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.1.post_attention_layernorm"
+      },
+      "id": "l3-legacy-normalization-8-4e89a414",
+      "phase": "fwd",
+      "rank": 8,
+      "record_start": 539,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2599.233682,
+      "start": 539,
+      "target_ranks": [
+        8
+      ]
+    },
+    {
+      "end": 600,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-normalization-8-4e89a414",
+      "record_start": 571,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 571,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-normalization-9-a58cb33a",
+      "end": 632,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.3.input_layernorm"
+      },
+      "id": "l3-legacy-normalization-9-a58cb33a",
+      "phase": "fwd",
+      "rank": 9,
+      "record_start": 601,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3121.729803,
+      "start": 601,
+      "target_ranks": [
+        9
+      ]
+    },
+    {
+      "end": 662,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-normalization-9-a58cb33a",
+      "record_start": 633,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 633,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-normalization-10-a08ca3e4",
+      "end": 694,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.post_attention_layernorm"
+      },
+      "id": "l3-legacy-normalization-10-a08ca3e4",
+      "phase": "fwd",
+      "rank": 10,
+      "record_start": 663,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2837.930214,
+      "start": 663,
+      "target_ranks": [
+        10
+      ]
+    },
+    {
+      "end": 724,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-normalization-10-a08ca3e4",
+      "record_start": 695,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 695,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-moe_block_router-11-056225fa",
+      "end": 756,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.5.mlp.shared_expert"
+      },
+      "id": "l3-legacy-moe_block_router-11-056225fa",
+      "phase": "fwd",
+      "rank": 11,
+      "record_start": 725,
+      "segment": "fault",
+      "slowdown_extra_ratio": 9720.077116,
+      "start": 725,
+      "target_ranks": [
+        11
+      ]
+    },
+    {
+      "end": 786,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-moe_block_router-11-056225fa",
+      "record_start": 757,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 757,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-moe_block_router-12-7a03040c",
+      "end": 818,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.10.mlp.shared_expert.act_fn"
+      },
+      "id": "l3-legacy-moe_block_router-12-7a03040c",
+      "phase": "fwd",
+      "rank": 12,
+      "record_start": 787,
+      "segment": "fault",
+      "slowdown_extra_ratio": 81137.788524,
+      "start": 787,
+      "target_ranks": [
+        12
+      ]
+    },
+    {
+      "end": 848,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-moe_block_router-12-7a03040c",
+      "record_start": 819,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 819,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-routed_expert_mlp-13-db3b5622",
+      "end": 880,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.7.mlp.experts.10.gate_proj"
+      },
+      "id": "l3-legacy-routed_expert_mlp-13-db3b5622",
+      "phase": "fwd",
+      "rank": 13,
+      "record_start": 849,
+      "segment": "fault",
+      "slowdown_extra_ratio": 11300.656929,
+      "start": 849,
+      "target_ranks": [
+        13
+      ]
+    },
+    {
+      "end": 910,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-routed_expert_mlp-13-db3b5622",
+      "record_start": 881,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 881,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-attention-14-b5727fd7",
+      "end": 942,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.self_attn.o_proj"
+      },
+      "id": "l3-legacy-attention-14-b5727fd7",
+      "phase": "fwd",
+      "rank": 14,
+      "record_start": 911,
+      "segment": "fault",
+      "slowdown_extra_ratio": 7286.636282,
+      "start": 911,
+      "target_ranks": [
+        14
+      ]
+    },
+    {
+      "end": 972,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-attention-14-b5727fd7",
+      "record_start": 943,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 943,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l3-legacy-attention-15-ee88817e",
+      "end": 1004,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.self_attn.o_proj"
+      },
+      "id": "l3-legacy-attention-15-ee88817e",
+      "phase": "fwd",
+      "rank": 15,
+      "record_start": 973,
+      "segment": "fault",
+      "slowdown_extra_ratio": 10890.536063,
+      "start": 973,
+      "target_ranks": [
+        15
+      ]
+    },
+    {
+      "end": 1034,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_after_l3-legacy-attention-15-ee88817e",
+      "record_start": 1005,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1005,
+      "target_ranks": []
+    },
+    {
+      "end": 1049,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_tail",
+      "record_start": 1035,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1035,
+      "target_ranks": []
+    }
+  ],
+  "layer": "L3",
+  "layout": "legacy",
+  "max_profiles": 40,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "parallel_layout": "legacy",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "peer_v1_l3_formal_v1",
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "peer_l3_formal",
+  "schema_version": 1,
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_catalog_legacy_02",
+  "seed": 1088829482,
+  "seq_len": 16,
+  "session_id": "v2s_peer_l3_formal_legacy_01",
+  "stage_forward_aux_binding_file_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped.json",
+  "stage_forward_aux_model_file_sha256": "639280cbc08daf5e5579f100aeb194d304fd1a01d911f9be0909056d061ce4a5",
+  "steps": 1049,
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_legacy_02"
+}

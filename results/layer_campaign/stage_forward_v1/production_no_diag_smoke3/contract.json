@@ -1,0 +1,108 @@
+{
+  "cases": [
+    {
+      "case_id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+      "fault_interval": {
+        "case_id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+        "end": 74,
+        "fault_enabled": true,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "whole"
+        },
+        "id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+        "rank": 6,
+        "record_start": 43,
+        "segment": "fault",
+        "slowdown_extra_ratio": 1.710202,
+        "start": 43,
+        "target_ranks": [
+          6
+        ]
+      },
+      "layout": "legacy",
+      "parent_definition": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline/formal_legacy_plan.json",
+      "parent_sha256": "8ee8fa662897c64502bfc91a56fba2e57f7d248429d7f148e90c8468f03ac852",
+      "seed": 2032905414
+    },
+    {
+      "case_id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+      "fault_interval": {
+        "case_id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+        "end": 136,
+        "fault_enabled": true,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "stage",
+          "phase": "bwd"
+        },
+        "id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+        "phase": "bwd",
+        "rank": 15,
+        "record_start": 105,
+        "segment": "fault",
+        "slowdown_extra_ratio": 3.117525,
+        "start": 105,
+        "target_ranks": [
+          15
+        ]
+      },
+      "layout": "legacy",
+      "parent_definition": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline/formal_legacy_plan.json",
+      "parent_sha256": "8ee8fa662897c64502bfc91a56fba2e57f7d248429d7f148e90c8468f03ac852",
+      "seed": 2032905414
+    },
+    {
+      "case_id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+      "fault_interval": {
+        "case_id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+        "end": 74,
+        "fault_enabled": true,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "stage",
+          "phase": "fwd"
+        },
+        "id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+        "phase": "fwd",
+        "rank": 13,
+        "record_start": 43,
+        "segment": "fault",
+        "slowdown_extra_ratio": 7.898007,
+        "start": 43,
+        "target_ranks": [
+          13
+        ]
+      },
+      "layout": "node_local_pp",
+      "parent_definition": "results/layer_campaign/stage_forward_v1/peer_v1/upper6/l2/formal_node_local_pp_plan.json",
+      "parent_sha256": "e9bedd8898dddffc0272777ef1540f714bc82599fc82fcc284816a619738138d",
+      "seed": 747330049
+    }
+  ],
+  "fixed_cases": 3,
+  "gate": "All three original cases target-correct with fault-contained complete8 core512/128markers + aux48 strict[1,3,7]/min3; pure-health localization0; any regression blocks and expands checks; no truth-based retiming/dose/threshold changes",
+  "health": "12 warmup+30 healthy13..42 before first fault; legacy recovery75..104 healthy30; original32step faults,15step final tail; automatic BEAST and core-only continuation unchanged",
+  "no_GPU_started": true,
+  "plans": {
+    "legacy": {
+      "path": "results/layer_campaign/stage_forward_v1/production_no_diag_smoke3/formal_legacy_plan.json",
+      "session_id": "v2s_production_nodiag_smoke3_legacy_01",
+      "sha256": "a194e12598690fe614971923492fc9e467aba31c79117fe7e27b278876a42de4",
+      "steps": 151
+    },
+    "node_local_pp": {
+      "path": "results/layer_campaign/stage_forward_v1/production_no_diag_smoke3/formal_node_local_pp_plan.json",
+      "session_id": "v2s_production_nodiag_smoke3_node_local_pp_01",
+      "sha256": "b231db6e61e893c35efdf77f0dd035d39b578aa0a3aa36f5b7ec6d208103adc3",
+      "steps": 89
+    }
+  },
+  "production_apply_required": true,
+  "production_binding_sha256": "4ba3b288ba7486ec2ac3081b66ab6868a2b1247573d3c15537c3c0782d4b63a0",
+  "protocol": "production_no_diag_runtime_difference_smoke3_v1",
+  "scope": "Only diagnostic-to-no-diagnostic runtime difference; no new full-campaign accuracy estimate",
+  "source_freeze_path": "results/layer_campaign/stage_forward_v1/production_no_diag_smoke3/source_freeze.json",
+  "source_freeze_sha256": "d5f7c464647c62beedb62075a49ab8193c59c8a6c7226f6492b2b5bd676bb260",
+  "status": "CPU_ready_only_after_NEWreg8_gate_and_production_apply"
+}

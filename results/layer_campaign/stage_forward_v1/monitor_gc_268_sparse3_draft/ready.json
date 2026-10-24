@@ -1,0 +1,8 @@
+{
+  "backend_tar_sha256": "344d751a772b0f3ab1517c10b8796baeaeb919f925910c639eb28d97499ec838",
+  "contract_sha256": "8abcaedffb761c68fa9868811b840550072b94cc872e45f39b6135302cf1db0c",
+  "freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+  "no_GPU_started": true,
+  "runner_sha256": "addcdcc65a07097b486328a7e1f53a960cc638f5b4757b99819ff5865be5ca90",
+  "status": "CPU_prepared_after_production_gate_only"
+}

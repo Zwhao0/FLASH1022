@@ -1,0 +1,21 @@
+{
+  "execution_complete_sha256": "5c65218a5d77f176c1b666eb644a9b577bd023151786807a70f2d7797afb6939",
+  "fixed_denominator": 8,
+  "layouts": {
+    "legacy": {
+      "events_sha256": "5ea1c85e66e2a864afc81f2c708fe903e6a6ddf518947bbbd7dcb876fecaaa16",
+      "plan_sha256": "28472ef76b6c44d4dab13e2b971c5cab03432bada8c67b4c539c6f6da4aca2b9",
+      "prediction_sha256": "349cdd9c85cd17a63076ff163e3084b8565d018855cabc0a1b3e61c49ae1effa",
+      "session": "v2s_peer_priority_reg8_sparse3_gc_diag_legacy_01"
+    },
+    "node_local_pp": {
+      "events_sha256": "5359cfe70e62d317d7e99ed7a6d0efbfe64407048c78b43204089f56ba2facf2",
+      "plan_sha256": "02edc16d0f4e6781f9c4776ef5440011105ca6fdc29cbd12215b9130d523a0bc",
+      "prediction_sha256": "a1aa2f0bdab4d3e9da31642ded2c771e7596663ad809811fbef3149ac8887745",
+      "session": "v2s_peer_priority_reg8_sparse3_gc_diag_node_local_pp_01"
+    }
+  },
+  "prediction_before_truth": true,
+  "protocol": "peer_priority_reg8_sparse3_gcdiag_prediction_freeze_v1",
+  "source_freeze_sha256": "9072531ec4083ec4150fcff15179f96bd735958d8cf46dc56b1681ac3037a94d"
+}

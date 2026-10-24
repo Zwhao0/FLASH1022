@@ -1,0 +1,93 @@
+{
+  "benchmark_mode": "ABC_CBA",
+  "controlled_manual_profile_limit": 0,
+  "controlled_profile_requests": [],
+  "controlled_request_source": "full healthy detector runs; only fixed two manual requests may emit",
+  "cost_contract_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/contract.json",
+  "cost_harness_files": {
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/contract.py": "4339f33a8f07080cc6a40e2272be3023c4bbb236e6be47c45c5b4a9eb810e022",
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/controller_cost.py": "2f6bf6308c64977fef2c20307155c4835c5c8eef1d9c8666156023693f958b5b",
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/node_collection_cost.py": "28dc79eb0e349f7bee5731b9e83f041d3888f5094d3d2e8a8bda82cd10f29f5a",
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/node_cost.py": "62b92a5f9d28df0f9e0dd133da160a9c6d3d8c8a3108576efebc686ece26a02c",
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/runtime.py": "b1c1fe54a16e429d7abace05139e9dbd05bf86d3b014233af4241a5f5832445b",
+    "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/train_pipeline_cost.py": "6e4056223e026e9c60c3158009fed762e4a50f7bd9e50e4eede8108303fe227b"
+  },
+  "cost_targets": {
+    "profile_vs_monitor_fraction": 0.05,
+    "total_monitor_fraction": 0.01
+  },
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "sameprocess_total_cost_baseline",
+  "fault_kind": "healthy_cost_only",
+  "fixed_denominator": null,
+  "freeze_manifest_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "gc_callbacks_diagnostic": false,
+  "integration_node_module": "results.layer_campaign.stage_forward_v1.monitor_gc_268_sparse3_draft.node_cost",
+  "intervals": [
+    {
+      "delay_ms": 0.0,
+      "end": 268,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy_cost_only",
+      "record_start": 1,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    }
+  ],
+  "layout": "legacy",
+  "max_profiles": 3,
+  "measurement_only": true,
+  "microbatches": 2,
+  "monitor_benchmark": false,
+  "monitor_confirm_recent_three": true,
+  "monitor_cost_timing": false,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "monitor_sameprocess_cost": true,
+  "no_truth_or_fault_inference_input": true,
+  "online": true,
+  "parallel_layout": "legacy",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "startup_gc_monitor_only_ABBA268_v1",
+  "retain_all_false_alarms": true,
+  "role": "stage_forward_cost",
+  "schema_version": 1,
+  "seed": 1348533921,
+  "seq_len": 16,
+  "session_id": "v2s_sparse3_gc_monitor268_legacy_01",
+  "source_freeze_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/freeze.json",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_plain_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_plain.json",
+  "stage_forward_aux_sampling": {
+    "core_evidence_steps": 8,
+    "expected_aux_rows": 48,
+    "sample_offsets": [
+      1,
+      3,
+      7
+    ],
+    "schema": "flash_stage_forward_sparse3_v1",
+    "window_size": 8
+  },
+  "startup_gc_policy": {
+    "collect_once": true,
+    "fixed_model_lifecycle": true,
+    "fixed_model_process_lifetime": true,
+    "freeze_once": true,
+    "normal_dynamic_gc": true,
+    "preexisting_heap_policy": "retain_all_frozen_until_process_exit",
+    "schema": "startup_process_lifetime_heap_freeze_v2"
+  },
+  "steps": 268,
+  "warmup_steps": 12
+}

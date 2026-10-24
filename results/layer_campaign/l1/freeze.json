@@ -1,0 +1,50 @@
+{
+  "candidate": "dc89 + recent-three monitor confirmation + monitor-cost-v3 source",
+  "files": {
+    "flash_v1/analysis.py": "a72fd79b5b6c596a53e8e71a358b27a16daa5bb7494cc7922532414a265e3c37",
+    "flash_v1/evidence.py": "a52f46637a0881f7cec869777e5c8dbf653fff819cb73d2b4ded8ac0fb51e674",
+    "flash_v1/localize_v2_linear.py": "4deb87cff9921d43fb72ea2fbd7dddd64af477155513242ba707866dc329b52a",
+    "flash_v1/monitor_channel.py": "ccb5758bf0f09f3009a4c25033383db04256b45e2beb7542823b33cc577300b8",
+    "flash_v1/online.py": "89139c77c2fdb0d64ecf89f3840457e247d9f77de43bdbcc8180d0d59824f473",
+    "flash_v1/online_v2.py": "464cf3879fce980955b6c9afae7b08fdbb1622068d6ff2a1a252e01454912298",
+    "flash_v1/scoped_compute.py": "28691004e6a869440b175211c5d7eda97ad96a2a712e486cb588a2aec72c934f",
+    "flash_v1/scripts/monitor_cost_v3.py": "788a3e94f287b69e6fb65c6d4bbde855bfdfab9eacb96ae9793fc44c6625b9df",
+    "flash_v1/scripts/node_collection.py": "69361ea7b6c278b958837383d5a750ed741b53764042f93045388ec56d5e58eb",
+    "flash_v1/scripts/v2_benchmark.py": "cdbc87f42277b5078d31c3210c34e73367fddca66cd0e242bde8c9ee32ba6604",
+    "flash_v1/scripts/v2_collect.py": "f3eb2008db8e60a11aeb373ac53d6e20cb4a17630d46709aab327a41b4566c0d",
+    "flash_v1/tests/test_v2_plan_defaults.py": "3dfda596cf763f55a1758e3cda71763b1ccd82b0034d5e1c73d9f57b73ce94c3",
+    "flash_v1/train_pipeline.py": "9a8eb95258f11aa232990a4f9930721d54db716afc2422dd88c5a8f9eed84e29",
+    "results/v2_semantic/linear_candidate_model.json": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b"
+  },
+  "freeze_utc": "2026-10-23T13:03:51.557814+00:00",
+  "model_path": "results/v2_semantic/linear_candidate_model.json",
+  "model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "protocol": "layer_campaign_l1_freeze_v1",
+  "provenance": {
+    "monitor_cost_v3_source_checks": {
+      "path": "results/monitor_cost_v3/source_and_cpu_checks.json",
+      "sha256": "f4e57d67827d4ddbb4119155d469b364826b955634dbd6c9b70d66278c823942"
+    },
+    "monitor_cost_v3_summary": {
+      "path": "results/monitor_cost_v3/summary.json",
+      "sha256": "83ff7c08c2ef16054aab010771291a8182d86cfae39d1c7d2e7edfef95265a03"
+    },
+    "recent_three_freeze": {
+      "path": "results/recent_three8/freeze.json",
+      "sha256": "8718dd0e7ab197fc944daa7f2230e95d4c7c9ca8ead6f579c8489b85c1a58c90"
+    },
+    "recent_three_release": {
+      "path": "results/recent_three8/release.json",
+      "sha256": "7f1bd16b8ee6520322b916ea6ffa191e35558fc06f5112b70d19e469b2b2bf7d"
+    },
+    "remote_release_check": {
+      "path": "results/layer_campaign/l1/remote_release_check.json",
+      "sha256": "1ed237b5b8cc66f9bc6a92085339e69428aa9d209550a4f12c9ffd606f2b9af2"
+    }
+  },
+  "scope_attestation": {
+    "path": "results/v2_semantic/scope_attestation_02/summary.json",
+    "sha256": "8b0bca782ab103a3a56ccebacccfcf3ff880bdc9757c8f36f69eb3ff8315cd48",
+    "status": "passed"
+  }
+}

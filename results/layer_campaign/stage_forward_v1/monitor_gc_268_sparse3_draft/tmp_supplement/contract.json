@@ -1,0 +1,20 @@
+{
+  "PP": "root fixed one original268 repeat; all original+repeat orders retained, no further adaptive samples",
+  "legacy": "fixed one original268 repeat because original AB CI crosses1; original decision remains inconclusive",
+  "max_additional_runs_per_layout": 1,
+  "method": {
+    "bootstrap": "reuse sparse3_gc_draft.score_sparse3._pooled; paired circular block2; seed20261024;10000draws; stratify by run/order",
+    "gate": "report separate average_budget_gate (pooled point+CIupper<1) and original_strict_per_order_gate (each merged order and pooled point+CIupper<1); never overwrite original run fields",
+    "original_legacy": "original block4 single-run result preserved; supplement block2 method separately declared, does not relabel original result",
+    "pairs": "all logical33..64, AB and BA kept separate within each run",
+    "primary": "ratio of summed max16rank complete-step walls"
+  },
+  "no_adaptive_more_runs": true,
+  "repeat_sessions": {
+    "legacy": "v2s_sparse3_gc_monitor268_legacy_repeat_01",
+    "node_local_pp": "v2s_sparse3_gc_monitor268_node_local_pp_repeat_01"
+  },
+  "report": "each run/order, original+repeat each-order merged, overall; retain negative values and uncertainty; no pure-monitor negative overhead claim",
+  "source": "same original production/cost source, inputs, seed, SGD, GC, 268ABBA; only session_id changes",
+  "status": "predeclared_CPU_only"
+}

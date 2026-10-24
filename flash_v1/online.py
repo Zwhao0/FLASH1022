@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import signal
+import statistics
 import time
 
 from flash_v1.analysis import WindowDetector
@@ -94,6 +95,50 @@ def diagnose(client, output, schedule, model):
         return None  # Retry only the drain, with a fixed ten-second deadline.
 
 
+def add_monitor_sample(detector, iteration, duration, confirm_recent=False):
+    """Optional persistence check after unchanged BEAST; rejected CP is uncommitted."""
+    previous_cp = getattr(detector, 'last_cp', None)
+    event = detector.add(iteration, duration)
+    if event is not None and confirm_recent:
+        recent = list(detector.samples)[-3:]
+        contiguous = len(recent) == 3 and [r[0] for r in recent] == list(range(iteration-2, iteration+1))
+        if (not contiguous or statistics.median(r[1] for r in recent)
+                <= event['baseline_mean'] * (1 + detector.degradation)):
+            detector.last_cp = previous_cp
+            return None
+    return event
+
+
+def profile_transition_event(configuration, pending, result, epoch, max_profiles, latest, done):
+    """One child per original request, emitted at the real completion boundary."""
+    # V2 fusion can change the public rank; continuation remains the original
+    # core decision. Auxiliary model output never populates this identity.
+    core = result.get('profile_transition_core', result)
+    if not isinstance(core, dict):return None
+    hint = core.get('profile_transition')
+    if (not configuration.get('monitor_profile_transition', False)
+            or pending.get('parent_epoch') is not None or not hint
+            or core.get('status') != 'localized' or hint.get('rank') != core.get('rank')
+            or done is not None or epoch >= max_profiles
+            or pending.get('schedule') is None or latest < pending['schedule']['end']):
+        return None
+    # The existing command path schedules two iterations after observation.
+    steps = configuration.get('training_steps')
+    if steps is None or latest + 9 > steps:
+        return None
+    return dict(epoch=epoch + 1, iteration=latest, source='profile_transition',
+                parent_epoch=epoch, profile_iterations=8, transition=hint)
+
+
+def bounded_diagnostic_timeout(client, output, schedule, model):
+    """Optional versioned callback; the existing deadline and v1 stay unchanged."""
+    resolver = vars(diagnose).get('timeout_result')
+    if callable(resolver):
+        result = resolver(client, output, schedule, model)
+        if result is not None:return result
+    return dict(predicted='inconclusive', reason='bounded_drain_or_coverage_timeout')
+
+
 def controller(client, output, model, warmup=12, max_profiles=3, stopped=lambda: False):
     from flash_v1.monitor_channel import MonitorChannel
     path = Path(output) / 'monitor.bin'
@@ -110,8 +155,11 @@ def _controller(client, output, model, warmup, max_profiles, stopped, channel):
     output.mkdir(parents=True, exist_ok=True)
     detector = WindowDetector(warmup=warmup)
     configuration_path = output / 'configuration.json'
-    benchmark_blocks = (json.loads(configuration_path.read_text()).get('monitor_benchmark_blocks')
-                        if configuration_path.exists() else None)
+    configuration = json.loads(configuration_path.read_text()) if configuration_path.exists() else {}
+    benchmark_blocks = configuration.get('monitor_benchmark_blocks')
+    resume = configuration.get('monitor_resume') == 'contiguous'
+    confirm_recent = configuration.get('monitor_confirm_recent_three', False)
+    replay_rows = []
     last_iteration, epoch, pending, exhausted = 0, 0, None, False
     channel_cursor, forwarded_epoch = 0, 0
     client.set('online_pending', '0')
@@ -131,12 +179,16 @@ def _controller(client, output, model, warmup, max_profiles, stopped, channel):
                 emit(output, 'profile_schedule', **schedule)
         else:
             observations = [decode(encoded) for encoded in client.lrange('online_iterations', 0, -1)]
+        observations = replay_rows + observations
+        replay_rows = []
         for row in observations:
             iteration = int(row['iteration'])
             if iteration <= last_iteration:
                 continue
             last_iteration = iteration
             if pending:
+                if resume:
+                    pending['resume_rows'].append(row)
                 if pending.get('schedule') is None:
                     pending['schedule'] = decode(client.get(f'online_schedule_{epoch}'))
                 schedule = pending['schedule']
@@ -149,12 +201,19 @@ def _controller(client, output, model, warmup, max_profiles, stopped, channel):
                     exhausted = True
                 continue
             if int(row.get('profile_epoch', 0)):
+                if resume:
+                    # BEAST assumes uniform unit spacing. A PROFILE gap must
+                    # break its sample window, but must not erase last_cp.
+                    detector.samples.clear()
                 continue
             if benchmark_blocks is not None and not any(
                     block['mode'] == 'B' and block['start'] <= iteration <= block['end']
                     for block in benchmark_blocks):
                 continue  # Controlled A blocks, never used by ordinary training.
-            event = detector.add(iteration, float(row['wall_iteration_ms']))
+            if resume and getattr(detector, 'last_iteration', None) is not None:
+                if iteration != detector.last_iteration + 1:
+                    detector.samples.clear()  # Lost/non-monitor intervals are gaps too.
+            event = add_monitor_sample(detector, iteration, float(row['wall_iteration_ms']), confirm_recent)
             if event is not None:
                 epoch += 1
                 event = dict(event)
@@ -165,7 +224,8 @@ def _controller(client, output, model, warmup, max_profiles, stopped, channel):
                 client.set('online_request', json.dumps(dict(epoch=epoch)))
                 if channel is not None:
                     channel.set_request(epoch)
-                pending = dict(requested_at=time.monotonic(), schedule=None)
+                pending = dict(requested_at=time.monotonic(), schedule=None,
+                               resume_after=iteration, resume_rows=[])
         if pending:
             if pending.get('schedule') is None:
                 pending['schedule'] = decode(client.get(f'online_schedule_{epoch}'))
@@ -186,21 +246,52 @@ def _controller(client, output, model, warmup, max_profiles, stopped, channel):
                 if drains_after(client, pending['schedule']['end']):
                     result = diagnose(client, output, pending['schedule'], model)
                 if result is None and time.monotonic() >= pending['deadline']:
-                    result = dict(predicted='inconclusive', reason='bounded_drain_or_coverage_timeout')
+                    result = bounded_diagnostic_timeout(client, output, pending['schedule'], model)
             if result is not None:
                 emit(output, 'localization', epoch=epoch, profile_start=schedule['start'] if schedule else None,
                      profile_end=schedule['end'] if schedule else None,
                      elapsed_seconds=time.monotonic() - pending['requested_at'], result=result)
                 client.set(f'online_completed_{epoch}', json.dumps(result))
-                client.set('online_pending', '0')
-                # Aggregation may have accumulated more records; discard all of them.
-                latest = client.lrange('online_iterations', -1, -1)
-                if latest:
-                    last_iteration = max(last_iteration, int(decode(latest[0])['iteration']))
-                if done:
-                    last_iteration = max(last_iteration, int(done['last_iteration']))
-                detector = WindowDetector(warmup=last_iteration)
+                latest_completed = last_iteration
+                if configuration.get('monitor_profile_transition', False):
+                    if channel is not None:
+                        latest_completed = max(latest_completed, channel.latest_completed_iteration())
+                    else:
+                        latest = client.lrange('online_iterations', -1, -1)
+                        if latest:
+                            latest_completed = max(latest_completed, int(decode(latest[0])['iteration']))
+                    done = decode(client.get('online_training_done'))
+                transition = profile_transition_event(configuration, pending, result, epoch,
+                                                      max_profiles, latest_completed, done)
+                if resume:
+                    # Revisit all rows observed while draining; PROFILE rows
+                    # are barriers, ordinary rows remain eligible exactly once.
+                    # Unread channel rows will arrive in the next poll normally.
+                    replay_rows = pending['resume_rows']
+                    last_iteration = pending['resume_after']
+                else:
+                    # Legacy behavior remains the default.
+                    latest = client.lrange('online_iterations', -1, -1)
+                    if latest:
+                        last_iteration = max(last_iteration, int(decode(latest[0])['iteration']))
+                    if done:
+                        last_iteration = max(last_iteration, int(done['last_iteration']))
+                    if transition is not None:
+                        last_iteration = max(last_iteration, latest_completed)
+                    detector = WindowDetector(warmup=last_iteration)
                 pending = None
+                if transition is not None:
+                    epoch = transition['epoch']
+                    emit(output, 'detection', **transition)
+                    client.set('online_pending', '1')
+                    client.set('online_request', json.dumps(dict(epoch=epoch)))
+                    if channel is not None:
+                        channel.set_request(epoch)
+                    pending = dict(requested_at=time.monotonic(), schedule=None,
+                                   resume_after=last_iteration, resume_rows=[],
+                                   parent_epoch=transition['parent_epoch'])
+                else:
+                    client.set('online_pending', '0')
         client.set('online_processed_iteration', last_iteration)
         time.sleep(.1)
 

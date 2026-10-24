@@ -1,0 +1,86 @@
+{
+  "authorized_by": "root",
+  "authorized_utc": "2026-10-24T15:39:00Z",
+  "decision": "Preserve the original locked measurement and both pretraining failures. Recovery_01 failed before training because the required explicit startup_gc_fixed_model boolean was omitted while startup_gc_policy was present. Reconstruct each recovery plan from production configure_plan(original), then change only session_id to a fresh recovery_02 value. Do not change algorithm, GC policy, source, model, seed, order, windows, or samples.",
+  "fixed_measurement_count": 2,
+  "mappings": {
+    "legacy": {
+      "changed_fields_from_original": [
+        "startup_gc_fixed_model",
+        "session_id"
+      ],
+      "changed_fields_from_recovery01": [
+        "startup_gc_fixed_model",
+        "session_id"
+      ],
+      "original_session_id": "v2s_sparse3_gc_monitor268_legacy_01",
+      "recovery01_session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_01",
+      "recovery02_session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_02"
+    },
+    "node_local_pp": {
+      "changed_fields_from_original": [
+        "startup_gc_fixed_model",
+        "session_id"
+      ],
+      "changed_fields_from_recovery01": [
+        "startup_gc_fixed_model",
+        "session_id"
+      ],
+      "original_session_id": "v2s_sparse3_gc_monitor268_node_local_pp_01",
+      "recovery01_session_id": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_01",
+      "recovery02_session_id": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_02"
+    }
+  },
+  "no_automatic_retry": true,
+  "original_attempt_has_measurement": false,
+  "original_contract_sha256": "8abcaedffb761c68fa9868811b840550072b94cc872e45f39b6135302cf1db0c",
+  "original_infrastructure_failure_sha256": "b7e9b3f3bd7e64946ebed30ed6651d34b86a0f2b0f0e55d7b20393c1aec4a192",
+  "preserve_all_prior_failures": true,
+  "protocol": "monitor_gc_268_explicit_startup_optin_recovery_v2",
+  "recovery01_amendment_sha256": "15a0eba19ba5fec1bfb8fdd2d94f8cc2d48f69b7c18d5c88514973b73b42cef1",
+  "recovery01_failure_sha256": "de1628c5c374fb0d0234869e7e26acf7a0092031e611814954599ae732c99b0e",
+  "recovery01_has_measurement": false,
+  "recovery01_ready_sha256": "f22c7dad11cff5039670b7cef8f28c527858659253257cb916df017c46e1c679",
+  "recovery_plans": {
+    "legacy": {
+      "configure_plan_exact_except_session_id": true,
+      "configured_original_sha256": "24d2a8000eb63bd6872bb8762a8dc602f713d2f9e16d94e9d3413f9db4b3d295",
+      "original_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/legacy_plan.json",
+      "original_sha256": "4e3ebe4028446a6583d1409fec2e4b6a40325b5fb4cee6f65f3ba8706206a263",
+      "path": "recovery02_legacy_plan.json",
+      "session_id": "v2s_sparse3_gc_monitor268_legacy_recovery_02",
+      "sha256": "07703a5baac114a7e63b460dd3500f23256c24bf3a49a8a994e2c2af628228d4",
+      "startup_gc_validate_plan": true
+    },
+    "node_local_pp": {
+      "configure_plan_exact_except_session_id": true,
+      "configured_original_sha256": "b4ff0ad8ac7ffdb6930bb39cd397a7c93eaef55687927d5581f9e126291ac508",
+      "original_path": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/node_local_pp_plan.json",
+      "original_sha256": "73bb12a1b78e61d1a7a0bcf1337745c3e9c908d5e3386d93c8a72330ded3328e",
+      "path": "recovery02_node_local_pp_plan.json",
+      "session_id": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_02",
+      "sha256": "0f7b2edbc91b2762575659beef2833a16c224db8b298010249c624a4da9e80d1",
+      "startup_gc_validate_plan": true
+    }
+  },
+  "remote_no_measurement_check": "recovery02_remote_no_measurement_check.json",
+  "remote_no_measurement_check_sha256": "0d37909ab9f0ac0e2e51658f69d8b872c702c27129fbc57312b5803e9a8d1e5e",
+  "source_freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+  "source_metadata_difference": "Only the recovery session id and explicit boolean startup_gc_fixed_model=true are added to each locked plan; CONFIG and POLICY exactly match production configure_plan output.",
+  "startup_gc_optin": {
+    "configured_by": "flash_v1.startup_gc.configure_plan",
+    "policy": {
+      "collect_once": true,
+      "fixed_model_lifecycle": true,
+      "fixed_model_process_lifetime": true,
+      "freeze_once": true,
+      "normal_dynamic_gc": true,
+      "preexisting_heap_policy": "retain_all_frozen_until_process_exit",
+      "schema": "startup_process_lifetime_heap_freeze_v2"
+    },
+    "required_field": "startup_gc_fixed_model",
+    "validate_result": true,
+    "validated_by": "flash_v1.startup_gc.validate_plan",
+    "value": true
+  }
+}

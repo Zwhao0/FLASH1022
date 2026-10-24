@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-24T16:15:21.002517+00:00",
+  "hosts": {
+    "host2": {
+      "owned_processes": [],
+      "redis17422_open": false,
+      "owned_shm": []
+    },
+    "host1": {
+      "owned_processes": [],
+      "redis17422_open": false,
+      "owned_shm": []
+    }
+  },
+  "all_clear": true
+}

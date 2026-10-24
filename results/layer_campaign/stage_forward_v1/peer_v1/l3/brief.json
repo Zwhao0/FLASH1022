@@ -1,0 +1,100 @@
+{
+  "by_family": {
+    "attention": "8/8",
+    "moe_block_router": "8/8",
+    "normalization": "8/8",
+    "routed_expert_mlp": "8/8"
+  },
+  "by_layout": {
+    "legacy": {
+      "healthy_false_triggers": 0,
+      "healthy_steps": 525,
+      "healthy_verdicts": {},
+      "nonprofile_healthy_steps": 525,
+      "peer_complete_windows": "16/16",
+      "strict": "16/16",
+      "valid_fma": "16/16",
+      "wrong_gpu": 0
+    },
+    "node_local_pp": {
+      "healthy_false_triggers": 1,
+      "healthy_steps": 525,
+      "healthy_verdicts": {
+        "rejected": 1
+      },
+      "nonprofile_healthy_steps": 517,
+      "peer_complete_windows": "16/16",
+      "strict": "16/16",
+      "valid_fma": "16/16",
+      "wrong_gpu": 0
+    }
+  },
+  "experiment_context": {
+    "limitation": "Potential injector CPU-side bypass/mixing is under review; component-only isolation capability is not yet confirmed. Keep the measured score, but do not describe it as confirmed isolated-component validation.",
+    "scope": "L3 FWD component families: attention, routed_expert_mlp, moe_block_router, normalization; 16 cases/layout.",
+    "status": "L4 paused pending isolation review; this brief does not change score."
+  },
+  "full_artifacts": [
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/summary.json",
+      "sha256": "88024830d14c4eb8f0f686d8a7a4328cce6f7f390a75b9aa603e07398364e6e0"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/cases.json",
+      "sha256": "951c44df09738ac1571861353b6d2df3413c715c3ec6513c84d6531ef0132247"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/scorer_prediction_freeze.json",
+      "sha256": "3c0ed8fa538bb3eca8459abfa65f6243b19a6495858cc657610808b815c86f1f"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/design.json",
+      "sha256": "50c167a31e13a4212b0da5998eb635275dff543b1e7db8dd36c36aeb65631730"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/plan_ready.json",
+      "sha256": "eab8ab69d6350d270ad3a537bdd969c5a7cfc7b05d7711d571a322b68b9d6118"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/formal_legacy_plan.json",
+      "sha256": "2f0c20c1b830959b5053ba081f172968f3b7ac2002dfa40684fa0cc0752e8cef"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/l3/formal_node_local_pp_plan.json",
+      "sha256": "8d75f8c6b876fd0c4042f17dc59509343abde4a0c21764784d44a7aedc7e7b7e"
+    },
+    {
+      "path": "results/layer_campaign/stage_forward_v1/peer_v1/source_freeze.json",
+      "sha256": "c46c7b8acd7606a8b2f97df50d130640220293742ff55e72531ff097ce0590d5"
+    }
+  ],
+  "integrity": {
+    "peer_offline_complete_fault_windows": "32/32",
+    "profile_complete_inside_fault": "32/32",
+    "profile_transition_events": 0,
+    "valid_fma_cases": "32/32"
+  },
+  "prediction_before_truth": true,
+  "protocol": "peer_v1_l3_brief_v1",
+  "score": {
+    "fixed_denominator": 32,
+    "gate_passed": true,
+    "outcomes": {
+      "correct_rank": 32
+    },
+    "strict_success": 32,
+    "threshold": 29
+  },
+  "source_counts": {
+    "core_outcomes": {
+      "correct_rank": 32
+    },
+    "correct_public": {
+      "dc89_core": 32
+    },
+    "peer_offline_outcomes": {
+      "correct_rank": 32
+    }
+  },
+  "status": "scored_with_isolation_limitation"
+}

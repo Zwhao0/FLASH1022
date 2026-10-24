@@ -1,0 +1,30 @@
+{
+  "amendment_path": "recovery02_amendment.json",
+  "amendment_sha256": "46423945c070c96f4bf5c75ec9e94f38d59ba24a5b4baff7f454aef20f241507",
+  "contract_sha256": "8abcaedffb761c68fa9868811b840550072b94cc872e45f39b6135302cf1db0c",
+  "freeze_sha256": "3edc7302159927e422464bed20ed69f7ce0f97708176f70b9cea3aeda7adfc3e",
+  "legacy_completion_sha256": "923467615d520e1f6acd76c24c591eee9c887095f5f672db370717b49d16a3b3",
+  "legacy_public_snapshot_sha256": "22a30853695d148297b16eec99b7ca2303e140d195a4b8b609cc48f8c2594da4",
+  "no_automatic_retry": true,
+  "original_infrastructure_failure_sha256": "b7e9b3f3bd7e64946ebed30ed6651d34b86a0f2b0f0e55d7b20393c1aec4a192",
+  "plan_session_ids": {
+    "legacy": "v2s_sparse3_gc_monitor268_legacy_recovery_02",
+    "node_local_pp": "v2s_sparse3_gc_monitor268_node_local_pp_recovery_02"
+  },
+  "preflight": {
+    "configure_plan_exact_except_session_id": true,
+    "no_gpu_started": true,
+    "node_collection_semantic_sampling_contract": true,
+    "node_cost_pre_gpu_contract": true,
+    "validate_plan_true": true
+  },
+  "protocol": "monitor_gc_268_explicit_startup_optin_recovery_v2",
+  "recovery01_failure_sha256": "de1628c5c374fb0d0234869e7e26acf7a0092031e611814954599ae732c99b0e",
+  "recovery_plans": {
+    "legacy": "07703a5baac114a7e63b460dd3500f23256c24bf3a49a8a994e2c2af628228d4",
+    "node_local_pp": "0f7b2edbc91b2762575659beef2833a16c224db8b298010249c624a4da9e80d1"
+  },
+  "remote_no_measurement_check_sha256": "0d37909ab9f0ac0e2e51658f69d8b872c702c27129fbc57312b5803e9a8d1e5e",
+  "runner_sha256": "13ebb8dafc03d9d1b8c797a4ccbeeb98a27201d53d891de62279d121d455a70c",
+  "status": "legacy_complete_public_snapshot_sealed_pp_ready"
+}

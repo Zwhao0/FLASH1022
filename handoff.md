@@ -1,16 +1,20 @@
-# FLASH v1交接（2026-10-22）
+# FLASH1022 handoff (2026-10-25)
 
-PP节点内、DP跨节点布局快验完成，代码及测试结果发布到GitHub main。遵守AGENTS.md；只读当前flash_v1/results/论文/原Greyhound，不读旧FLASH/旧交接/Git历史、不恢复删除。
+## 当前任务
 
-- 新布局显式参数`--parallel-layout node_local_pp`（默认legacy）：每节点TP2×PP2×EP2，跨节点Expert-DP2/dense-DP4；冻结模型rank0/9/14/7在线4/4正确，均2步检测，163健康步零触发，4窗零丢失。16卡FP32梯度/SGD验证通过。见flash_v1/LAYOUT_LOCALPP.md及results/layout_localpp/report.json；本次未重测开销。
-- 本轮注入GPU stream `_sleep`：每微批反向累计450ms，注意力/本卡路由专家各半；2微批每步名义900ms，rank0/9/14/7各单独25步，不改通信/时钟。450ms单次实测445.60–446.59ms，迭代均值增加74.10%–102.82%，属于较强故障，不能外推轻微故障。见results/layout_localpp/injection_summary.json。
-- 当前真实2节点16卡TP2×PP2×EP2×Expert-DP2，完整Qwen派生MoE，seq16/2微批。生产入口：工作站`python3 -m flash_v1.scripts.online16 --session 全新ID`。
-- MONITOR已改native关闭时直接转发、mmap逐步队列/CPU控制器、复用WORLD2float控制与异步D2H；去掉Python整数setitem隐含同步H2D。BEAST参数、完整8步PROFILE和定位阈值不变。双节点drain ACK后才关Redis，修复退出竞态。
-- 最终真无探针ABBA平均差−1.173%，配对−0.068/−2.307%，59项检查通过；200健康步零触发、loss差0。同次训练交替增量−1.096%（A共享探针/测量，非总成本）。仅本次平均点估计<1%，负差不称加速，不保证每个短窗/长期。
-- rank6/10在线故障回归2/2，158健康步零触发；两8步窗完整16rank覆盖、零丢失。匹配故障PROFILE差−0.621%。冻结定位源码/模型hash未改；此前离线盲测16故障+4健康全正确。9项CPU回归及探针记录/事件等价检查通过。
-- 结果见flash_v1/MONITOR_OPTIMIZATION.md及results/monitor_optimization/final_summary.json。首轮+9.835%和第二轮收尾失败均保留；最终是全新四组，不替换失败。
-- 快验泛化仅score层：blind20向量×100随机rank重排，2000/2000等变；固定阈值缩放0.5x/1x/2x分别17/20、20/20、19/20正确，其余inconclusive。见generalization_audit.json。这不证明跨模型/并行规模/硬件/故障类型泛化；当前实现严格固定TP2/PP2/16rank/24层。
-- GitHub Zwhao0/FLASH1022 main已更新新布局代码与测试证据；经GitHub工具发布，不上传本地旧Git历史。模型权重/完整原始PROFILE本地保留；本轮发布回执results/layout_localpp/github_upload.json。
-- 评分仅CPU：`python3 -m flash_v1.scripts.monitor16_healthy_report`及`python3 -m flash_v1.scripts.monitor16_crossover --session monopt_crossover_01`。后者仅显式--run才启动GPU；生产不启benchmark。
-- 当前无后台实验/遗留Redis17422/shm，16卡维持1980MHz，未改他人任务，证据results/layout_localpp/cleanup.json。停止新实验仅touch本session的STOP，勿kill他人/改时钟。
-- 远端/home/campus/zhangweihao/FLASH1022，容器/workspace/FLASH1022。host2 flash1022-run，host1 flash1022-data16；Docker /opt/greyhound-docker/docker，DOCKER_HOST=unix:///run/greyhound-docker.sock；host1 sudo -n env。NCCL Socket、CUMEM/NVLS off、channels4/buff1MB；host1可用约2.3GB/card，Boost缺，native so在host2编译复制。
+- 冻结范围内v2结果及完整ABBA平均预算已核验；主窗口准备GitHub原子提交。仅待提交后N∈{4,5,6}随机抽查：两布局各≥2、四层各≥1、rank均匀0..15、L2 phase随机、L3/L4仅已覆盖FWDscope，合理健康校准剂量；提交commit后seed及全设计一次抽取冻结，不重抽。
+- 首发随机43..58（12warm后≥30监测健康步）；后续fault结束后≥30恢复再随机延迟0..15；单GPU/32步/无重叠/末尾≥30健康。正常自动MONITOR→PROFILE，不按注入时刻手工请求；预测先封存后truth。草稿`stage_forward_v1/postcommit_random_check_draft/`；synthetic构造/空site保留invalid CPU检查通过，无正式seed。
+
+## 正式模式与结果边界
+
+- 生产no-diag九文件patch `de9beade`，collector仍`57c7cd2d`，模型/阈值/min3不变；显式入口`python3 -m flash_v1.scripts.compute_v2 --plan <完整online计划.json>`启用aux{1,3,7}/48rows+startupGC lifetime；core仍8步512roles/128markers。旧入口默认False，不套用优化成本。
+- L1/L2原固定各32/32，原upper6 whole/FWD/BWD 6/6；L3仅FWD开发31/32+独立component blind8 8/8（不合并）；L4仅framed-FWD ATen31/32。
+- NEW GCdiag fixed-reg8 strict7/8保留原7；whole2+BWDstage2+norm组件2为6/6，330健康步0误触/错GPU；strict8门false、保baseline7门true。最终no-diag smoke3 public/core3/3、120健康步0检测/错GPU，三窗core512/128+aux48/8TP完整；仅运行差异检查，不冒充新全量准确率。
+- PROFILE总体：legacy3.51%CI[2.57,4.39]；PP3runs×2C=6窗总体3.36%[2.25,4.39]。PP cold4.07%[2.28,5.64]仍跨5；cost源1ab4、GCdiag reg8源9072531e及no-diag正式源分别绑定，不称exact同runtime。
+- MONITOR每布局2runs共4runs（原268+固定追加268）：完整ABBA平均legacy−.299%CI[−.540,−.064]，PP+.514%[.166,.876]；average_budget_gate均通过。PP BA1.230%[.669,1.840]原严格逐序门仍不通过，原单run/inconclusive全保留；负值不宣称加速。证据`monitor_gc_268_sparse3_draft/tmp_supplement/two_run_*_aggregate.json`。
+- 最终报告`flash_v1/COMPUTE_V2.md`；验收限冻结范围和完整ABBA平均预算，不保证任意短窗/负载/总体准确率。
+
+## 保留失败与约束
+
+- sparse4+GC旧reg8 strict5/8保留：d42检测虽在健康时，PROFILE44–51在whole故障43–74内；d219 PROFILE221–228才是1窗纯健康core误定位，不称错GPU2。旧5.5s平台未获因果归因，健康A/B80未复现，源/所有原证据保留。
+- 仅读当前flash_v1/results/论文/原Greyhound；不查Git历史/旧FLASH、不恢复删除文件。后处理错误只CPU恢复，不自动重跑GPU；不改分母/阈值逃失败。唯一GPU owner为extended64_protocol。

@@ -1,0 +1,17 @@
+{
+  "layout": "legacy",
+  "original_result": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_legacy_independent_cost_audit.json",
+  "runs": [
+    {
+      "completion": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_complete_legacy.json",
+      "public_snapshot": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/recovery02_legacy_predictions_without_truth.json",
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_legacy_recovery_02"
+    },
+    {
+      "completion": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/repeat_legacy_complete.json",
+      "public_snapshot": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/repeat_legacy_predictions_without_truth.json",
+      "session": "results/data16_sessions/v2s_sparse3_gc_monitor268_legacy_repeat_01"
+    }
+  ],
+  "source_freeze": "results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/freeze.json"
+}

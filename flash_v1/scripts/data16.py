@@ -48,10 +48,18 @@ def command_for(host, container, sudo, session, verify, timeout):
         '--node-rank', str(0 if host == 'host2' else 1), '--timeout', str(timeout)]
     if verify:
         parts.append('--verify')
-    return ['ssh', '-o', 'ServerAliveInterval=15', host, shlex.join(parts)]
+    # Long experiment supervisors need a dedicated channel: an expiring shared
+    # ControlMaster must not turn completed node work into a harness failure.
+    return ['ssh', '-o', 'ControlPath=none', '-o', 'ServerAliveInterval=15',
+            '-o', 'ServerAliveCountMax=4', host, shlex.join(parts)]
 
 
-def run(plan, verify=False, timeout=900):
+def run(plan, verify=False, timeout=900, *, startup_gc_fixed_model=False):
+    if type(startup_gc_fixed_model) is not bool:
+        raise ValueError('startup_gc_fixed_model must be boolean')
+    if startup_gc_fixed_model:
+        from flash_v1.startup_gc import configure_plan
+        plan = configure_plan(plan)
     session = plan['session_id']
     plans = ROOT / 'tmp/data16_plans'; plans.mkdir(parents=True, exist_ok=True)
     path = plans / f'{session}.json'
@@ -64,9 +72,9 @@ def run(plan, verify=False, timeout=900):
         'tar', '-czf', '-', '--exclude=.git', '--exclude=__pycache__',
         'flash_v1', 'Greyhound-master']
     with (local / 'source_snapshot.tar.gz').open('wb') as archive:
-        sp.run(['ssh', 'host2', shlex.join(snapshot_command)], stdout=archive, check=True, timeout=60)
+        sp.run(['ssh', '-o', 'ControlPath=none', 'host2', shlex.join(snapshot_command)], stdout=archive, check=True, timeout=60)
     for host, _, _ in NODES:
-        sp.run(['scp', '-q', str(path), f'{host}:{REMOTE}/data16_plans/'], check=True)
+        sp.run(['scp', '-o', 'ControlPath=none', '-q', str(path), f'{host}:{REMOTE}/data16_plans/'], check=True)
     processes, logs = [], []
     try:
         for host, container, sudo in NODES:
@@ -91,7 +99,7 @@ def run(plan, verify=False, timeout=900):
                     stop = ['env']
                 stop += ['DOCKER_HOST=unix:///run/greyhound-docker.sock', '/opt/greyhound-docker/docker',
                          'exec', container, 'touch', f'{CONTAINER_ROOT}/results/data16_sessions/{session}/STOP']
-                sp.run(['ssh', host, shlex.join(stop)], check=False)
+                sp.run(['ssh', '-o', 'ControlPath=none', host, shlex.join(stop)], check=False)
         for process in processes:
             try:
                 process.wait(timeout=20)
@@ -110,8 +118,8 @@ def run(plan, verify=False, timeout=900):
                 command = (['sudo', '-n', 'env'] if sudo else ['env']) + [
                     'DOCKER_HOST=unix:///run/greyhound-docker.sock', '/opt/greyhound-docker/docker',
                     'exec', container, 'python', '-c', code]
-                sp.run(['ssh', host, shlex.join(command)], check=True, timeout=30)
-            sp.run(['rsync', '-az', f'{host}:{REMOTE}/results/data16_sessions/{session}/', str(destination) + '/'], check=True)
+                sp.run(['ssh', '-o', 'ControlPath=none', host, shlex.join(command)], check=True, timeout=30)
+            sp.run(['rsync', '-az', '-e', 'ssh -o ControlPath=none', f'{host}:{REMOTE}/results/data16_sessions/{session}/', str(destination) + '/'], check=True)
     return local
 
 

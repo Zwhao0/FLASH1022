@@ -1,0 +1,585 @@
+{
+  "design_sha256": "8da416fc0f096ed2d6ca8c4d3ac38748372846fd3b93368275846fcbf0362e49",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "formal",
+  "fault_kind": "whole_rank_compute",
+  "fixed_denominator": 32,
+  "freeze_manifest_sha256": "2f7abc527b20deee86b363cc50eb5a7d999d45a67e9295c5580a4f71d2ac94e5",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "intervals": [
+    {
+      "delay_ms": 0.0,
+      "end": 12,
+      "fault_mode": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": [],
+      "warmup": true
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 42,
+      "fault_mode": null,
+      "id": "healthy_opening",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-6-7a27e5b2",
+      "delay_ms": 1.0,
+      "end": 82,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-6-7a27e5b2",
+      "rank": 6,
+      "record_start": 43,
+      "segment": "fault",
+      "slowdown_extra_ratio": 1.918765,
+      "start": 43,
+      "target_ranks": [
+        6
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 112,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-6-7a27e5b2",
+      "record_start": 83,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 83,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-8-6f04ec92",
+      "delay_ms": 1.0,
+      "end": 152,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-8-6f04ec92",
+      "rank": 8,
+      "record_start": 113,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.394205,
+      "start": 113,
+      "target_ranks": [
+        8
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 182,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-8-6f04ec92",
+      "record_start": 153,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 153,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-4-553def25",
+      "delay_ms": 1.0,
+      "end": 222,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-4-553def25",
+      "rank": 4,
+      "record_start": 183,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.870382,
+      "start": 183,
+      "target_ranks": [
+        4
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 252,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-4-553def25",
+      "record_start": 223,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 223,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-14-85da93c2",
+      "delay_ms": 1.0,
+      "end": 292,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-14-85da93c2",
+      "rank": 14,
+      "record_start": 253,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.957783,
+      "start": 253,
+      "target_ranks": [
+        14
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 322,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-14-85da93c2",
+      "record_start": 293,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 293,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-12-23d7b327",
+      "delay_ms": 1.0,
+      "end": 362,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-12-23d7b327",
+      "rank": 12,
+      "record_start": 323,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3.092208,
+      "start": 323,
+      "target_ranks": [
+        12
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 392,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-12-23d7b327",
+      "record_start": 363,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 363,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-0-bb63c9c0",
+      "delay_ms": 1.0,
+      "end": 432,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-0-bb63c9c0",
+      "rank": 0,
+      "record_start": 393,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.307583,
+      "start": 393,
+      "target_ranks": [
+        0
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 462,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-0-bb63c9c0",
+      "record_start": 433,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 433,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-7-15b0e067",
+      "delay_ms": 1.0,
+      "end": 502,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-7-15b0e067",
+      "rank": 7,
+      "record_start": 463,
+      "segment": "fault",
+      "slowdown_extra_ratio": 1.8432,
+      "start": 463,
+      "target_ranks": [
+        7
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 532,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-7-15b0e067",
+      "record_start": 503,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 503,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-2-899a38c0",
+      "delay_ms": 1.0,
+      "end": 572,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-2-899a38c0",
+      "rank": 2,
+      "record_start": 533,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.961359,
+      "start": 533,
+      "target_ranks": [
+        2
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 602,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-2-899a38c0",
+      "record_start": 573,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 573,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-5-5e18ef66",
+      "delay_ms": 1.0,
+      "end": 642,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-5-5e18ef66",
+      "rank": 5,
+      "record_start": 603,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.182362,
+      "start": 603,
+      "target_ranks": [
+        5
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 672,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-5-5e18ef66",
+      "record_start": 643,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 643,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-10-f70a5269",
+      "delay_ms": 1.0,
+      "end": 712,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-10-f70a5269",
+      "rank": 10,
+      "record_start": 673,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.459299,
+      "start": 673,
+      "target_ranks": [
+        10
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 742,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-10-f70a5269",
+      "record_start": 713,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 713,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-3-6c05112c",
+      "delay_ms": 1.0,
+      "end": 782,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-3-6c05112c",
+      "rank": 3,
+      "record_start": 743,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.469833,
+      "start": 743,
+      "target_ranks": [
+        3
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 812,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-3-6c05112c",
+      "record_start": 783,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 783,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-15-b006cd7b",
+      "delay_ms": 1.0,
+      "end": 852,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-15-b006cd7b",
+      "rank": 15,
+      "record_start": 813,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.464801,
+      "start": 813,
+      "target_ranks": [
+        15
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 882,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-15-b006cd7b",
+      "record_start": 853,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 853,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-13-bb460344",
+      "delay_ms": 1.0,
+      "end": 922,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-13-bb460344",
+      "rank": 13,
+      "record_start": 883,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.293329,
+      "start": 883,
+      "target_ranks": [
+        13
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 952,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-13-bb460344",
+      "record_start": 923,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 923,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-11-d2e4c5bc",
+      "delay_ms": 1.0,
+      "end": 992,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-11-d2e4c5bc",
+      "rank": 11,
+      "record_start": 953,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.77018,
+      "start": 953,
+      "target_ranks": [
+        11
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 1022,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-11-d2e4c5bc",
+      "record_start": 993,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 993,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-1-84c7a7c4",
+      "delay_ms": 1.0,
+      "end": 1062,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-1-84c7a7c4",
+      "rank": 1,
+      "record_start": 1023,
+      "segment": "fault",
+      "slowdown_extra_ratio": 3.000185,
+      "start": 1023,
+      "target_ranks": [
+        1
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 1092,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-1-84c7a7c4",
+      "record_start": 1063,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1063,
+      "target_ranks": []
+    },
+    {
+      "case_id": "l1-legacy-9-0777986a",
+      "delay_ms": 1.0,
+      "end": 1132,
+      "fault_enabled": true,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole",
+        "phase": null,
+        "slot_id": null
+      },
+      "id": "l1-legacy-9-0777986a",
+      "rank": 9,
+      "record_start": 1093,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.91227,
+      "start": 1093,
+      "target_ranks": [
+        9
+      ]
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 1162,
+      "fault_mode": null,
+      "id": "healthy_after_l1-legacy-9-0777986a",
+      "record_start": 1133,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1133,
+      "target_ranks": []
+    },
+    {
+      "delay_ms": 0.0,
+      "end": 1177,
+      "fault_mode": null,
+      "id": "healthy_tail",
+      "record_start": 1163,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1163,
+      "target_ranks": []
+    }
+  ],
+  "layout": "legacy",
+  "max_profiles": 40,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "parallel_layout": "legacy",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "layer_campaign_l1_v1",
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "blind_test",
+  "schema_version": 1,
+  "scope_attestation_sha256": "8b0bca782ab103a3a56ccebacccfcf3ff880bdc9757c8f36f69eb3ff8315cd48",
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_catalog_legacy_02",
+  "seed": 283532504,
+  "seq_len": 16,
+  "session_id": "v2s_layer_l1_formal_legacy_01",
+  "steps": 1177,
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_legacy_02"
+}

@@ -1,0 +1,609 @@
+{
+  "acceptance": {
+    "fixed_denominator": 8,
+    "require_all_whole_fwd_bwd_six_cases_correct": true,
+    "require_healthy_wrong_gpu_localizations": 0,
+    "require_same_seven_baseline_successes": true
+  },
+  "baseline_reference": {
+    "fixed_denominator": 8,
+    "path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline/summary.json",
+    "sha256": "0cac68d050e1f4e12ce0fe0a896c250ac267be30e8e9f615a4deb8fbd87287a2",
+    "strict_success": 7
+  },
+  "fixed_denominator": 8,
+  "gc_callbacks_diagnostic": true,
+  "integration_not_blind": true,
+  "layout_plan_amendments": {
+    "legacy": {
+      "candidate_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/formal_legacy_plan.json",
+      "candidate_plan_sha256": "28472ef76b6c44d4dab13e2b971c5cab03432bada8c67b4c539c6f6da4aca2b9",
+      "only_changed_fields": [
+        "freeze_manifest_path",
+        "freeze_manifest_sha256",
+        "gc_callbacks_diagnostic",
+        "monitor_cost_timing",
+        "session_id",
+        "stage_forward_aux_sampling"
+      ],
+      "parent_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse4_gc_lifetime_v2/formal_legacy_plan.json",
+      "parent_plan_sha256": "dff6e314bcb88c4278a57e26e3fa9a64976e6ec557bc29d7f6731991480fe27b",
+      "session_id": "v2s_peer_priority_reg8_sparse3_gc_diag_legacy_01"
+    },
+    "node_local_pp": {
+      "candidate_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/formal_node_local_pp_plan.json",
+      "candidate_plan_sha256": "02edc16d0f4e6781f9c4776ef5440011105ca6fdc29cbd12215b9130d523a0bc",
+      "only_changed_fields": [
+        "freeze_manifest_path",
+        "freeze_manifest_sha256",
+        "gc_callbacks_diagnostic",
+        "monitor_cost_timing",
+        "session_id",
+        "stage_forward_aux_sampling"
+      ],
+      "parent_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse4_gc_lifetime_v2/formal_node_local_pp_plan.json",
+      "parent_plan_sha256": "4443bf11695699ac2168d9008c936426aa5dc5886ff69c2961e9cf8b3ffb68a3",
+      "session_id": "v2s_peer_priority_reg8_sparse3_gc_diag_node_local_pp_01"
+    }
+  },
+  "layouts": {
+    "legacy": [
+      {
+        "case_id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+        "category": "whole_rank_compute",
+        "dose": {
+          "desired_extra_ms_estimate": 612.4440104592484,
+          "estimator": {
+            "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+            "fwd_estimated_ms_per_step": 114.94022417394444,
+            "fwd_healthy_operator_total_ms_over_three": 114.94022417394444,
+            "method": "FWD operator catalog sum / 3 plus BWD scaled by BWD/FWD allowlisted call ratio",
+            "phase": "whole",
+            "source": "scope_attestation_02 catalog and recent_three8 estimator"
+          },
+          "healthy_training_ms_baseline": 1398.4705701004714,
+          "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+          "selected_healthy_compute_ms_estimate": 358.1120901451867,
+          "slowdown_extra_ratio": 1.710202,
+          "target_extra_fraction_of_healthy_wall": 0.437938
+        },
+        "fault_target": {
+          "kind": "whole"
+        },
+        "layer": "L1",
+        "layout": "legacy",
+        "parent_case_id": "upper6-l1-legacy-whole-6-9ce9cf48",
+        "phase": null,
+        "population_basis": "all validated 16-rank catalog entries; fixed draw before formal",
+        "population_size": 16,
+        "rank": 6,
+        "rank_catalog": {
+          "catalog_file_sha256": "b562664da99f9d65c735364210a8e6fd5a8a5197b0117067a8dabb6b83c257e7",
+          "catalog_path": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank6.json",
+          "catalog_sha256": "ce73d819461eeec857f2015a7906fa21f8ce6de83bdf06c9ddbeae846614abc3",
+          "proof_path": "results/v2_semantic/scope_attestation_02/legacy/proof_rank6.json",
+          "proof_sha256": "fb990d96c11a6a769170771ce15dc5192a435381f0ea76bad3fce69be640c0fa"
+        },
+        "regression_family": "whole_compute",
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/design.json",
+        "source_case_design_sha256": "535e40f3315bbe9a1e9235d2cb18e052addb5489a247d4fc7098dfb10ccf3008",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/formal_legacy_plan.json",
+        "source_case_plan_sha256": "38c82866867d314885eaf3ea20a9a56af28121e880b419fdff09deb1351e2984",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/summary.json",
+        "source_case_summary_sha256": "3486f941b7326bd85da70528e2ae0cf0efb8298b3cd30a60e24fa7ff4c4d4ebc",
+        "source_family": null,
+        "source_stage": "upper6/l1",
+        "topology": {
+          "ep": 1,
+          "host": "gpu-02",
+          "pp": 0,
+          "tp": 0
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/legacy/topology.json",
+          "sha256": "6543d190618c570a01b0414ef27d24c40f739ff082cad429db7d724f8dc151b7"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+        "category": "phase_compute",
+        "dose": {
+          "desired_extra_ms_estimate": 648.821597544567,
+          "estimator": {
+            "bwd_fwd_allowlisted_call_ratio": 2.120624663435649,
+            "fwd_estimated_ms_per_step": 98.14124811425184,
+            "fwd_healthy_operator_total_ms_over_three": 98.14124811425184,
+            "method": "FWD operator catalog sum / 3 scaled by BWD/FWD allowlisted call ratio",
+            "phase": "bwd",
+            "source": "scope_attestation_02 catalog and recent_three8 estimator"
+          },
+          "healthy_training_ms_baseline": 1398.4705701004714,
+          "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+          "selected_healthy_compute_ms_estimate": 208.12075125143983,
+          "slowdown_extra_ratio": 3.117525,
+          "target_extra_fraction_of_healthy_wall": 0.463951
+        },
+        "fault_target": {
+          "kind": "stage",
+          "phase": "bwd"
+        },
+        "layer": "L2",
+        "layout": "legacy",
+        "parent_case_id": "upper6-l2-legacy-bwd-15-c90e132c",
+        "phase": "bwd",
+        "population_basis": "all validated 16-rank catalog entries; fixed draw before formal",
+        "population_size": 16,
+        "rank": 15,
+        "rank_catalog": {
+          "catalog_file_sha256": "719510011bd559e49877d02c3960adcc4c33daac2a53863ac05801783d835bf5",
+          "catalog_path": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank15.json",
+          "catalog_sha256": "b89d55995d9f82a2181615ccbfc614ea2d96bc1b908202c3b72e3a0b1c8b2a7a",
+          "proof_path": "results/v2_semantic/scope_attestation_02/legacy/proof_rank15.json",
+          "proof_sha256": "a5c84cb9f4d44ae94e84c4919a19f1630ed0b4c9593b96f21acd5848361d0f09"
+        },
+        "regression_family": "backward_stage",
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/design.json",
+        "source_case_design_sha256": "968dc4e8f5fcbecc5bb2443bdebf9671948ca58041a140174f25f31e3fb218ec",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/formal_legacy_plan.json",
+        "source_case_plan_sha256": "44c77d4d0b4970773f233d9f3266b067039c88b9b9a4e4d199b5d7a81250e9ba",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/summary.json",
+        "source_case_summary_sha256": "ed25f10b0ee5aa2cc0b32cb5e468fbd1487abd85da4e71367061eb4b482a50b7",
+        "source_family": null,
+        "source_stage": "upper6/l2",
+        "topology": {
+          "ep": 1,
+          "host": "gpu-01",
+          "pp": 1,
+          "tp": 1
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/legacy/topology.json",
+          "sha256": "6543d190618c570a01b0414ef27d24c40f739ff082cad429db7d724f8dc151b7"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-legacy-nonfirst_normalization_component-blind8-legacy-normalization-r4-184bf47e",
+        "category": "normalization",
+        "dose": {
+          "catalog_healthy_total_ms_estimate": 0.878976009786129,
+          "catalog_reference_steps": 3,
+          "healthy_training_ms_baseline": 1398.4705701004714,
+          "requested_extra_ms_estimate": 799.6375675223813,
+          "selected_healthy_compute_ms_estimate_per_step": 0.292992003262043,
+          "slowdown_extra_ratio": 2729.212943,
+          "target_extra_fraction_of_healthy_wall": 0.5717943477816143,
+          "timeonly_policy": "single confirmation; do not retune, replace, or use localization outcomes"
+        },
+        "family": "normalization",
+        "family_population_total": 392,
+        "fault_target": {
+          "kind": "component",
+          "phase": "fwd",
+          "slot_id": "decoder.layers.11.input_layernorm"
+        },
+        "layer": "component_blind8",
+        "layout": "legacy",
+        "parent_case_id": "blind8-legacy-normalization-r4-184bf47e",
+        "phase": "fwd",
+        "population_basis": "all source-bound healthy catalog FWD component scopes with at least one fully timed framed descendant ATen site and all-positive tensor-shape signature; one family stratum per rank, no PROFILE filter",
+        "population_size": 24,
+        "rank": 4,
+        "rank_catalog": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank4.json",
+          "catalog_sha256": "4e410573ec7670af8d7b9c86a841627fa93aea81f706c468a3022288f2d785f1",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank4.json",
+          "proof_sha256": "e8a75e04dfd68ae09fbdb61c15fc7ef85e16441aabce81cfb66d22ae3c58315c"
+        },
+        "regression_family": "nonfirst_normalization_component",
+        "site": {
+          "eligible": true,
+          "estimated_healthy_total_ms": 0.878976009786129,
+          "excluded_reason": null,
+          "module_class": "Qwen2MoeRMSNorm",
+          "path": "decoder.layers.11.input_layernorm",
+          "slot_id": "decoder.layers.11.input_layernorm"
+        },
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/design.json",
+        "source_case_design_sha256": "c7df80af26689d4e49a2c720d719b36f15f45581378f4a44cd110acf25125167",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/formal_legacy_plan.json",
+        "source_case_plan_sha256": "f006ee4e12f3369e2a2f62565c899a8263278b63dbd18495448b8e3a9b80ca47",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/summary.json",
+        "source_case_summary_sha256": "9e82a0fd8761b8c989381137454dd213a31258eb405bba3ba715324f62b4e664",
+        "source_family": "normalization",
+        "source_stage": "blind8",
+        "topology": {
+          "ep": 0,
+          "host": "gpu-02",
+          "pp": 0,
+          "tp": 0
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/legacy/topology.json",
+          "sha256": "6543d190618c570a01b0414ef27d24c40f739ff082cad429db7d724f8dc151b7"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-legacy-operator-l4-legacy-matrix_multiply-0-8354614b",
+        "category": "matrix_multiply",
+        "dose": {
+          "catalog_healthy_total_ms_estimate": 0.313120000064373,
+          "catalog_reference_steps": 3,
+          "healthy_training_ms_baseline": 1398.4705701004714,
+          "requested_extra_ms_estimate": 896.4991495567449,
+          "selected_healthy_compute_ms_estimate_per_step": 0.104373333354791,
+          "slowdown_extra_ratio": 8589.350562,
+          "target_extra_fraction_of_healthy_wall": 0.6410568579160998,
+          "timeonly_policy": "single confirmation; do not retune, replace, or use localization outcomes"
+        },
+        "family": "matrix_multiply",
+        "fault_target": {
+          "kind": "operator",
+          "phase": "fwd",
+          "slot_id": "decoder.layers.1.mlp.experts.0.gate_proj|fwd|aten.mm.default|0"
+        },
+        "layer": "L4",
+        "layout": "legacy",
+        "nonzero_work_filter": {
+          "all_tensor_shapes_positive": true,
+          "predicate_source": "peer_priority_v1/blind8/prepare.py:_is_nonzero_framed_fwd_operator"
+        },
+        "operator": "aten.mm.default",
+        "operator_family": "matrix_multiply",
+        "parent_case_id": "l4-legacy-matrix_multiply-0-8354614b",
+        "phase": "fwd",
+        "population_size": 559,
+        "rank": 0,
+        "regression_family": "operator",
+        "sample_basis": "one site per rank; fixed family quota; random within rank/family",
+        "scope_catalog_ref": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank0.json",
+          "catalog_sha256": "dd6a3121e691242b6e420eb0c47c9ef8b4569e2127a61469957e185402e21181",
+          "derived_from": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank0.json",
+          "proof_sha256": "9637883c9d2aaf70a8cbcc99745a93430b0f0fd78c6722d98c45951f06d823da"
+        },
+        "scope_catalog_sha256": "718a2345ca3ab4aa2307eec87c71a31f24dd7f80d44af2012f177cd2bbcc6beb",
+        "site": {
+          "ancestors": [
+            "<model>",
+            "decoder.layers.1",
+            "decoder.layers.1.mlp",
+            "decoder.layers.1.mlp.experts.0",
+            "decoder.layers.1.mlp.experts.0.gate_proj"
+          ],
+          "calls": 6,
+          "estimated_healthy_per_call_ms": 0.0521866666773955,
+          "estimated_healthy_total_ms": 0.313120000064373,
+          "module_path": "decoder.layers.1.mlp.experts.0.gate_proj",
+          "operator": "aten.mm.default",
+          "ordinal": 0,
+          "phase": "fwd",
+          "signatures": [
+            "((('tensor', (2, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())",
+            "((('tensor', (27, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())",
+            "((('tensor', (29, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())",
+            "((('tensor', (3, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())",
+            "((('tensor', (4, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())"
+          ],
+          "slot_id": "decoder.layers.1.mlp.experts.0.gate_proj|fwd|aten.mm.default|0",
+          "timing_calls": {
+            "('fwd', 'aten.mm.default', (('tensor', (2, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())": 2,
+            "('fwd', 'aten.mm.default', (('tensor', (27, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())": 1,
+            "('fwd', 'aten.mm.default', (('tensor', (29, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())": 1,
+            "('fwd', 'aten.mm.default', (('tensor', (3, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())": 1,
+            "('fwd', 'aten.mm.default', (('tensor', (4, 896), (896, 1), 'torch.bfloat16', 'cuda:0'), ('tensor', (896, 64), (1, 896), 'torch.bfloat16', 'cuda:0')), ())": 1
+          },
+          "timing_unresolved_calls": 0
+        },
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/design.json",
+        "source_case_design_sha256": "5d5f745f2459fd8fe129f83da7c7d4e373f6e2514f9176b1d4b9b69dba9109d9",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/recovery_formal_legacy_plan.json",
+        "source_case_plan_sha256": "9211185d84c65ccdca78bcdb49a004c42dc34c878b459b0c72cd2f7ae6c47b36",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/summary.json",
+        "source_case_summary_sha256": "77add864e63f15cb7050fce366e6a9c4cd02f8cb90f8a6cf7f13241c8e20c93a",
+        "source_family": "matrix_multiply",
+        "source_stage": "L4",
+        "topology": {
+          "ep": 0,
+          "host": "gpu-02",
+          "pp": 0,
+          "tp": 0
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/legacy/topology.json",
+          "sha256": "6543d190618c570a01b0414ef27d24c40f739ff082cad429db7d724f8dc151b7"
+        },
+        "training_seed": 2032905414
+      }
+    ],
+    "node_local_pp": [
+      {
+        "case_id": "reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+        "category": "whole_rank_compute",
+        "dose": {
+          "desired_extra_ms_estimate": 857.5250106839878,
+          "estimator": {
+            "bwd_fwd_allowlisted_call_ratio": 2.120624663435649,
+            "fwd_estimated_ms_per_step": 111.65419748735924,
+            "fwd_healthy_operator_total_ms_over_three": 111.65419748735924,
+            "method": "FWD operator catalog sum / 3 plus BWD scaled by BWD/FWD allowlisted call ratio",
+            "phase": "whole",
+            "source": "scope_attestation_02 catalog and recent_three8 estimator"
+          },
+          "healthy_training_ms_baseline": 1308.3629379980266,
+          "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+          "selected_healthy_compute_ms_estimate": 348.4308424551679,
+          "slowdown_extra_ratio": 2.461105,
+          "target_extra_fraction_of_healthy_wall": 0.655418
+        },
+        "fault_target": {
+          "kind": "whole"
+        },
+        "layer": "L1",
+        "layout": "node_local_pp",
+        "parent_case_id": "upper6-l1-node_local_pp-whole-4-448323ce",
+        "phase": null,
+        "population_basis": "all validated 16-rank catalog entries; fixed draw before formal",
+        "population_size": 16,
+        "rank": 4,
+        "rank_catalog": {
+          "catalog_file_sha256": "d1af5271f4bbd5855e06c32445d8e1cacf5294a3d29edeb8a19b6e082568e0e0",
+          "catalog_path": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank4.json",
+          "catalog_sha256": "f35c48d3e401d5cf6f5b708307a43654ac15da3431a982016585a83a99cf088c",
+          "proof_path": "results/v2_semantic/scope_attestation_02/node_local_pp/proof_rank4.json",
+          "proof_sha256": "ec3065f0b9a84a73efd5ac0c8a6d0db703a2545e297803afd03e29c9fd389261"
+        },
+        "regression_family": "whole_compute",
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/design.json",
+        "source_case_design_sha256": "535e40f3315bbe9a1e9235d2cb18e052addb5489a247d4fc7098dfb10ccf3008",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/formal_node_local_pp_plan.json",
+        "source_case_plan_sha256": "3715f91cad7f07f6620f0cbebb07beb5bb9438d7f6d3b0ad39c80e441927e324",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l1/summary.json",
+        "source_case_summary_sha256": "3486f941b7326bd85da70528e2ae0cf0efb8298b3cd30a60e24fa7ff4c4d4ebc",
+        "source_family": null,
+        "source_stage": "upper6/l1",
+        "topology": {
+          "ep": 0,
+          "host": "gpu-02",
+          "pp": 1,
+          "tp": 0
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/node_local_pp/topology.json",
+          "sha256": "8205d0c466bc38b58c1efdc89f5a3d2cba05435e2c87bcaa73a714ffb5b0c53e"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+        "category": "phase_compute",
+        "dose": {
+          "desired_extra_ms_estimate": 886.1277565229299,
+          "estimator": {
+            "bwd_fwd_allowlisted_call_ratio": 2.120624663435649,
+            "fwd_estimated_ms_per_step": 112.81000543634097,
+            "fwd_healthy_operator_total_ms_over_three": 112.81000543634097,
+            "method": "FWD operator catalog sum / 3 scaled by BWD/FWD allowlisted call ratio",
+            "phase": "bwd",
+            "source": "scope_attestation_02 catalog and recent_three8 estimator"
+          },
+          "healthy_training_ms_baseline": 1308.3629379980266,
+          "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+          "selected_healthy_compute_ms_estimate": 239.2276798106143,
+          "slowdown_extra_ratio": 3.704119,
+          "target_extra_fraction_of_healthy_wall": 0.67728
+        },
+        "fault_target": {
+          "kind": "stage",
+          "phase": "bwd"
+        },
+        "layer": "L2",
+        "layout": "node_local_pp",
+        "parent_case_id": "upper6-l2-node_local_pp-bwd-5-96bd077d",
+        "phase": "bwd",
+        "population_basis": "all validated 16-rank catalog entries; fixed draw before formal",
+        "population_size": 16,
+        "rank": 5,
+        "rank_catalog": {
+          "catalog_file_sha256": "417479b7cfba2dcf246f6e910ff6d231d3133944d79245f7ca1a8c9935386cb0",
+          "catalog_path": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank5.json",
+          "catalog_sha256": "32c4aaf8b0cbb4ef7d5bba7f548667980d390b69fc59e05a8807746554597a43",
+          "proof_path": "results/v2_semantic/scope_attestation_02/node_local_pp/proof_rank5.json",
+          "proof_sha256": "c2d08508b3e45a765186e653a84b007851bf1c94d1c9f2cb347ad3d160173f31"
+        },
+        "regression_family": "backward_stage",
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/design.json",
+        "source_case_design_sha256": "968dc4e8f5fcbecc5bb2443bdebf9671948ca58041a140174f25f31e3fb218ec",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/formal_node_local_pp_plan.json",
+        "source_case_plan_sha256": "cb612aaae3e999c855fd1b20c3e4ad2cda4a5fa863fa4b8c786cf9a7a8a6a89e",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/upper6/l2/summary.json",
+        "source_case_summary_sha256": "ed25f10b0ee5aa2cc0b32cb5e468fbd1487abd85da4e71367061eb4b482a50b7",
+        "source_family": null,
+        "source_stage": "upper6/l2",
+        "topology": {
+          "ep": 0,
+          "host": "gpu-02",
+          "pp": 1,
+          "tp": 1
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/node_local_pp/topology.json",
+          "sha256": "8205d0c466bc38b58c1efdc89f5a3d2cba05435e2c87bcaa73a714ffb5b0c53e"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+        "category": "normalization",
+        "dose": {
+          "catalog_healthy_total_ms_estimate": 0.849407996982336,
+          "catalog_reference_steps": 3,
+          "healthy_training_ms_baseline": 1308.3629379980266,
+          "requested_extra_ms_estimate": 706.5972247744907,
+          "selected_healthy_compute_ms_estimate_per_step": 0.283135998994112,
+          "slowdown_extra_ratio": 2495.610686,
+          "target_extra_fraction_of_healthy_wall": 0.5400620915291904,
+          "timeonly_policy": "single confirmation; do not retune, replace, or use localization outcomes"
+        },
+        "family": "normalization",
+        "family_population_total": 392,
+        "fault_target": {
+          "kind": "component",
+          "phase": "fwd",
+          "slot_id": "decoder.layers.10.input_layernorm"
+        },
+        "layer": "component_blind8",
+        "layout": "node_local_pp",
+        "parent_case_id": "blind8-node_local_pp-normalization-r14-58ea1661",
+        "phase": "fwd",
+        "population_basis": "all source-bound healthy catalog FWD component scopes with at least one fully timed framed descendant ATen site and all-positive tensor-shape signature; one family stratum per rank, no PROFILE filter",
+        "population_size": 25,
+        "rank": 14,
+        "rank_catalog": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank14.json",
+          "catalog_sha256": "72d49b8ec0e80d89d0a9ed1da7ced869941267edd8b34d65246ca8a6561224ca",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank14.json",
+          "proof_sha256": "40b341f822fb96903292b7c640d98254442ae44a384f7eb3eabd352162255d37"
+        },
+        "regression_family": "nonfirst_normalization_component",
+        "site": {
+          "eligible": true,
+          "estimated_healthy_total_ms": 0.849407996982336,
+          "excluded_reason": null,
+          "module_class": "Qwen2MoeRMSNorm",
+          "path": "decoder.layers.10.input_layernorm",
+          "slot_id": "decoder.layers.10.input_layernorm"
+        },
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/design.json",
+        "source_case_design_sha256": "c7df80af26689d4e49a2c720d719b36f15f45581378f4a44cd110acf25125167",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/formal_node_local_pp_plan.json",
+        "source_case_plan_sha256": "e827881555081e93e7919a77bde425c23e2cd4e94c9b6944e11ed513b9c543d5",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/blind8/summary.json",
+        "source_case_summary_sha256": "9e82a0fd8761b8c989381137454dd213a31258eb405bba3ba715324f62b4e664",
+        "source_family": "normalization",
+        "source_stage": "blind8",
+        "topology": {
+          "ep": 1,
+          "host": "gpu-01",
+          "pp": 1,
+          "tp": 0
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/node_local_pp/topology.json",
+          "sha256": "8205d0c466bc38b58c1efdc89f5a3d2cba05435e2c87bcaa73a714ffb5b0c53e"
+        },
+        "training_seed": 2032905414
+      },
+      {
+        "case_id": "reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+        "category": "matrix_multiply",
+        "dose": {
+          "catalog_healthy_total_ms_estimate": 0.19100799597799778,
+          "catalog_reference_steps": 3,
+          "healthy_training_ms_baseline": 1308.3629379980266,
+          "requested_extra_ms_estimate": 887.8838335535897,
+          "selected_healthy_compute_ms_estimate_per_step": 0.06366933199266593,
+          "slowdown_extra_ratio": 13945.235575,
+          "target_extra_fraction_of_healthy_wall": 0.6786219693078228,
+          "timeonly_policy": "single confirmation; do not retune, replace, or use localization outcomes"
+        },
+        "family": "matrix_multiply",
+        "fault_target": {
+          "kind": "operator",
+          "phase": "fwd",
+          "slot_id": "decoder.layers.0.mlp.experts.9.down_proj|fwd|aten.mm.default|0"
+        },
+        "layer": "L4",
+        "layout": "node_local_pp",
+        "nonzero_work_filter": {
+          "all_tensor_shapes_positive": true,
+          "predicate_source": "peer_priority_v1/blind8/prepare.py:_is_nonzero_framed_fwd_operator"
+        },
+        "operator": "aten.mm.default",
+        "operator_family": "matrix_multiply",
+        "parent_case_id": "l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+        "phase": "fwd",
+        "population_size": 558,
+        "rank": 5,
+        "regression_family": "operator",
+        "sample_basis": "one site per rank; fixed family quota; random within rank/family",
+        "scope_catalog_ref": {
+          "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_node_local_pp_01/scope_catalog_rank5.json",
+          "catalog_sha256": "4f32ec0d1acaa85a73e9c692959522b988ca4d5c04659ef32bdee4202804a4e0",
+          "derived_from": "results/v2_semantic/scope_attestation_02/node_local_pp/scope_catalog_rank5.json",
+          "proof_sha256": "c2d08508b3e45a765186e653a84b007851bf1c94d1c9f2cb347ad3d160173f31"
+        },
+        "scope_catalog_sha256": "f91c5fa0ecafd80f37c27e3ec3c85834a4a63aac01f1676d37612fef41c39def",
+        "site": {
+          "ancestors": [
+            "<model>",
+            "decoder.layers.0",
+            "decoder.layers.0.mlp",
+            "decoder.layers.0.mlp.experts.9",
+            "decoder.layers.0.mlp.experts.9.down_proj"
+          ],
+          "calls": 6,
+          "estimated_healthy_per_call_ms": 0.031834665996332966,
+          "estimated_healthy_total_ms": 0.19100799597799778,
+          "module_path": "decoder.layers.0.mlp.experts.9.down_proj",
+          "operator": "aten.mm.default",
+          "ordinal": 0,
+          "phase": "fwd",
+          "signatures": [
+            "((('tensor', (27, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())",
+            "((('tensor', (30, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())",
+            "((('tensor', (32, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())"
+          ],
+          "slot_id": "decoder.layers.0.mlp.experts.9.down_proj|fwd|aten.mm.default|0",
+          "timing_calls": {
+            "('fwd', 'aten.mm.default', (('tensor', (27, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())": 1,
+            "('fwd', 'aten.mm.default', (('tensor', (30, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())": 1,
+            "('fwd', 'aten.mm.default', (('tensor', (32, 64), (64, 1), 'torch.bfloat16', 'cuda:5'), ('tensor', (64, 896), (1, 64), 'torch.bfloat16', 'cuda:5')), ())": 4
+          },
+          "timing_unresolved_calls": 0
+        },
+        "source_case_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/design.json",
+        "source_case_design_sha256": "5d5f745f2459fd8fe129f83da7c7d4e373f6e2514f9176b1d4b9b69dba9109d9",
+        "source_case_plan_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/recovery_formal_node_local_pp_plan.json",
+        "source_case_plan_sha256": "be129fbf96ff0137843dd036d29128b8ba91afbe13e05fd1e1d9b08730fdfe17",
+        "source_case_summary_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/summary.json",
+        "source_case_summary_sha256": "77add864e63f15cb7050fce366e6a9c4cd02f8cb90f8a6cf7f13241c8e20c93a",
+        "source_family": "matrix_multiply",
+        "source_stage": "L4",
+        "topology": {
+          "ep": 0,
+          "host": "gpu-02",
+          "pp": 1,
+          "tp": 1
+        },
+        "topology_source": {
+          "path": "results/v2_semantic/scoped32_public/node_local_pp/topology.json",
+          "sha256": "8205d0c466bc38b58c1efdc89f5a3d2cba05435e2c87bcaa73a714ffb5b0c53e"
+        },
+        "training_seed": 2032905414
+      }
+    ]
+  },
+  "monitor_cost_timing": true,
+  "parent_design_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse4_gc_lifetime_v2/design.json",
+  "parent_design_sha256": "cf1676f14ddabc802bfa2b7804a70c9d47c56052c94d5e4e2f1a02532ab0c009",
+  "protocol": "peer_priority_reg8_sparse3_startup_gc_gcdiag_fixed_case_regression_v1",
+  "sampling_schema": {
+    "core_evidence_steps": 8,
+    "expected_aux_rows": 48,
+    "sample_offsets": [
+      1,
+      3,
+      7
+    ],
+    "schema": "flash_stage_forward_sparse3_v1",
+    "window_size": 8
+  },
+  "source_freeze": {
+    "path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/reg8_control_sparse3_gc_lifetime_v2/source_freeze.json",
+    "sha256": "9072531ec4083ec4150fcff15179f96bd735958d8cf46dc56b1681ac3037a94d"
+  },
+  "training_seed": 2032905414
+}

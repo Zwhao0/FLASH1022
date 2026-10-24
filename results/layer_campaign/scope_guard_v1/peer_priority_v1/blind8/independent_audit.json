@@ -1,0 +1,464 @@
+{
+  "all_8_fault_windows_evidence_complete": true,
+  "all_8_peer_windows_complete_and_correct": true,
+  "cases": [
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-legacy-attention-r0-ce0d6941",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 2,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "attention",
+      "fault_interval": [
+        43,
+        74
+      ],
+      "layout": "legacy",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 0,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 11,
+      "profile_epoch": 1,
+      "profile_interval": [
+        47,
+        54
+      ],
+      "profile_start_latency_steps": 4,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 0,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_legacy_01/host2/whole_compute_truth_rank0.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-legacy-routed_expert_mlp-r14-8f718260",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "routed_expert_mlp",
+      "fault_interval": [
+        105,
+        136
+      ],
+      "layout": "legacy",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 14,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 2,
+      "profile_interval": [
+        110,
+        117
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 14,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_legacy_01/host1/whole_compute_truth_rank14.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-legacy-moe_block_router-r13-8543c099",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "moe_block_router",
+      "fault_interval": [
+        167,
+        198
+      ],
+      "layout": "legacy",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 13,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 3,
+      "profile_interval": [
+        172,
+        179
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 13,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_legacy_01/host1/whole_compute_truth_rank13.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-legacy-normalization-r4-184bf47e",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "normalization",
+      "fault_interval": [
+        229,
+        260
+      ],
+      "layout": "legacy",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 4,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 384,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 4,
+      "profile_interval": [
+        234,
+        241
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 384,
+      "target_rank": 4,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_legacy_01/host2/whole_compute_truth_rank4.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-node_local_pp-attention-r0-027a56ad",
+      "completion_markers": 128,
+      "core_outcome": "wrong_rank",
+      "detection_latency_steps": 2,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "attention",
+      "fault_interval": [
+        43,
+        74
+      ],
+      "layout": "node_local_pp",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 0,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 11,
+      "profile_epoch": 1,
+      "profile_interval": [
+        47,
+        54
+      ],
+      "profile_start_latency_steps": 4,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 0,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_node_local_pp_01/host2/whole_compute_truth_rank0.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-node_local_pp-routed_expert_mlp-r5-a9c852a5",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "routed_expert_mlp",
+      "fault_interval": [
+        105,
+        136
+      ],
+      "layout": "node_local_pp",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 5,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 2,
+      "profile_interval": [
+        110,
+        117
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 5,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_node_local_pp_01/host2/whole_compute_truth_rank5.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-node_local_pp-moe_block_router-r1-b9216cee",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "moe_block_router",
+      "fault_interval": [
+        167,
+        198
+      ],
+      "layout": "node_local_pp",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 1,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 64,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 3,
+      "profile_interval": [
+        172,
+        179
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 64,
+      "target_rank": 1,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_node_local_pp_01/host2/whole_compute_truth_rank1.jsonl",
+      "truth_rows": 32
+    },
+    {
+      "aux_rows": 128,
+      "aux_unique_rank_iteration_pairs": 128,
+      "case_id": "blind8-node_local_pp-normalization-r14-58ea1661",
+      "completion_markers": 128,
+      "core_outcome": "rejected",
+      "detection_latency_steps": 3,
+      "evidence_integrity_reason": null,
+      "evidence_passed": true,
+      "family": "normalization",
+      "fault_interval": [
+        229,
+        260
+      ],
+      "layout": "node_local_pp",
+      "peer_offline_complete": true,
+      "peer_offline_rank": 14,
+      "peer_offline_status": "localized",
+      "physical_fma_launches": 384,
+      "physical_injection_valid": true,
+      "profile_8_steps_inside_fault": true,
+      "profile_end_latency_steps": 12,
+      "profile_epoch": 4,
+      "profile_interval": [
+        234,
+        241
+      ],
+      "profile_start_latency_steps": 5,
+      "public_outcome": "correct_rank",
+      "public_source": "stage_forward_aux",
+      "role_measurements": 512,
+      "scope_misses": 0,
+      "scope_valid_steps": 32,
+      "selected_compute_calls": 384,
+      "target_rank": 14,
+      "tp_pairs_support3": 8,
+      "tp_topology_valid": true,
+      "trace_drift": 0,
+      "truth_path": "results/data16_sessions/v2s_peer_blind8_formal_node_local_pp_01/host1/whole_compute_truth_rank14.jsonl",
+      "truth_rows": 32
+    }
+  ],
+  "cases_sha256": "60a5f2f5e95a9eb0d76da7cdde807760f573ec4bbde3da88e6e09d525baf2280",
+  "core_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "correct_public_sources": {
+    "stage_forward_aux": 8
+  },
+  "fixed_denominator": 8,
+  "healthy_false_triggers": 0,
+  "healthy_wrong_gpu_localizations": 0,
+  "layouts": {
+    "legacy": {
+      "fault_cases": 4,
+      "fault_profile_windows": 4,
+      "formal_steps": 305,
+      "healthy_false_triggers": 0,
+      "healthy_wrong_gpu_localizations": 0,
+      "profile_transition_child_events": 0
+    },
+    "node_local_pp": {
+      "fault_cases": 4,
+      "fault_profile_windows": 4,
+      "formal_steps": 305,
+      "healthy_false_triggers": 0,
+      "healthy_wrong_gpu_localizations": 0,
+      "profile_transition_child_events": 0
+    }
+  },
+  "limitations": [
+    "Eight-case regression, not a 32-case certification.",
+    "Component scopes and matching peer evidence here are FWD-only.",
+    "The pre-formal completion-marker error is preserved; both 87-step timeonly sessions completed, were reconstructed from manifests, and formal resumed with the locked seed/sites/doses/source."
+  ],
+  "neighbor_timing": {
+    "at_least_30pct_cases": 6,
+    "baseline_fault_range_overlap_cases": 0,
+    "cases": 8,
+    "fault_nonprofile_n": 24,
+    "median_degradation_max_pct": 79.96289631820257,
+    "median_degradation_min_pct": 23.79647809263934,
+    "preceding_nonprofile_n": 10
+  },
+  "neighbor_timing_audit_sha256": "b8a7432b92732d05e92ff594dab6f38dffc02a24d9123341ff114bb088851c88",
+  "original_core_outcomes": {
+    "rejected": 7,
+    "wrong_rank": 1
+  },
+  "peer_binding_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "peer_model_sha256": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+  "peer_offline_outcomes": {
+    "correct_rank": 8
+  },
+  "per_window_evidence_shape": {
+    "completion_markers": 128,
+    "measurement_rows": 512,
+    "ranks": 16,
+    "roles_per_rank_step": 4,
+    "steps": 8
+  },
+  "prediction_before_truth_verified": true,
+  "prediction_freeze_sha256": "e0aba7649bf4b3fce9c363d5e891eda7e604f595a6b4cea8aedd407b647ce3a8",
+  "prior_l1_l2": {
+    "l1": {
+      "fixed_denominator": 32,
+      "healthy_localized_false_alarms": 0,
+      "strict": 32,
+      "summary_sha_matches": true
+    },
+    "l2": {
+      "fixed_denominator": 32,
+      "healthy_localized_false_alarms": 0,
+      "strict": 32,
+      "summary_sha_matches": true
+    }
+  },
+  "profile_transition_child_count": 0,
+  "protocol": "peer_priority_component_blind8_independent_cpu_audit_v1",
+  "public_sources": {
+    "stage_forward_aux": 8
+  },
+  "ready_design_lock_and_prior_gate_checks": "passed",
+  "remote_sources_both_match": true,
+  "runtime_files_bound": 93,
+  "runtime_source_mismatches": [],
+  "source_freeze_sha256": "3eb4b97a56c125039e09f203636fbf25eddaa19b9abd84a4fe659423da717e61",
+  "status": "passed",
+  "strict_correct": 8,
+  "summary_sha256": "9e82a0fd8761b8c989381137454dd213a31258eb405bba3ba715324f62b4e664",
+  "support3_tp_pairs_each_window": 8,
+  "timeonly_by_layout": {
+    "legacy": {
+      "all_physical_valid": true,
+      "cases": 4,
+      "session": "v2s_peer_blind8_timeonly_legacy_01",
+      "steps": 87
+    },
+    "node_local_pp": {
+      "all_physical_valid": true,
+      "cases": 4,
+      "session": "v2s_peer_blind8_timeonly_node_local_pp_01",
+      "steps": 87
+    }
+  },
+  "timeonly_execution_completion_reconstructed": true,
+  "timeonly_recovery_metadata": {
+    "no_case_seed_site_dose_source_changes": true,
+    "no_gpu_retry": true,
+    "reason": "executor omitted completion marker before health gate; both timeonly sessions completed and fetched",
+    "resume": "formal-only after fixed health gate"
+  },
+  "timeonly_stability_gate": true,
+  "timeonly_weak_cases_retained": [
+    {
+      "below_drawn_target": true,
+      "case_id": "blind8-node_local_pp-routed_expert_mlp-r5-a9c852a5",
+      "layout": "node_local_pp",
+      "nonprofile_degradation_pct": 23.42741262794028,
+      "physical_valid": true
+    },
+    {
+      "below_drawn_target": true,
+      "case_id": "blind8-node_local_pp-moe_block_router-r1-b9216cee",
+      "layout": "node_local_pp",
+      "nonprofile_degradation_pct": 25.76406525614916,
+      "physical_valid": true
+    }
+  ],
+  "total_physical_fma_launches": 1152,
+  "total_scope_misses": 0,
+  "total_selected_compute_calls": 1152,
+  "total_trace_drift": 0,
+  "valid_physical_fma_windows": 8
+}

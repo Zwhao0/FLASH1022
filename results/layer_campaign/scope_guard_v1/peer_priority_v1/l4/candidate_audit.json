@@ -1,0 +1,148 @@
+{
+  "attestation": {
+    "localizer_outputs_used": false,
+    "path": "results/v2_semantic/scope_attestation_02/summary.json",
+    "sha256": "8b0bca782ab103a3a56ccebacccfcf3ff880bdc9757c8f36f69eb3ff8315cd48"
+  },
+  "draws_seed_or_design": false,
+  "fixed_denominator": 32,
+  "layouts": {
+    "legacy": {
+      "catalog_hashes": {
+        "0": "dd6a3121e691242b6e420eb0c47c9ef8b4569e2127a61469957e185402e21181",
+        "1": "144c4e12fb616a04a4c9e739fcbb5426cedbcc8b67224b9afeb8cff8c62b80da",
+        "10": "ed0b4798656ea8cb4e1f43d7c53576df5d5f92786dfc3de3dc19ff1552410f11",
+        "11": "38ae9d7dfc3191d49b7e3f4f74a89114eda814459972496595da0e72c96f3cf1",
+        "12": "35da92016bdd72f0675835e0f1dfd863a14654c5c59c08087ff337b62b9be607",
+        "13": "3a41d5c27a7d952401e4b35a0580324933bec4723505c16e0c8bc3929eea5de2",
+        "14": "2c39e72ab3aa70d2499a808ae4f05809d2a614e727a31763f5dda9615cd10967",
+        "15": "97e241ef8be48e7e460b7b615f35a9cfe0e39698dfb9fdbcd7495a9edaf1ce0f",
+        "2": "789aa43a4b644a1ecd2ccdddd860cb29cc96138ff8b57829cbbfe8c2e58acd59",
+        "3": "87c3dd9ceb33aa80ed3c40bb807aa440ce3ac225b921a7d7d8e79c2c0445fd38",
+        "4": "4e410573ec7670af8d7b9c86a841627fa93aea81f706c468a3022288f2d785f1",
+        "5": "d2468ac9c525e30c7da5adecf9873ef07881ba61b20c2960a5f0359727abaeb6",
+        "6": "50d1683f8473b40fba24e4dc87f9e8c0539e1a11bb1cb32effe3fac2ab23a0a2",
+        "7": "c1f2f6d2bce9f36f5d9402528dff27d14e36c76f6769634d68ea21ae775a31ef",
+        "8": "8d14299cfbf6c0592737ce477d5b0e72301427c988d1e0d12d585c5926624a04",
+        "9": "c3edc433b99bb7525693754f06ef58d34c023413fdf417692504a13d09d09bb8"
+      },
+      "conservative_fma_round_bound_at_80pct": 167841831,
+      "dose_reference_steps": 3,
+      "excluded_by_signature_timing_or_family": {
+        "no_nonzero_tensor_signature": 3372,
+        "not_framed_module_site": 1232
+      },
+      "excluded_unmapped_overload_sites": 0,
+      "family_population_sites": {
+        "elementwise_activation": 9780,
+        "fused_sdpa_attention": 192,
+        "matrix_multiply": 8882,
+        "reduction_normalization": 1152,
+        "routing_index": 5910,
+        "softmax": 184
+      },
+      "family_rank_coverage": {
+        "elementwise_activation": 16,
+        "fused_sdpa_attention": 16,
+        "matrix_multiply": 16,
+        "reduction_normalization": 16,
+        "routing_index": 16,
+        "softmax": 16
+      },
+      "max_slowdown_ratio_at_80pct_by_family": {
+        "elementwise_activation": 108576.905207,
+        "fused_sdpa_attention": 11477.92688,
+        "matrix_multiply": 77692.810785,
+        "reduction_normalization": 69644.951378,
+        "routing_index": 110638.492679,
+        "softmax": 25152.348558
+      },
+      "rank_count": 16,
+      "rank_quota_match_feasible": true,
+      "unframed_training_functional_sites_excluded": 80
+    },
+    "node_local_pp": {
+      "catalog_hashes": {
+        "0": "d57e843461c0b17c4ee45dcaf2fde6d634b69751a0dfd19b8b4edcc2dcfb7c56",
+        "1": "9ef68955411b132001dc50b0070d4c3f8f72110813beffc7468998cbfe7e5b07",
+        "10": "68a90423feb91f029db083a4f5450c0f1ea8350f3c3eba40886bea1ccc73dbfd",
+        "11": "a85494ea6f15072fcc8127e3952cf22e13f2a7ca1574c97113435d53bdfec0c8",
+        "12": "7c5126d4274d0473910f837c82c52cef702786021cc13fe03b30c82c2a0d7b0a",
+        "13": "6c3a49ce16e51f6dd159aa60307c9e0f18bd27e7aef178e85a84a5c594b3f4ab",
+        "14": "72d49b8ec0e80d89d0a9ed1da7ced869941267edd8b34d65246ca8a6561224ca",
+        "15": "dccaa80b07bc61ef27c5edacd154085d04c20bf4f571290234f1c389f66bb0b7",
+        "2": "cca14dfe0fd5885f597226cbce2e5658e574ef558448c819bb36d1cc212d1555",
+        "3": "43c1fd910cd8d947c0e313abb3ada38c1ec490be60fbae2dae347580234dc611",
+        "4": "c1a73c2bbce1499de6e4838297cd1a3339d2dbeadda54965dbe7cab751a0e7d6",
+        "5": "4f32ec0d1acaa85a73e9c692959522b988ca4d5c04659ef32bdee4202804a4e0",
+        "6": "2d94554bedeaa9851a168eeb91a56fdbbfd32a8ace8b2fed3c305a4ec60ffc3f",
+        "7": "dfdca7ba03dc988c596b895c1aad9c07f2228d50be91a8035db2238aada0f0ea",
+        "8": "ea0daec152404e1f951eed8ba45bcbf6def6024ab0915269a07c10f9668807c4",
+        "9": "5395b77202983930a96acf0ebccb6ad4f8c81524390e73e7d97e572899f6a170"
+      },
+      "conservative_fma_round_bound_at_80pct": 156851391,
+      "dose_reference_steps": 3,
+      "excluded_by_signature_timing_or_family": {
+        "no_nonzero_tensor_signature": 1956,
+        "not_framed_module_site": 1232
+      },
+      "excluded_unmapped_overload_sites": 0,
+      "family_population_sites": {
+        "elementwise_activation": 10252,
+        "fused_sdpa_attention": 192,
+        "matrix_multiply": 9590,
+        "reduction_normalization": 1152,
+        "routing_index": 6146,
+        "softmax": 184
+      },
+      "family_rank_coverage": {
+        "elementwise_activation": 16,
+        "fused_sdpa_attention": 16,
+        "matrix_multiply": 16,
+        "reduction_normalization": 16,
+        "routing_index": 16,
+        "softmax": 16
+      },
+      "max_slowdown_ratio_at_80pct_by_family": {
+        "elementwise_activation": 104169.022254,
+        "fused_sdpa_attention": 10954.144117,
+        "matrix_multiply": 68429.023703,
+        "reduction_normalization": 63636.327944,
+        "routing_index": 99824.231754,
+        "softmax": 22809.675031
+      },
+      "rank_count": 16,
+      "rank_quota_match_feasible": true,
+      "unframed_training_functional_sites_excluded": 80
+    }
+  },
+  "operator_semantics": {
+    "fused_sdpa_attention": [
+      "aten._scaled_dot_product_flash_attention.default"
+    ],
+    "log_softmax_loss_sampled": false,
+    "sdpa_is_softmax": false,
+    "site_identity": "preserve exact ATen overload and catalog slot_id",
+    "softmax": [
+      "aten._softmax.default"
+    ],
+    "unframed_training_functional_excluded": true
+  },
+  "passed": true,
+  "quota_per_layout": {
+    "elementwise_activation": 4,
+    "fused_sdpa_attention": 2,
+    "matrix_multiply": 4,
+    "reduction_normalization": 2,
+    "routing_index": 3,
+    "softmax": 1
+  },
+  "schedule": {
+    "cases_per_layout": 16,
+    "formal_steps_per_layout": 1049,
+    "operator_phase": "fwd",
+    "timeonly_steps_per_layout": 207
+  },
+  "scope_limit": "framed module-local allowlisted ATen overload sites are FWD-only; unframed training_functional sites excluded; no BWD hooks or arbitrary CUDA-kernel identity",
+  "writes_artifacts": false
+}

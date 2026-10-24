@@ -1,5 +1,9 @@
 # FLASH 第三章 v1
 
+v2 显式启动入口（在项目根目录）：`python3 -m flash_v1.scripts.compute_v2 --plan /path/to/approved_online_plan.json`。输入须为完整online plan，包含core/peer模型与context binding；入口调用既有`run(plan, startup_gc_fixed_model=True)`，启用aux固定采样`{1,3,7}`（core仍完整8步）及fixed-model进程生命周期startupGC。仅用于固定模型、不在同进程卸载/替换模型的训练；preexisting永久代保留至训练子进程退出。已测成本属于此显式模式；旧`data16`入口/API默认不变，不能套用该成本。当前最终验收状态见项目根`handoff.md`。
+
+以下为此前v1结果与历史入口：
+
 当前路线：2节点16卡、真实TP2×PP2×EP2×Expert-DP2。`wait_localize.py`已通过`online.py`接入自动检测与有界8步PROFILE，rank6/10故障在线回归2/2正确；常驻MONITOR已优化，真无探针ABBA平均耗时差−1.173%（本次平均开销点估计<1%），见[优化与实测边界](MONITOR_OPTIMIZATION.md)，接入命令见[在线报告](ONLINE16.md)。此前冻结离线盲测故障16/16、健康4/4正确，见[数据研究报告](DATA16_STUDY.md)。离线采集入口`python -m flash_v1.scripts.data16`保留，模板法失败与论文对照保留，旧`--reference-profile`入口仍禁用。下方4/8卡命令与校准结果为历史记录。
 
 新增`--parallel-layout node_local_pp`，每节点TP2×PP2×EP2、节点间Expert-DP2；冻结算法在线4/4正确，见[布局快验](LAYOUT_LOCALPP.md)。

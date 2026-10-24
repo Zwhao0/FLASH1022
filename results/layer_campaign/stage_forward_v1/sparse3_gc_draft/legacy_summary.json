@@ -1,0 +1,89 @@
+{
+  "core8_unchanged": true,
+  "fixed_masks": [
+    1,
+    3,
+    7
+  ],
+  "layouts": {
+    "legacy": {
+      "healthy_evidence_passed": true,
+      "healthy_false_localizations": 0,
+      "profile_cost": {
+        "limits": "Two healthy sparse-profile windows only; no full-BEAST MONITOR budget claim.",
+        "monitor_budget_claim": false,
+        "pairs": {
+          "cold": {
+            "baseline_total_ms": 6212.404756108299,
+            "bootstrap": {
+              "block_length": 2,
+              "method": "circular paired logical-position block bootstrap",
+              "replicates": 10000,
+              "seed": 20261024
+            },
+            "ci95_percent": [
+              1.7804450949388206,
+              4.527956922603038
+            ],
+            "delta_percent": 3.262495389190634,
+            "label": "B1->C2_cold",
+            "paired_position_delta_percent": [
+              8.29154822454925,
+              0.08249321768205586,
+              5.616675000928284,
+              0.33819154755359015,
+              2.272923035261609,
+              -0.6185990768804439,
+              9.779330172387702,
+              0.5783830627595687
+            ],
+            "profiled_total_ms": 6415.084174834192
+          },
+          "warm": {
+            "baseline_total_ms": 6151.1546804104,
+            "bootstrap": {
+              "block_length": 2,
+              "method": "circular paired logical-position block bootstrap",
+              "replicates": 10000,
+              "seed": 20261024
+            },
+            "ci95_percent": [
+              2.5108105126819824,
+              4.936221766250259
+            ],
+            "delta_percent": 3.757817674486641,
+            "label": "B4->C3_warm",
+            "paired_position_delta_percent": [
+              6.664400486127597,
+              1.9518861447791913,
+              4.949502771731007,
+              2.816806066642963,
+              0.753707066099607,
+              3.5601970751550027,
+              8.109894829408248,
+              1.3823701047046777
+            ],
+            "profiled_total_ms": 6382.303858175874
+          }
+        },
+        "pooled": {
+          "baseline_total_ms": 12363.559436518699,
+          "ci95_percent": [
+            2.5708758736318447,
+            4.3883799816264775
+          ],
+          "delta_percent": 3.5089295984613633,
+          "method": "ratio of summed max-16-rank walls; bootstrap resamples paired positions within each cold/warm stratum",
+          "profiled_total_ms": 12797.388033010066
+        },
+        "profile_budget_percent": 5.0,
+        "step_metric": "max full_step_wall_ms across 16 global ranks; includes complete timed step"
+      },
+      "replay": true,
+      "startup_gc_passed": true
+    }
+  },
+  "monitor_budget_claim": false,
+  "schema": "sparse3_GC140_independent_score_v1",
+  "status": "single_layout_complete"
+}

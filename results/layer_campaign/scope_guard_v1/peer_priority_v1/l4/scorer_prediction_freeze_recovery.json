@@ -1,0 +1,25 @@
+{
+  "execution_complete_sha256": "696d64200dc6b1bdd2ac4271eda3234f3659fd848f6b727f4bb6b51c9c096a76",
+  "layouts": {
+    "legacy": {
+      "events_canonical_sha256": "dcfc1a281deb17ee15485ea894b41aec694d838db3fc5c466975ac394e632a12",
+      "events_path": "results/data16_sessions/v2s_peer_l4_formal_legacy_01/host2/events.jsonl",
+      "events_sha256": "6d97f7bc385fda858cebf136d23e837dd47e4cef8a51d1bf86deddddb84783b6",
+      "plan_sha256": "9211185d84c65ccdca78bcdb49a004c42dc34c878b459b0c72cd2f7ae6c47b36",
+      "prediction_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/legacy_predictions_without_truth.json",
+      "prediction_sha256": "42c079a83d83dec37e1a84e70578f090871d1ac380d58629001f35ceac622936",
+      "session": "v2s_peer_l4_formal_legacy_01"
+    },
+    "node_local_pp": {
+      "events_canonical_sha256": "415814d1330f2b554ed523e6714889e3671dd4e74529d9798b06de58208d6b63",
+      "events_path": "results/data16_sessions/v2s_peer_l4_formal_node_local_pp_01/host2/events.jsonl",
+      "events_sha256": "74d46d4663bce8fabbf64cf70893d95efa99985fd29253cb88d6f5c3c269a784",
+      "plan_sha256": "be129fbf96ff0137843dd036d29128b8ba91afbe13e05fd1e1d9b08730fdfe17",
+      "prediction_path": "results/layer_campaign/scope_guard_v1/peer_priority_v1/l4/node_local_pp_predictions_without_truth.json",
+      "prediction_sha256": "f6210a93a56bbae1e58deaa0de77416d503d07570c81919f82e659e343969750",
+      "session": "v2s_peer_l4_formal_node_local_pp_01"
+    }
+  },
+  "prediction_before_truth": true,
+  "protocol": "peer_v1_l4_recovery_prediction_freeze_v1"
+}

@@ -1,0 +1,20 @@
+{
+  "GPU_executed": false,
+  "case_count": "Uniform{4,5,6} pending",
+  "commit_pending": true,
+  "formal_seed_drawn": false,
+  "production_source_changed": false,
+  "protocol_sha256": "da80afd4105b2a10224e3c63a79372d6f905df08ee0080375beaf13f155a4c4c",
+  "reuses": "production_no_diag_smoke3/run.py; variable N and per-layout schedule; no draw yet",
+  "runner_sha256": "975bb994d5648a3bd710db6312b8f9d1ee5e0402c998f0a1fe8028535195dd6f",
+  "seed_drawn": false,
+  "single_gpu_nonoverlap": true,
+  "status": "CPU_draft_only_not_execution_ready",
+  "synthetic_CPU_validation": "real healthy32rank catalogs/refs, selected nonzero dose estimates, random onset/nonoverlap, configure_plan/validate_plan passed; empty-site fixture retained invalid",
+  "synthetic_builder_sha256": "e66a8734233bab9cd519767a6f0e396ff50bc263c0e504cda735f2ffeebd5fd8",
+  "synthetic_outputs": [
+    "/tmp/flash_postcommit_synthetic.json",
+    "/tmp/flash_postcommit_empty_site_fixture.json"
+  ],
+  "unknown_onset": true
+}
