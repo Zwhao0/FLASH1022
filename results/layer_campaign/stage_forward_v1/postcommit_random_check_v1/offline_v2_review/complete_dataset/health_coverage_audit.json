@@ -1,0 +1,200 @@
+{
+  "healthy_public_unavailable": [
+    {
+      "session": "v2s_stage_forward_v1_calibration_legacy_01",
+      "epoch": 1,
+      "start": 1,
+      "end": 8,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_calibration_legacy_01",
+      "epoch": 1,
+      "start": 17,
+      "end": 24,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_calibration_node_local_pp_01",
+      "epoch": 1,
+      "start": 1,
+      "end": 8,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_calibration_node_local_pp_01",
+      "epoch": 1,
+      "start": 17,
+      "end": 24,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 1,
+      "end": 8,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 17,
+      "end": 24,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 25,
+      "end": 32,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 33,
+      "end": 40,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_node_local_pp_01",
+      "epoch": 1,
+      "start": 1,
+      "end": 8,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_node_local_pp_01",
+      "epoch": 1,
+      "start": 17,
+      "end": 24,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_node_local_pp_01",
+      "epoch": 1,
+      "start": 25,
+      "end": 32,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_node_local_pp_01",
+      "epoch": 1,
+      "start": 33,
+      "end": 40,
+      "reason": "missing_core_raw_and_markers",
+      "files": {
+        "evidence.json": false,
+        "evidence_markers.json": false
+      }
+    }
+  ],
+  "incomplete_healthy_tails": [
+    {
+      "session": "v2s_stage_forward_v1_calibration_legacy_01",
+      "epoch": 1,
+      "start": 25,
+      "end": 28,
+      "rows": 64
+    },
+    {
+      "session": "v2s_stage_forward_v1_calibration_node_local_pp_01",
+      "epoch": 1,
+      "start": 25,
+      "end": 28,
+      "rows": 64
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 41,
+      "end": 45,
+      "rows": 80
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_node_local_pp_01",
+      "epoch": 1,
+      "start": 41,
+      "end": 45,
+      "rows": 80
+    }
+  ],
+  "structurally_invalid_aux": [
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 1,
+      "end": 8,
+      "reason": "incomplete auxiliary evidence",
+      "rows": 128
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 17,
+      "end": 24,
+      "reason": "incomplete auxiliary evidence",
+      "rows": 128
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 25,
+      "end": 32,
+      "reason": "incomplete auxiliary evidence",
+      "rows": 128
+    },
+    {
+      "session": "v2s_stage_forward_v1_fit_legacy_01",
+      "epoch": 1,
+      "start": 33,
+      "end": 40,
+      "reason": "incomplete auxiliary evidence",
+      "rows": 128
+    }
+  ]
+}

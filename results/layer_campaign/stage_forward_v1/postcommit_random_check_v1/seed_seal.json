@@ -1,0 +1,10 @@
+{
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "submitted_tree": "6c25b838566475db02cdfba22d720ca2b9637d30",
+  "seed_hex": "d67fffcceaf67f3beb24c881b81a07f6",
+  "seed": 285119401048717492891786117375770363894,
+  "created_unix": 1792858901.858599,
+  "one_draw_only": true,
+  "payload_sha256": "6e7e7aae8efa1bb914f8a0bd554ef2796807c99bdd34dea8ea92cc6054f34450",
+  "index_sha256": "62a14aea88e325e18dbda6169ac52fe95243ac3507013c4cacf8f1f71e92db28"
+}

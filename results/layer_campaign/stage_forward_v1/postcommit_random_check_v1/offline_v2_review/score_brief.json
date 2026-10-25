@@ -1,0 +1,398 @@
+{
+  "artifacts": {
+    "historical": "complete_dataset/score_brief.json",
+    "historical_predictions": "complete_dataset/prediction_freeze.json",
+    "partial": "partial_score_brief.json",
+    "partial_predictions": "partial_prediction_freeze.json",
+    "protocol": "available_data_protocol.json"
+  },
+  "input_inventory": {
+    "interrupted_public_snapshot/available_input_manifest.json": "2260f2c07acad438f39dcf8c453fa384dcc4ab3d680ab684091b09a303a2d420",
+    "recovery_infra_v1/interrupted_public_snapshot/available_input_manifest.json": "dee6e32a1178c1ae3d1db3c01c065ef4ac1eadb900486c979574ca858c9eb7ec"
+  },
+  "offline_localizer_replay": {
+    "cohort": {
+      "aux_accepted": 135,
+      "canonical_tiles": 16,
+      "complete_tiles": 186,
+      "incomplete_tails": 4,
+      "raw_tiles": 190,
+      "sessions": 44
+    },
+    "coverage_boundary": "L1 2/2 and L2 4/4 are small matched replay groups, not repeats of original L1/L2 32-case campaigns.",
+    "excluded_scope_validation": {
+      "stage_forward_v1/peer_v1/l3": {
+        "fixed_denominator": 32,
+        "raw_public_correct": 32,
+        "source": "results/layer_campaign/stage_forward_v1/peer_v1/l3/injection_scope_confound.json",
+        "status": "invalid_scope_confounded_not_component_validation"
+      }
+    },
+    "healthy": {
+      "fit_calibration_tiles": {
+        "all_tiles": 16,
+        "aux_localized": 0,
+        "aux_rejection_reasons": {
+          "insufficient_persistent_directional_threshold_support": 16
+        },
+        "aux_results": 16,
+        "aux_structurally_scored": 16,
+        "complete_tiles": 16,
+        "incomplete_tails": 0,
+        "public_localized": 0,
+        "public_localized_details": [],
+        "public_results": 0,
+        "public_unavailable": 16
+      },
+      "historical_raw_healthy_tiles": {
+        "all_tiles": 42,
+        "aux_localized": 0,
+        "aux_rejection_reasons": {
+          "incomplete auxiliary evidence": 4,
+          "insufficient_persistent_directional_threshold_support": 34
+        },
+        "aux_results": 38,
+        "aux_structurally_scored": 34,
+        "collection_context": "Mixed historical fit/calibration, development and prior regression/failure-producer collections; retain 1/26; not unconditional health false positive rate of current production collector.",
+        "complete_tiles": 38,
+        "incomplete_tails": 4,
+        "public_localized": 1,
+        "public_localized_details": [
+          {
+            "aux_reason": "insufficient_persistent_directional_threshold_support",
+            "aux_status": "rejected",
+            "core_rank": 1,
+            "core_reason": "unique_local_duration_anomaly",
+            "end": 226,
+            "epoch": 4,
+            "session": "v2s_peer_priority_reg8_node_local_pp_01",
+            "start": 219
+          }
+        ],
+        "public_results": 26,
+        "public_unavailable": 12
+      }
+    },
+    "healthy_gap_summary": "42=38 complete+4 tails; 38=26 production public+12 lacking both evidence.json and evidence_markers.json (fit 8, calibration 4). 34 structurally scored aux +4 invalid aux; all four invalid are legacy fit tiles. The public healthy rank1 failure is retained, distinct from the previously recorded sparse4 profile221-228 rank4 failure.",
+    "limitations": [
+      "All predictions frozen before this score; historical labels were previously known during original development. No new blind experiment.",
+      "135 is a historical accepted-window count, not the exhaustive cohort size or independent case denominator.",
+      "Scope ledgers are separate and can overlap; no aggregate accuracy across scopes.",
+      "Public production result is scored only with matching raw core plus marker evidence; unavailable is retained as no result.",
+      "Offline healthy PROFILE localization is distinct from continuous BEAST detection false positives. No BEAST rate inferred.",
+      "Canonical fit/calibration tiles overlap development sources and are reported separately."
+    ],
+    "replay_coverage": {
+      "aux_only_no_matching_raw_core": 32,
+      "production_diagnose_raw_core_aux": 170
+    },
+    "selected_scope_results": {
+      "scope_guard_v1/peer_priority_v1/blind8": {
+        "aux": {
+          "correct": 8,
+          "rejected": 0,
+          "total": 8,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "classification": "previously_blind_historical_now_known",
+        "fixed_denominator": 8,
+        "public": {
+          "correct": 8,
+          "rejected": 0,
+          "total": 8,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "unique_case_keys": 8
+      },
+      "scope_guard_v1/peer_priority_v1/l4": {
+        "aux": {
+          "correct": 31,
+          "rejected": 0,
+          "total": 32,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 32,
+        "public": {
+          "correct": 31,
+          "rejected": 0,
+          "total": 32,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "unique_case_keys": 32
+      },
+      "scope_guard_v1/peer_priority_v1/reg8_control": {
+        "aux": {
+          "correct": 4,
+          "rejected": 2,
+          "total": 8,
+          "unavailable": 2,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 8,
+        "public": {
+          "correct": 6,
+          "rejected": 0,
+          "total": 8,
+          "unavailable": 2,
+          "wrong": 0
+        },
+        "unique_case_keys": 8
+      },
+      "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline": {
+        "aux": {
+          "correct": 5,
+          "rejected": 2,
+          "total": 8,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 8,
+        "public": {
+          "correct": 7,
+          "rejected": 0,
+          "total": 8,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "unique_case_keys": 8
+      },
+      "scope_guard_v1/revalidation/l1": {
+        "aux": {
+          "correct": 2,
+          "rejected": 0,
+          "total": 2,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 2,
+        "public": {
+          "correct": 2,
+          "rejected": 0,
+          "total": 2,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "unique_case_keys": 2
+      },
+      "scope_guard_v1/revalidation/l2": {
+        "aux": {
+          "correct": 2,
+          "rejected": 2,
+          "total": 4,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 4,
+        "public": {
+          "correct": 4,
+          "rejected": 0,
+          "total": 4,
+          "unavailable": 0,
+          "wrong": 0
+        },
+        "unique_case_keys": 4
+      },
+      "scope_guard_v1/revalidation/l3": {
+        "aux": {
+          "correct": 31,
+          "rejected": 0,
+          "total": 32,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "classification": "historical_development_or_known_regression",
+        "fixed_denominator": 32,
+        "public": {
+          "correct": 31,
+          "rejected": 0,
+          "total": 32,
+          "unavailable": 1,
+          "wrong": 0
+        },
+        "unique_case_keys": 32
+      }
+    },
+    "status": "historical_development_offline_raw_replay"
+  },
+  "partial_existing_online_log_review": {
+    "cases": [
+      {
+        "assessment_status": "trace_complete_provisional_planned_target_only",
+        "auxiliary_integrity_passed": true,
+        "case_id": "random-legacy-0",
+        "chosen_attempt": "recovery",
+        "core_outcome": "rejected",
+        "core_rank": null,
+        "detected_in_fault": true,
+        "fma_validation_status": "unknown_missing_truth",
+        "frozen_slowdown_extra_ratio": 14634.635426,
+        "layout": "legacy",
+        "observed_nonprofile_wall_degradation_pct": 23.18767056775448,
+        "peer_outcome": "correct_rank",
+        "profile_end": 78,
+        "profile_start": 71,
+        "public_outcome": "correct_rank",
+        "public_rank": 0,
+        "rank": 0,
+        "semantic_evidence_passed": true,
+        "tier": "L3",
+        "truth_rows": 0
+      },
+      {
+        "assessment_status": "trace_complete_provisional_planned_target_only",
+        "auxiliary_integrity_passed": true,
+        "case_id": "random-legacy-1",
+        "chosen_attempt": "recovery",
+        "core_outcome": "correct_rank",
+        "core_rank": 7,
+        "detected_in_fault": true,
+        "fma_validation_status": "unknown_missing_truth",
+        "frozen_slowdown_extra_ratio": 2.139656,
+        "layout": "legacy",
+        "observed_nonprofile_wall_degradation_pct": 56.51218784537462,
+        "peer_outcome": "correct_rank",
+        "profile_end": 144,
+        "profile_start": 137,
+        "public_outcome": "correct_rank",
+        "public_rank": 7,
+        "rank": 7,
+        "semantic_evidence_passed": true,
+        "tier": "L1",
+        "truth_rows": 0
+      },
+      {
+        "assessment_status": "not_evaluated_not_reached",
+        "auxiliary_integrity_passed": false,
+        "case_id": "random-legacy-2",
+        "chosen_attempt": "recovery",
+        "core_outcome": "missing",
+        "core_rank": null,
+        "detected_in_fault": false,
+        "fma_validation_status": "unknown_missing_truth",
+        "frozen_slowdown_extra_ratio": 2.179457,
+        "layout": "legacy",
+        "observed_nonprofile_wall_degradation_pct": null,
+        "peer_outcome": "invalid",
+        "profile_end": null,
+        "profile_start": null,
+        "public_outcome": "not_triggered",
+        "public_rank": null,
+        "rank": 3,
+        "semantic_evidence_passed": null,
+        "tier": "L1",
+        "truth_rows": 0
+      },
+      {
+        "assessment_status": "not_evaluated_layout_never_started",
+        "auxiliary_integrity_passed": null,
+        "case_id": "random-node_local_pp-0",
+        "chosen_attempt": null,
+        "core_outcome": null,
+        "core_rank": null,
+        "detected_in_fault": null,
+        "fma_validation_status": null,
+        "frozen_slowdown_extra_ratio": null,
+        "layout": "node_local_pp",
+        "observed_nonprofile_wall_degradation_pct": null,
+        "peer_outcome": null,
+        "profile_end": null,
+        "profile_start": null,
+        "public_outcome": null,
+        "public_rank": null,
+        "rank": 3,
+        "semantic_evidence_passed": null,
+        "tier": "L4",
+        "truth_rows": null
+      },
+      {
+        "assessment_status": "not_evaluated_layout_never_started",
+        "auxiliary_integrity_passed": null,
+        "case_id": "random-node_local_pp-1",
+        "chosen_attempt": null,
+        "core_outcome": null,
+        "core_rank": null,
+        "detected_in_fault": null,
+        "fma_validation_status": null,
+        "frozen_slowdown_extra_ratio": null,
+        "layout": "node_local_pp",
+        "observed_nonprofile_wall_degradation_pct": null,
+        "peer_outcome": null,
+        "profile_end": null,
+        "profile_start": null,
+        "public_outcome": null,
+        "public_rank": null,
+        "rank": 14,
+        "semantic_evidence_passed": null,
+        "tier": "L2",
+        "truth_rows": null
+      },
+      {
+        "assessment_status": "not_evaluated_layout_never_started",
+        "auxiliary_integrity_passed": null,
+        "case_id": "random-node_local_pp-2",
+        "chosen_attempt": null,
+        "core_outcome": null,
+        "core_rank": null,
+        "detected_in_fault": null,
+        "fma_validation_status": null,
+        "frozen_slowdown_extra_ratio": null,
+        "layout": "node_local_pp",
+        "observed_nonprofile_wall_degradation_pct": null,
+        "peer_outcome": null,
+        "profile_end": null,
+        "profile_start": null,
+        "public_outcome": null,
+        "public_rank": null,
+        "rank": 7,
+        "semantic_evidence_passed": null,
+        "tier": "L2",
+        "truth_rows": null
+      }
+    ],
+    "core_correct": 1,
+    "detected_in_fault": 2,
+    "formal_accuracy_denominator": 0,
+    "health": {
+      "original": {
+        "healthy_detection_candidates": 0,
+        "healthy_detection_profile_overlaps_fault_count": 0,
+        "healthy_false_triggers": 0,
+        "healthy_monitor_steps_without_profile": 59,
+        "healthy_nonfault_nonwarmup_steps": 59,
+        "healthy_trigger_verdicts": [],
+        "healthy_wrong_gpu_localizations": 0,
+        "pure_healthy_profile_count": 0,
+        "pure_healthy_profile_localized_count": 0
+      },
+      "recovery": {
+        "healthy_detection_candidates": 0,
+        "healthy_detection_profile_overlaps_fault_count": 0,
+        "healthy_false_triggers": 0,
+        "healthy_monitor_steps_without_profile": 93,
+        "healthy_nonfault_nonwarmup_steps": 93,
+        "healthy_trigger_verdicts": [],
+        "healthy_wrong_gpu_localizations": 0,
+        "pure_healthy_profile_count": 0,
+        "pure_healthy_profile_localized_count": 0
+      }
+    },
+    "independent_health_attempt": "recovery; original consistency only",
+    "physically_verified_cases": 0,
+    "planned_cases": 6,
+    "planned_target_hit_denominator_provisional": 2,
+    "planned_target_hits_provisional": 2,
+    "raw_existing_scorer_strict_success": 0,
+    "strict_success_assessment": "unassessable_missing_truth; raw existing scorer false retained, not evidence of algorithm failure",
+    "trace_complete_provisional_cases": 2
+  },
+  "status": "CPU_review_complete_server_experiments_paused"
+}

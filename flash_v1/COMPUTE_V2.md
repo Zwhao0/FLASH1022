@@ -1,6 +1,6 @@
 # v2 四层计算慢：冻结范围内实测结果
 
-状态：冻结范围内精度检查与完整ABBA平均成本预算核验完成。GitHub提交由主窗口执行；提交后另做一次4–6例随机抽查，不据小样本作总体保证。
+状态：GitHub代码`5cc7cb8347d1efb91ef37a143e1428e82b15086d`已提交；用户暂停新增服务器实验。现有数据离线复核已完成，最后随机N6未完成，不作新全量在线验收声明。
 
 ## 配置与入口
 
@@ -38,6 +38,13 @@
 - PP合并BA单序仍+1.230% [0.669,1.840]，原严格逐序门仍不通过；原run inconclusive及全部窗口保留，不称所有短窗<1%。负值仅表示此配对试验未测出正开销，不宣称加速。
 - 聚合使用max16rank完整wall总和比、逐run/order分层配对block2 bootstrap（seed20261024，10000次）；[legacy](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_legacy_aggregate.json)、[PP](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_node_local_pp_aggregate.json)。原单run block4结论保留，未改写为通过。
 - 本轮按冻结精度范围及完整ABBA平均预算验收：MONITOR<1%、PROFILE<5%的两拓扑总体CI上界均达标；不承诺任意短窗、负载或未来总体性能。
+
+## 已完成的离线复核
+
+- [离线报告](../results/layer_campaign/stage_forward_v1/postcommit_random_check_v1/offline_v2_review/offline_report.md)：固定生产模型/融合/采样，全部可用预测先封存再评分；历史已知标签不冒充新盲测。
+- 历史L1小组2/2、L2小组4/4、L3 31/32、旧blind8 8/8、L4 31/32。不同来源和重叠病例分开，旧混杂L3 raw32/32标invalid_scope，不用于组件验证。
+- 混合历史健康PROFILE public错GPU1/26；aux34窗全部拒判不代表public零误报，也不是MONITOR总体误报率。无trigger的完整历史病例仍在固定分母内。
+- 本轮中断前2例计划目标均命中，但FMA truth未落盘，仅辅助观察；余4未评。原/recovery不重复计数，计划健康93监测步0候选。新增在线测试已停止，不再补6例。
 
 ## 保留失败与范围
 

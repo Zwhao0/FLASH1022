@@ -1,0 +1,74 @@
+{
+  "available_data_protocol.json": {
+    "bytes": 819,
+    "sha256": "a62f8110e66078769514210a882da7e3e1b9036e2af718985a39edf7e635287d"
+  },
+  "complete_dataset/case_ledger.json": {
+    "bytes": 84826,
+    "sha256": "38a85d4a66c11c9009b0900778ee09f6bbcaa0a31c431750e29b59c533448f90"
+  },
+  "complete_dataset/health_coverage_audit.json": {
+    "bytes": 4711,
+    "sha256": "d90321c18e0df45e02b6543dd29d2d45b87acad33194a51052d298e11e30a590"
+  },
+  "complete_dataset/method_sources.json": {
+    "bytes": 61632,
+    "sha256": "12ce504fe17efe4dd2fe1e9424921842b2166a5f20dab9651960ddf006c6ec84"
+  },
+  "complete_dataset/prediction_freeze.json": {
+    "bytes": 1669,
+    "sha256": "31f9c1ca0b99b50659fe729e381888be94bc14500b3c47bccbf95a21fd8f1a10"
+  },
+  "complete_dataset/replay.py": {
+    "bytes": 6416,
+    "sha256": "b3a41a01a68d5982bafaf968b80c42d1ee0d2ebca9a5a5a09134a87dbff2d19e"
+  },
+  "complete_dataset/report.txt": {
+    "bytes": 2223,
+    "sha256": "d2a10b8ef4a765128a295849f48309deb0610bcaca45a9b60b62ec7654143ba0"
+  },
+  "complete_dataset/score.py": {
+    "bytes": 8569,
+    "sha256": "78d067369ad4fb51702f97869b91f458e7d7561e1b76e175f0e3cad10a75365f"
+  },
+  "complete_dataset/score_brief.json": {
+    "bytes": 8878,
+    "sha256": "f2ef43bf18e1da5388abc6bf863d31e5ddd20e4ddc106a3e502fb6e2310837b6"
+  },
+  "offline_report.md": {
+    "bytes": 4570,
+    "sha256": "81096b5bac890ba2e6ac045ef05ba79f829dfb80ff476661c6eb7cd8e4afd0d6"
+  },
+  "partial_input_freeze.json": {
+    "bytes": 17199,
+    "sha256": "60df9f00cbb2350352ad7711c16aae6d84d11b483899f8ad12c9121cf5b2caaa"
+  },
+  "partial_label_sources_after_prediction_freeze.json": {
+    "bytes": 118,
+    "sha256": "ba69c57531b7281f5f7c0f6c3bec76381d1c38dc8623cdbc53d38956116e8a4c"
+  },
+  "partial_prediction_freeze.json": {
+    "bytes": 393,
+    "sha256": "7bfeb5c4df2f050927f76408059fbaed5c295b47ecc71c1eafb3eba316acea0d"
+  },
+  "partial_predictions_without_truth.json": {
+    "bytes": 278489,
+    "sha256": "d0e27af6635aac6d8733ad38f50f1db97c564d56cd5b5bb66e128af2f1a24b9a"
+  },
+  "partial_replay.py": {
+    "bytes": 5025,
+    "sha256": "0cc00bb072d94e20bc746821efb65fa4fdc714d8a97eb3ab2c00b79b671c555c"
+  },
+  "partial_score_brief.json": {
+    "bytes": 16993,
+    "sha256": "4d16c9600226b57de54ced88b309f7b782715284a7f92fbe131999656255c8a5"
+  },
+  "score_brief.json": {
+    "bytes": 13823,
+    "sha256": "fb9bf84b751503152b121a3b885dc076c51d31a438b8e6d9ff6b579ae90ed9b9"
+  },
+  "score_partial.py": {
+    "bytes": 11881,
+    "sha256": "73cb56ae38f3698db1b2badf6dc74ae93e3c797437a91532a80624a03ea454b7"
+  }
+}

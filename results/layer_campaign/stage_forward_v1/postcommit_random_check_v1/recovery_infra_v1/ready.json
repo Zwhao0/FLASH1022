@@ -1,0 +1,17 @@
+{
+  "CPU_only": true,
+  "GPU_executed": false,
+  "N": 6,
+  "contract_sha256": "4ada9a76310b1abc70688f5b2c471c151586b26a0354418ee2dc359c490a6a7f",
+  "design_sha256": "caff18619f66482ddd343b340066e1d08316d4f1e453c74df95a03ab4381e3c6",
+  "layout_counts": {
+    "legacy": 3,
+    "node_local_pp": 3
+  },
+  "recovery_amendment_sha256": "fdc89a335e6518d549478593dae5ddc681b13038bdfe0ab89c8a01c5c7776512",
+  "runner_sha256": "bf458de232dd33fd246f55483ea4a6b9f8eb00ba84da8b65e8bc023755caef55",
+  "seed_seal_sha256": "f6b24c55001ffdf4ba868d1666dabb76bac6c56459b1ac9e16a6d906b042e9bb",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "status": "postcommit_random_4to6_frozen_for_execution",
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d"
+}

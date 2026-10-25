@@ -1,0 +1,2922 @@
+[
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-legacy-attention-r0-ce0d6941",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-legacy-routed_expert_mlp-r14-8f718260",
+    "epoch": 2,
+    "expected_rank": 14,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-legacy-moe_block_router-r13-8543c099",
+    "epoch": 3,
+    "expected_rank": 13,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-legacy-normalization-r4-184bf47e",
+    "epoch": 4,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-node_local_pp-attention-r0-027a56ad",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-node_local_pp-routed_expert_mlp-r5-a9c852a5",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-node_local_pp-moe_block_router-r1-b9216cee",
+    "epoch": 3,
+    "expected_rank": 1,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "blind8-node_local_pp-normalization-r14-58ea1661",
+    "epoch": 4,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/blind8",
+    "session": "v2s_peer_blind8_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-matrix_multiply-0-8354614b",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-softmax-1-4c40cdde",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-routing_index-2-ae1673bc",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-elementwise_activation-3-449be23a",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-reduction_normalization-4-a006c3c6",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-elementwise_activation-5-80d3b620",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-reduction_normalization-6-d7bc9d12",
+    "epoch": 7,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-routing_index-7-968c9305",
+    "epoch": 8,
+    "expected_rank": 7,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-matrix_multiply-8-56dcae9c",
+    "epoch": 9,
+    "expected_rank": 8,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-routing_index-9-e0f7cf41",
+    "epoch": 10,
+    "expected_rank": 9,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 10,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-matrix_multiply-10-d8427ba8",
+    "epoch": 11,
+    "expected_rank": 10,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 10,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-fused_sdpa_attention-11-4cb94538",
+    "epoch": 12,
+    "expected_rank": 11,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-fused_sdpa_attention-12-b2ab8cce",
+    "epoch": 13,
+    "expected_rank": 12,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-elementwise_activation-13-3c7cfe9d",
+    "epoch": 14,
+    "expected_rank": 13,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-matrix_multiply-14-1c6389c5",
+    "epoch": 15,
+    "expected_rank": 14,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-legacy-elementwise_activation-15-b8d06851",
+    "epoch": 16,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-routing_index-0-a77f537e",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-elementwise_activation-1-8ca93c7d",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-elementwise_activation-2-a8680bc5",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-reduction_normalization-3-790d0baf",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-routing_index-4-746718a9",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-softmax-6-3f730b2e",
+    "epoch": 7,
+    "expected_rank": 6,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-routing_index-7-8ae91495",
+    "epoch": 8,
+    "expected_rank": 7,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-reduction_normalization-8-e60b0b22",
+    "epoch": 9,
+    "expected_rank": 8,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-matrix_multiply-9-dcd7742e",
+    "epoch": 10,
+    "expected_rank": 9,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "case_id": "l4-node_local_pp-matrix_multiply-10-83a87db8",
+    "epoch": null,
+    "expected_rank": 10,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "replay_coverage": "no_complete_window",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-fused_sdpa_attention-11-1c6d88ae",
+    "epoch": 11,
+    "expected_rank": 11,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-fused_sdpa_attention-12-ec7da9b2",
+    "epoch": 12,
+    "expected_rank": 12,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-elementwise_activation-13-fa58c896",
+    "epoch": 13,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-elementwise_activation-14-0b58b8ab",
+    "epoch": 14,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l4-node_local_pp-matrix_multiply-15-0f879d22",
+    "epoch": 15,
+    "expected_rank": 15,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/l4",
+    "session": "v2s_peer_l4_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+    "epoch": 1,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+    "epoch": 2,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-legacy-nonfirst_normalization_component-blind8-legacy-normalization-r4-184bf47e",
+    "epoch": 3,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "case_id": "reg8-legacy-operator-l4-legacy-matrix_multiply-0-8354614b",
+    "epoch": null,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "replay_coverage": "no_complete_window",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+    "epoch": 1,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+    "epoch": 3,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "case_id": "reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+    "epoch": null,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "replay_coverage": "no_complete_window",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control",
+    "session": "v2s_peer_priority_reg8_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-legacy-whole_compute-upper6-l1-legacy-whole-6-9ce9cf48",
+    "epoch": 1,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "reg8-legacy-backward_stage-upper6-l2-legacy-bwd-15-c90e132c",
+    "epoch": 2,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-legacy-nonfirst_normalization_component-blind8-legacy-normalization-r4-184bf47e",
+    "epoch": 3,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "case_id": "reg8-legacy-operator-l4-legacy-matrix_multiply-0-8354614b",
+    "epoch": null,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "replay_coverage": "no_complete_window",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-node_local_pp-whole_compute-upper6-l1-node_local_pp-whole-4-448323ce",
+    "epoch": 1,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "reg8-node_local_pp-backward_stage-upper6-l2-node_local_pp-bwd-5-96bd077d",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-node_local_pp-nonfirst_normalization_component-blind8-node_local_pp-normalization-r14-58ea1661",
+    "epoch": 3,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "reg8-node_local_pp-operator-l4-node_local_pp-matrix_multiply-5-23cc2ab3",
+    "epoch": 4,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline",
+    "session": "v2s_peer_priority_reg8_reverted_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-legacy-whole-6-9ce9cf48",
+    "epoch": 1,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l1",
+    "session": "v2s_peer_priority_upper6_l1_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-node_local_pp-whole-4-448323ce",
+    "epoch": 1,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l1",
+    "session": "v2s_peer_priority_upper6_l1_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-legacy-fwd-5-de1dc6b3",
+    "epoch": 1,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l2",
+    "session": "v2s_peer_priority_upper6_l2_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "upper6-l2-legacy-bwd-15-c90e132c",
+    "epoch": 2,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l2",
+    "session": "v2s_peer_priority_upper6_l2_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+    "epoch": 1,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l2",
+    "session": "v2s_peer_priority_upper6_l2_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "upper6-l2-node_local_pp-bwd-5-96bd077d",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/peer_priority_v1/upper6/l2",
+    "session": "v2s_peer_priority_upper6_l2_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-legacy-whole-6-9ce9cf48",
+    "epoch": 1,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l1",
+    "session": "v2s_scope_guard_reval_l1_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-node_local_pp-whole-4-448323ce",
+    "epoch": 1,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l1",
+    "session": "v2s_scope_guard_reval_l1_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-legacy-fwd-5-de1dc6b3",
+    "epoch": 1,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l2",
+    "session": "v2s_scope_guard_reval_l2_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "upper6-l2-legacy-bwd-15-c90e132c",
+    "epoch": 2,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l2",
+    "session": "v2s_scope_guard_reval_l2_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+    "epoch": 1,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l2",
+    "session": "v2s_scope_guard_reval_l2_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "reason": "insufficient_persistent_directional_threshold_support",
+      "status": "rejected"
+    },
+    "case_id": "upper6-l2-node_local_pp-bwd-5-96bd077d",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "unique_local_duration_anomaly",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l2",
+    "session": "v2s_scope_guard_reval_l2_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-0-c8350bb8",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-1-3a162785",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-2-b720b85e",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-3-5789298b",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-4-168c55a9",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-5-505f8cd8",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-6-c1b4297d",
+    "epoch": null,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": false,
+      "rank": null,
+      "status": "unavailable"
+    },
+    "replay_coverage": "no_complete_window",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-7-457fb312",
+    "epoch": 7,
+    "expected_rank": 7,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-8-4e89a414",
+    "epoch": 8,
+    "expected_rank": 8,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-9-a58cb33a",
+    "epoch": 9,
+    "expected_rank": 9,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 10,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-10-a08ca3e4",
+    "epoch": 10,
+    "expected_rank": 10,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 10,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-11-056225fa",
+    "epoch": 11,
+    "expected_rank": 11,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-12-7a03040c",
+    "epoch": 12,
+    "expected_rank": 12,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-13-db3b5622",
+    "epoch": 13,
+    "expected_rank": 13,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-14-b5727fd7",
+    "epoch": 14,
+    "expected_rank": 14,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-15-ee88817e",
+    "epoch": 15,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-0-905d4441",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-1-4b7b27ba",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-2-a569539e",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-3-d292362b",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-4-a5e072e5",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-5-f6cc2db2",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-6-db2fe6cc",
+    "epoch": 7,
+    "expected_rank": 6,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-7-15390ab1",
+    "epoch": 8,
+    "expected_rank": 7,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-8-8ba5ac8b",
+    "epoch": 9,
+    "expected_rank": 8,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-9-c61be209",
+    "epoch": 10,
+    "expected_rank": 9,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 10,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-10-148510a7",
+    "epoch": 11,
+    "expected_rank": 10,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 10,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-11-28763236",
+    "epoch": 12,
+    "expected_rank": 11,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-12-8e1346af",
+    "epoch": 13,
+    "expected_rank": 12,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-13-65555794",
+    "epoch": 14,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-14-bb9685ef",
+    "epoch": 15,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-15-8eb1570a",
+    "epoch": 16,
+    "expected_rank": 15,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "scope_guard_v1/revalidation/l3",
+    "session": "v2s_scope_guard_reval_l3_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-0-c8350bb8",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-1-3a162785",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-2-b720b85e",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-3-5789298b",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-4-168c55a9",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-5-505f8cd8",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-6-c1b4297d",
+    "epoch": 7,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-7-457fb312",
+    "epoch": 8,
+    "expected_rank": 7,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-8-4e89a414",
+    "epoch": 9,
+    "expected_rank": 8,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-9-a58cb33a",
+    "epoch": 10,
+    "expected_rank": 9,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 10,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-normalization-10-a08ca3e4",
+    "epoch": 11,
+    "expected_rank": 10,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 10,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-11-056225fa",
+    "epoch": 12,
+    "expected_rank": 11,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-moe_block_router-12-7a03040c",
+    "epoch": 13,
+    "expected_rank": 12,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-routed_expert_mlp-13-db3b5622",
+    "epoch": 14,
+    "expected_rank": 13,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-14-b5727fd7",
+    "epoch": 15,
+    "expected_rank": 14,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-legacy-attention-15-ee88817e",
+    "epoch": 16,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 0,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-0-905d4441",
+    "epoch": 1,
+    "expected_rank": 0,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 0,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 1,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-1-4b7b27ba",
+    "epoch": 2,
+    "expected_rank": 1,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 1,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 2,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-2-a569539e",
+    "epoch": 3,
+    "expected_rank": 2,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 2,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 3,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-3-d292362b",
+    "epoch": 4,
+    "expected_rank": 3,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 3,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-4-a5e072e5",
+    "epoch": 5,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-5-f6cc2db2",
+    "epoch": 6,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-6-db2fe6cc",
+    "epoch": 7,
+    "expected_rank": 6,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 7,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-7-15390ab1",
+    "epoch": 8,
+    "expected_rank": 7,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 7,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 8,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-8-8ba5ac8b",
+    "epoch": 9,
+    "expected_rank": 8,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 8,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 9,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-9-c61be209",
+    "epoch": 10,
+    "expected_rank": 9,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 9,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 10,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-10-148510a7",
+    "epoch": 11,
+    "expected_rank": 10,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 10,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 11,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-routed_expert_mlp-11-28763236",
+    "epoch": 12,
+    "expected_rank": 11,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 11,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 12,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-moe_block_router-12-8e1346af",
+    "epoch": 13,
+    "expected_rank": 12,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 12,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-13-65555794",
+    "epoch": 14,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 14,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-attention-14-bb9685ef",
+    "epoch": 15,
+    "expected_rank": 14,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 14,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "l3-node_local_pp-normalization-15-8eb1570a",
+    "epoch": 16,
+    "expected_rank": 15,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/l3",
+    "scope_validation_status": "invalid_scope_confounded_raw_only_not_component_accuracy",
+    "session": "v2s_peer_l3_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 6,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-legacy-whole-6-9ce9cf48",
+    "epoch": 1,
+    "expected_rank": 6,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 6,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l1",
+    "session": "v2s_peer_upper6_l1_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 4,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l1-node_local_pp-whole-4-448323ce",
+    "epoch": 1,
+    "expected_rank": 4,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 4,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l1",
+    "session": "v2s_peer_upper6_l1_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-legacy-fwd-5-de1dc6b3",
+    "epoch": 1,
+    "expected_rank": 5,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l2",
+    "session": "v2s_peer_upper6_l2_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 15,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-legacy-bwd-15-c90e132c",
+    "epoch": 2,
+    "expected_rank": 15,
+    "layout": "legacy",
+    "public": {
+      "correct": true,
+      "rank": 15,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l2",
+    "session": "v2s_peer_upper6_l2_formal_legacy_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 13,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-node_local_pp-fwd-13-88ed1ba7",
+    "epoch": 1,
+    "expected_rank": 13,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 13,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l2",
+    "session": "v2s_peer_upper6_l2_formal_node_local_pp_01"
+  },
+  {
+    "aux": {
+      "correct": true,
+      "rank": 5,
+      "reason": "persistent_matched_tp2_peer_residual_contrast",
+      "status": "localized"
+    },
+    "case_id": "upper6-l2-node_local_pp-bwd-5-96bd077d",
+    "epoch": 2,
+    "expected_rank": 5,
+    "layout": "node_local_pp",
+    "public": {
+      "correct": true,
+      "rank": 5,
+      "reason": "stage_forward_tp_peer_priority",
+      "status": "localized"
+    },
+    "replay_coverage": "production_diagnose_raw_core_aux",
+    "scope": "stage_forward_v1/peer_v1/upper6/l2",
+    "session": "v2s_peer_upper6_l2_formal_node_local_pp_01"
+  }
+]

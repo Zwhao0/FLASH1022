@@ -1,0 +1,15 @@
+{
+  "all_available_profile_windows_replayed_before_labels": true,
+  "all_six_planned_cases_retained": true,
+  "case_eligibility": "full fault32 actually executed and continuous train/monitor coverage through fault end; no PROFILE requirement for entry; no-trigger is miss",
+  "health": "continuous healthy monitor trigger count/step denominator separate from pure healthy PROFILE wrong-GPU/reject and mixed overlap",
+  "independent_case_priority": [
+    "recovery",
+    "original"
+  ],
+  "old_attempt_only_consistency": true,
+  "partial_fault_or_unstarted": "not_evaluated_infra_interrupted",
+  "schema": "available_partial_v2_review_v1",
+  "scope": "no new blind population claim; no retraining, retuning or GPU",
+  "strict_rule": "unchanged original scorer; full PROFILE evidence/FMA/aux gates, in-fault detection"
+}

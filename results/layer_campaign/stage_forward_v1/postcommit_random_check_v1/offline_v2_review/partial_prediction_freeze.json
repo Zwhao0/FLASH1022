@@ -1,0 +1,8 @@
+{
+  "inputs_sha256": "60df9f00cbb2350352ad7711c16aae6d84d11b483899f8ad12c9121cf5b2caaa",
+  "predictions_sha256": "d0e27af6635aac6d8733ad38f50f1db97c564d56cd5b5bb66e128af2f1a24b9a",
+  "protocol_sha256": "a62f8110e66078769514210a882da7e3e1b9036e2af718985a39edf7e635287d",
+  "status": "all_available_partial_replayed_predictions_frozen_before_truth",
+  "truth_read": false,
+  "window_count": 3
+}

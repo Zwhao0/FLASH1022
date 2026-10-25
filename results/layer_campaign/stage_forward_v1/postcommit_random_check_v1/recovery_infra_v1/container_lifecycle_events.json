@@ -1,0 +1,66 @@
+{
+  "cause_assigned": false,
+  "host1": {
+    "container_id_prefix": "40818c7",
+    "docker_inspect": {
+      "exit_code": 137,
+      "finished_at": "2026-10-25T02:15:15.183799872Z",
+      "oom_killed": false,
+      "started_at": "2026-10-25T02:08:58.666790055Z",
+      "status": "exited"
+    },
+    "events": [
+      {
+        "action": "kill",
+        "signal": "15",
+        "time_nano": "1792894504011373390"
+      },
+      {
+        "action": "kill",
+        "signal": "9",
+        "time_nano": "1792894514056096583"
+      },
+      {
+        "action": "stop",
+        "time_nano": "1792894515260422977"
+      },
+      {
+        "action": "die",
+        "exit_code": "137",
+        "time_nano": "1792894515262044839"
+      }
+    ]
+  },
+  "host2": {
+    "container_id_prefix": "998e31b",
+    "docker_inspect": {
+      "exit_code": 137,
+      "finished_at": "2026-10-25T02:15:19.406290560Z",
+      "oom_killed": false,
+      "started_at": "2026-10-25T02:08:58.662531331Z",
+      "status": "exited"
+    },
+    "events": [
+      {
+        "action": "kill",
+        "signal": "15",
+        "time_nano": "1792894509377991862"
+      },
+      {
+        "action": "kill",
+        "signal": "9",
+        "time_nano": "1792894519394283224"
+      },
+      {
+        "action": "stop",
+        "time_nano": "1792894519488449088"
+      },
+      {
+        "action": "die",
+        "exit_code": "137",
+        "time_nano": "1792894519489699192"
+      }
+    ]
+  },
+  "scope": "only owned experiment containers flash1022-data16 and flash1022-run"
+}

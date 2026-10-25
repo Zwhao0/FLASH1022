@@ -1,0 +1,11 @@
+完整旧离线cohort复核（CPU）
+
+固定旧全集44 sessions、190 raw tiles：186完整，4不完整尾窗；另16 fit/calibration tiles。135仅aux接受窗口数，非独立case分母。生产完整public可复核170窗，aux-only32窗（含16 canonical），另4尾窗保留。
+
+重新读取原raw并调用生产online_v2.diagnose；core dc89、sparse3 aux offsets1/3/7、原融合及min3不改。静态缺失metadata按既有loader推导，full8 raw按固定mask变换，仅为历史offline replay。全部新预测freeze后才读取cases/健康plan。
+
+匹配旧case ledger12组逐组保留，session/case_id去重；不合成总体独立准确率。旧peer L3混杂组原始回放32/32（invalid_scope，仅原始观察，不用于组件准确率/合格验证；源peer_v1/l3/injection_scope_confound.json）；scope revalidation L3 31/32（1无结果）；旧blind8 8/8（现为已知历史集）；L4 31/32（1无结果）；旧reg8 6/8（2无结果），reverted7/8（1无结果）。L1 2/2、L2 4/4仅本次覆盖的小组，并非原32/32重测；其余见score_brief.json。
+
+健康数据混合历史fit/calibration、开发与旧regression/失败候选producer采集，不代表当前正式生产采集器无条件健康误报率，全部1/26保留。健康raw42 tiles含4尾窗；38完整中34 aux结构可评均拒判，另4结构不完整亦拒判。public可复核26窗有1次健康错GPU：v2s_peer_priority_reg8_node_local_pp_01 epoch4 PROFILE219–226，core rank1，aux拒判，生产融合保留core。原plan健康199–228且无native重叠。其余12完整健康窗来自fit8与calibration4，均缺evidence.json与evidence_markers.json，不冒充public通过。4尾窗来自calibration两布局25–28与fit两布局41–45，4个aux结构invalid均为legacy fit。该rank1失败区别于旧sparse4 PROFILE221–228 rank4失败，不排除任何旧失败。Canonical16均aux拒判。此为离线健康PROFILE定位结果，不是BEAST连续监测误报率。
+
+证据：prediction_freeze.json、predictions_without_truth.json、score_brief.json、score_audit.json、case_ledger.json、method_sources.json；production_replay/逐窗保存新diagnose证据。无GPU/SSH/训练/调参/删例。

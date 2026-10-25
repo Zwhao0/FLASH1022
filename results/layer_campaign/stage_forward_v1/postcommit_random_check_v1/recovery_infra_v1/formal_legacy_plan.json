@@ -1,0 +1,189 @@
+{
+  "candidate_population_note": "one seed after submitted commit; healthy-catalog eligibility, no old localization outcomes",
+  "component_operator_population_phase": "fwd",
+  "controlled_profile_requests": [],
+  "design_sha256": "caff18619f66482ddd343b340066e1d08316d4f1e453c74df95a03ab4381e3c6",
+  "detector_and_localizer_frozen": true,
+  "evidence_enabled": true,
+  "evidence_model": "results/v2_semantic/linear_candidate_model.json",
+  "evidence_model_file_sha256": "3f17aba4185a151cad118af05ef27c44e9b77182d6125962e72a3029c6f1004b",
+  "execution_role": "postcommit_random_spotcheck_not_population_accuracy",
+  "fault_kind": "mixed_scoped_compute_regression",
+  "fixed_denominator": 3,
+  "formal_execution_gate": "retain every drawn case; no replacement or retuning",
+  "freeze_manifest_path": "results/layer_campaign/stage_forward_v1/postcommit_random_check_v1/source_freeze.json",
+  "freeze_manifest_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "frozen_model_sha256": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+  "gc_callbacks_diagnostic": false,
+  "intervals": [
+    {
+      "end": 12,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "warmup",
+      "record_start": 1,
+      "segment": "warmup",
+      "slowdown_extra_ratio": 0.0,
+      "start": 1,
+      "target_ranks": []
+    },
+    {
+      "end": 56,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy0",
+      "record_start": 13,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 13,
+      "target_ranks": []
+    },
+    {
+      "case_id": "random-legacy-0",
+      "end": 88,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "component",
+        "phase": "fwd",
+        "slot_id": "decoder.layers.6.mlp.experts.7.down_proj"
+      },
+      "id": "random-legacy-0",
+      "record_start": 57,
+      "scope_catalog_ref": {
+        "catalog_amendment_sha256": "01784f92724db7c99f4cc5680eac3fc1cdf0b3afbe94baf78ffdde1d82fb0646",
+        "catalog_file_sha256": "dd6a3121e691242b6e420eb0c47c9ef8b4569e2127a61469957e185402e21181",
+        "catalog_path": "results/data16_sessions/v2s_scope_guard_catalog_legacy_01/scope_catalog_rank0.json",
+        "catalog_sha256": "718a2345ca3ab4aa2307eec87c71a31f24dd7f80d44af2012f177cd2bbcc6beb",
+        "derived_from_catalog_path": "results/v2_semantic/scope_attestation_02/legacy/scope_catalog_rank0.json",
+        "proof_path": "results/v2_semantic/scope_attestation_02/legacy/proof_rank0.json",
+        "proof_sha256": "9637883c9d2aaf70a8cbcc99745a93430b0f0fd78c6722d98c45951f06d823da"
+      },
+      "segment": "fault",
+      "slowdown_extra_ratio": 14634.635426,
+      "start": 57,
+      "target_ranks": [
+        0
+      ]
+    },
+    {
+      "end": 131,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy1",
+      "record_start": 89,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 89,
+      "target_ranks": []
+    },
+    {
+      "case_id": "random-legacy-1",
+      "end": 163,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole"
+      },
+      "id": "random-legacy-1",
+      "record_start": 132,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.139656,
+      "start": 132,
+      "target_ranks": [
+        7
+      ]
+    },
+    {
+      "end": 208,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "healthy2",
+      "record_start": 164,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 164,
+      "target_ranks": []
+    },
+    {
+      "case_id": "random-legacy-2",
+      "end": 240,
+      "fault_mode": "whole_compute",
+      "fault_scope": {
+        "kind": "whole"
+      },
+      "id": "random-legacy-2",
+      "record_start": 209,
+      "segment": "fault",
+      "slowdown_extra_ratio": 2.179457,
+      "start": 209,
+      "target_ranks": [
+        3
+      ]
+    },
+    {
+      "end": 270,
+      "fault_mode": null,
+      "fault_scope": null,
+      "id": "tail",
+      "record_start": 241,
+      "segment": "healthy",
+      "slowdown_extra_ratio": 0.0,
+      "start": 241,
+      "target_ranks": []
+    }
+  ],
+  "layer": "reg8_fixed_case_regression",
+  "layout": "legacy",
+  "max_profiles": 40,
+  "measurement_only": false,
+  "microbatches": 2,
+  "monitor_confirm_recent_three": true,
+  "monitor_cost_timing": false,
+  "monitor_profile_transition": true,
+  "monitor_resume_policy": "off_by_default",
+  "online": true,
+  "parallel_layout": "legacy",
+  "probe_enabled": false,
+  "profile_backend": "semantic_only",
+  "profile_enabled": false,
+  "protocol": "postcommit_compute_v2_random_4to6_v1",
+  "regression_case_mix_per_layout": "random tiers/layouts/rank/subtype/strength/onset; four tiers covered globally",
+  "retain_all_cases": true,
+  "retain_all_false_alarms": true,
+  "role": "component_blind8_formal",
+  "schema_version": 1,
+  "scoped_compute_enabled": true,
+  "scoped_reference_session": "v2s_scope_guard_catalog_legacy_01",
+  "seed": 577940940,
+  "seq_len": 16,
+  "session_id": "v2s_postcommit_random_legacy_d67fffcc_infra_recovery1",
+  "stage_forward_aux_binding_file_sha256": "02cd9897fd8aafd72bc8987323e6b0fc41f2cfb6afeb9a13c35b355f7689cdf8",
+  "stage_forward_aux_context_binding": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped_context_binding.json",
+  "stage_forward_aux_enabled": true,
+  "stage_forward_aux_model": "results/layer_campaign/stage_forward_v1/peer_v1/model_scoped.json",
+  "stage_forward_aux_model_file_sha256": "639280cbc08daf5e5579f100aeb194d304fd1a01d911f9be0909056d061ce4a5",
+  "stage_forward_aux_sampling": {
+    "core_evidence_steps": 8,
+    "expected_aux_rows": 48,
+    "sample_offsets": [
+      1,
+      3,
+      7
+    ],
+    "schema": "flash_stage_forward_sparse3_v1",
+    "window_size": 8
+  },
+  "startup_gc_fixed_model": true,
+  "startup_gc_policy": {
+    "collect_once": true,
+    "fixed_model_lifecycle": true,
+    "fixed_model_process_lifetime": true,
+    "freeze_once": true,
+    "normal_dynamic_gc": true,
+    "preexisting_heap_policy": "retain_all_frozen_until_process_exit",
+    "schema": "startup_process_lifetime_heap_freeze_v2"
+  },
+  "steps": 270,
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "warmup_steps": 12,
+  "whole_compute_reference_session": "v2s_scope_catalog_legacy_02"
+}

@@ -1,0 +1,304 @@
+{
+  "cohort": {
+    "aux_accepted": 135,
+    "canonical_tiles": 16,
+    "complete_tiles": 186,
+    "incomplete_tails": 4,
+    "raw_tiles": 190,
+    "sessions": 44
+  },
+  "coverage_boundary": "L1 2/2 and L2 4/4 are small matched replay groups, not repeats of original L1/L2 32-case campaigns.",
+  "deduplicated_case_keys": 138,
+  "healthy": {
+    "fit_calibration_tiles": {
+      "all_tiles": 16,
+      "aux_localized": 0,
+      "aux_rejection_reasons": {
+        "insufficient_persistent_directional_threshold_support": 16
+      },
+      "aux_results": 16,
+      "aux_structurally_scored": 16,
+      "complete_tiles": 16,
+      "incomplete_tails": 0,
+      "public_localized": 0,
+      "public_localized_details": [],
+      "public_results": 0,
+      "public_unavailable": 16
+    },
+    "historical_raw_healthy_tiles": {
+      "all_tiles": 42,
+      "aux_localized": 0,
+      "aux_rejection_reasons": {
+        "incomplete auxiliary evidence": 4,
+        "insufficient_persistent_directional_threshold_support": 34
+      },
+      "aux_results": 38,
+      "aux_structurally_scored": 34,
+      "collection_context": "Mixed historical fit/calibration, development, and prior regression/failure-producer collections; not an unconditional healthy rate of the current formal production collector. All 1/26 retained.",
+      "complete_tiles": 38,
+      "incomplete_tails": 4,
+      "public_localized": 1,
+      "public_localized_details": [
+        {
+          "aux_reason": "insufficient_persistent_directional_threshold_support",
+          "aux_status": "rejected",
+          "core_rank": 1,
+          "core_reason": "unique_local_duration_anomaly",
+          "end": 226,
+          "epoch": 4,
+          "session": "v2s_peer_priority_reg8_node_local_pp_01",
+          "start": 219
+        }
+      ],
+      "public_results": 26,
+      "public_unavailable": 12
+    }
+  },
+  "healthy_coverage_audit": "health_coverage_audit.json",
+  "healthy_gap_summary": "42=38 complete+4 tails; 38=26 production public+12 lacking both evidence.json and evidence_markers.json (fit 8, calibration 4). 34 structurally scored aux +4 invalid aux; all four invalid are legacy fit tiles. The public healthy rank1 failure is retained, distinct from the previously recorded sparse4 profile221-228 rank4 failure.",
+  "limitations": [
+    "All predictions frozen before this score; historical labels were previously known during original development. No new blind experiment.",
+    "135 is a historical accepted-window count, not the exhaustive cohort size or independent case denominator.",
+    "Scope ledgers are separate and can overlap; no aggregate accuracy across scopes.",
+    "Public production result is scored only with matching raw core plus marker evidence; unavailable is retained as no result.",
+    "Offline healthy PROFILE localization is distinct from continuous BEAST detection false positives. No BEAST rate inferred.",
+    "Canonical fit/calibration tiles overlap development sources and are reported separately."
+  ],
+  "prediction_sha256": "cbf478cc04e92da6b67dbd89ee4fada5c9aa3d90a26421c3f57bc896407302db",
+  "replay_coverage": {
+    "aux_only_no_matching_raw_core": 32,
+    "production_diagnose_raw_core_aux": 170
+  },
+  "scopes": {
+    "scope_guard_v1/peer_priority_v1/blind8": {
+      "aux": {
+        "correct": 8,
+        "rejected": 0,
+        "total": 8,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "previously_blind_historical_now_known",
+      "fixed_denominator": 8,
+      "public": {
+        "correct": 8,
+        "rejected": 0,
+        "total": 8,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 8
+    },
+    "scope_guard_v1/peer_priority_v1/l4": {
+      "aux": {
+        "correct": 31,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 32,
+      "public": {
+        "correct": 31,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "unique_case_keys": 32
+    },
+    "scope_guard_v1/peer_priority_v1/reg8_control": {
+      "aux": {
+        "correct": 4,
+        "rejected": 2,
+        "total": 8,
+        "unavailable": 2,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 8,
+      "public": {
+        "correct": 6,
+        "rejected": 0,
+        "total": 8,
+        "unavailable": 2,
+        "wrong": 0
+      },
+      "unique_case_keys": 8
+    },
+    "scope_guard_v1/peer_priority_v1/reg8_control_reverted_baseline": {
+      "aux": {
+        "correct": 5,
+        "rejected": 2,
+        "total": 8,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 8,
+      "public": {
+        "correct": 7,
+        "rejected": 0,
+        "total": 8,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "unique_case_keys": 8
+    },
+    "scope_guard_v1/peer_priority_v1/upper6/l1": {
+      "aux": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 2,
+      "public": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 2
+    },
+    "scope_guard_v1/peer_priority_v1/upper6/l2": {
+      "aux": {
+        "correct": 2,
+        "rejected": 2,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 4,
+      "public": {
+        "correct": 4,
+        "rejected": 0,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 4
+    },
+    "scope_guard_v1/revalidation/l1": {
+      "aux": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 2,
+      "public": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 2
+    },
+    "scope_guard_v1/revalidation/l2": {
+      "aux": {
+        "correct": 2,
+        "rejected": 2,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 4,
+      "public": {
+        "correct": 4,
+        "rejected": 0,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 4
+    },
+    "scope_guard_v1/revalidation/l3": {
+      "aux": {
+        "correct": 31,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 32,
+      "public": {
+        "correct": 31,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 1,
+        "wrong": 0
+      },
+      "unique_case_keys": 32
+    },
+    "stage_forward_v1/peer_v1/l3": {
+      "aux": {
+        "correct": 32,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "invalid_scope_confounded_historical_raw_only_not_component_validation",
+      "fixed_denominator": 32,
+      "public": {
+        "correct": 32,
+        "rejected": 0,
+        "total": 32,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "scope_validity_source": "results/layer_campaign/stage_forward_v1/peer_v1/l3/injection_scope_confound.json",
+      "unique_case_keys": 32
+    },
+    "stage_forward_v1/peer_v1/upper6/l1": {
+      "aux": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 2,
+      "public": {
+        "correct": 2,
+        "rejected": 0,
+        "total": 2,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 2
+    },
+    "stage_forward_v1/peer_v1/upper6/l2": {
+      "aux": {
+        "correct": 4,
+        "rejected": 0,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "classification": "historical_development_or_known_regression",
+      "fixed_denominator": 4,
+      "public": {
+        "correct": 4,
+        "rejected": 0,
+        "total": 4,
+        "unavailable": 0,
+        "wrong": 0
+      },
+      "unique_case_keys": 4
+    }
+  },
+  "status": "historical_development_offline_raw_replay"
+}

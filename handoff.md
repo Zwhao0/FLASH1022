@@ -1,9 +1,13 @@
 # FLASH1022 handoff (2026-10-25)
 
-## 当前任务
+## 当前状态
 
-- 冻结范围内v2结果及完整ABBA平均预算已核验；主窗口准备GitHub原子提交。仅待提交后N∈{4,5,6}随机抽查：两布局各≥2、四层各≥1、rank均匀0..15、L2 phase随机、L3/L4仅已覆盖FWDscope，合理健康校准剂量；提交commit后seed及全设计一次抽取冻结，不重抽。
-- 首发随机43..58（12warm后≥30监测健康步）；后续fault结束后≥30恢复再随机延迟0..15；单GPU/32步/无重叠/末尾≥30健康。正常自动MONITOR→PROFILE，不按注入时刻手工请求；预测先封存后truth。草稿`stage_forward_v1/postcommit_random_check_draft/`；synthetic构造/空site保留invalid CPU检查通过，无正式seed。
+- 用户已暂停服务器实验；离线复核已完成，不再补最后N6在线。没有GPU新采集、训练或调参。v2依据为冻结范围离线复核+既有在线验证+真实paired成本，不作全场景准确率保证。
+- GitHub代码提交`5cc7cb8347d1efb91ef37a143e1428e82b15086d`；API上传，本地Git HEAD未改，不reset/读旧history。`tmp/v2_github_tree_elements.json`为代码提交SHA256索引。
+- 完整离线结果：`stage_forward_v1/postcommit_random_check_v1/offline_v2_review/offline_report.md`、score_brief.json、review_artifact_manifest.json。44 sessions/190raw tiles+16fit，实际public新推170窗；135为aux接受数，不是独立病例。L1小组2/2、L2小组4/4、L3 31/32、旧blind8 8/8、L4 31/32；原32/32上层只是既有在线结果。旧混杂L3 raw32/32标invalid_scope，不用于组件验证。
+- 混合历史健康public1/26错GPU，aux34全拒判不能掩盖它；这是采到PROFILE后的条件结果，不是MONITOR误报率。fit/calibration/开发/旧失败producer上下文分别保留，不混成总体准确率。
+- 最后N6原/recovery均被容器停止中断(trace103/169)，两partial共3窗无GT预测已锁；latest2例计划目标均命中，512/128+aux48有效，但FMA truth丢失，正式物理验证分母0，不冒充严格2/2或0/2算法失败；余4未评。计划健康监测93步0候选，原重复59仅一致性，不叠独立样本。原所有markers/partial/日志保留。
+- 不再诊断容器触发者；已知TERM→10s→KILL，来源未定。server.md只作授权连接配置且gitignored，凭据不输出/上传；只读取回已有宿主日志后临时auth helper已删除，本地无实验进程。没有重启容器或新在线实验。
 
 ## 正式模式与结果边界
 
@@ -17,4 +21,4 @@
 ## 保留失败与约束
 
 - sparse4+GC旧reg8 strict5/8保留：d42检测虽在健康时，PROFILE44–51在whole故障43–74内；d219 PROFILE221–228才是1窗纯健康core误定位，不称错GPU2。旧5.5s平台未获因果归因，健康A/B80未复现，源/所有原证据保留。
-- 仅读当前flash_v1/results/论文/原Greyhound；不查Git历史/旧FLASH、不恢复删除文件。后处理错误只CPU恢复，不自动重跑GPU；不改分母/阈值逃失败。唯一GPU owner为extended64_protocol。
+- 仅读当前flash_v1/results/论文/原Greyhound；不查Git历史/旧FLASH、不恢复删除文件。后处理错误只CPU恢复，不自动重跑GPU；不改分母/阈值逃失败。唯一GPU owner为v2_final_gpu。

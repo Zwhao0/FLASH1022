@@ -1,0 +1,49 @@
+{
+  "authorization": "User requested continued quick attempt; root approved one infrastructure recovery",
+  "frozen_case_seed_dose_onset_source_unchanged": true,
+  "no_automatic_retry": true,
+  "no_result_selection": true,
+  "original_attempt": "results/layer_campaign/stage_forward_v1/postcommit_random_check_v1",
+  "original_attempt_status": "infra_failed_partial_not_scored",
+  "original_contract_sha256": "a9c3c8089a543fb0fc5778f23b0b0260b0e74d234e022d5497a956e2533ca154",
+  "original_partial_excluded_from_accuracy": true,
+  "original_source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "plan_metadata_changes": {
+    "legacy": {
+      "only_changed_plan_field": "session_id",
+      "original_plan_sha256": "78ac56ec4783395b3092a7210b38b114d31e2f31307740567ece3b9b9e5bda7d",
+      "original_session_id": "v2s_postcommit_random_legacy_d67fffcc",
+      "recovery_plan_sha256": "f30fde40271d0d5ddc809ea06642f7c73b3d8137bd0e1f2c21790203e6f127e4",
+      "recovery_session_id": "v2s_postcommit_random_legacy_d67fffcc_infra_recovery1"
+    },
+    "node_local_pp": {
+      "only_changed_plan_field": "session_id",
+      "original_plan_sha256": "760ba06d9db4e8ebf133ce99992d26a253b3cd9e72b9a42cc2215243c9332531",
+      "original_session_id": "v2s_postcommit_random_node_local_pp_d67fffcc",
+      "recovery_plan_sha256": "a66755ea5b289386736756a22b4ab3c777a19014c6bd159526e8cc71a76012e6",
+      "recovery_session_id": "v2s_postcommit_random_node_local_pp_d67fffcc_infra_recovery1"
+    }
+  },
+  "preserved_original_artifact_sha256": {
+    "contract.json": "a9c3c8089a543fb0fc5778f23b0b0260b0e74d234e022d5497a956e2533ca154",
+    "design.json": "caff18619f66482ddd343b340066e1d08316d4f1e453c74df95a03ab4381e3c6",
+    "execution_failure.json": "d282981b28eebd817e383aa89934c8ffbb3f91cddb4e52fd596025acc22ce381",
+    "execution_start.json": "6d1bf9d282918300719ac2836faa9604882036940849198973b1045f8c0abcc1",
+    "formal_legacy_plan.json": "78ac56ec4783395b3092a7210b38b114d31e2f31307740567ece3b9b9e5bda7d",
+    "formal_node_local_pp_plan.json": "760ba06d9db4e8ebf133ce99992d26a253b3cd9e72b9a42cc2215243c9332531",
+    "freeze_once.py": "929e5855c4d7f199db03856f4f56f33154f074765855986b79366679b244dd2d",
+    "ready.json": "adba01b46d597dc4c336c7b1680e1b425c7758ca76662d7da4c9c648bf4128ab",
+    "remote_source_check.json": "5ac6c58a9dbca6eb9bb573822d5f29c026d46df8900d157edeed8b8f78f2ad9a",
+    "run.py": "e8a2638435c95871cdd9a11a636b398bc5555d64afa27708d479d362e417173e",
+    "seed_seal.json": "f6b24c55001ffdf4ba868d1666dabb76bac6c56459b1ac9e16a6d906b042e9bb",
+    "source_freeze.json": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+  },
+  "protocol": "postcommit_random_same_frozen_draw_infra_recovery_v1",
+  "recovery_contract_sha256": "4ada9a76310b1abc70688f5b2c471c151586b26a0354418ee2dc359c490a6a7f",
+  "recovery_source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "reported_interruption": "legacy approximately step101/270 host1 container notrunning; PP not started; cause unresolved",
+  "runner_change": "Only directory depth/PROD path adapted to recovery child directory; execution behavior unchanged",
+  "runner_sha256": "bf458de232dd33fd246f55483ea4a6b9f8eb00ba84da8b65e8bc023755caef55",
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "truth_gate": "both recovery layout public predictions sealed and owner confirmed before scoring"
+}
