@@ -1,0 +1,10 @@
+{
+  "GPU_owner": "v2_final_gpu",
+  "contract_sha256": "4bfdca875067a99157e3077ff43f7561508475c8d08c3d2189e9205365827b5f",
+  "launcher": "existing detached_run short RPC exec-d",
+  "production_APPLY_not_performed_by_runner": true,
+  "source_binding": "workstation106 submitted bytes; remote frozen execution subset and catalogs; undeployed convenience/tests excluded transparently",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "source_snapshot_archive": false,
+  "status": "starting"
+}

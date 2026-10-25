@@ -1,0 +1,1804 @@
+{
+  "event_file_present": true,
+  "events": [
+    {
+      "baseline_mean": 1337.4797438154928,
+      "cp": 45,
+      "cp_index": 26,
+      "degradation": 0.3796663629832349,
+      "degraded_mean": 1845.2758137136698,
+      "epoch": 1,
+      "event": "detection",
+      "filtered_iterations": [],
+      "iteration": 48,
+      "method": "Rbeast",
+      "probability": 1.0,
+      "profile_iterations": 8,
+      "recent_mean": 1851.6788796211283,
+      "recovery_ratio": -0.012609522379215105,
+      "wall_time": 1792903666.5840662,
+      "window_end": 48,
+      "window_start": 19
+    },
+    {
+      "end": 57,
+      "epoch": 1,
+      "event": "profile_schedule",
+      "start": 50,
+      "wall_time": 1792903668.2968802
+    },
+    {
+      "elapsed_seconds": 17.59884985210374,
+      "epoch": 1,
+      "event": "localization",
+      "profile_end": 57,
+      "profile_start": 50,
+      "result": {
+        "coverage": {
+          "completion_markers": 128,
+          "evidence_rows": 512,
+          "expected_markers": 128
+        },
+        "diagnostics": {
+          "insufficient_repeat": 8,
+          "unknown_semantic_shape": 48
+        },
+        "evidence_sha256": "a024c52f1c98e230a771c0ba1b7ecd4eeb370149aabbc75ae756f1a60a61357b",
+        "frozen_model_hash": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+        "predicted": "rank:2",
+        "rank": 2,
+        "rank_scores": {
+          "0": 5.1050893453615735,
+          "1": 5.011328668090261,
+          "10": 5.227447081593262,
+          "11": 6.776845851900257,
+          "12": 6.615896491386035,
+          "13": 5.8672029459325135,
+          "14": 6.543718189832095,
+          "15": 5.253328128834134,
+          "2": 32.10755461688922,
+          "3": 2.987412482509826,
+          "4": 4.935071202523241,
+          "5": 6.410641404664465,
+          "6": 4.789899388841485,
+          "7": 5.221665264363507,
+          "8": 6.448320410582044,
+          "9": 5.436471964477666
+        },
+        "reason": "stage_forward_tp_peer_priority",
+        "run_id": "online_profile_1",
+        "source": "stage_forward_aux",
+        "stage_forward_aux": {
+          "actual_pair_margin": 21.53799400673348,
+          "binding_sha256": "7168ebb2d1cea20aa00d183995681d93d5be769cba444cad4bce4b3e0bfb1750",
+          "candidate": 2,
+          "candidate_pair": "2,3",
+          "coverage": {
+            "comparable_pair_count": 8,
+            "comparable_pairs": [
+              "0,1",
+              "10,11",
+              "12,13",
+              "14,15",
+              "2,3",
+              "4,5",
+              "6,7",
+              "8,9"
+            ],
+            "expected_ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "layout": "legacy",
+            "matched_pair_iterations": 24,
+            "structural_rows": 48,
+            "unknown_pairs": []
+          },
+          "evidence_sha256": "12a074ece246651cea672345b7a88690ae5ff32b7b6546e62f4038d3b1992bbc",
+          "frozen_model_hash": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+          "frozen_model_sha256": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+          "instrumentation_context": "scoped_dispatch",
+          "model_type": "flash_stage_forward_tp_peer_v1",
+          "pair_scores": {
+            "0,1": 0.18880395261502297,
+            "10,11": 0.047090553993825196,
+            "12,13": 0.4340402649403382,
+            "14,15": 0.07922152869323892,
+            "2,3": 22.707772981498955,
+            "4,5": 1.169778974765476,
+            "6,7": 1.0193737881223923,
+            "8,9": 0.3230293900590557
+          },
+          "pair_support": {
+            "0,1": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 1,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -0.26577428206896164
+                },
+                {
+                  "iteration": 52,
+                  "z": -0.18880395261502297
+                },
+                {
+                  "iteration": 56,
+                  "z": -0.16328888565041813
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                0,
+                1
+              ],
+              "signed_median_z": -0.18880395261502297,
+              "unknown_iterations": 0
+            },
+            "10,11": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 11,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -0.047090553993825196
+                },
+                {
+                  "iteration": 52,
+                  "z": 0.03252715405173555
+                },
+                {
+                  "iteration": 56,
+                  "z": -0.36208974321407716
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                10,
+                11
+              ],
+              "signed_median_z": -0.047090553993825196,
+              "unknown_iterations": 0
+            },
+            "12,13": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 13,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -0.4340402649403382
+                },
+                {
+                  "iteration": 52,
+                  "z": -0.798362326565096
+                },
+                {
+                  "iteration": 56,
+                  "z": -0.30231940078309294
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                12,
+                13
+              ],
+              "signed_median_z": -0.4340402649403382,
+              "unknown_iterations": 0
+            },
+            "14,15": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 15,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": 0.2670899009227363
+                },
+                {
+                  "iteration": 52,
+                  "z": -0.14804279225024947
+                },
+                {
+                  "iteration": 56,
+                  "z": -0.07922152869323892
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                14,
+                15
+              ],
+              "signed_median_z": -0.07922152869323892,
+              "unknown_iterations": 0
+            },
+            "2,3": {
+              "above_threshold_same_direction_iterations": 3,
+              "comparable": true,
+              "directional_rank": 2,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": 22.691023105281218
+                },
+                {
+                  "iteration": 52,
+                  "z": 22.707772981498955
+                },
+                {
+                  "iteration": 56,
+                  "z": 23.328900887310247
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                2,
+                3
+              ],
+              "signed_median_z": 22.707772981498955,
+              "unknown_iterations": 0
+            },
+            "4,5": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 5,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -1.169778974765476
+                },
+                {
+                  "iteration": 52,
+                  "z": -1.11713256822307
+                },
+                {
+                  "iteration": 56,
+                  "z": -1.1935683528292536
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                4,
+                5
+              ],
+              "signed_median_z": -1.169778974765476,
+              "unknown_iterations": 0
+            },
+            "6,7": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 7,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -1.2388276935491795
+                },
+                {
+                  "iteration": 52,
+                  "z": -0.988560746345439
+                },
+                {
+                  "iteration": 56,
+                  "z": -1.0193737881223923
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                6,
+                7
+              ],
+              "signed_median_z": -1.0193737881223923,
+              "unknown_iterations": 0
+            },
+            "8,9": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 9,
+              "iteration_signed_z": [
+                {
+                  "iteration": 50,
+                  "z": -0.436440253322584
+                },
+                {
+                  "iteration": 52,
+                  "z": -0.30681904621653183
+                },
+                {
+                  "iteration": 56,
+                  "z": -0.3230293900590557
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                8,
+                9
+              ],
+              "signed_median_z": -0.3230293900590557,
+              "unknown_iterations": 0
+            }
+          },
+          "rank": 2,
+          "reason": "persistent_matched_tp2_peer_residual_contrast",
+          "runner_up_pair": "4,5",
+          "sampling_contract": {
+            "core_evidence_steps": 8,
+            "end": 57,
+            "epoch": 1,
+            "expected_aux_rows": 48,
+            "sample_offsets": [
+              1,
+              3,
+              7
+            ],
+            "schema": "flash_stage_forward_sparse3_v1",
+            "start": 50,
+            "unobserved_is_healthy": false,
+            "unobserved_offsets": [
+              2,
+              4,
+              5,
+              6,
+              8
+            ],
+            "window_size": 8
+          },
+          "status": "localized",
+          "unknown": {}
+        },
+        "status": "localized",
+        "support": {
+          "0": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.1050893453615735
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.666731700089312
+            }
+          ],
+          "1": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.011328668090261
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6739944277982903
+            }
+          ],
+          "10": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.227447081593262
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.157539197647001
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.8313588089165975
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.24692849303667547
+            }
+          ],
+          "11": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.911321625648262
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.376226912574204
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.776845851900257
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.352602018286165
+            }
+          ],
+          "12": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.083993746008792
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.575637333035292
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.615896491386035
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 3.1569341881010526
+            }
+          ],
+          "13": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.8672029459325135
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.742515144932763
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.90312191728081
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.490815491216542
+            }
+          ],
+          "14": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.526542023738778
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.305741744793768
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.543718189832095
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.33162167848491
+            }
+          ],
+          "15": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.1047767360329015
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.253328128834134
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.896899693617072
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.5592193964672479
+            }
+          ],
+          "2": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 21.844731516249404
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 32.10755461688922
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 3.028786717253186
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.562472476428791
+            }
+          ],
+          "3": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -2.776240951702717
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 2.987412482509826
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": -1.5366675584083107
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6741806641854151
+            }
+          ],
+          "4": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.935071202523241
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 1.6301131930874293
+            }
+          ],
+          "5": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.0203937564814956
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.410641404664465
+            }
+          ],
+          "6": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.789899388841485
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[7,896],\"torch.bfloat16\"]"
+              ],
+              "z": 3.888638724003532
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[7,896],\"torch.bfloat16\"]"
+              ],
+              "z": -3.747626746022604
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6189352282871836
+            }
+          ],
+          "7": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.221665264363507
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[7,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.369636225337318
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[7,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.708802667485788
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 0.9594698062377869
+            }
+          ],
+          "8": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.447001869150554
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.452737988223727
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.391896970691495
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.448320410582044
+            }
+          ],
+          "9": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.392934426656809
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.436471964477666
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.554676703965976
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 1.848114113898134
+            }
+          ]
+        }
+      },
+      "wall_time": 1792903684.183419
+    },
+    {
+      "baseline_mean": 1342.157575346601,
+      "cp": 100,
+      "cp_index": 26,
+      "degradation": 0.6290106263553595,
+      "degraded_mean": 2186.3889524829574,
+      "epoch": 2,
+      "event": "detection",
+      "filtered_iterations": [],
+      "iteration": 103,
+      "method": "Rbeast",
+      "probability": 0.9999999403953552,
+      "profile_iterations": 8,
+      "recent_mean": 2197.143491357565,
+      "recovery_ratio": -0.012738852364250033,
+      "wall_time": 1792903754.009924,
+      "window_end": 103,
+      "window_start": 74
+    },
+    {
+      "end": 112,
+      "epoch": 2,
+      "event": "profile_schedule",
+      "start": 105,
+      "wall_time": 1792903756.1257145
+    },
+    {
+      "elapsed_seconds": 20.278203922091052,
+      "epoch": 2,
+      "event": "localization",
+      "profile_end": 112,
+      "profile_start": 105,
+      "result": {
+        "coverage": {
+          "completion_markers": 128,
+          "evidence_rows": 512,
+          "expected_markers": 128
+        },
+        "diagnostics": {
+          "insufficient_repeat": 4,
+          "unknown_semantic_shape": 40
+        },
+        "evidence_sha256": "effb03f0c117f2fff5fbbb7186be5510777648f85b9578fcc1b288bfffd2bcad",
+        "frozen_model_hash": "dc89b9f6b6d593c95757ad644fcf5055806724b22b693ef08542bed222bdd300",
+        "predicted": "rank:0",
+        "rank": 0,
+        "rank_scores": {
+          "0": 19.30226645692735,
+          "1": 4.818496447801861,
+          "10": 5.49731904609654,
+          "11": 6.35331948579452,
+          "12": 6.890966061160125,
+          "13": 5.563588322654599,
+          "14": 6.079124459400189,
+          "15": 5.47924581106125,
+          "2": 5.166658247462912,
+          "3": 4.1717065824973325,
+          "4": 5.210101047763722,
+          "5": 6.340373950428145,
+          "6": 5.206194304365727,
+          "7": 5.698572753771616,
+          "8": 6.072226347898876,
+          "9": 6.614238760954589
+        },
+        "reason": "stage_forward_tp_peer_priority",
+        "run_id": "online_profile_2",
+        "source": "stage_forward_aux",
+        "stage_forward_aux": {
+          "actual_pair_margin": 11.826871040276028,
+          "binding_sha256": "7168ebb2d1cea20aa00d183995681d93d5be769cba444cad4bce4b3e0bfb1750",
+          "candidate": 0,
+          "candidate_pair": "0,1",
+          "coverage": {
+            "comparable_pair_count": 8,
+            "comparable_pairs": [
+              "0,1",
+              "10,11",
+              "12,13",
+              "14,15",
+              "2,3",
+              "4,5",
+              "6,7",
+              "8,9"
+            ],
+            "expected_ranks": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "layout": "legacy",
+            "matched_pair_iterations": 24,
+            "structural_rows": 48,
+            "unknown_pairs": []
+          },
+          "evidence_sha256": "7ee85c9ae2f501e3e073690722401501784205ad05fb818c9bfc4a60d4dd0707",
+          "frozen_model_hash": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+          "frozen_model_sha256": "851d57ea6c83dcf94510ec0621028ba11363164fa0b98ac5a1aad9b6420a360f",
+          "instrumentation_context": "scoped_dispatch",
+          "model_type": "flash_stage_forward_tp_peer_v1",
+          "pair_scores": {
+            "0,1": 12.862720837752367,
+            "10,11": 0.17825206047269365,
+            "12,13": 0.17786235757689492,
+            "14,15": 0.011920746945088873,
+            "2,3": 0.18189238304712677,
+            "4,5": 0.9336448560837793,
+            "6,7": 1.0358497974763379,
+            "8,9": 0.059291736565385056
+          },
+          "pair_support": {
+            "0,1": {
+              "above_threshold_same_direction_iterations": 3,
+              "comparable": true,
+              "directional_rank": 0,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": 12.884013649259591
+                },
+                {
+                  "iteration": 107,
+                  "z": 12.68621620730654
+                },
+                {
+                  "iteration": 111,
+                  "z": 12.862720837752367
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                0,
+                1
+              ],
+              "signed_median_z": 12.862720837752367,
+              "unknown_iterations": 0
+            },
+            "10,11": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 10,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -0.12009377224156703
+                },
+                {
+                  "iteration": 107,
+                  "z": 0.17825206047269365
+                },
+                {
+                  "iteration": 111,
+                  "z": 0.3595325159931411
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                10,
+                11
+              ],
+              "signed_median_z": 0.17825206047269365,
+              "unknown_iterations": 0
+            },
+            "12,13": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 13,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -0.17786235757689492
+                },
+                {
+                  "iteration": 107,
+                  "z": -0.09545534649678701
+                },
+                {
+                  "iteration": 111,
+                  "z": -0.17861838961757448
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                12,
+                13
+              ],
+              "signed_median_z": -0.17786235757689492,
+              "unknown_iterations": 0
+            },
+            "14,15": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 15,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -0.011920746945088873
+                },
+                {
+                  "iteration": 107,
+                  "z": -0.0838877949269254
+                },
+                {
+                  "iteration": 111,
+                  "z": 0.013115291876693235
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                14,
+                15
+              ],
+              "signed_median_z": -0.011920746945088873,
+              "unknown_iterations": 0
+            },
+            "2,3": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 2,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": 0.23210162100203074
+                },
+                {
+                  "iteration": 107,
+                  "z": 0.16877084109291884
+                },
+                {
+                  "iteration": 111,
+                  "z": 0.18189238304712677
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                2,
+                3
+              ],
+              "signed_median_z": 0.18189238304712677,
+              "unknown_iterations": 0
+            },
+            "4,5": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 5,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -1.233657085174879
+                },
+                {
+                  "iteration": 107,
+                  "z": -0.902620328462471
+                },
+                {
+                  "iteration": 111,
+                  "z": -0.9336448560837793
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                4,
+                5
+              ],
+              "signed_median_z": -0.9336448560837793,
+              "unknown_iterations": 0
+            },
+            "6,7": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 7,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -1.1946138083912947
+                },
+                {
+                  "iteration": 107,
+                  "z": -0.9403817657194916
+                },
+                {
+                  "iteration": 111,
+                  "z": -1.0358497974763379
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                6,
+                7
+              ],
+              "signed_median_z": -1.0358497974763379,
+              "unknown_iterations": 0
+            },
+            "8,9": {
+              "above_threshold_same_direction_iterations": 0,
+              "comparable": true,
+              "directional_rank": 9,
+              "iteration_signed_z": [
+                {
+                  "iteration": 105,
+                  "z": -0.059291736565385056
+                },
+                {
+                  "iteration": 107,
+                  "z": 0.009942861231005528
+                },
+                {
+                  "iteration": 111,
+                  "z": -0.1249311960815863
+                }
+              ],
+              "matched_iterations": 3,
+              "pair": [
+                8,
+                9
+              ],
+              "signed_median_z": -0.059291736565385056,
+              "unknown_iterations": 0
+            }
+          },
+          "rank": 0,
+          "reason": "persistent_matched_tp2_peer_residual_contrast",
+          "runner_up_pair": "6,7",
+          "sampling_contract": {
+            "core_evidence_steps": 8,
+            "end": 112,
+            "epoch": 2,
+            "expected_aux_rows": 48,
+            "sample_offsets": [
+              1,
+              3,
+              7
+            ],
+            "schema": "flash_stage_forward_sparse3_v1",
+            "start": 105,
+            "unobserved_is_healthy": false,
+            "unobserved_offsets": [
+              2,
+              4,
+              5,
+              6,
+              8
+            ],
+            "window_size": 8
+          },
+          "status": "localized",
+          "unknown": {}
+        },
+        "status": "localized",
+        "support": {
+          "0": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 19.30226645692735
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 17.076981273165234
+            }
+          ],
+          "1": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.818496447801861
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6766612241782567
+            }
+          ],
+          "10": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.886315207915548
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.49731904609654
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.837581020507608
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.32520295571021796
+            }
+          ],
+          "11": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.416529736358419
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.956984724351606
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.35331948579452
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.3351971697005106
+            }
+          ],
+          "12": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.68202703456535
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.043737599092591
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.294000474648671
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.890966061160125
+            }
+          ],
+          "13": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.143530978543895
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.563588322654599
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.861640349728612
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.3707026469622082
+            }
+          ],
+          "14": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.540293341358719
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.65817151119642
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.079124459400189
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.37287585766057574
+            }
+          ],
+          "15": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.0307069536263125
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.47924581106125
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.812277306917497
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.2967738830546886
+            }
+          ],
+          "2": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.166658247462912
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[5,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.512917693938213
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[5,896],\"torch.bfloat16\"]"
+              ],
+              "z": -3.183777257270947
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6599036203010529
+            }
+          ],
+          "3": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.1717065824973325
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[5,896],\"torch.bfloat16\"]"
+              ],
+              "z": 3.0024356244645563
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[3,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[5,896],\"torch.bfloat16\"]"
+              ],
+              "z": -3.195622752074261
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6770358359394139
+            }
+          ],
+          "4": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.210101047763722
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 1.3918735250174645
+            },
+            {
+              "iterations": 4,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[10,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[9,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.099680641765046
+            },
+            {
+              "iterations": 4,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[10,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[9,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6739537777256374
+            }
+          ],
+          "5": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.651133446766277
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.340373950428145
+            },
+            {
+              "iterations": 4,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[10,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[9,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.09643532935271
+            },
+            {
+              "iterations": 4,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[10,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[9,896],\"torch.bfloat16\"]"
+              ],
+              "z": 2.1559314021474236
+            }
+          ],
+          "6": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.206194304365727
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.1972505868143815
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.780500886138677
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.6229701380365429
+            }
+          ],
+          "7": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.172440646832944
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 4.04225816656975
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[1,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[2,896],\"torch.bfloat16\"]",
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[4,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.698572753771616
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 0.35561888705607636
+            }
+          ],
+          "8": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.072226347898876
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.862401535809784
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": -4.855832932927304
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": -0.576352219115407
+            }
+          ],
+          "9": [
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.130091105972074
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"forward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"forward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 5.864810776814427
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"experts\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"experts\",[0,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.614238760954589
+            },
+            {
+              "iterations": 8,
+              "key": "[\"local_residual\",\"decoder\",\"backward\",\"attention\",\"torch.bfloat16\"]",
+              "reference_keys": [
+                "[\"local_residual\",\"decoder\",\"backward\",\"attention\",[1,16,896],\"torch.bfloat16\"]"
+              ],
+              "z": 6.585130013207621
+            }
+          ]
+        }
+      },
+      "wall_time": 1792903774.2885861
+    }
+  ],
+  "events_sha256": "832856aeff02d37cb1aa12bfed8ad37b794a993a4e99b75fea17199302ab50a6",
+  "group": "group1",
+  "layout": "legacy",
+  "plan_sha256": "fe6731731c4845207e9c5e1e5f389a34fba953fda10ecbb5f55ba7ff9c99a82f",
+  "prediction_before_truth": true,
+  "session_id": "v2s_quick3_r4_group1_legacy_a7159dbf",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+}

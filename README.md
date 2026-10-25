@@ -10,6 +10,7 @@ python3 -m flash_v1.scripts.compute_v2 --plan /path/to/approved_online_plan.json
 
 该入口启用aux固定采样`{1,3,7}`与fixed-model startupGC；core保持完整8步。旧入口默认不变，实测成本只属于显式配置模式。
 
+- [四轮重复快测：24/24](results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/report.md)
 - [最新L1/L2短轮：严格4/4](results/layer_campaign/stage_forward_v1/quick_l1l2_v1/report.md)
 - [服务器清理与保留范围](flash_v1/SERVER_CLEANUP.md)
 - [离线复核与误报边界](results/layer_campaign/stage_forward_v1/postcommit_random_check_v1/offline_v2_review/offline_report.md)

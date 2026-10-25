@@ -1,0 +1,17 @@
+{
+  "all_three_public_before_truth": true,
+  "aux_gate": "48 rows with unchanged1,3,7 mask,min3,TP topology/binding",
+  "core_gate": "8 complete steps,512 roles/128 markers, in-fault",
+  "cost": "existing paired budgets only; fault wall not profile overhead",
+  "fault_steps": 24,
+  "first_actual_accepted": "in-fault detections ordered by iteration/epoch; first public status localized cannot be overwritten by later correct; retain source/parent lineage",
+  "fixed_case_denominator": 6,
+  "fma_gate": "24 truth rows,24 valid steps,positive physical launches/selected calls,no miss/drift,all exact case ID",
+  "group_assessment": "three independent frozen sessions, first-in-fault and first-actual-accepted per group/case; do not merge repeated layout windows",
+  "health": "healthy detection candidates separate from pure healthy PROFILE localization and mixed fault-overlap; all denominators retained",
+  "primary": "earliest detection iteration inside fault interval; its exact epoch only; no-trigger is miss",
+  "round": 4,
+  "scorer_sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3",
+  "source_binding": "workstation106 submitted bytes; remote actual runtime subset/catalogs, historical missing convenience/test files not used or repaired",
+  "status": "frozen_before_public_and_truth"
+}

@@ -1,0 +1,313 @@
+{
+  "cases": [
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 902.1409744611105,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+          "fwd_estimated_ms_per_step": 118.03872036809723,
+          "fwd_healthy_operator_total_ms_over_three": 118.03872036809723,
+          "method": "FWD operator catalog sum / 3 plus BWD scaled by BWD/FWD allowlisted call ratio",
+          "phase": "whole",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1398.4705701004714,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 367.7658815517159,
+        "slowdown_extra_ratio": 2.453031,
+        "target_extra_fraction_of_healthy_wall": 0.645091
+      },
+      "fault_interval": {
+        "case_id": "quick-group1-legacy-0",
+        "end": 68,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "whole"
+        },
+        "id": "quick-group1-legacy-0",
+        "record_start": 45,
+        "segment": "fault",
+        "slowdown_extra_ratio": 2.453031,
+        "start": 45,
+        "target_ranks": [
+          2
+        ]
+      },
+      "fault_target": {
+        "kind": "whole"
+      },
+      "group": "group1",
+      "layout": "legacy",
+      "phase": null,
+      "preflight_valid": true,
+      "rank": 2,
+      "seed": 1097933062,
+      "tier": "L1"
+    },
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 945.057588930694,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+          "fwd_estimated_ms_per_step": 114.94022417394444,
+          "fwd_healthy_operator_total_ms_over_three": 114.94022417394444,
+          "method": "FWD operator catalog sum / 3",
+          "phase": "fwd",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1398.4705701004714,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 114.94022417394444,
+        "slowdown_extra_ratio": 8.222166,
+        "target_extra_fraction_of_healthy_wall": 0.675779
+      },
+      "fault_interval": {
+        "case_id": "quick-group1-legacy-1",
+        "end": 124,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "stage",
+          "phase": "fwd"
+        },
+        "id": "quick-group1-legacy-1",
+        "record_start": 101,
+        "segment": "fault",
+        "slowdown_extra_ratio": 8.222166,
+        "start": 101,
+        "target_ranks": [
+          6
+        ]
+      },
+      "fault_target": {
+        "kind": "stage",
+        "phase": "fwd"
+      },
+      "group": "group1",
+      "layout": "legacy",
+      "phase": "fwd",
+      "preflight_valid": true,
+      "rank": 6,
+      "seed": 1097933062,
+      "tier": "L2"
+    },
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 924.2971585999946,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+          "fwd_estimated_ms_per_step": 122.91235237739359,
+          "fwd_healthy_operator_total_ms_over_three": 122.91235237739359,
+          "method": "FWD operator catalog sum / 3 plus BWD scaled by BWD/FWD allowlisted call ratio",
+          "phase": "whole",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1398.4705701004714,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 382.95035294100387,
+        "slowdown_extra_ratio": 2.413621,
+        "target_extra_fraction_of_healthy_wall": 0.660934
+      },
+      "fault_interval": {
+        "case_id": "quick-group2-legacy-0",
+        "end": 67,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "whole"
+        },
+        "id": "quick-group2-legacy-0",
+        "record_start": 44,
+        "segment": "fault",
+        "slowdown_extra_ratio": 2.413621,
+        "start": 44,
+        "target_ranks": [
+          3
+        ]
+      },
+      "fault_target": {
+        "kind": "whole"
+      },
+      "group": "group2",
+      "layout": "legacy",
+      "phase": null,
+      "preflight_valid": true,
+      "rank": 3,
+      "seed": 1097933062,
+      "tier": "L1"
+    },
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 762.0372022471981,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+          "fwd_estimated_ms_per_step": 118.03872036809723,
+          "fwd_healthy_operator_total_ms_over_three": 118.03872036809723,
+          "method": "FWD operator catalog sum / 3",
+          "phase": "fwd",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1398.4705701004714,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 118.03872036809723,
+        "slowdown_extra_ratio": 6.455824,
+        "target_extra_fraction_of_healthy_wall": 0.544908
+      },
+      "fault_interval": {
+        "case_id": "quick-group2-legacy-1",
+        "end": 122,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "stage",
+          "phase": "fwd"
+        },
+        "id": "quick-group2-legacy-1",
+        "record_start": 99,
+        "segment": "fault",
+        "slowdown_extra_ratio": 6.455824,
+        "start": 99,
+        "target_ranks": [
+          2
+        ]
+      },
+      "fault_target": {
+        "kind": "stage",
+        "phase": "fwd"
+      },
+      "group": "group2",
+      "layout": "legacy",
+      "phase": "fwd",
+      "preflight_valid": true,
+      "rank": 2,
+      "seed": 1097933062,
+      "tier": "L2"
+    },
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 823.3753824223106,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.1156376518218623,
+          "fwd_estimated_ms_per_step": 111.98178138909861,
+          "fwd_healthy_operator_total_ms_over_three": 111.98178138909861,
+          "method": "FWD operator catalog sum / 3 scaled by BWD/FWD allowlisted call ratio",
+          "phase": "bwd",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1308.3629379980266,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 236.9128730248617,
+        "slowdown_extra_ratio": 3.475435,
+        "target_extra_fraction_of_healthy_wall": 0.629317
+      },
+      "fault_interval": {
+        "case_id": "quick-group3-node_local_pp-0",
+        "end": 68,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "stage",
+          "phase": "bwd"
+        },
+        "id": "quick-group3-node_local_pp-0",
+        "record_start": 45,
+        "segment": "fault",
+        "slowdown_extra_ratio": 3.475435,
+        "start": 45,
+        "target_ranks": [
+          8
+        ]
+      },
+      "fault_target": {
+        "kind": "stage",
+        "phase": "bwd"
+      },
+      "group": "group3",
+      "layout": "node_local_pp",
+      "phase": "bwd",
+      "preflight_valid": true,
+      "rank": 8,
+      "seed": 1097933062,
+      "tier": "L2"
+    },
+    {
+      "dose": {
+        "desired_extra_ms_estimate": 751.8179567882503,
+        "estimator": {
+          "bwd_fwd_allowlisted_call_ratio": 2.120624663435649,
+          "fwd_estimated_ms_per_step": 111.65419748735924,
+          "fwd_healthy_operator_total_ms_over_three": 111.65419748735924,
+          "method": "FWD operator catalog sum / 3 plus BWD scaled by BWD/FWD allowlisted call ratio",
+          "phase": "whole",
+          "source": "scope_attestation_02 catalog and recent_three8 estimator"
+        },
+        "healthy_training_ms_baseline": 1308.3629379980266,
+        "policy": "single timing-only pass; keep the drawn ratio, no dose adaptation/replacement or localization-informed changes",
+        "selected_healthy_compute_ms_estimate": 348.4308424551679,
+        "slowdown_extra_ratio": 2.157725,
+        "target_extra_fraction_of_healthy_wall": 0.574625
+      },
+      "fault_interval": {
+        "case_id": "quick-group3-node_local_pp-1",
+        "end": 123,
+        "fault_mode": "whole_compute",
+        "fault_scope": {
+          "kind": "whole"
+        },
+        "id": "quick-group3-node_local_pp-1",
+        "record_start": 100,
+        "segment": "fault",
+        "slowdown_extra_ratio": 2.157725,
+        "start": 100,
+        "target_ranks": [
+          4
+        ]
+      },
+      "fault_target": {
+        "kind": "whole"
+      },
+      "group": "group3",
+      "layout": "node_local_pp",
+      "phase": null,
+      "preflight_valid": true,
+      "rank": 4,
+      "seed": 1097933062,
+      "tier": "L1"
+    }
+  ],
+  "causal_output_rule": "earliest in-fault detection primary; first accepted public verdict never replaced by later correct window; no-trigger remains miss; both layouts public frozen before truth",
+  "draw_seed": 246123224347094432804443932444285755530,
+  "fixed_cases": 6,
+  "launcher": "metadata_only_cost_v1.owned_runner.detached_run(configure_plan(plan))",
+  "manual_profile_requests_forbidden": true,
+  "one_draw_no_retuning": true,
+  "plans": {
+    "group1": {
+      "L2_phase": "fwd",
+      "layout": "legacy",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group1_plan.json",
+      "session_id": "v2s_quick3_group1_legacy_b9299bd8",
+      "sha256": "14250e27a32e4c26a0b7a923b6387983f25a0e4bcf607c6bc85ad4e9d6cf982c",
+      "steps": 133
+    },
+    "group2": {
+      "L2_phase": "fwd",
+      "layout": "legacy",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group2_plan.json",
+      "session_id": "v2s_quick3_group2_legacy_b9299bd8",
+      "sha256": "e42024be91ef616efb4243c8ff21d3e39bd334ead7f40cedf4ac6d8b1a2e9403",
+      "steps": 131
+    },
+    "group3": {
+      "L2_phase": "bwd",
+      "layout": "node_local_pp",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group3_plan.json",
+      "session_id": "v2s_quick3_group3_node_local_pp_b9299bd8",
+      "sha256": "68d124602ed1daa5c41ad4a8b92572e01bb23055a44846d44d54ed46a6d98508",
+      "steps": 133
+    }
+  },
+  "preflight_valid": true,
+  "production_binding_sha256": "4ba3b288ba7486ec2ac3081b66ab6868a2b1247573d3c15537c3c0782d4b63a0",
+  "protocol": "quick_l1l2_three_groups_v1",
+  "short_test_boundary": "24-step faults and 8-10-step tail; not original32/fullhealth-recovery campaign",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "source_snapshot_archive": false,
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d"
+}

@@ -1,0 +1,366 @@
+{
+  "files": {
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/batch_ready.json": {
+      "bytes": 36870,
+      "sha256": "50298063c8d00b91d4da96ddf5e331068e4363f7030b49d17289637d88313347"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/case_ledger.json": {
+      "bytes": 89113,
+      "sha256": "b17809648b3f08ba7cf31fc2fef5ff49c120c375334dfeb290e752abc29a2754"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/report.md": {
+      "bytes": 2585,
+      "sha256": "bb6e686de18cb6d88ee328c018b7640636ed287a7d0833a68a261c47b49c6149"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/score_brief.json": {
+      "bytes": 107084,
+      "sha256": "c76f980219c36ac3de588120ee20ef6d4aa36d151301a6470c0c0b807a0e1a05"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/summarize.py": {
+      "bytes": 5683,
+      "sha256": "0549ea7f05af1d12db39d6da443f82af7d0c9e4d6576d8259f10a43a08f7b6d7"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/contract.json": {
+      "bytes": 11312,
+      "sha256": "d9a725fe0a5df6ef75688a7f69a61515fe2a5c8789333e6b96a3e0846884393b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/execution_complete.json": {
+      "bytes": 1512,
+      "sha256": "f293de5655821f417115571cc2de41e7a66eb396862a9fc72cc67910ad8f455b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/execution_start.json": {
+      "bytes": 537,
+      "sha256": "6171ab4080551cb89271cd1aeedb2366f3451047ebfe65c8cf4eade71d4d97fe"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/formal_group1_plan.json": {
+      "bytes": 5104,
+      "sha256": "d744c5ad9e291cb853d47634a546f2ab825748f85f06bb62b24b124153c91ab4"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/formal_group2_plan.json": {
+      "bytes": 5171,
+      "sha256": "45f62ba2f1caa4775c1cf3405071ece3a1df9e23deb36acd8ad7fb759a5ff087"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/formal_group3_plan.json": {
+      "bytes": 5170,
+      "sha256": "092d50340d70743b55021c4e1eb148d7d3a96ac1711689dcd873212eda09a967"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/freeze_once.py": {
+      "bytes": 5506,
+      "sha256": "0a8683f73295449b6b0293c7e172b021d79821863629159e5ed5155bfb230ec6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/group1_predictions_without_truth.json": {
+      "bytes": 79798,
+      "sha256": "5ecfae4aca1237ab703214fc6833157af909831e41e64bc71833413dcf53064a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/group2_predictions_without_truth.json": {
+      "bytes": 71380,
+      "sha256": "a6e907825d9ccbb1b06671880c09c6c1eab322fcfd3d39637046e81553177484"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/group3_predictions_without_truth.json": {
+      "bytes": 69682,
+      "sha256": "0091b140e14c2b33296772d9411662ad094f8fa68e864cfa7ac7a0aabbf8d5b4"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/prediction_seal_and_label_refs.json": {
+      "bytes": 4649,
+      "sha256": "3e9ca57cb121abb2e1a634002d725e2f6c185b32db9d26e6892bb883bd7b2f5f"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/public_predictions_before_truth.json": {
+      "bytes": 1305,
+      "sha256": "1ac887c202497caa7e3561a200c1d26757d7b75a09f5c0948b18585da245ee55"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/ready.json": {
+      "bytes": 488,
+      "sha256": "9882d7bf42fb55eb8bb62366e113b5b426951155e17aaa146cfb81772a2d79a8"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/remote_source_check.json": {
+      "bytes": 28845,
+      "sha256": "5ac6c58a9dbca6eb9bb573822d5f29c026d46df8900d157edeed8b8f78f2ad9a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/report.md": {
+      "bytes": 1358,
+      "sha256": "c816c69818c0677a6112dc57e4c416add6dfa09b414bea2d3a4b2d4e5a45911c"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/run.py": {
+      "bytes": 7399,
+      "sha256": "8a201c94887636dc70b734b052545cba7e31a9087947f2e30da34dafbc7631e6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/score_brief.json": {
+      "bytes": 20430,
+      "sha256": "cb66eec4ea3f3d65c1f7b0211f93714325fd06dac890a36d7db9b34008070b5a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/score_cpu.py": {
+      "bytes": 16486,
+      "sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/scoring_rule_before_truth.json": {
+      "bytes": 1320,
+      "sha256": "744f3cbaa6c6eb26193a5c1f71fd9dd243827f2d5d149e6a44640493ca5673ae"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/seed_seal.json": {
+      "bytes": 231,
+      "sha256": "8a84df0f14214d01052bb94a27ebac1e2050c0f99242cd6270d9265b683e302d"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round2_v1/source_freeze.json": {
+      "bytes": 27086,
+      "sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/contract.json": {
+      "bytes": 11288,
+      "sha256": "284a7b3d62405d877ace5494f881ca2cd9c707fe8a4aeb0f88264c1ca4ebc9e2"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/execution_complete.json": {
+      "bytes": 1491,
+      "sha256": "65a14d9b7849697ad014e303996f2afe72bc3376015b22b72ccdbba77983884b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/execution_start.json": {
+      "bytes": 537,
+      "sha256": "f21fbd46acc7d6913756487371744f3cf40e5cb742e0bdb3f29dd7d95d3bb7c5"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/formal_group1_plan.json": {
+      "bytes": 5109,
+      "sha256": "859b54df5d2737c8f1e7a4230093b77ebbf4c649c14cb1fdf677e6712f6d27bb"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/formal_group2_plan.json": {
+      "bytes": 5170,
+      "sha256": "ed029ac8b11bd863621e3c9dbc759f2b71304243a83b171300c6dcff452b58a5"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/formal_group3_plan.json": {
+      "bytes": 5108,
+      "sha256": "952370b1d99e449d7f991eb88b43036df0a1c8a6ea91401849baaebf2c6013fe"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/freeze_once.py": {
+      "bytes": 5506,
+      "sha256": "794fe05578a6b168c7b8a89782c398dd82f75251d3aa2d57849e5fe6d6673d5c"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/group1_predictions_without_truth.json": {
+      "bytes": 76960,
+      "sha256": "c2225d33be1bc0c8b8c19a6bc10181baf028b96d44901bba2a1871d745034192"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/group2_predictions_without_truth.json": {
+      "bytes": 76940,
+      "sha256": "83dacb5c36305d358f3d56f2d572017d523129615311c1bd358fad1605ee8240"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/group3_predictions_without_truth.json": {
+      "bytes": 76999,
+      "sha256": "54d5ca4f927706f9d5ac42fb20dfa61537740110b5688b2b52d3a1c25981b0cc"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/prediction_seal_and_label_refs.json": {
+      "bytes": 4602,
+      "sha256": "a4a1158c5f83172fe005a001b74a2df07f0c4262ffa9cf22a32f748b7cf75658"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/public_predictions_before_truth.json": {
+      "bytes": 1284,
+      "sha256": "146d0f5e4b79ba2fd63fb7696b73d61a006fb4d2cab19800987b590ff88fa0e6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/ready.json": {
+      "bytes": 488,
+      "sha256": "1ae545f9af10b03d43e6b1e3a7ecfc10d59c60869d39735b57c0ebc713164d0f"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/remote_source_check.json": {
+      "bytes": 28845,
+      "sha256": "5ac6c58a9dbca6eb9bb573822d5f29c026d46df8900d157edeed8b8f78f2ad9a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/report.md": {
+      "bytes": 1325,
+      "sha256": "5f701ab6b1fba42eb7200b49a868054d96c3ab9979a07da4de4741e18bfa7c7c"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/run.py": {
+      "bytes": 7399,
+      "sha256": "8a201c94887636dc70b734b052545cba7e31a9087947f2e30da34dafbc7631e6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/score_brief.json": {
+      "bytes": 20429,
+      "sha256": "4954f78a2d89a8419cd4471104f5be34d2bcc7ab5d6473a1f20da64b48c8c848"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/score_cpu.py": {
+      "bytes": 16486,
+      "sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/scoring_rule_before_truth.json": {
+      "bytes": 1320,
+      "sha256": "9a9607f0eeb10635ebc7752a84d0cae69c223ab97ed80b03cae08a39fb863a41"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/seed_seal.json": {
+      "bytes": 231,
+      "sha256": "0e90edd620d058bd3b17c953232040255805d82a0c8ff391406125956187dabd"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round3_v1/source_freeze.json": {
+      "bytes": 27086,
+      "sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/contract.json": {
+      "bytes": 11357,
+      "sha256": "c2471771eb7a9a950a8b22f31f07c0751fe918c1c778868dd449c3ec3d145733"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/execution_complete.json": {
+      "bytes": 1512,
+      "sha256": "2be4b71497d474f8a3966873a01dcedf7430a0a4f2fe0663989e7f976e25be31"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/execution_start.json": {
+      "bytes": 537,
+      "sha256": "0539b09c89614b62ac446f787b1eea16200f682b6d80eedd32b92a8cddd7bbae"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/formal_group1_plan.json": {
+      "bytes": 5107,
+      "sha256": "fe6731731c4845207e9c5e1e5f389a34fba953fda10ecbb5f55ba7ff9c99a82f"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/formal_group2_plan.json": {
+      "bytes": 5169,
+      "sha256": "00eed8d6687bcbc02851d24a07c510b51a539396b13f6f40e5b02f7317a10e3e"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/formal_group3_plan.json": {
+      "bytes": 5169,
+      "sha256": "254b2846d267a8911a5540422414c63e8a702665354ef4d1782b12528cbaaba7"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/freeze_once.py": {
+      "bytes": 5506,
+      "sha256": "44c3a8cfcb46e80e0366e394507e39b588c2365b17fa558c6787712dece95589"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group1_predictions_without_truth.json": {
+      "bytes": 71634,
+      "sha256": "d8479e8ff9fc4d863f1d09ade7d86b098f6eda9c22582862d46416b4edb5770b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group2_predictions_without_truth.json": {
+      "bytes": 76021,
+      "sha256": "a541d171e010cac3d2e43d6f1632ac9b9fef31db041851f3f3901bf18f9c248e"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group3_predictions_without_truth.json": {
+      "bytes": 76484,
+      "sha256": "3b164aa90fffdce36cd0ac7faa81eb477017c7c7d52a1015df914e468c5866c7"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/prediction_seal_and_label_refs.json": {
+      "bytes": 4649,
+      "sha256": "f939427ad649ca2e4657267ba8095e5fadb99aba4cf62d39c51be8ddb5092b4e"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/public_predictions_before_truth.json": {
+      "bytes": 1305,
+      "sha256": "1fff382527bea5c43398fc5527ee42559a161cef4cc83540bd93d6dda764c696"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/ready.json": {
+      "bytes": 488,
+      "sha256": "f103bf89b0092343239fca9ea1990863bfe3a4d2e5b23bbe6a32de65de7c04f9"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/remote_source_check.json": {
+      "bytes": 28845,
+      "sha256": "5ac6c58a9dbca6eb9bb573822d5f29c026d46df8900d157edeed8b8f78f2ad9a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/report.md": {
+      "bytes": 1220,
+      "sha256": "0204b28782be8f221173ef14771c7eb9b512d1a14eff4e50df6e0d41cf415b7a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/run.py": {
+      "bytes": 7399,
+      "sha256": "8a201c94887636dc70b734b052545cba7e31a9087947f2e30da34dafbc7631e6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/score_brief.json": {
+      "bytes": 20480,
+      "sha256": "5a4f2ed295db1c95b9fbeaffacca797c782632429499e7a56f66a5134934b5dd"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/score_cpu.py": {
+      "bytes": 16486,
+      "sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/scoring_rule_before_truth.json": {
+      "bytes": 1320,
+      "sha256": "9ba7e3f0f23b41ffc44bdbed0cafa5dc06af532bb0f0dfe8aeb37317a5c1aa66"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/seed_seal.json": {
+      "bytes": 232,
+      "sha256": "b96f7bcad7a53d607f7f8e8cac6ccf8499cd8a3a385365bd8b01c03d8ed4d86d"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/source_freeze.json": {
+      "bytes": 27086,
+      "sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/contract.json": {
+      "bytes": 11197,
+      "sha256": "4bfdca875067a99157e3077ff43f7561508475c8d08c3d2189e9205365827b5f"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/execution_complete.json": {
+      "bytes": 1473,
+      "sha256": "3aee27e300e6c43d4db774136c1259e3abb7c892cab581b9f0e9d28a27702b90"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/execution_start.json": {
+      "bytes": 537,
+      "sha256": "89f9482fc2ac533ad6e44cdd9c72acc0c31fcdda0f82c75c87be0254d607a81c"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group1_plan.json": {
+      "bytes": 5086,
+      "sha256": "14250e27a32e4c26a0b7a923b6387983f25a0e4bcf607c6bc85ad4e9d6cf982c"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group2_plan.json": {
+      "bytes": 5083,
+      "sha256": "e42024be91ef616efb4243c8ff21d3e39bd334ead7f40cedf4ac6d8b1a2e9403"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/formal_group3_plan.json": {
+      "bytes": 5148,
+      "sha256": "68d124602ed1daa5c41ad4a8b92572e01bb23055a44846d44d54ed46a6d98508"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/freeze_once.py": {
+      "bytes": 5497,
+      "sha256": "b062bd7489b7802d745b0b4027b4692c945d370b38420e8b8417f0b877a9ece8"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/group1_predictions_without_truth.json": {
+      "bytes": 65040,
+      "sha256": "8dc15f248d60dfaab5b66d1413f93c17307b06884bd2bdb3bb61193b6a92b761"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/group2_predictions_without_truth.json": {
+      "bytes": 65548,
+      "sha256": "4ba07c6a716906fe685c4b0a6728d5c8573bdc9946575040bffa29912ef994c5"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/group3_predictions_without_truth.json": {
+      "bytes": 66808,
+      "sha256": "2f37c8350837fb5824a2ca89ffca38fa19c3f66f48a5fa5e4e8a09ae8d479bb7"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/prediction_seal_and_label_refs.json": {
+      "bytes": 4523,
+      "sha256": "0348c4fc192d2258a92cc3d41786fedfd53010d2aa8a7e55f4e2abac693e570b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/public_predictions_before_truth.json": {
+      "bytes": 1266,
+      "sha256": "d9766babd06868b14863a9b96d4660ef95f51eed94667cb8ec49ea5f74586a5f"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/ready.json": {
+      "bytes": 488,
+      "sha256": "bee85d3d01db4df3967b783361aabc9572b99729dfa698b04435af7bc226516d"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/remote_source_check.json": {
+      "bytes": 28845,
+      "sha256": "5ac6c58a9dbca6eb9bb573822d5f29c026d46df8900d157edeed8b8f78f2ad9a"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/report.md": {
+      "bytes": 1601,
+      "sha256": "17d0b25b450e1de25b40c483d1064d5937e0d58f54492cdb6fcb0c1b4d9c9faa"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/run.py": {
+      "bytes": 7399,
+      "sha256": "8a201c94887636dc70b734b052545cba7e31a9087947f2e30da34dafbc7631e6"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/score_brief.json": {
+      "bytes": 20344,
+      "sha256": "c7c0dafb480ab05abc31400b2ed14d89be1b3b5d143de7bff801516400d2d42d"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/score_cpu.py": {
+      "bytes": 16486,
+      "sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/scoring_rule_before_truth.json": {
+      "bytes": 1306,
+      "sha256": "c29d72ff17e5e9a26c9928bd6015e553dbe0c4b70dd61a97c5dcdbe49d2dff60"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/seed_seal.json": {
+      "bytes": 231,
+      "sha256": "3a7dad0078b0436db1a56fee9461afd29afd12dba957986dbc061c37e953bf2b"
+    },
+    "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_v1/source_freeze.json": {
+      "bytes": 27086,
+      "sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+    }
+  },
+  "full_audits_local_only": [
+    "per-round score_summary.json",
+    "results/data16_sessions raw rank evidence/truth/train logs"
+  ],
+  "status": "recommended_small_reports_and_reproduction_no_raw_rank_truth_or_full_audit",
+  "total_bytes": 1689705
+}

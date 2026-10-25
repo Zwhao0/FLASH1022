@@ -1,0 +1,91 @@
+{
+  "fixed_cases": 6,
+  "label_refs": {
+    "quick-r4-group1-legacy-0": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group1_legacy_a7159dbf/host2/whole_compute_truth_rank2.jsonl",
+      "sha256": "4c1f45f27737567ed844e890af8b3cebb1f0d262c889ab34483391b5c9d523b8",
+      "truth_rows": 24
+    },
+    "quick-r4-group1-legacy-1": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group1_legacy_a7159dbf/host2/whole_compute_truth_rank0.jsonl",
+      "sha256": "230956a7da43b4ce4bd9585a10147cdbd606344c948e8222c274a9abee9ce661",
+      "truth_rows": 24
+    },
+    "quick-r4-group2-node_local_pp-0": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group2_node_local_pp_a7159dbf/host2/whole_compute_truth_rank6.jsonl",
+      "sha256": "6197cea259380b20467a4c1d6cebc81f93147eeea3dc6462c63d100d5484f729",
+      "truth_rows": 24
+    },
+    "quick-r4-group2-node_local_pp-1": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group2_node_local_pp_a7159dbf/host1/whole_compute_truth_rank12.jsonl",
+      "sha256": "28cc2670c5dbfbd738972722491eff02fb77efb86543f32326f5d24282c879cd",
+      "truth_rows": 24
+    },
+    "quick-r4-group3-node_local_pp-0": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group3_node_local_pp_a7159dbf/host1/whole_compute_truth_rank12.jsonl",
+      "sha256": "08935eaf8b84dbdb8ba023735890aa0f7c86c10bf1e7fd365cdd079df428371c",
+      "truth_rows": 24
+    },
+    "quick-r4-group3-node_local_pp-1": {
+      "injection_valid": true,
+      "path": "results/data16_sessions/v2s_quick3_r4_group3_node_local_pp_a7159dbf/host2/whole_compute_truth_rank1.jsonl",
+      "sha256": "7d63276a9809a3fca530e841611fb1f7598102374253be596527335bf5101928",
+      "truth_rows": 24
+    }
+  },
+  "prediction_first_then_truth": true,
+  "public_snapshots": {
+    "group1": {
+      "events_sha256": "832856aeff02d37cb1aa12bfed8ad37b794a993a4e99b75fea17199302ab50a6",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group1_predictions_without_truth.json",
+      "sha256": "d8479e8ff9fc4d863f1d09ade7d86b098f6eda9c22582862d46416b4edb5770b"
+    },
+    "group2": {
+      "events_sha256": "2527b1a158180f2bd1b6ec6b7959a29059a136a56e857d152d75209b1626d9b9",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group2_predictions_without_truth.json",
+      "sha256": "a541d171e010cac3d2e43d6f1632ac9b9fef31db041851f3f3901bf18f9c248e"
+    },
+    "group3": {
+      "events_sha256": "03a860c542d8b4d1d03eeedd352c4748387821911164519cb70182b88b0d93ab",
+      "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_three_groups_round4_v1/group3_predictions_without_truth.json",
+      "sha256": "3b164aa90fffdce36cd0ac7faa81eb477017c7c7d52a1015df914e468c5866c7"
+    }
+  },
+  "round": 4,
+  "scorer_sha256": "aa46916a6b28f040894d12c3734ef38db3b675334537929ff0b5097fcb349ec3",
+  "scoring_rule_sha256": "9ba7e3f0f23b41ffc44bdbed0cafa5dc06af532bb0f0dfe8aeb37317a5c1aa66",
+  "sessions": {
+    "group1": {
+      "group": "group1",
+      "layout": "legacy",
+      "path": "results/data16_sessions/v2s_quick3_r4_group1_legacy_a7159dbf",
+      "plan_sha256": "fe6731731c4845207e9c5e1e5f389a34fba953fda10ecbb5f55ba7ff9c99a82f",
+      "prediction_sha256": "d8479e8ff9fc4d863f1d09ade7d86b098f6eda9c22582862d46416b4edb5770b",
+      "session_id": "v2s_quick3_r4_group1_legacy_a7159dbf"
+    },
+    "group2": {
+      "group": "group2",
+      "layout": "node_local_pp",
+      "path": "results/data16_sessions/v2s_quick3_r4_group2_node_local_pp_a7159dbf",
+      "plan_sha256": "00eed8d6687bcbc02851d24a07c510b51a539396b13f6f40e5b02f7317a10e3e",
+      "prediction_sha256": "a541d171e010cac3d2e43d6f1632ac9b9fef31db041851f3f3901bf18f9c248e",
+      "session_id": "v2s_quick3_r4_group2_node_local_pp_a7159dbf"
+    },
+    "group3": {
+      "group": "group3",
+      "layout": "node_local_pp",
+      "path": "results/data16_sessions/v2s_quick3_r4_group3_node_local_pp_a7159dbf",
+      "plan_sha256": "254b2846d267a8911a5540422414c63e8a702665354ef4d1782b12528cbaaba7",
+      "prediction_sha256": "3b164aa90fffdce36cd0ac7faa81eb477017c7c7d52a1015df914e468c5866c7",
+      "session_id": "v2s_quick3_r4_group3_node_local_pp_a7159dbf"
+    }
+  },
+  "source_binding": "workstation106 submitted bytes; server actual execution subset/catalogs; absent convenience/tests not changed",
+  "source_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671"
+}

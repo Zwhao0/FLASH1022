@@ -1,0 +1,30 @@
+{
+  "fixed_cases": 6,
+  "prediction_before_truth": true,
+  "sessions": {
+    "group1": {
+      "group": "group1",
+      "layout": "legacy",
+      "path": "results/data16_sessions/v2s_quick3_r4_group1_legacy_a7159dbf",
+      "plan_sha256": "fe6731731c4845207e9c5e1e5f389a34fba953fda10ecbb5f55ba7ff9c99a82f",
+      "prediction_sha256": "d8479e8ff9fc4d863f1d09ade7d86b098f6eda9c22582862d46416b4edb5770b",
+      "session_id": "v2s_quick3_r4_group1_legacy_a7159dbf"
+    },
+    "group2": {
+      "group": "group2",
+      "layout": "node_local_pp",
+      "path": "results/data16_sessions/v2s_quick3_r4_group2_node_local_pp_a7159dbf",
+      "plan_sha256": "00eed8d6687bcbc02851d24a07c510b51a539396b13f6f40e5b02f7317a10e3e",
+      "prediction_sha256": "a541d171e010cac3d2e43d6f1632ac9b9fef31db041851f3f3901bf18f9c248e",
+      "session_id": "v2s_quick3_r4_group2_node_local_pp_a7159dbf"
+    },
+    "group3": {
+      "group": "group3",
+      "layout": "node_local_pp",
+      "path": "results/data16_sessions/v2s_quick3_r4_group3_node_local_pp_a7159dbf",
+      "plan_sha256": "254b2846d267a8911a5540422414c63e8a702665354ef4d1782b12528cbaaba7",
+      "prediction_sha256": "3b164aa90fffdce36cd0ac7faa81eb477017c7c7d52a1015df914e468c5866c7",
+      "session_id": "v2s_quick3_r4_group3_node_local_pp_a7159dbf"
+    }
+  }
+}

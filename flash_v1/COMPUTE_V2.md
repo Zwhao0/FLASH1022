@@ -1,6 +1,6 @@
 # v2 四层计算慢：冻结范围内实测结果
 
-状态：代码提交`5cc7cb8347d1efb91ef37a143e1428e82b15086d`保持不变。用户追加的最后短轮L1/L2已严格4/4通过，之后完成服务器失败开发资源清理；无后续在线实验计划。原N6中断仍保留，不冒充完成。
+状态：固定生产v2在最后追加的4轮/12组/24例中严格24/24通过，L1为12/12、L2 FWD/BWD各6/6；869健康监测步0候选。算法/模型未改，临时运行资源已释放，无待执行在线任务。
 
 ## 配置与入口
 
@@ -38,6 +38,13 @@
 - PP合并BA单序仍+1.230% [0.669,1.840]，原严格逐序门仍不通过；原run inconclusive及全部窗口保留，不称所有短窗<1%。负值仅表示此配对试验未测出正开销，不宣称加速。
 - 聚合使用max16rank完整wall总和比、逐run/order分层配对block2 bootstrap（seed20261024，10000次）；[legacy](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_legacy_aggregate.json)、[PP](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_node_local_pp_aggregate.json)。原单run block4结论保留，未改写为通过。
 - 本轮按冻结精度范围及完整ABBA平均预算验收：MONITOR<1%、PROFILE<5%的两拓扑总体CI上界均达标；不承诺任意短窗、负载或未来总体性能。
+
+## 最新四轮重复快测
+
+- [四轮报告](../results/layer_campaign/stage_forward_v1/quick_l1l2_four_round_campaign_v1/report.md)：按当前3组×2例完成后再额外重复3轮，共4轮/12组/24新例；全部计划在本批次首次GT评分前冻结，不与此前4例混总。
+- strict、自动检测、public和首个actual accepted均24/24；L1 whole12/12，L2 FWD6/6、BWD6/6，两布局各12/12。全部FMA24与完整core512/128+aux48证据有效。
+- core23/24；唯一L1拒判由peer补足。peer18/24；六例BWD为有效aux拒判，由core正确定位，沿原规则无修改。没有后续正确窗掩盖早先错误。
+- 12个不重复完成session中869健康监测步0候选/0mixed；纯健康PROFILE为0窗，不计算条件定位比例，不作全场景零误报保证。无模型/阈值调参、病例重抽或结果筛选。
 
 ## 最新正式配置短轮L1/L2
 
