@@ -1,6 +1,6 @@
 # v2 四层计算慢：冻结范围内实测结果
 
-状态：GitHub代码`5cc7cb8347d1efb91ef37a143e1428e82b15086d`已提交；用户暂停新增服务器实验。现有数据离线复核已完成，最后随机N6未完成，不作新全量在线验收声明。
+状态：代码提交`5cc7cb8347d1efb91ef37a143e1428e82b15086d`保持不变。用户追加的最后短轮L1/L2已严格4/4通过，之后完成服务器失败开发资源清理；无后续在线实验计划。原N6中断仍保留，不冒充完成。
 
 ## 配置与入口
 
@@ -38,6 +38,13 @@
 - PP合并BA单序仍+1.230% [0.669,1.840]，原严格逐序门仍不通过；原run inconclusive及全部窗口保留，不称所有短窗<1%。负值仅表示此配对试验未测出正开销，不宣称加速。
 - 聚合使用max16rank完整wall总和比、逐run/order分层配对block2 bootstrap（seed20261024，10000次）；[legacy](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_legacy_aggregate.json)、[PP](../results/layer_campaign/stage_forward_v1/monitor_gc_268_sparse3_draft/tmp_supplement/two_run_node_local_pp_aggregate.json)。原单run block4结论保留，未改写为通过。
 - 本轮按冻结精度范围及完整ABBA平均预算验收：MONITOR<1%、PROFILE<5%的两拓扑总体CI上界均达标；不承诺任意短窗、负载或未来总体性能。
+
+## 最新正式配置短轮L1/L2
+
+- [最后短轮报告](../results/layer_campaign/stage_forward_v1/quick_l1l2_v1/report.md)：两拓扑各L1/L2一例，L2覆盖FWD/BWD；自动检测、public/core与首个实际接受结果均4/4正确，24步FMA及core512/128+aux48全部有效。144健康监测步0候选，不当长期零误报保证。
+- 使用已有detached启动器；PP一次启动失败尚无故障测量，只改SID恢复，legacy不重跑。两public封存后才读truth。短故障与小样本不替代32步campaign或总体准确率。
+- 取消旧数据扩展前已生成的core-only审计：L1 32/32，L2严格故障内触发口径30/32（2无in-fault触发）；这是旧在线日志+最新core回放，无aux，不能当完整新融合验证，也不是重新运行了最新MONITOR。
+- [服务器清理](SERVER_CLEANUP.md)：删除126旧退出容器和334失败路径，实际释放140.376 GiB；FLASH1022、GREYHOUND、所需环境/模型已保全。
 
 ## 已完成的离线复核
 

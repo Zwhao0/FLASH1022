@@ -1,0 +1,11 @@
+{
+  "first_accepted": "Separately, all detections inside same case sorted by iteration then epoch; first replay status localized is irreversible first-accepted verdict; earlier wrong is never replaced by later correct.",
+  "fixed_case_denominator": 64,
+  "health": "Detection time outside all fault intervals is healthy candidate; classify its PROFILE overlap/pure health separately; all windows retain schedule order.",
+  "labels_read": false,
+  "lineage": "Retain source and parent_epoch for every in-fault detection; list all associated window outcomes in order.",
+  "predictions_sha256": "69708b891a263f0c6e7fe37e2e0ea52bcd15f80c85afd5f39c65a6c31fcaa24e",
+  "protocol": "case_output_rule_frozen_before_labels",
+  "strict_primary": "Earliest detection with iteration inside frozen case fault interval; use exactly its epoch replay. No any-correct selection. Missing trigger/window remains miss/unavailable.",
+  "terminal": "Separately list last logged localization associated with in-fault detections; never substitute it for primary strict or first-accepted."
+}

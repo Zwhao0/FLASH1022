@@ -1,0 +1,182 @@
+{
+  "causal_rule_sha256": "cf0a872eb8cb2e1ca747a0ec06f1df5ef961474c48c9dd4d377fb2b37656391f",
+  "fixed_case_denominator": 64,
+  "groups": {
+    "L1": {
+      "detected": 32,
+      "first_accepted_correct": 32,
+      "first_accepted_wrong": 0,
+      "fixed_denominator": 32,
+      "injection_valid": 32,
+      "not_triggered": 0,
+      "primary_correct": 32,
+      "primary_rejected": 0,
+      "primary_unavailable": 0,
+      "primary_wrong": 0,
+      "strict_success": 32,
+      "trace_complete": 32
+    },
+    "L2": {
+      "detected": 30,
+      "first_accepted_correct": 30,
+      "first_accepted_wrong": 0,
+      "fixed_denominator": 32,
+      "injection_valid": 32,
+      "not_triggered": 2,
+      "primary_correct": 30,
+      "primary_rejected": 0,
+      "primary_unavailable": 0,
+      "primary_wrong": 0,
+      "strict_success": 30,
+      "trace_complete": 32
+    }
+  },
+  "healthy": [
+    {
+      "details": [],
+      "healthy_detection_candidates": 0,
+      "healthy_monitor_steps": 525,
+      "healthy_nonwarm_nonfault_steps": 525,
+      "layout": "legacy",
+      "mixed_profile_candidates": 0,
+      "pure_healthy_profile_results": 0,
+      "pure_healthy_profile_wrong_gpu": 0,
+      "session": "v2s_layer_l1_formal_legacy_01",
+      "tier": "L1"
+    },
+    {
+      "details": [
+        {
+          "epoch": 14,
+          "iteration": 925,
+          "missing_raw_result": false,
+          "profile_end": 934,
+          "profile_overlaps_fault": false,
+          "profile_start": 927,
+          "pure_healthy_profile": true,
+          "replay_rank": null,
+          "replay_status": "rejected"
+        },
+        {
+          "epoch": 18,
+          "iteration": 1134,
+          "missing_raw_result": false,
+          "profile_end": 1143,
+          "profile_overlaps_fault": false,
+          "profile_start": 1136,
+          "pure_healthy_profile": true,
+          "replay_rank": null,
+          "replay_status": "rejected"
+        },
+        {
+          "epoch": 19,
+          "iteration": 1173,
+          "missing_raw_result": true,
+          "profile_end": 1182,
+          "profile_overlaps_fault": false,
+          "profile_start": 1175,
+          "pure_healthy_profile": true,
+          "replay_rank": null,
+          "replay_status": null
+        }
+      ],
+      "healthy_detection_candidates": 3,
+      "healthy_monitor_steps": 506,
+      "healthy_nonwarm_nonfault_steps": 525,
+      "layout": "node_local_pp",
+      "mixed_profile_candidates": 0,
+      "pure_healthy_profile_results": 2,
+      "pure_healthy_profile_wrong_gpu": 0,
+      "session": "v2s_layer_l1_formal_node_local_pp_01",
+      "tier": "L1"
+    },
+    {
+      "details": [
+        {
+          "epoch": 3,
+          "iteration": 147,
+          "missing_raw_result": false,
+          "profile_end": 156,
+          "profile_overlaps_fault": false,
+          "profile_start": 149,
+          "pure_healthy_profile": true,
+          "replay_rank": 3,
+          "replay_status": "localized"
+        },
+        {
+          "epoch": 5,
+          "iteration": 270,
+          "missing_raw_result": false,
+          "profile_end": 279,
+          "profile_overlaps_fault": false,
+          "profile_start": 272,
+          "pure_healthy_profile": true,
+          "replay_rank": 7,
+          "replay_status": "localized"
+        },
+        {
+          "epoch": 16,
+          "iteration": 891,
+          "missing_raw_result": false,
+          "profile_end": 900,
+          "profile_overlaps_fault": false,
+          "profile_start": 893,
+          "pure_healthy_profile": true,
+          "replay_rank": null,
+          "replay_status": "rejected"
+        }
+      ],
+      "healthy_detection_candidates": 3,
+      "healthy_monitor_steps": 501,
+      "healthy_nonwarm_nonfault_steps": 525,
+      "layout": "legacy",
+      "mixed_profile_candidates": 0,
+      "pure_healthy_profile_results": 3,
+      "pure_healthy_profile_wrong_gpu": 2,
+      "session": "v2s_layer_l2_formal_legacy_01",
+      "tier": "L2"
+    },
+    {
+      "details": [
+        {
+          "epoch": 13,
+          "iteration": 784,
+          "missing_raw_result": false,
+          "profile_end": 793,
+          "profile_overlaps_fault": true,
+          "profile_start": 786,
+          "pure_healthy_profile": false,
+          "replay_rank": 0,
+          "replay_status": "localized"
+        }
+      ],
+      "healthy_detection_candidates": 1,
+      "healthy_monitor_steps": 524,
+      "healthy_nonwarm_nonfault_steps": 525,
+      "layout": "node_local_pp",
+      "mixed_profile_candidates": 1,
+      "pure_healthy_profile_results": 0,
+      "pure_healthy_profile_wrong_gpu": 0,
+      "session": "v2s_layer_l2_formal_node_local_pp_01",
+      "tier": "L2"
+    }
+  ],
+  "limitations": [
+    "No historical aux evidence; this validates latest core fallback, not complete new sparse3 fusion.",
+    "Primary is earliest in-fault detection only; first accepted also reported, wrong cannot be overwritten by later correctness.",
+    "Existing online detection logs are audited, offline replay does not emulate new BEAST triggers.",
+    "Health PROFILE localization is distinct from healthy monitor candidate count/step denominator."
+  ],
+  "new_core_only_cases": 64,
+  "new_full_fusion_cases": 0,
+  "prediction_freeze_sha256": "afbed29248c62e1fbd26ef7d363230479f7b997f2591b9faef6685ecad741ef3",
+  "prior_upper6_not_recounted": true,
+  "scope": "historical known original cohorts, not new blind; production latest diagnose called on original aux-disabled configuration",
+  "sessions_outside_prior44": true,
+  "status": "expanded_original_L1_L2_latest_v2_core_fallback_replay_complete",
+  "windows": {
+    "missing_raw": 1,
+    "raw_complete": 68,
+    "schedules": 69
+  }
+}

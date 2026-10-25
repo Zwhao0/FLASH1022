@@ -1,0 +1,17 @@
+{
+  "status": "detached_running",
+  "session": "v2s_quick_l1l2_node_local_pp_a3704587_startup_recovery1",
+  "states": {
+    "host2": {
+      "status": "completed",
+      "error": null,
+      "last_iteration": 134
+    },
+    "host1": {
+      "status": "completed",
+      "error": null,
+      "last_iteration": null
+    }
+  },
+  "gpu_owner": "extended64_protocol"
+}

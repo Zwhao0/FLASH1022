@@ -1,0 +1,11 @@
+{
+  "case_output_rule_sha256": "cf0a872eb8cb2e1ca747a0ec06f1df5ef961474c48c9dd4d377fb2b37656391f",
+  "fixed_cases": 64,
+  "inventory_sha256": "670fa50825a31f964abff914060540463316eeacf312d7a0603fc8e984fb0460",
+  "labels_still_unread_at_rule_freeze": true,
+  "new_full_fusion_cases": 0,
+  "predictions_sha256": "69708b891a263f0c6e7fe37e2e0ea52bcd15f80c85afd5f39c65a6c31fcaa24e",
+  "status": "all_L1_L2_original_cohort_predictions_frozen_before_label_score",
+  "truth_read": false,
+  "windows": 69
+}

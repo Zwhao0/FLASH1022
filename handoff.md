@@ -1,24 +1,21 @@
 # FLASH1022 handoff (2026-10-25)
 
-## 当前状态
+## 当前完成状态
 
-- 用户已暂停服务器实验；离线复核已完成，不再补最后N6在线。没有GPU新采集、训练或调参。v2依据为冻结范围离线复核+既有在线验证+真实paired成本，不作全场景准确率保证。
-- GitHub代码提交`5cc7cb8347d1efb91ef37a143e1428e82b15086d`；API上传，本地Git HEAD未改，不reset/读旧history。`tmp/v2_github_tree_elements.json`为代码提交SHA256索引。
-- 完整离线结果：`stage_forward_v1/postcommit_random_check_v1/offline_v2_review/offline_report.md`、score_brief.json、review_artifact_manifest.json。44 sessions/190raw tiles+16fit，实际public新推170窗；135为aux接受数，不是独立病例。L1小组2/2、L2小组4/4、L3 31/32、旧blind8 8/8、L4 31/32；原32/32上层只是既有在线结果。旧混杂L3 raw32/32标invalid_scope，不用于组件验证。
-- 混合历史健康public1/26错GPU，aux34全拒判不能掩盖它；这是采到PROFILE后的条件结果，不是MONITOR误报率。fit/calibration/开发/旧失败producer上下文分别保留，不混成总体准确率。
-- 最后N6原/recovery均被容器停止中断(trace103/169)，两partial共3窗无GT预测已锁；latest2例计划目标均命中，512/128+aux48有效，但FMA truth丢失，正式物理验证分母0，不冒充严格2/2或0/2算法失败；余4未评。计划健康监测93步0候选，原重复59仅一致性，不叠独立样本。原所有markers/partial/日志保留。
-- 不再诊断容器触发者；已知TERM→10s→KILL，来源未定。server.md只作授权连接配置且gitignored，凭据不输出/上传；只读取回已有宿主日志后临时auth helper已删除，本地无实验进程。没有重启容器或新在线实验。
+- v2生产源码提交`5cc7cb8347d1efb91ef37a143e1428e82b15086d`，离线报告提交16ac596；API上传，本地Git HEAD未同步，不reset/查旧history。全部详细结果见flash_v1/COMPUTE_V2.md。
+- 用户最后追加短轮已完成：quick_l1l2_v1，两拓扑各L1/L2一例、L2 FWD/BWD；strict/public/core/首accepted均4/4，24步FMA及512/128+aux48全有效，144健康监测步0候选。两public先封存再truth；PP仅一次startup无测量失败后fresh SID恢复，legacy未重跑。源/model及阈值未改，无后续在线任务。
+- 最新短轮报告：results/layer_campaign/stage_forward_v1/quick_l1l2_v1/report.md；原N6两partial和缺FMA证明状态仍保留，计划命中2/2不当正式验证；不混入新4例。
+- 用户清理已执行完成：两host删除126旧退出容器/334名单路径，df可用空间实增140.376GiB，0错误/跳过。FLASH1022整目录/模型/源码、保留容器ID/镜像/环境/挂载、GREYHOUND必要子树均前后一致。详见flash_v1/SERVER_CLEANUP.md；私有完整receipt在tmp/server_cleanup_receipt.json。
+- GREYHOUND/Greyhound、dataset、checkpoints与results各s4-reference-exact已整理。FLASH1/runtime是实际Docker数据根，原地保护；旧四个bind路径留兼容symlink。保留flash1022-data16/run及greyhound-s4-reference-exact-node0/node1；全部现有镜像保留。不动外部服务，未全局prune。greenhound/opensource/xpu及oss-xpu-build范围未明暂留。
 
-## 正式模式与结果边界
+## 验证边界
 
-- 生产no-diag九文件patch `de9beade`，collector仍`57c7cd2d`，模型/阈值/min3不变；显式入口`python3 -m flash_v1.scripts.compute_v2 --plan <完整online计划.json>`启用aux{1,3,7}/48rows+startupGC lifetime；core仍8步512roles/128markers。旧入口默认False，不套用优化成本。
-- L1/L2原固定各32/32，原upper6 whole/FWD/BWD 6/6；L3仅FWD开发31/32+独立component blind8 8/8（不合并）；L4仅framed-FWD ATen31/32。
-- NEW GCdiag fixed-reg8 strict7/8保留原7；whole2+BWDstage2+norm组件2为6/6，330健康步0误触/错GPU；strict8门false、保baseline7门true。最终no-diag smoke3 public/core3/3、120健康步0检测/错GPU，三窗core512/128+aux48/8TP完整；仅运行差异检查，不冒充新全量准确率。
-- PROFILE总体：legacy3.51%CI[2.57,4.39]；PP3runs×2C=6窗总体3.36%[2.25,4.39]。PP cold4.07%[2.28,5.64]仍跨5；cost源1ab4、GCdiag reg8源9072531e及no-diag正式源分别绑定，不称exact同runtime。
-- MONITOR每布局2runs共4runs（原268+固定追加268）：完整ABBA平均legacy−.299%CI[−.540,−.064]，PP+.514%[.166,.876]；average_budget_gate均通过。PP BA1.230%[.669,1.840]原严格逐序门仍不通过，原单run/inconclusive全保留；负值不宣称加速。证据`monitor_gc_268_sparse3_draft/tmp_supplement/two_run_*_aggregate.json`。
-- 最终报告`flash_v1/COMPUTE_V2.md`；验收限冻结范围和完整ABBA平均预算，不保证任意短窗/负载/总体准确率。
+- 离线报告offline_v2_review：190raw tiles+16fit，public重推170窗；135是aux接受窗，不是独立病例。L1小组2/2、L2小组4/4、L3 31/32、旧blind8 8/8、L4 31/32；旧混杂L3 raw32/32无效，分组不合总体准确率。
+- 原L1/L2 core-only扩展中断前已生成结果：32/32与严格30/32（2无in-fault触发）；无历史aux，不当完整最新fusion或最新检测全量重测。旧32/32原报告口径不能覆盖该严格审计。
+- 混合历史健康public1/26错GPU仍保留；aux34全拒判不代表public无误报，也不等于MONITOR率。
+- MONITOR完整ABBA平均legacy−.299%、PP+.514%（总体区间上界均<1）；PP BA单序1.230%严格逐序门仍未通过。PROFILE总体legacy3.51%、PP3.36%（总体CI上界<5）；PP cold区间跨5保留。负值不作加速声明，验收限平均预算/已测范围。
+- 正式入口compute_v2启用aux{1,3,7}/48+startupGC lifetime；core8步、模型/min3不变。服务器实际执行源码/模型SHA匹配v2；106本地提交资源中的部分便捷脚本与tests未部署/版本不同，预存在baseline，清理前后未改变。
 
-## 保留失败与约束
+## 约束
 
-- sparse4+GC旧reg8 strict5/8保留：d42检测虽在健康时，PROFILE44–51在whole故障43–74内；d219 PROFILE221–228才是1窗纯健康core误定位，不称错GPU2。旧5.5s平台未获因果归因，健康A/B80未复现，源/所有原证据保留。
-- 仅读当前flash_v1/results/论文/原Greyhound；不查Git历史/旧FLASH、不恢复删除文件。后处理错误只CPU恢复，不自动重跑GPU；不改分母/阈值逃失败。唯一GPU owner为v2_final_gpu。
+- AGENTS.md简洁；不读旧FLASH/Git历史、不恢复删文件，不重抽/篡改失败/改分母逃结果。server.md只供授权连接且gitignored，凭据不输出/上传。失败科学记录均在FLASH1022内保留；本轮只删用户明确名单的旧开发资源。

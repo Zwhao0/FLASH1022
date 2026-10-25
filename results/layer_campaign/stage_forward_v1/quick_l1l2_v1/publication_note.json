@@ -1,0 +1,9 @@
+{
+  "source_code_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "inference_or_model_changed": false,
+  "report_only_clarification": "106 items refer to workstation submitted resources; deployed actual execution source/models match; pre-existing auxiliary script/test deployment differences are not cleanup damage",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "original_artifact_manifest_sha256": "ab5af5aa2447e2d909d5c26c16b9e16af6da0c2a24f645cff5c01b472ccce4b3",
+  "original_report_sha256": "da58feacd403cd20bcdd2ffbd8aff14ae68c0e3834c5edc5f05c48f956097d6f",
+  "clarified_report_sha256": "454a0ac52ed98539d80f1f332d25a028de7a6342685221526c45ecbc36e37b41"
+}

@@ -1,0 +1,23 @@
+{
+  "all_original_local_and_remote_sessions_preserved": true,
+  "fresh_session_id": "v2s_quick_l1l2_node_local_pp_a3704587_startup_recovery1",
+  "legacy_not_reexecuted": true,
+  "legacy_prediction_sha256": "a8606d0893a09ba3fe0051d70d24afe151abd7ebe5c3a7331135ebdef45e7be3",
+  "no_automatic_retry": true,
+  "no_seed_dose_onset_runtime_change": true,
+  "old_PP_no_train_or_events_on_both_hosts": true,
+  "only_changed_plan_field": "session_id",
+  "original_attempt_status": "startup_failed_no_fault_measurements",
+  "original_execution_failure_sha256": "6f1aa14512b83697baf16f7a9eb6f2d69062363e99ff9962ff37add06b9aa452",
+  "original_execution_start_sha256": "1cc5ba28d77c7827ab92f505ca230ee25adebf4a42f72869b3196c3451b50960",
+  "original_plan_sha256": "dee5e12c480c8e0a3fea0cbadc4ad6c5f93efd9010faf5d0d33575d491fbd087",
+  "original_session_id": "v2s_quick_l1l2_node_local_pp_a3704587",
+  "recovery_plan": {
+    "path": "results/layer_campaign/stage_forward_v1/quick_l1l2_v1/startup_recovery_node_local_pp_plan.json",
+    "session_id": "v2s_quick_l1l2_node_local_pp_a3704587_startup_recovery1",
+    "sha256": "a4b0ab6f0e7289a486a2b7275b3406c90cc02e2924d5173391d2d30c2c4d8e25",
+    "steps": 134
+  },
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "status": "one_authorized_fresh_SID_PP_startup_recovery"
+}

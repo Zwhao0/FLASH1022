@@ -1,0 +1,15 @@
+{
+  "aux_gate": "48 rows with unchanged1,3,7 mask,min3,TP topology/binding",
+  "core_gate": "8 complete steps,512 roles/128 markers, in-fault",
+  "cost": "existing paired budgets only; fault wall not profile overhead",
+  "fault_steps": 24,
+  "first_actual_accepted": "in-fault detections ordered by iteration/epoch; first public status localized cannot be overwritten by later correct; retain source/parent lineage",
+  "fixed_case_denominator": 4,
+  "fma_gate": "24 truth rows,24 valid steps,positive physical launches/selected calls,no miss/drift,all exact case ID",
+  "health": "healthy detection candidates separate from pure healthy PROFILE localization and mixed fault-overlap; all denominators retained",
+  "metadata_adapter_note": "Authorized PP startup fresh SID only; validate original/recovery plan equality except session_id and preserved legacy SHA. All causal/rank/evidence/FMA scoring rules unchanged, no truth read.",
+  "original_scorer_sha256_before_metadata_adapter": "e2d7cb344d0dda1b2b2a266845f4bfc7a2bd386ec3aec39563aac8518984b024",
+  "primary": "earliest detection iteration inside fault interval; its exact epoch only; no-trigger is miss",
+  "scorer_sha256": "c4616b5235f6430cf86a2454ae71d30e17417e3bb9ecb2f64702628cc31c284e",
+  "status": "frozen_before_public_and_truth"
+}

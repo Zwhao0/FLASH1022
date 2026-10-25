@@ -1,0 +1,11 @@
+{
+  "all_public_sealed_before_truth": true,
+  "fault_duration_steps": 24,
+  "fixed_denominator": 4,
+  "original_PP_startup_failure_excluded": true,
+  "scorer_sha256": "c4616b5235f6430cf86a2454ae71d30e17417e3bb9ecb2f64702628cc31c284e",
+  "scoring_rule_sha256": "f16e6e355bf5f6893409774a9e1e4ef2b18a7a8d0c3d3370290320460793f6b6",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "submitted_commit": "5cc7cb8347d1efb91ef37a143e1428e82b15086d",
+  "verified_submitted_runtime_and_model_files": 106
+}

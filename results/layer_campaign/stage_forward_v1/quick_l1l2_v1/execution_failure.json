@@ -1,0 +1,12 @@
+{
+  "error": "RuntimeError('owned recovery SSH unavailable host2: Error response from daemon: container 998e31bc99d8fbabfe6221dc2bd923bfe11426fe9d8c03d591fe2e2a72626e1c is not running\\n')",
+  "no_automatic_GPU_retry": true,
+  "sessions": {
+    "legacy": {
+      "path": "results/data16_sessions/v2s_quick_l1l2_legacy_a3704587",
+      "plan_sha256": "3effb36f3625c79198bc81e6cd6c7d1ac7d833a305e5c487de234a00853749bb",
+      "prediction_sha256": "a8606d0893a09ba3fe0051d70d24afe151abd7ebe5c3a7331135ebdef45e7be3",
+      "session_id": "v2s_quick_l1l2_legacy_a3704587"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "CPU_only": true,
+  "GPU_executed": false,
+  "contract_sha256": "5c9211e36960a2d6705b2a2fd9788f075c77ae683bbb63aa59c0436da5dd31fd",
+  "fixed_cases": 4,
+  "runner_sha256": "6f4a3d13b657e13c0b097a2a128c1f19942dc7960868412684da99b3a6abe91e",
+  "seed_seal_sha256": "a6198450f5e1019b7ecb9f66243c312733a1f40b0a911b9c58c095441da253e0",
+  "source_freeze_sha256": "47e07b1c5ab7b7b2b9ca1082e0041e7af9e02a85a26c27290d8d8197b26f9671",
+  "status": "quick_l1l2_four_frozen_for_execution"
+}
