@@ -1,0 +1,254 @@
+{
+  "all_original_failures_preserved": true,
+  "frozen_model_and_sources_verified": true,
+  "github_uploaded": false,
+  "node_terminal_records": [
+    {
+      "case": "z01",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z01",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z02",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z02",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z03",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_03",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z03",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_03",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z04",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_04",
+      "returncode": 1,
+      "status": "failed"
+    },
+    {
+      "case": "z04",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_04",
+      "returncode": -15,
+      "status": "timeout"
+    },
+    {
+      "case": "z05",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_05",
+      "returncode": 1,
+      "status": "failed"
+    },
+    {
+      "case": "z05",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_05",
+      "returncode": -15,
+      "status": "timeout"
+    },
+    {
+      "case": "z06",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_06",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z06",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_06",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z07",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_07",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z07",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_07",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z08",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_08",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z08",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_08",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z09",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_09",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z09",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_09",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z10",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_10",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "z10",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_10",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "w01",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "w01",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "w02",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "w02",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "h01",
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r99_health_port",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "case": "h01",
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r99_health_port",
+      "returncode": 0,
+      "status": "completed"
+    }
+  ],
+  "passed": true,
+  "postcheck": {
+    "nodes": [
+      {
+        "node": 0,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      },
+      {
+        "node": 1,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "runner_exit0_not_test_pass": true,
+  "source_pins_verified": true,
+  "training_source_zero_modification": true
+}

@@ -1,0 +1,47 @@
+{
+  "acceptance": "Both new cases: all32 requested delayed iterations on exactly target rank,16rank actuation/no budget/cap/errors,correct alarm during training,complete16rank8stepPROFILE/no drops,Store control complete,cleanup passed.",
+  "change": "Only restore original seq256 actor test workload; new ranks/seeds/releases. Original R97 outcomes never replaced.",
+  "frozen_before_fresh_GPU": true,
+  "no_algorithm_tuning": true,
+  "not_formal_blind": true,
+  "plans": [
+    {
+      "case": "w01",
+      "first": 50,
+      "group": "simulated",
+      "order": 1,
+      "plan": {
+        "bytes": 19212,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r98_plan_01.json",
+        "sha256": "dce7b93b9a907d84856318911e20a8053a3e2eaf27da045a6d44e75d77c99fc6"
+      },
+      "ratio": 6.0,
+      "release": "v4_online_20261028_r98_sim_contract_01",
+      "requested_SM_MHz": null,
+      "target_rank": 13,
+      "topology": "legacy"
+    },
+    {
+      "case": "w02",
+      "first": 50,
+      "group": "simulated",
+      "order": 2,
+      "plan": {
+        "bytes": 19219,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r98_plan_02.json",
+        "sha256": "41d05c984ae808e60ea835726d9ea43d8bb056ae8d250072582357ce28f4ae1a"
+      },
+      "ratio": 6.0,
+      "release": "v4_online_20261028_r98_sim_contract_02",
+      "requested_SM_MHz": null,
+      "target_rank": 14,
+      "topology": "node_local_pp"
+    }
+  ],
+  "release_decision": "R97 remains failed if any original attempt invalid. A separate engineering release judgment may accept a demonstrably isolated fixture misconfiguration only if original real6 and health2 pass and both new simulator cases pass; preserve cumulative12attempt denominator. Any product/control/healthy failure blocks upload.",
+  "source": {
+    "bytes": 5167,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/sim_followup.py",
+    "sha256": "eaaffe6d6a103b7ade8ac22b33607ee9cf533085f86efb011eb9741ca320ff34"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "acceptance": "Both cases complete32step verified realSM fault,16rank PROFILE with no drops,correct alarm during training,full Store control,end-of-fault restoration and watcher error=None/cleanup complete; source/model pins unchanged.",
+  "algorithm_tuning": false,
+  "candidate_watcher": {
+    "bytes": 20985,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/clock_watch_r100.py",
+    "sha256": "d20d71ed49cc6d49870e64843687bed8a0563375f533f9782a7a1d25c3a638b7"
+  },
+  "frozen_before_GPU": true,
+  "historical_13_attempts_and_4_failures_retained": true,
+  "no_replay": true,
+  "plans": [
+    {
+      "case": "k01",
+      "first": 50,
+      "group": "real_clock",
+      "order": 1,
+      "plan": {
+        "bytes": 19406,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r100_plan_01.json",
+        "sha256": "d9edfb42e494b1887cf9f9ab7a4db82e666b2916331ca72934fe68b92d7c5bc5"
+      },
+      "port": 27231,
+      "release": "v4_online_20261028_r100_repair_01",
+      "requested_SM_MHz": 345,
+      "target_rank": 8,
+      "topology": "legacy"
+    },
+    {
+      "case": "k02",
+      "first": 42,
+      "group": "real_clock",
+      "order": 2,
+      "plan": {
+        "bytes": 19413,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r100_plan_02.json",
+        "sha256": "fd438f7542172b7615647f8b0a850e8f6ee8a8a8837e163473566e664f71953a"
+      },
+      "port": 27233,
+      "release": "v4_online_20261028_r100_repair_02",
+      "requested_SM_MHz": 345,
+      "target_rank": 4,
+      "topology": "node_local_pp"
+    }
+  ],
+  "port_policy": "Outside each node ephemeral range and temporary bind succeeds on both nodes before dispatch; no race/exclusivity guarantee.",
+  "source": {
+    "bytes": 6407,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/repair_r100.py",
+    "sha256": "944adae9155188fe725f6dfbea517ef2e6002c019b9d2bf03c3e25ee88da85a9"
+  }
+}

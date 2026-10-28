@@ -1,0 +1,3120 @@
+{
+  "schema": "r96_quiet_fault_regression_summary_v1",
+  "generated_at_utc": "2026-10-28T06:02:44.316891+00:00",
+  "index_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_regression_index.json",
+  "planned_denominator": 5,
+  "case_records_present": 5,
+  "release_results_available": 4,
+  "outcome_counts_all_planned": {
+    "correct_alarm": 2,
+    "mislocalized": 0,
+    "not_triggered": 0,
+    "abstained": 0,
+    "collection_failure": 3,
+    "inference_failure": 0,
+    "injection_failure": 0,
+    "no_result_execution_error": 0,
+    "pending": 0,
+    "other_outcome": 0
+  },
+  "priority_outcome_counts": {
+    "correct_alarm": 2,
+    "mislocalized": 0,
+    "not_triggered": 0,
+    "abstained": 0,
+    "collection_failure": 3,
+    "inference_failure": 0,
+    "no_result_execution_error": 0,
+    "pending": 0
+  },
+  "counts": {
+    "planned_denominator": 5,
+    "case_records_present": 5,
+    "release_results_available": 4,
+    "outcome_counts_all_planned": {
+      "correct_alarm": 2,
+      "mislocalized": 0,
+      "not_triggered": 0,
+      "abstained": 0,
+      "collection_failure": 3,
+      "inference_failure": 0,
+      "injection_failure": 0,
+      "no_result_execution_error": 0,
+      "pending": 0,
+      "other_outcome": 0
+    },
+    "pre_injection_alarm_count": 1,
+    "wrong_planned_target_alarm_count": 1,
+    "runner_errors": 1,
+    "runner_nonzero_returncodes": 0,
+    "controller_failures": 1,
+    "telemetry_failed": 0,
+    "timed_out": 0,
+    "initial_postcheck_failed": 1,
+    "initial_postcheck_passed": 4,
+    "qualified_injection_and_restoration": 2,
+    "partial_injection_before_declared_end": 2,
+    "store_control_contract_16": 5,
+    "common_8_iteration_PROFILE_window": 5,
+    "native_16_no_drop": 5,
+    "prediction_during_training": 4,
+    "cleanup_ownercheck_passed": 4,
+    "monitor_control_incomplete": 2,
+    "monitor_end_count_by_case": {
+      "t01": 16,
+      "t02": 14,
+      "u03": 14,
+      "v04": 16,
+      "v05": 16
+    }
+  },
+  "groups": {
+    "strong": {
+      "planned_denominator": 5,
+      "case_records_present": 5,
+      "release_results_available": 4,
+      "outcome_counts_all_planned": {
+        "correct_alarm": 2,
+        "mislocalized": 0,
+        "not_triggered": 0,
+        "abstained": 0,
+        "collection_failure": 3,
+        "inference_failure": 0,
+        "injection_failure": 0,
+        "no_result_execution_error": 0,
+        "pending": 0,
+        "other_outcome": 0
+      },
+      "pre_injection_alarm_count": 1,
+      "wrong_planned_target_alarm_count": 1,
+      "runner_errors": 1,
+      "runner_nonzero_returncodes": 0,
+      "controller_failures": 1,
+      "telemetry_failed": 0,
+      "timed_out": 0,
+      "initial_postcheck_failed": 1,
+      "initial_postcheck_passed": 4,
+      "qualified_injection_and_restoration": 2,
+      "partial_injection_before_declared_end": 2,
+      "store_control_contract_16": 5,
+      "common_8_iteration_PROFILE_window": 5,
+      "native_16_no_drop": 5,
+      "prediction_during_training": 4,
+      "cleanup_ownercheck_passed": 4,
+      "monitor_control_incomplete": 2,
+      "monitor_end_count_by_case": {
+        "t01": 16,
+        "t02": 14,
+        "u03": 14,
+        "v04": 16,
+        "v05": 16
+      }
+    }
+  },
+  "topologies": {
+    "legacy": {
+      "planned_denominator": 3,
+      "case_records_present": 3,
+      "release_results_available": 2,
+      "outcome_counts_all_planned": {
+        "correct_alarm": 1,
+        "mislocalized": 0,
+        "not_triggered": 0,
+        "abstained": 0,
+        "collection_failure": 2,
+        "inference_failure": 0,
+        "injection_failure": 0,
+        "no_result_execution_error": 0,
+        "pending": 0,
+        "other_outcome": 0
+      },
+      "pre_injection_alarm_count": 1,
+      "wrong_planned_target_alarm_count": 1,
+      "runner_errors": 1,
+      "runner_nonzero_returncodes": 0,
+      "controller_failures": 1,
+      "telemetry_failed": 0,
+      "timed_out": 0,
+      "initial_postcheck_failed": 1,
+      "initial_postcheck_passed": 2,
+      "qualified_injection_and_restoration": 1,
+      "partial_injection_before_declared_end": 1,
+      "store_control_contract_16": 3,
+      "common_8_iteration_PROFILE_window": 3,
+      "native_16_no_drop": 3,
+      "prediction_during_training": 2,
+      "cleanup_ownercheck_passed": 2,
+      "monitor_control_incomplete": 1,
+      "monitor_end_count_by_case": {
+        "t01": 16,
+        "u03": 14,
+        "v04": 16
+      }
+    },
+    "node_local_pp": {
+      "planned_denominator": 2,
+      "case_records_present": 2,
+      "release_results_available": 2,
+      "outcome_counts_all_planned": {
+        "correct_alarm": 1,
+        "mislocalized": 0,
+        "not_triggered": 0,
+        "abstained": 0,
+        "collection_failure": 1,
+        "inference_failure": 0,
+        "injection_failure": 0,
+        "no_result_execution_error": 0,
+        "pending": 0,
+        "other_outcome": 0
+      },
+      "pre_injection_alarm_count": 0,
+      "wrong_planned_target_alarm_count": 0,
+      "runner_errors": 0,
+      "runner_nonzero_returncodes": 0,
+      "controller_failures": 0,
+      "telemetry_failed": 0,
+      "timed_out": 0,
+      "initial_postcheck_failed": 0,
+      "initial_postcheck_passed": 2,
+      "qualified_injection_and_restoration": 1,
+      "partial_injection_before_declared_end": 1,
+      "store_control_contract_16": 2,
+      "common_8_iteration_PROFILE_window": 2,
+      "native_16_no_drop": 2,
+      "prediction_during_training": 2,
+      "cleanup_ownercheck_passed": 2,
+      "monitor_control_incomplete": 1,
+      "monitor_end_count_by_case": {
+        "t02": 14,
+        "v05": 16
+      }
+    }
+  },
+  "lineage": {
+    "retained_failed_attempts": 3,
+    "retained_R94_failed_attempts": 1,
+    "retained_R95_failed_attempts": 2,
+    "fresh_R96_conditional_attempts": 2,
+    "no_retry": true,
+    "controller_fix": "One read-only status retry after SSH banner failure; never retry launch/injection/collection mutation; CPU2+18 tests passed"
+  },
+  "conditional_dispatch_gate": {
+    "execution_gate": "At most180seconds for2consecutive samples15seconds apart: allGPUutil<=10%, free>=8GiB, sampled numeric external workerSM<=5%; not exclusivity. Each existing precheck also enforces<=10%.",
+    "observations_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_load_observations.jsonl",
+    "observation_count": 3,
+    "observations": [
+      {
+        "time": 1793166768.753661,
+        "nodes": [
+          {
+            "node": 0,
+            "eligible": null,
+            "sample_time": 1793166768.753661,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          },
+          {
+            "node": 1,
+            "eligible": null,
+            "sample_time": 1793166768.753661,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          }
+        ]
+      },
+      {
+        "time": null,
+        "nodes": [
+          {
+            "node": 0,
+            "eligible": true,
+            "sample_time": 1793166969.012201,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          },
+          {
+            "node": 1,
+            "eligible": true,
+            "sample_time": 1793166969.0601506,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          }
+        ]
+      },
+      {
+        "time": null,
+        "nodes": [
+          {
+            "node": 0,
+            "eligible": true,
+            "sample_time": 1793166985.456529,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          },
+          {
+            "node": 1,
+            "eligible": true,
+            "sample_time": 1793166985.5050838,
+            "transport_ok": true,
+            "pmon_available": true,
+            "measured_worker_rows": 8,
+            "active_worker_rows": 0,
+            "activity_observed": false
+          }
+        ]
+      }
+    ],
+    "dispatch_receipt_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_lowload_dispatch_receipt.json",
+    "dispatch_receipt_present": true,
+    "dispatch_receipt_read_error": null,
+    "sampled_gate_passed": true,
+    "receipt_not_exclusivity": true,
+    "last_sample_time": 1793166986.147795,
+    "last_sample_nodes": [
+      {
+        "node": 0,
+        "eligible": true,
+        "pmon_available": true,
+        "measured_worker_rows": 8,
+        "active_worker_rows": 0,
+        "activity_observed": false
+      },
+      {
+        "node": 1,
+        "eligible": true,
+        "pmon_available": true,
+        "measured_worker_rows": 8,
+        "active_worker_rows": 0,
+        "activity_observed": false
+      }
+    ],
+    "parse_errors": [],
+    "interpretation": "The sampled low-load gate is a dispatch condition only; it does not establish exclusive GPU use or absence of interference."
+  },
+  "deferred_orders_pending": [],
+  "previous_shared_load_context": {
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r95_shared_load_failure_context.json",
+    "present": true,
+    "read_error": null,
+    "case": "t02",
+    "SM_percent_max": 99,
+    "active_vllm_worker_observations": 334,
+    "host_pmon_samples_available": 64,
+    "monitor_end_count": 14,
+    "clock_restore_after_iteration": 71,
+    "declared_fault_last": 81,
+    "interpretation": "Concurrent numeric vLLM activity and slowdown observed; not unique-cause proof, do not replace invalid attempt with pass."
+  },
+  "separate_post_failure_cleanup_recovery": {
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_failed_case_cleanup.json",
+    "present": true,
+    "read_error": null,
+    "diagnosis": "Controller SSH banner exchange timed out; native watcher restored and stopped after target iteration62 before declared81; training later completed. Do not convert partial injection or missing online prediction to success.",
+    "original_failure_retained": true,
+    "no_retry": true,
+    "postcheck_passed": true,
+    "owner_exists_by_node": {
+      "0": false,
+      "1": false
+    },
+    "node_postchecks": [
+      {
+        "node": 0,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      },
+      {
+        "node": 1,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      }
+    ],
+    "all_private_mps_stopped": true,
+    "states": [
+      {
+        "error": null,
+        "node": 1,
+        "online_monitor_integrity": true,
+        "private_mps_stopped": true,
+        "profile_ready_ranks": 8,
+        "returncode": 0,
+        "status": "completed"
+      },
+      {
+        "error": null,
+        "node": 0,
+        "online_monitor_integrity": true,
+        "private_mps_stopped": true,
+        "profile_ready_ranks": 8,
+        "returncode": 0,
+        "status": "completed"
+      }
+    ],
+    "does_not_rewrite_original_case_postcheck_or_outcome": true
+  },
+  "cleanup_recovery_does_not_change_original_outcome": true,
+  "formal_acceptance_claimed": false,
+  "all16_fault_rank_coverage_claimed": false,
+  "gpu_started_by_report": false,
+  "cases": [
+    {
+      "order": 1,
+      "case": "t01",
+      "cohort_origin": "retained_R94_failed_attempt",
+      "group": "strong",
+      "topology": "legacy",
+      "target_rank": 3,
+      "requested_SM_MHz": 345,
+      "release": "v4_online_20261028_r94_store_regression_01",
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_case_01_result.json",
+      "state": "recorded_error",
+      "outcome": null,
+      "clock_interval_qualified": false,
+      "actual_SM_MHz": 345,
+      "strength_diagnostic_qualified": null,
+      "step_time_ms_mean_increase": null,
+      "step_time_ms_median_increase": null,
+      "wall_iteration_ms_mean_increase": null,
+      "wall_iteration_ms_median_increase": null,
+      "accepted_secondary": null,
+      "profile_triggered": null,
+      "natural_trigger": null,
+      "final_alarm_rank": null,
+      "prediction_during_training": null,
+      "complete_ranks": null,
+      "complete_ranks_16": null,
+      "profile_window": [
+        60,
+        67
+      ],
+      "profile_start_iteration": 60,
+      "fault_start_iteration": null,
+      "profile_start_minus_fault_start_iterations": null,
+      "clock_restored": true,
+      "prediction_delay_from_profile_start_seconds": null,
+      "prediction_delay_from_fault_start_seconds": null,
+      "wall_time_latency_status": "unavailable",
+      "lowered_clock_event_count": 1,
+      "telemetry_failed": null,
+      "timed_out": null,
+      "runner_returncode": null,
+      "runner_error": {
+        "type": "FileNotFoundError",
+        "message": "[Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r94_store_regression_01/driver_t01/result.json'"
+      },
+      "driver_returncode": null,
+      "postcheck_passed": false,
+      "shared_gpu_external_activity": {
+        "status": "unknown",
+        "telemetry_file_present": true,
+        "sample_groups": 12,
+        "pmon_available_node_samples": 48,
+        "active_sample_groups": 0,
+        "active_vllm_rows": 0,
+        "evidence": [],
+        "parse_errors": 0,
+        "interpretation": "no observed vLLM activity is not evidence of no interference"
+      },
+      "native": {
+        "applicable": true,
+        "file_count": 16,
+        "parsed_file_count": 16,
+        "rank_count": 16,
+        "ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "all_ranks_0_to_15": true,
+        "row_schemas": [
+          "compute_compact_v1"
+        ],
+        "all_compute_compact_v1": true,
+        "strides": [
+          64
+        ],
+        "all_stride_64": true,
+        "dropped_total": 0.0,
+        "skipped_total": 0.0,
+        "event_pool_cleanup_all": true,
+        "output_bytes": 3056052
+      },
+      "case_record_read_error": null,
+      "quality_read_error": null,
+      "prediction_read_error": null,
+      "plan_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_plan_01.json",
+      "plan_monitor_control": "r92_store_v1",
+      "plan_read_error": null,
+      "outcome_class": "collection_failure",
+      "qualified_injection_and_restoration": false,
+      "cleanup_ownercheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": true,
+            "passed": false,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": true,
+            "passed": false,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": false
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.4574390000028359,
+          "median": 1.9298065000121767,
+          "max": 3.961771000003722
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.90352788195014,
+          "median": 15.846271300688386,
+          "max": 16.628054901957512
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3056052
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "native_16_no_drop": true,
+      "native_complete_ranks_16": true,
+      "store_control_contract_16": true,
+      "common_8_iteration_profile_window": true,
+      "controller_failure": true,
+      "controller_failure_class": "SSH banner/status timeout followed by local driver quality-load failure",
+      "failure_reason": "Controller SSH banner exchange timed out; native watcher restored and stopped after target iteration62 before declared81; training later completed. Do not convert partial injection or missing online prediction to success.",
+      "raw_outcome_class_before_retention_override": "no_result_execution_error",
+      "outcome_retention_override": "Do not score PROFILE/native collection as successful injection or localization; no release result, driver quality result, or online prediction exists.",
+      "localization_success_claimed": false,
+      "no_result_execution_error": true,
+      "training_completed_after_controller_failure": true,
+      "later_cleanup_recovery": {
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_failed_case_cleanup.json",
+        "present": true,
+        "read_error": null,
+        "diagnosis": "Controller SSH banner exchange timed out; native watcher restored and stopped after target iteration62 before declared81; training later completed. Do not convert partial injection or missing online prediction to success.",
+        "original_failure_retained": true,
+        "no_retry": true,
+        "postcheck_passed": true,
+        "owner_exists_by_node": {
+          "0": false,
+          "1": false
+        },
+        "node_postchecks": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "all_private_mps_stopped": true,
+        "states": [
+          {
+            "error": null,
+            "node": 1,
+            "online_monitor_integrity": true,
+            "private_mps_stopped": true,
+            "profile_ready_ranks": 8,
+            "returncode": 0,
+            "status": "completed"
+          },
+          {
+            "error": null,
+            "node": 0,
+            "online_monitor_integrity": true,
+            "private_mps_stopped": true,
+            "profile_ready_ranks": 8,
+            "returncode": 0,
+            "status": "completed"
+          }
+        ],
+        "does_not_rewrite_original_case_postcheck_or_outcome": true
+      },
+      "later_cleanup_is_separate_from_original_outcome": true,
+      "seed": 202610289401,
+      "clock_interval_evidence": {
+        "evidence_path": "/Users/henry/Desktop/FLASH1022/results/v4/online/v4_online_20261028_r94_store_regression_01/t01_clock_evidence_private.json",
+        "evidence_present": true,
+        "read_error": null,
+        "lowered_event_count": 1,
+        "lowered_event": {
+          "kind": "lowered",
+          "wall_time": 1793165917.346229,
+          "after_iteration": 49,
+          "requested_mhz": 345,
+          "success": true,
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8, 345, 1980, 52\n",
+            "stderr": ""
+          },
+          "target_rank": 3,
+          "expected_node_rank": 0,
+          "local_rank": 3
+        },
+        "requested_SM_MHz": 345,
+        "actual_SM_MHz_from_lowered_query": 345,
+        "lowered_after_iteration": 49,
+        "declared_first_iteration": 50,
+        "declared_last_iteration": 81,
+        "restore_event": {
+          "kind": "final_restore",
+          "wall_time": 1793165928.427544,
+          "restored": true,
+          "after_iteration": 62,
+          "result": {
+            "returncode": 0,
+            "stdout": "GPU clocks set to \"(gpuClkMin 1980, gpuClkMax 1980)\" for GPU 00000000:61:00.0\n\nWarning: persistence mode is disabled on device 00000000:61:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.\nAll done.\n",
+            "stderr": ""
+          },
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8, 1830, 1980, 100\n",
+            "stderr": ""
+          }
+        },
+        "watcher_restored_reported": true,
+        "restored_after_iteration": 62,
+        "restored_before_declared_end": true,
+        "iterations_short_of_declared_end": 19,
+        "injection_interval_complete": false,
+        "watcher_stop": {
+          "pid": 2813985,
+          "state": null,
+          "status": "terminated"
+        },
+        "parse_errors": []
+      },
+      "profile_triggered_from_control": true,
+      "partial_injection_before_declared_end": true,
+      "injection_interval_complete": false,
+      "driver_quality_file_present": false,
+      "raw_release_result_present": false,
+      "case_record_result_present": false,
+      "online_prediction_file_present": false,
+      "primary_outcome_override_reason": "Retain failed/partial collection as primary classification; any alarm is recorded separately.",
+      "raw_outcome_class_before_R96_failure_override": "collection_failure",
+      "alarm_observation": {
+        "evidence_state": "recorded_case",
+        "evaluated": true,
+        "alarm_observed": false,
+        "alarm_rank": null,
+        "planned_target_rank": 3,
+        "wrong_planned_target": null,
+        "pre_injection_alarm": null
+      },
+      "pre_injection_alarm": null,
+      "wrong_planned_target": null
+    },
+    {
+      "order": 2,
+      "case": "t02",
+      "cohort_origin": "retained_R95_failed_attempt",
+      "group": "strong",
+      "topology": "node_local_pp",
+      "target_rank": 12,
+      "requested_SM_MHz": 345,
+      "release": "v4_online_20261028_r94_store_regression_02",
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_case_02_result.json",
+      "state": "recorded_with_result",
+      "outcome": "collection_failure",
+      "clock_interval_qualified": false,
+      "actual_SM_MHz": 345.0,
+      "strength_diagnostic_qualified": false,
+      "step_time_ms_mean_increase": 3.4437749370892368,
+      "step_time_ms_median_increase": 2.0372228906836676,
+      "wall_iteration_ms_mean_increase": 3.478026301731239,
+      "wall_iteration_ms_median_increase": 2.055915553375634,
+      "accepted_secondary": false,
+      "profile_triggered": true,
+      "natural_trigger": null,
+      "final_alarm_rank": 12,
+      "prediction_during_training": true,
+      "complete_ranks": 16,
+      "complete_ranks_16": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "profile_start_iteration": 60,
+      "fault_start_iteration": 50,
+      "profile_start_minus_fault_start_iterations": 10,
+      "clock_restored": true,
+      "prediction_delay_from_profile_start_seconds": 10.667831420898438,
+      "prediction_delay_from_fault_start_seconds": 19.678196907043457,
+      "wall_time_latency_status": "rough_cross_host_uncalibrated_observation",
+      "lowered_clock_event_count": 1,
+      "telemetry_failed": false,
+      "timed_out": false,
+      "runner_returncode": 0,
+      "runner_error": null,
+      "driver_returncode": 1,
+      "postcheck_passed": true,
+      "shared_gpu_external_activity": {
+        "status": "observed",
+        "telemetry_file_present": true,
+        "sample_groups": 32,
+        "pmon_available_node_samples": 128,
+        "active_sample_groups": 21,
+        "active_vllm_rows": 334,
+        "evidence": [
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 0,
+            "pid": 2818680,
+            "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+            "sm_percent": 98
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 1,
+            "pid": 2818681,
+            "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 2,
+            "pid": 2818682,
+            "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 3,
+            "pid": 2818683,
+            "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 4,
+            "pid": 2818684,
+            "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 5,
+            "pid": 2818685,
+            "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 6,
+            "pid": 2818686,
+            "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+            "sm_percent": 99
+          },
+          {
+            "sample_group": 2,
+            "node": 0,
+            "gpu": 7,
+            "pid": 2818687,
+            "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+            "sm_percent": 99
+          }
+        ],
+        "parse_errors": 0,
+        "interpretation": "sampled concurrent vLLM process activity observed"
+      },
+      "native": {
+        "applicable": true,
+        "file_count": 16,
+        "parsed_file_count": 16,
+        "rank_count": 16,
+        "ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "all_ranks_0_to_15": true,
+        "row_schemas": [
+          "compute_compact_v1"
+        ],
+        "all_compute_compact_v1": true,
+        "strides": [
+          64
+        ],
+        "all_stride_64": true,
+        "dropped_total": 0.0,
+        "skipped_total": 0.0,
+        "event_pool_cleanup_all": true,
+        "output_bytes": 3073393
+      },
+      "case_record_read_error": null,
+      "quality_read_error": null,
+      "prediction_read_error": null,
+      "plan_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_plan_02.json",
+      "plan_monitor_control": "r92_store_v1",
+      "plan_read_error": null,
+      "outcome_class": "collection_failure",
+      "qualified_injection_and_restoration": false,
+      "cleanup_ownercheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "control_audit": {
+        "status": "incomplete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 14,
+        "all_16_monitor_start_end_present": false,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [
+          5,
+          15
+        ],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 13,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 14,
+          "min": 1.5156090000090217,
+          "median": 1.8952235000035955,
+          "max": 5.814301000015121
+        },
+        "control_wall_ms_distribution": {
+          "count": 14,
+          "min": 1.9036270678043365,
+          "median": 14.964067377150059,
+          "max": 17.481422051787376
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3073393
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [
+          {
+            "kind": "monitor_end_count",
+            "rank": 5,
+            "count": 0
+          },
+          {
+            "kind": "monitor_end_count",
+            "rank": 15,
+            "count": 0
+          }
+        ],
+        "parse_errors": []
+      },
+      "native_16_no_drop": true,
+      "native_complete_ranks_16": true,
+      "store_control_contract_16": true,
+      "common_8_iteration_profile_window": true,
+      "controller_failure": false,
+      "localization_success_claimed": false,
+      "seed": 202610289402,
+      "clock_interval_evidence": {
+        "evidence_path": "/Users/henry/Desktop/FLASH1022/results/v4/online/v4_online_20261028_r94_store_regression_02/t02_clock_evidence_private.json",
+        "evidence_present": true,
+        "read_error": null,
+        "lowered_event_count": 1,
+        "lowered_event": {
+          "kind": "lowered",
+          "wall_time": 1793166278.076895,
+          "after_iteration": 49,
+          "requested_mhz": 345,
+          "success": true,
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712, 345, 1980, 100\n",
+            "stderr": ""
+          },
+          "target_rank": 12,
+          "expected_node_rank": 1,
+          "local_rank": 4
+        },
+        "requested_SM_MHz": 345,
+        "actual_SM_MHz_from_lowered_query": 345,
+        "lowered_after_iteration": 49,
+        "declared_first_iteration": 50,
+        "declared_last_iteration": 81,
+        "restore_event": {
+          "kind": "final_restore",
+          "wall_time": 1793166301.1682656,
+          "restored": true,
+          "after_iteration": 71,
+          "result": {
+            "returncode": 0,
+            "stdout": "GPU clocks set to \"(gpuClkMin 1980, gpuClkMax 1980)\" for GPU 00000000:9A:00.0\n\nWarning: persistence mode is disabled on device 00000000:9A:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.\nAll done.\n",
+            "stderr": ""
+          },
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712, 1830, 1980, 100\n",
+            "stderr": ""
+          }
+        },
+        "watcher_restored_reported": true,
+        "restored_after_iteration": 71,
+        "restored_before_declared_end": true,
+        "iterations_short_of_declared_end": 10,
+        "injection_interval_complete": false,
+        "watcher_stop": {
+          "pid": 1119436,
+          "status": "already_stopped"
+        },
+        "parse_errors": []
+      },
+      "profile_triggered_from_control": true,
+      "partial_injection_before_declared_end": true,
+      "injection_interval_complete": false,
+      "driver_quality_file_present": true,
+      "raw_release_result_present": true,
+      "case_record_result_present": true,
+      "online_prediction_file_present": true,
+      "primary_outcome_override_reason": "Retain failed/partial collection as primary classification; any alarm is recorded separately.",
+      "raw_outcome_class_before_R96_failure_override": "collection_failure",
+      "alarm_observation": {
+        "evidence_state": "recorded_case",
+        "evaluated": true,
+        "alarm_observed": true,
+        "alarm_rank": 12,
+        "planned_target_rank": 12,
+        "wrong_planned_target": false,
+        "pre_injection_alarm": false,
+        "profile_window": [
+          60,
+          67
+        ],
+        "declared_injection_first_iteration": 50,
+        "final_alarm_is_not_reclassified_as_detection_outcome": true
+      },
+      "pre_injection_alarm": false,
+      "wrong_planned_target": false
+    },
+    {
+      "order": 3,
+      "case": "u03",
+      "cohort_origin": "retained_R95_failed_attempt",
+      "group": "strong",
+      "topology": "legacy",
+      "target_rank": 0,
+      "requested_SM_MHz": 345,
+      "release": "v4_online_20261028_r95_store_fresh_legacy",
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r95_case_03_result.json",
+      "state": "recorded_with_result",
+      "outcome": "collection_failure",
+      "clock_interval_qualified": false,
+      "actual_SM_MHz": null,
+      "strength_diagnostic_qualified": false,
+      "step_time_ms_mean_increase": null,
+      "step_time_ms_median_increase": null,
+      "wall_iteration_ms_mean_increase": null,
+      "wall_iteration_ms_median_increase": null,
+      "accepted_secondary": false,
+      "profile_triggered": true,
+      "natural_trigger": null,
+      "final_alarm_rank": 4,
+      "prediction_during_training": true,
+      "complete_ranks": 16,
+      "complete_ranks_16": true,
+      "profile_window": [
+        36,
+        43
+      ],
+      "profile_start_iteration": 36,
+      "fault_start_iteration": 50,
+      "profile_start_minus_fault_start_iterations": -14,
+      "clock_restored": true,
+      "prediction_delay_from_profile_start_seconds": 32.63801407814026,
+      "prediction_delay_from_fault_start_seconds": null,
+      "wall_time_latency_status": "rough_cross_host_uncalibrated_observation",
+      "lowered_clock_event_count": 0,
+      "telemetry_failed": false,
+      "timed_out": false,
+      "runner_returncode": 0,
+      "runner_error": null,
+      "driver_returncode": 1,
+      "postcheck_passed": true,
+      "shared_gpu_external_activity": {
+        "status": "observed",
+        "telemetry_file_present": true,
+        "sample_groups": 32,
+        "pmon_available_node_samples": 128,
+        "active_sample_groups": 23,
+        "active_vllm_rows": 356,
+        "evidence": [
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 0,
+            "pid": 2818680,
+            "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+            "sm_percent": 11
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 1,
+            "pid": 2818681,
+            "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+            "sm_percent": 8
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 2,
+            "pid": 2818682,
+            "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+            "sm_percent": 19
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 3,
+            "pid": 2818683,
+            "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+            "sm_percent": 39
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 4,
+            "pid": 2818684,
+            "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+            "sm_percent": 33
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 5,
+            "pid": 2818685,
+            "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+            "sm_percent": 56
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 6,
+            "pid": 2818686,
+            "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+            "sm_percent": 56
+          },
+          {
+            "sample_group": 8,
+            "node": 0,
+            "gpu": 7,
+            "pid": 2818687,
+            "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+            "sm_percent": 28
+          }
+        ],
+        "parse_errors": 0,
+        "interpretation": "sampled concurrent vLLM process activity observed"
+      },
+      "native": {
+        "applicable": true,
+        "file_count": 16,
+        "parsed_file_count": 16,
+        "rank_count": 16,
+        "ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "all_ranks_0_to_15": true,
+        "row_schemas": [
+          "compute_compact_v1"
+        ],
+        "all_compute_compact_v1": true,
+        "strides": [
+          64
+        ],
+        "all_stride_64": true,
+        "dropped_total": 0.0,
+        "skipped_total": 0.0,
+        "event_pool_cleanup_all": true,
+        "output_bytes": 3077026
+      },
+      "case_record_read_error": null,
+      "quality_read_error": null,
+      "prediction_read_error": null,
+      "plan_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r95_plan_03.json",
+      "plan_monitor_control": "r92_store_v1",
+      "plan_read_error": null,
+      "outcome_class": "collection_failure",
+      "qualified_injection_and_restoration": false,
+      "cleanup_ownercheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "control_audit": {
+        "status": "incomplete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 14,
+        "all_16_monitor_start_end_present": false,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [
+          8,
+          9
+        ],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            36,
+            43
+          ],
+          "4": [
+            36,
+            43
+          ],
+          "0": [
+            36,
+            43
+          ],
+          "2": [
+            36,
+            43
+          ],
+          "5": [
+            36,
+            43
+          ],
+          "7": [
+            36,
+            43
+          ],
+          "3": [
+            36,
+            43
+          ],
+          "1": [
+            36,
+            43
+          ],
+          "11": [
+            36,
+            43
+          ],
+          "13": [
+            36,
+            43
+          ],
+          "15": [
+            36,
+            43
+          ],
+          "12": [
+            36,
+            43
+          ],
+          "10": [
+            36,
+            43
+          ],
+          "14": [
+            36,
+            43
+          ],
+          "9": [
+            36,
+            43
+          ],
+          "8": [
+            36,
+            43
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            36,
+            43
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          36,
+          43
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          36,
+          43
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 5,
+          "4": 5,
+          "0": 5,
+          "2": 5,
+          "5": 5,
+          "7": 5,
+          "3": 5,
+          "1": 5,
+          "11": 5,
+          "13": 5,
+          "15": 5,
+          "12": 5,
+          "10": 5,
+          "14": 5
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 13,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 14,
+          "min": 0.9541450000014606,
+          "median": 1.2049904999944516,
+          "max": 7.97329499999222
+        },
+        "control_wall_ms_distribution": {
+          "count": 14,
+          "min": 1.4787106774747372,
+          "median": 26.87554864678532,
+          "max": 31.75109252333641
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3077026
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [
+          {
+            "kind": "monitor_end_count",
+            "rank": 9,
+            "count": 0
+          },
+          {
+            "kind": "monitor_end_count",
+            "rank": 8,
+            "count": 0
+          }
+        ],
+        "parse_errors": []
+      },
+      "native_16_no_drop": true,
+      "native_complete_ranks_16": true,
+      "store_control_contract_16": true,
+      "common_8_iteration_profile_window": true,
+      "controller_failure": false,
+      "localization_success_claimed": false,
+      "seed": 202610289503,
+      "clock_interval_evidence": {
+        "evidence_path": "/Users/henry/Desktop/FLASH1022/results/v4/online/v4_online_20261028_r95_store_fresh_legacy/u03_clock_evidence_private.json",
+        "evidence_present": true,
+        "read_error": null,
+        "lowered_event_count": 0,
+        "lowered_event": null,
+        "requested_SM_MHz": null,
+        "actual_SM_MHz_from_lowered_query": null,
+        "lowered_after_iteration": null,
+        "declared_first_iteration": 50,
+        "declared_last_iteration": 81,
+        "restore_event": null,
+        "watcher_restored_reported": null,
+        "restored_after_iteration": null,
+        "restored_before_declared_end": null,
+        "iterations_short_of_declared_end": null,
+        "injection_interval_complete": null,
+        "watcher_stop": {
+          "pid": 2841295,
+          "status": "already_stopped"
+        },
+        "parse_errors": []
+      },
+      "profile_triggered_from_control": true,
+      "partial_injection_before_declared_end": null,
+      "injection_interval_complete": null,
+      "driver_quality_file_present": true,
+      "raw_release_result_present": true,
+      "case_record_result_present": true,
+      "online_prediction_file_present": true,
+      "primary_outcome_override_reason": "Retain failed/partial collection as primary classification; any alarm is recorded separately.",
+      "raw_outcome_class_before_R96_failure_override": "collection_failure",
+      "alarm_observation": {
+        "evidence_state": "recorded_case",
+        "evaluated": true,
+        "alarm_observed": true,
+        "alarm_rank": 4,
+        "planned_target_rank": 0,
+        "wrong_planned_target": true,
+        "pre_injection_alarm": true,
+        "profile_window": [
+          36,
+          43
+        ],
+        "declared_injection_first_iteration": 50,
+        "final_alarm_is_not_reclassified_as_detection_outcome": true
+      },
+      "pre_injection_alarm": true,
+      "wrong_planned_target": true,
+      "do_not_count_as_no_alarm_or_clean_localization": true
+    },
+    {
+      "order": 4,
+      "case": "v04",
+      "cohort_origin": "fresh_R96_conditional_attempt",
+      "group": "strong",
+      "topology": "legacy",
+      "target_rank": 12,
+      "requested_SM_MHz": 345,
+      "release": "v4_online_20261028_r96_store_lowload_04",
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_case_04_result.json",
+      "state": "recorded_with_result",
+      "outcome": "correct_alarm",
+      "clock_interval_qualified": true,
+      "actual_SM_MHz": 345.0,
+      "strength_diagnostic_qualified": true,
+      "step_time_ms_mean_increase": 0.375686685716772,
+      "step_time_ms_median_increase": 0.3340105952341059,
+      "wall_iteration_ms_mean_increase": 0.38724645995563556,
+      "wall_iteration_ms_median_increase": 0.3460740431428684,
+      "accepted_secondary": true,
+      "profile_triggered": true,
+      "natural_trigger": null,
+      "final_alarm_rank": 12,
+      "prediction_during_training": true,
+      "complete_ranks": 16,
+      "complete_ranks_16": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "profile_start_iteration": 60,
+      "fault_start_iteration": 50,
+      "profile_start_minus_fault_start_iterations": 10,
+      "clock_restored": true,
+      "prediction_delay_from_profile_start_seconds": 8.72563624382019,
+      "prediction_delay_from_fault_start_seconds": 17.698564291000366,
+      "wall_time_latency_status": "rough_cross_host_uncalibrated_observation",
+      "lowered_clock_event_count": 1,
+      "telemetry_failed": false,
+      "timed_out": false,
+      "runner_returncode": 0,
+      "runner_error": null,
+      "driver_returncode": 0,
+      "postcheck_passed": true,
+      "shared_gpu_external_activity": {
+        "status": "unknown",
+        "telemetry_file_present": true,
+        "sample_groups": 19,
+        "pmon_available_node_samples": 76,
+        "active_sample_groups": 0,
+        "active_vllm_rows": 0,
+        "evidence": [],
+        "parse_errors": 0,
+        "interpretation": "no observed vLLM activity is not evidence of no interference"
+      },
+      "native": {
+        "applicable": true,
+        "file_count": 16,
+        "parsed_file_count": 16,
+        "rank_count": 16,
+        "ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "all_ranks_0_to_15": true,
+        "row_schemas": [
+          "compute_compact_v1"
+        ],
+        "all_compute_compact_v1": true,
+        "strides": [
+          64
+        ],
+        "all_stride_64": true,
+        "dropped_total": 0.0,
+        "skipped_total": 0.0,
+        "event_pool_cleanup_all": true,
+        "output_bytes": 3030895
+      },
+      "case_record_read_error": null,
+      "quality_read_error": null,
+      "prediction_read_error": null,
+      "plan_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_plan_04.json",
+      "plan_monitor_control": "r92_store_v1",
+      "plan_read_error": null,
+      "outcome_class": "correct_alarm",
+      "qualified_injection_and_restoration": true,
+      "cleanup_ownercheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.396098000000734,
+          "median": 1.748427999997304,
+          "max": 3.9582070000037106
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.9442425109446049,
+          "median": 14.735352247953415,
+          "max": 16.685939393937588
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3030895
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "native_16_no_drop": true,
+      "native_complete_ranks_16": true,
+      "store_control_contract_16": true,
+      "common_8_iteration_profile_window": true,
+      "controller_failure": false,
+      "localization_success_claimed": true,
+      "seed": 202610289604,
+      "clock_interval_evidence": {
+        "evidence_path": "/Users/henry/Desktop/FLASH1022/results/v4/online/v4_online_20261028_r96_store_lowload_04/v04_clock_evidence_private.json",
+        "evidence_present": true,
+        "read_error": null,
+        "lowered_event_count": 1,
+        "lowered_event": {
+          "kind": "lowered",
+          "wall_time": 1793167059.4919038,
+          "after_iteration": 49,
+          "requested_mhz": 345,
+          "success": true,
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712, 345, 1980, 94\n",
+            "stderr": ""
+          },
+          "target_rank": 12,
+          "expected_node_rank": 1,
+          "local_rank": 4
+        },
+        "requested_SM_MHz": 345,
+        "actual_SM_MHz_from_lowered_query": 345,
+        "lowered_after_iteration": 49,
+        "declared_first_iteration": 50,
+        "declared_last_iteration": 81,
+        "restore_event": {
+          "kind": "final_restore",
+          "wall_time": 1793167106.8846045,
+          "restored": true,
+          "after_iteration": 107,
+          "result": {
+            "returncode": 0,
+            "stdout": "GPU clocks set to \"(gpuClkMin 1980, gpuClkMax 1980)\" for GPU 00000000:9A:00.0\n\nWarning: persistence mode is disabled on device 00000000:9A:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.\nAll done.\n",
+            "stderr": ""
+          },
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712, 1830, 1980, 0\n",
+            "stderr": ""
+          }
+        },
+        "watcher_restored_reported": true,
+        "restored_after_iteration": 107,
+        "restored_before_declared_end": false,
+        "iterations_short_of_declared_end": -26,
+        "injection_interval_complete": true,
+        "watcher_stop": {
+          "pid": 1156190,
+          "status": "already_stopped"
+        },
+        "parse_errors": []
+      },
+      "profile_triggered_from_control": true,
+      "partial_injection_before_declared_end": false,
+      "injection_interval_complete": true,
+      "driver_quality_file_present": true,
+      "raw_release_result_present": true,
+      "case_record_result_present": true,
+      "online_prediction_file_present": true,
+      "raw_outcome_class_before_R96_failure_override": "correct_alarm",
+      "alarm_observation": {
+        "evidence_state": "recorded_case",
+        "evaluated": true,
+        "alarm_observed": true,
+        "alarm_rank": 12,
+        "planned_target_rank": 12,
+        "wrong_planned_target": false,
+        "pre_injection_alarm": false,
+        "profile_window": [
+          60,
+          67
+        ],
+        "declared_injection_first_iteration": 50,
+        "final_alarm_is_not_reclassified_as_detection_outcome": true
+      },
+      "pre_injection_alarm": false,
+      "wrong_planned_target": false
+    },
+    {
+      "order": 5,
+      "case": "v05",
+      "cohort_origin": "fresh_R96_conditional_attempt",
+      "group": "strong",
+      "topology": "node_local_pp",
+      "target_rank": 0,
+      "requested_SM_MHz": 345,
+      "release": "v4_online_20261028_r96_store_lowload_05",
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_case_05_result.json",
+      "state": "recorded_with_result",
+      "outcome": "correct_alarm",
+      "clock_interval_qualified": true,
+      "actual_SM_MHz": 345.0,
+      "strength_diagnostic_qualified": false,
+      "step_time_ms_mean_increase": 0.17151023098033313,
+      "step_time_ms_median_increase": 0.125274953008365,
+      "wall_iteration_ms_mean_increase": 0.1640601088947522,
+      "wall_iteration_ms_median_increase": 0.11897312568894902,
+      "accepted_secondary": true,
+      "profile_triggered": true,
+      "natural_trigger": null,
+      "final_alarm_rank": 0,
+      "prediction_during_training": true,
+      "complete_ranks": 16,
+      "complete_ranks_16": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "profile_start_iteration": 60,
+      "fault_start_iteration": 50,
+      "profile_start_minus_fault_start_iterations": 10,
+      "clock_restored": true,
+      "prediction_delay_from_profile_start_seconds": 8.983068466186523,
+      "prediction_delay_from_fault_start_seconds": 16.490175247192383,
+      "wall_time_latency_status": "rough_cross_host_uncalibrated_observation",
+      "lowered_clock_event_count": 1,
+      "telemetry_failed": false,
+      "timed_out": false,
+      "runner_returncode": 0,
+      "runner_error": null,
+      "driver_returncode": 0,
+      "postcheck_passed": true,
+      "shared_gpu_external_activity": {
+        "status": "unknown",
+        "telemetry_file_present": true,
+        "sample_groups": 19,
+        "pmon_available_node_samples": 76,
+        "active_sample_groups": 0,
+        "active_vllm_rows": 0,
+        "evidence": [],
+        "parse_errors": 0,
+        "interpretation": "no observed vLLM activity is not evidence of no interference"
+      },
+      "native": {
+        "applicable": true,
+        "file_count": 16,
+        "parsed_file_count": 16,
+        "rank_count": 16,
+        "ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "all_ranks_0_to_15": true,
+        "row_schemas": [
+          "compute_compact_v1"
+        ],
+        "all_compute_compact_v1": true,
+        "strides": [
+          64
+        ],
+        "all_stride_64": true,
+        "dropped_total": 0.0,
+        "skipped_total": 0.0,
+        "event_pool_cleanup_all": true,
+        "output_bytes": 3083593
+      },
+      "case_record_read_error": null,
+      "quality_read_error": null,
+      "prediction_read_error": null,
+      "plan_path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_plan_05.json",
+      "plan_monitor_control": "r92_store_v1",
+      "plan_read_error": null,
+      "outcome_class": "correct_alarm",
+      "qualified_injection_and_restoration": true,
+      "cleanup_ownercheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.4753460000065388,
+          "median": 1.8329959999974221,
+          "max": 4.832037000014111
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.1062036976218224,
+          "median": 14.581548981368542,
+          "max": 15.401466749608517
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3083593
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "native_16_no_drop": true,
+      "native_complete_ranks_16": true,
+      "store_control_contract_16": true,
+      "common_8_iteration_profile_window": true,
+      "controller_failure": false,
+      "localization_success_claimed": true,
+      "seed": 202610289605,
+      "clock_interval_evidence": {
+        "evidence_path": "/Users/henry/Desktop/FLASH1022/results/v4/online/v4_online_20261028_r96_store_lowload_05/v05_clock_evidence_private.json",
+        "evidence_present": true,
+        "read_error": null,
+        "lowered_event_count": 1,
+        "lowered_event": {
+          "kind": "lowered",
+          "wall_time": 1793167191.0232759,
+          "after_iteration": 49,
+          "requested_mhz": 345,
+          "success": true,
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1, 345, 1980, 100\n",
+            "stderr": ""
+          },
+          "target_rank": 0,
+          "expected_node_rank": 0,
+          "local_rank": 0
+        },
+        "requested_SM_MHz": 345,
+        "actual_SM_MHz_from_lowered_query": 345,
+        "lowered_after_iteration": 49,
+        "declared_first_iteration": 50,
+        "declared_last_iteration": 81,
+        "restore_event": {
+          "kind": "final_restore",
+          "wall_time": 1793167235.7677054,
+          "restored": true,
+          "after_iteration": 107,
+          "result": {
+            "returncode": 0,
+            "stdout": "GPU clocks set to \"(gpuClkMin 1980, gpuClkMax 1980)\" for GPU 00000000:10:00.0\n\nWarning: persistence mode is disabled on device 00000000:10:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.\nAll done.\n",
+            "stderr": ""
+          },
+          "query": {
+            "returncode": 0,
+            "stdout": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1, 1830, 1980, 0\n",
+            "stderr": ""
+          }
+        },
+        "watcher_restored_reported": true,
+        "restored_after_iteration": 107,
+        "restored_before_declared_end": false,
+        "iterations_short_of_declared_end": -26,
+        "injection_interval_complete": true,
+        "watcher_stop": {
+          "pid": 2872995,
+          "status": "already_stopped"
+        },
+        "parse_errors": []
+      },
+      "profile_triggered_from_control": true,
+      "partial_injection_before_declared_end": false,
+      "injection_interval_complete": true,
+      "driver_quality_file_present": true,
+      "raw_release_result_present": true,
+      "case_record_result_present": true,
+      "online_prediction_file_present": true,
+      "raw_outcome_class_before_R96_failure_override": "correct_alarm",
+      "alarm_observation": {
+        "evidence_state": "recorded_case",
+        "evaluated": true,
+        "alarm_observed": true,
+        "alarm_rank": 0,
+        "planned_target_rank": 0,
+        "wrong_planned_target": false,
+        "pre_injection_alarm": false,
+        "profile_window": [
+          60,
+          67
+        ],
+        "declared_injection_first_iteration": 50,
+        "final_alarm_is_not_reclassified_as_detection_outcome": true
+      },
+      "pre_injection_alarm": false,
+      "wrong_planned_target": false
+    }
+  ],
+  "notes": [
+    "All five R96 index entries remain in the denominator; earlier failures stay failed and future records refresh dynamically.",
+    "The first three attempts retain collection_failure as the primary outcome. Alarm rank, pre-injection timing, and wrong planned target are reported separately, including the legacy rank0 attempt that alarmed rank4 in PROFILE window 36..43 before injection was scheduled for iteration50.",
+    "A passing sampled low-load gate is not evidence of exclusive use or absence of interference; the earlier R95 shared-load context remains attached as context only.",
+    "Original case postchecks and the later R94 recovery proof are kept separate. The report reads local records only and never launches GPU work."
+  ]
+}

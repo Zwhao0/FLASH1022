@@ -1,0 +1,20 @@
+test_invalid_harness_opt_in_never_dispatches (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_receipts_reject_wrong_identity_invalid_stale_and_regression (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_invalid_wrong_node_oversize_and_missing (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_regressed_iteration_and_terminal_stops (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_timestamp_regression (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_stream_uses_rank12_without_train_log_then_rejects_stale (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_valid_harness_opt_in_propagates_identity_to_both_nodes (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_writer_only_publishes_successful_schedule_ends_and_closes_atomically (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_writer_rejects_wrong_local_rank_and_iteration_budget (flash_v4.tests.test_rank_progress.ProgressContracts) ... ok
+test_fault_time_budget_restores_even_without_end_iteration (flash_v4.tests.test_rank_progress.WatcherCleanup) ... ok
+test_invalid_progress_before_lower_never_changes_clock (flash_v4.tests.test_rank_progress.WatcherCleanup) ... ok
+test_rank12_normal_lower_restore_and_cleanup (flash_v4.tests.test_rank_progress.WatcherCleanup) ... ok
+test_stale_host_pipe_progress_never_lowers_clock (flash_v4.tests.test_rank_progress.WatcherCleanup) ... ok
+test_stream_rejection_after_lower_restores_and_cleans (flash_v4.tests.test_rank_progress.WatcherCleanup) ... ok
+test_complete_restoration_stops_before_later_stale_progress (__main__.PostRestoreRegression) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.045s
+
+OK

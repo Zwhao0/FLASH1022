@@ -1,0 +1,95 @@
+{
+  "GPU_owner_released": true,
+  "abstained": 0,
+  "actual_attempts": 11,
+  "actual_degradation_ranges": {
+    "step_time_ms_mean_increase": {
+      "max": 0.3309684865986273,
+      "min": -0.02934884907323987,
+      "n": 11
+    },
+    "step_time_ms_median_increase": {
+      "max": 0.278275759955227,
+      "min": -0.0491569259827751,
+      "n": 11
+    },
+    "wall_iteration_ms_mean_increase": {
+      "max": 0.3341035426831629,
+      "min": -0.02846398461964228,
+      "n": 11
+    },
+    "wall_iteration_ms_median_increase": {
+      "max": 0.29025722080323213,
+      "min": -0.05009239344458616,
+      "n": 11
+    }
+  },
+  "all_native_R86_no_drops": true,
+  "all_triggered_predictions_during_training": true,
+  "all_triggered_profiles16_complete": true,
+  "at_local": "2026-10-28T12:58:14.263887+08:00",
+  "clocks_restored_SM1980_memory2619": true,
+  "collection_failures": 0,
+  "correct_alarms": 8,
+  "cost_measured": false,
+  "evidence": {
+    "matrix": {
+      "bytes": 10548,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r91_matrix_index.json",
+      "sha256": "da27d397d601ba437cc76742bf4e0fe532100dc19179667d5d284f288fc80be6"
+    },
+    "parent_wait": {
+      "bytes": 176,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r91_runner_parent_wait.json",
+      "sha256": "eeeeaa48dd4f23a8e8e12699273b540861cd267cf5c9df4b46587349b63ce1fc"
+    },
+    "postcheck": {
+      "bytes": 646,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r91_final_postcheck.json",
+      "sha256": "a8061e6cf1ced1ecaf876e1430134c8949fafd69f259c2e1ca053772d33a5301"
+    },
+    "summary": {
+      "bytes": 54951,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r91_quicktest_summary.json",
+      "sha256": "905e22e54af947cb179e06344fc3a66bb165a907e608b416f640226ef0083c8e"
+    }
+  },
+  "execution_failures": 0,
+  "external_activity_unknown": 11,
+  "formal_blind": false,
+  "healthy_FPR_claimed": false,
+  "inference_failures": 0,
+  "limits": [
+    "Representative engineering test with user-directed adaptation; not blind or general accuracy/FPR guarantee.",
+    "Three original nontriggers remain in all11 denominator, despite stronger supplements succeeding.",
+    "No new healthy or performance acceptance.",
+    "Sampled external activity unknown does not rule out shared-job interference.",
+    "Actual degradation was not constrained to planned0\u201350%; do not claim full50% coverage."
+  ],
+  "mislocalized": 0,
+  "not_triggered": 3,
+  "original_nontriggers_not_replaced": true,
+  "sampled_external_activity_observed": 0,
+  "schema": "r88_r91_representative_quicktest_completion",
+  "standalone_healthy": 0,
+  "status": "completed_user_adapted_quicktest",
+  "strong_requested_group": {
+    "attempts": 9,
+    "correct": 8,
+    "not_triggered": 1
+  },
+  "targets_with_at_least_one_correct_alarm": 8,
+  "training_and_runtime_sources_verified": true,
+  "unique_representative_targets": 8,
+  "user_amendments": [
+    "Reduce equivalent ranks",
+    "Skip execution failures without retry",
+    "Future faults below750MHz;750 explicit weak control",
+    "No standalone healthy; fresh stronger faults supplement nontriggers"
+  ],
+  "weak_requested_group": {
+    "attempts": 2,
+    "correct": 0,
+    "not_triggered": 2
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "isolated_clone": true,
+  "tests": [
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "flash_v4/tests",
+        "-p",
+        "test*.py"
+      ],
+      "returncode": 0,
+      "tail": [
+        ".........................................................................................................................................................",
+        "----------------------------------------------------------------------",
+        "Ran 161 tests in 0.264s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": [
+        "releases/v4/watcher_cpu_r100.py"
+      ],
+      "returncode": 0,
+      "tail": [
+        "node dispatched",
+        "node dispatched",
+        "{\"passed\": true, \"run\": 15, \"failures\": 0, \"errors\": 0, \"existing_safety_contracts_preserved\": true, \"new_postrestore_regression\": true, \"training_monitor_and_localizer_changed\": false}"
+      ]
+    }
+  ],
+  "no_GPU_or_remote": true
+}

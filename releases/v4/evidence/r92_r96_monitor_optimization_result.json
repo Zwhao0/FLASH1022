@@ -1,0 +1,734 @@
+{
+  "GPU_owner_released": true,
+  "at_local": "2026-10-28T14:03:49.701767+08:00",
+  "clocks_restored_SM1980_memory2619": true,
+  "control_resources": {
+    "MONITOR_extra_CUDA_timing_events": 0,
+    "extra_control_group_threads_per_rank_real_CPU_test": {
+      "gloo1": 2,
+      "old": 3,
+      "store": 0
+    },
+    "limits": "Thread counts from real CPU validation; full-job CPU includes waited child subtree and instrumentation; RSS is largest single-process high-water, not aggregate process-tree RAM. Not all per-node CPU observations are below1percent.",
+    "native_event_pool_highwater": 0
+  },
+  "controller_fix": "One bounded read-only SSH status retry after banner failure, CPU2+18 tests passed; never repeats launch/injection or overwrites failed attempts",
+  "cost": {
+    "actual_attempts": 10,
+    "natural_PROFILE_triggers": 0,
+    "positive_increment_worst_raw_off_endpoint_percent": {
+      "full_job_per_node": 0.171088,
+      "largest_child_process_peak_RSS_per_node": 0.767284,
+      "per_node_CPU_seconds": 1.620611,
+      "step_sum": 0.213925,
+      "two_node_total_CPU_seconds": 0.410144
+    },
+    "rows": [
+      {
+        "control_cpu_ms": {
+          "count": 16,
+          "max": 12.59673,
+          "median": 3.147719,
+          "min": 2.716339
+        },
+        "control_wall_ms": {
+          "count": 16,
+          "max": 32.983155,
+          "median": 26.199542,
+          "min": 3.020719
+        },
+        "off_drift": {
+          "all_step_total_seconds": {
+            "delta": 0.116768,
+            "percent_change": 0.144222
+          },
+          "controller_full_observation_ms": {
+            "delta": -1681.585124,
+            "percent_change": -1.480771
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": 4.949218,
+            "percent_change": 0.18303
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              765.098687,
+              824.20254
+            ],
+            "mean_percent_change": 0.721626,
+            "percent_by_node": [
+              0.694638,
+              0.748615
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              -3.97859,
+              7.548002
+            ],
+            "mean_percent_change": 0.153735,
+            "percent_by_node": [
+              -0.374623,
+              0.682092
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              -6.269531,
+              4.949218
+            ],
+            "mean_percent_change": -0.02534,
+            "percent_by_node": [
+              -0.23371,
+              0.18303
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": 3.569412,
+            "percent_change": 0.164594
+          }
+        },
+        "output_bytes": {
+          "bytes_by_group": {
+            "control_auxiliary": 148,
+            "control_rank_jsonl": 8251,
+            "native_observation_jsonl": 30054,
+            "native_setup_json": 9728
+          },
+          "combined_bytes": 48181,
+          "control_bytes": 8399,
+          "count_errors": [],
+          "file_counts": {
+            "control_auxiliary": 3,
+            "control_rank_jsonl": 16,
+            "native_observation_jsonl": 16,
+            "native_setup_json": 16
+          },
+          "observations_bytes": 30054,
+          "patterns": {
+            "control_auxiliary": [
+              "final/node*/control/bocd_worker.log",
+              "final/node*/control/bocd_audit.jsonl",
+              "final/node*/control/profile_request.json",
+              "final/node*/control/monitor_stop"
+            ],
+            "control_rank_jsonl": "final/node*/control/online_rank*.jsonl",
+            "native_observation_jsonl": "final/node*/observations/rank_*.jsonl",
+            "native_setup_json": "final/node*/observations/setup_rank*.json"
+          },
+          "setup_bytes": 9728,
+          "training_logs_included": false
+        },
+        "store_vs_off_endpoint_mean": {
+          "all_step_total_seconds": {
+            "delta": -0.941028,
+            "percent_change": -1.161442
+          },
+          "controller_full_observation_ms": {
+            "delta": -1886.390521,
+            "percent_change": -1.673509
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": 0.486328,
+            "percent_change": 0.017969
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              -2226.549472,
+              -2225.155673
+            ],
+            "mean_percent_change": -2.014026,
+            "percent_by_node": [
+              -2.014502,
+              -2.01355
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              -10.766377,
+              -15.855234
+            ],
+            "mean_percent_change": -1.221792,
+            "percent_by_node": [
+              -1.015661,
+              -1.427923
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              17.400391,
+              0.486328
+            ],
+            "mean_percent_change": 0.333682,
+            "percent_by_node": [
+              0.649395,
+              0.017969
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": -26.621611,
+            "percent_change": -1.226573
+          }
+        },
+        "store_vs_original": {
+          "all_step_total_seconds": {
+            "delta": -3.326857,
+            "percent_change": -3.988644
+          },
+          "controller_full_observation_ms": {
+            "delta": -2180.8025,
+            "percent_change": -1.929657
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": 2.53125,
+            "percent_change": 0.093595
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              -3734.333958,
+              -3773.810946
+            ],
+            "mean_percent_change": -3.350479,
+            "percent_by_node": [
+              -3.33322,
+              -3.367738
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              -58.320816,
+              -29.307103
+            ],
+            "mean_percent_change": -3.936681,
+            "percent_by_node": [
+              -5.265556,
+              -2.607806
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              17.84375,
+              2.53125
+            ],
+            "mean_percent_change": 0.379823,
+            "percent_by_node": [
+              0.666051,
+              0.093595
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": -87.627919,
+            "percent_change": -3.927015
+          }
+        },
+        "store_vs_raw_off_endpoints": {
+          "vs_off_after": {
+            "all_step_total_seconds": {
+              "delta": -0.999412,
+              "percent_change": -1.232613
+            },
+            "node_child_elapsed_ms": {
+              "delta_by_node": [
+                -2609.098815,
+                -2637.256943
+              ],
+              "mean_percent_change": -2.365036,
+              "percent_by_node": [
+                -2.352477,
+                -2.377596
+              ]
+            },
+            "node_cpu_seconds": {
+              "delta_by_node": [
+                -8.777082,
+                -19.629235
+              ],
+              "mean_percent_change": -1.295689,
+              "percent_by_node": [
+                -0.829555,
+                -1.761822
+              ]
+            },
+            "node_max_child_process_rss_MiB": {
+              "delta_by_node": [
+                20.535156,
+                -1.988281
+              ],
+              "mean_percent_change": 0.346944,
+              "percent_by_node": [
+                0.767284,
+                -0.073395
+              ]
+            },
+            "two_node_cpu_seconds_sum": {
+              "delta": -28.406317,
+              "percent_change": -1.307726
+            }
+          },
+          "vs_off_before": {
+            "all_step_total_seconds": {
+              "delta": -0.882644,
+              "percent_change": -1.090168
+            },
+            "node_child_elapsed_ms": {
+              "delta_by_node": [
+                -1844.000128,
+                -1813.054403
+              ],
+              "mean_percent_change": -1.66048,
+              "percent_by_node": [
+                -1.67418,
+                -1.64678
+              ]
+            },
+            "node_cpu_seconds": {
+              "delta_by_node": [
+                -12.755672,
+                -12.081233
+              ],
+              "mean_percent_change": -1.146409,
+              "percent_by_node": [
+                -1.20107,
+                -1.091747
+              ]
+            },
+            "node_max_child_process_rss_MiB": {
+              "delta_by_node": [
+                14.265625,
+                2.960937
+              ],
+              "mean_percent_change": 0.32064,
+              "percent_by_node": [
+                0.531781,
+                0.1095
+              ]
+            },
+            "two_node_cpu_seconds_sum": {
+              "delta": -24.836905,
+              "percent_change": -1.145285
+            }
+          }
+        },
+        "topology": "legacy"
+      },
+      {
+        "control_cpu_ms": {
+          "count": 16,
+          "max": 6.914988,
+          "median": 3.403572,
+          "min": 2.658489
+        },
+        "control_wall_ms": {
+          "count": 16,
+          "max": 30.924384,
+          "median": 30.093698,
+          "min": 3.139343
+        },
+        "off_drift": {
+          "all_step_total_seconds": {
+            "delta": 2.621042,
+            "percent_change": 3.277542
+          },
+          "controller_full_observation_ms": {
+            "delta": 2486.543291,
+            "percent_change": 2.225107
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": 0.351562,
+            "percent_change": 0.013165
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              2809.686643,
+              2848.880102
+            ],
+            "mean_percent_change": 2.602823,
+            "percent_by_node": [
+              2.583942,
+              2.621703
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              98.58227,
+              -13.542603
+            ],
+            "mean_percent_change": 4.833083,
+            "percent_by_node": [
+              11.099267,
+              -1.4331
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              3.339844,
+              0.351562
+            ],
+            "mean_percent_change": 0.069196,
+            "percent_by_node": [
+              0.125226,
+              0.013165
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": 85.039667,
+            "percent_change": 4.638931
+          }
+        },
+        "output_bytes": {
+          "bytes_by_group": {
+            "control_auxiliary": 148,
+            "control_rank_jsonl": 8253,
+            "native_observation_jsonl": 30054,
+            "native_setup_json": 9728
+          },
+          "combined_bytes": 48183,
+          "control_bytes": 8401,
+          "count_errors": [],
+          "file_counts": {
+            "control_auxiliary": 3,
+            "control_rank_jsonl": 16,
+            "native_observation_jsonl": 16,
+            "native_setup_json": 16
+          },
+          "observations_bytes": 30054,
+          "patterns": {
+            "control_auxiliary": [
+              "final/node*/control/bocd_worker.log",
+              "final/node*/control/bocd_audit.jsonl",
+              "final/node*/control/profile_request.json",
+              "final/node*/control/monitor_stop"
+            ],
+            "control_rank_jsonl": "final/node*/control/online_rank*.jsonl",
+            "native_observation_jsonl": "final/node*/observations/rank_*.jsonl",
+            "native_setup_json": "final/node*/observations/setup_rank*.json"
+          },
+          "setup_bytes": 9728,
+          "training_logs_included": false
+        },
+        "store_vs_off_endpoint_mean": {
+          "all_step_total_seconds": {
+            "delta": -1.139446,
+            "percent_change": -1.401873
+          },
+          "controller_full_observation_ms": {
+            "delta": -1773.801105,
+            "percent_change": -1.569837
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": -5.371094,
+            "percent_change": -0.201126
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              -1241.064278,
+              -1238.526657
+            ],
+            "mean_percent_change": -1.125904,
+            "percent_by_node": [
+              -1.126793,
+              -1.125016
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              -34.897079,
+              -0.104094
+            ],
+            "mean_percent_change": -1.866768,
+            "percent_by_node": [
+              -3.722441,
+              -0.011095
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              -3.572266,
+              -6.007813
+            ],
+            "mean_percent_change": -0.179413,
+            "percent_by_node": [
+              -0.133857,
+              -0.224968
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": -35.001173,
+            "percent_change": -1.866039
+          }
+        },
+        "store_vs_original": {
+          "all_step_total_seconds": {
+            "delta": 1.045707,
+            "percent_change": 1.322088
+          },
+          "controller_full_observation_ms": {
+            "delta": 1782.964667,
+            "percent_change": 1.629232
+          },
+          "max_node_child_process_rss_MiB": {
+            "delta": -33.304688,
+            "percent_change": -1.234216
+          },
+          "node_child_elapsed_ms": {
+            "delta_by_node": [
+              695.271752,
+              624.898045
+            ],
+            "mean_percent_change": 0.609976,
+            "percent_by_node": [
+              0.642551,
+              0.5774
+            ]
+          },
+          "node_cpu_seconds": {
+            "delta_by_node": [
+              -1.898032,
+              36.212441
+            ],
+            "mean_percent_change": 1.902642,
+            "percent_by_node": [
+              -0.209848,
+              4.015133
+            ]
+          },
+          "node_max_child_process_rss_MiB": {
+            "delta_by_node": [
+              -33.304688,
+              -27.941407
+            ],
+            "mean_percent_change": -1.135992,
+            "percent_by_node": [
+              -1.234216,
+              -1.037769
+            ]
+          },
+          "two_node_cpu_seconds_sum": {
+            "delta": 34.314409,
+            "percent_change": 1.899625
+          }
+        },
+        "store_vs_raw_off_endpoints": {
+          "vs_off_after": {
+            "all_step_total_seconds": {
+              "delta": -2.449967,
+              "percent_change": -2.966392
+            },
+            "node_child_elapsed_ms": {
+              "delta_by_node": [
+                -2645.9076,
+                -2662.966708
+              ],
+              "mean_percent_change": -2.380019,
+              "percent_by_node": [
+                -2.37203,
+                -2.388008
+              ]
+            },
+            "node_cpu_seconds": {
+              "delta_by_node": [
+                -84.188214,
+                6.667207
+              ],
+              "mean_percent_change": -3.907954,
+              "percent_by_node": [
+                -8.5317,
+                0.715793
+              ]
+            },
+            "node_max_child_process_rss_MiB": {
+              "delta_by_node": [
+                -5.242188,
+                -6.183594
+              ],
+              "mean_percent_change": -0.213921,
+              "percent_by_node": [
+                -0.196308,
+                -0.231535
+              ]
+            },
+            "two_node_cpu_seconds_sum": {
+              "delta": -77.521007,
+              "percent_change": -4.041313
+            }
+          },
+          "vs_off_before": {
+            "all_step_total_seconds": {
+              "delta": 0.171075,
+              "percent_change": 0.213925
+            },
+            "node_child_elapsed_ms": {
+              "delta_by_node": [
+                163.779043,
+                185.913394
+              ],
+              "mean_percent_change": 0.160854,
+              "percent_by_node": [
+                0.15062,
+                0.171088
+              ]
+            },
+            "node_cpu_seconds": {
+              "delta_by_node": [
+                14.394056,
+                -6.875396
+              ],
+              "mean_percent_change": 0.446523,
+              "percent_by_node": [
+                1.620611,
+                -0.727565
+              ]
+            },
+            "node_max_child_process_rss_MiB": {
+              "delta_by_node": [
+                -1.902344,
+                -5.832032
+              ],
+              "mean_percent_change": -0.144864,
+              "percent_by_node": [
+                -0.071328,
+                -0.2184
+              ]
+            },
+            "two_node_cpu_seconds_sum": {
+              "delta": 7.51866,
+              "percent_change": 0.410144
+            }
+          }
+        },
+        "topology": "node_local_pp"
+      }
+    ],
+    "valid_pure_cost_attempts": 10
+  },
+  "evidence": {
+    "configuration": {
+      "bytes": 2340,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/current_monitor_configuration.json",
+      "sha256": "af7e8d0b347d5db83323010f98e59acd29332b1f870569762376c992f69c21cd"
+    },
+    "cost": {
+      "bytes": 147588,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r93_monitor_cost_summary.json",
+      "sha256": "8dc152666db7c73c785da29d4ddaf42ef14be491685a564f98692593c22a6900"
+    },
+    "cost_parent": {
+      "bytes": 177,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r93_runner_parent_wait.json",
+      "sha256": "6ac067a82b9bb896fdd425c91e82453ee9698f81b98a202398e531aeec5447f9"
+    },
+    "failed_cleanup": {
+      "bytes": 1466,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r94_failed_case_cleanup.json",
+      "sha256": "cf6cf110f93b1a31a2a4c676c9e8f42f074515cdb6dd217a22edc50f8632a3ff"
+    },
+    "postcheck": {
+      "bytes": 646,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_final_runtime_postcheck.json",
+      "sha256": "a8061e6cf1ced1ecaf876e1430134c8949fafd69f259c2e1ca053772d33a5301"
+    },
+    "regression": {
+      "bytes": 87551,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_regression_summary.json",
+      "sha256": "a6c9f1a25beb7901f65f996dd451004f1baca965bbef132f76079e730ef0ec94"
+    },
+    "regression_parent": {
+      "bytes": 177,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_runner_parent_wait.json",
+      "sha256": "b1a45bd068776dd2029cf238160dad0a6f45498476bacec2c9e08a1cc1699b7f"
+    },
+    "shared_failure_context": {
+      "bytes": 38498,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r95_shared_load_failure_context.json",
+      "sha256": "3af8a280d231277f32a32d2f87ef161880e307734285618d915fd998c134d27a"
+    }
+  },
+  "historical_accuracy_denominators_unchanged": true,
+  "limits": [
+    "Engineering observations from one bracketed cost block per topology; endpoints shared, no independent repeat or population confidence guarantee.",
+    "OFF drift about0.7percent legacy and2.6percent PP prevents claiming stable0.1percent; negative deltas are not proof of zero.",
+    "Three failed attempts and a pre-injection wrong-target alarm retained; shared vLLM numericSM max99percent observed, not unique-cause proof.",
+    "No new broad accuracy/FPR acceptance, no GitHub upload."
+  ],
+  "monitor_frequency_threshold_filters_and_r11_unchanged": true,
+  "monitor_functional_sources_match_cost_round": true,
+  "regression": {
+    "all_actual_attempts": 5,
+    "collection_or_controller_failures": 3,
+    "correct_complete_online_cases": 2,
+    "failed_cases_not_reclassified_as_success": true,
+    "final_lowload_fresh_complete_cases": 2,
+    "fresh_results": [
+      {
+        "SM_MHz": 345,
+        "accepted": true,
+        "actual_degradation": {
+          "time_ms": {
+            "baseline_cv": 0.03272449213022586,
+            "block_median_increases": [
+              0.3429865310839981,
+              0.3279738477257592
+            ],
+            "mean_increase": 0.375686685716772,
+            "median_increase": 0.3340105952341059
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.03266069777838145,
+            "block_median_increases": [
+              0.3547301682851254,
+              0.3400291700926681
+            ],
+            "mean_increase": 0.38724645995563556,
+            "median_increase": 0.3460740431428684
+          }
+        },
+        "order": 4,
+        "outcome": "correct_alarm",
+        "prediction_during_training": true,
+        "rank": 12,
+        "topology": "legacy"
+      },
+      {
+        "SM_MHz": 345,
+        "accepted": true,
+        "actual_degradation": {
+          "time_ms": {
+            "baseline_cv": 0.03362135670697609,
+            "block_median_increases": [
+              0.11897135497192401,
+              0.14028537962673227
+            ],
+            "mean_increase": 0.17151023098033313,
+            "median_increase": 0.125274953008365
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.034071001390280124,
+            "block_median_increases": [
+              0.1127073444131661,
+              0.1339012981346872
+            ],
+            "mean_increase": 0.1640601088947522,
+            "median_increase": 0.11897312568894902
+          }
+        },
+        "order": 5,
+        "outcome": "correct_alarm",
+        "prediction_during_training": true,
+        "rank": 0,
+        "topology": "node_local_pp"
+      }
+    ],
+    "no_new_healthy_FPR_claim": true,
+    "no_standalone_healthy_trials": true,
+    "raw_pre_injection_wrong_target_alarm_retained": 1
+  },
+  "schema": "r92_r96_MONITOR_optimization_result",
+  "stages": {
+    "absolute_zero_claimed": false,
+    "stable_point1percent_proven": false,
+    "stage1_time_under1percent_observed": true,
+    "stage2_near_zero_aspiration": "approached; stable0.1percent or exact zero not established"
+  },
+  "status": "Store_adopted_for_fresh_plans_after_bounded_cost_and_valid_fault_trials",
+  "training_and_runtime_sources_verified": true
+}

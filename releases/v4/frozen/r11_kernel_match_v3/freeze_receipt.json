@@ -1,0 +1,74 @@
+{
+  "feature_replay": [
+    {
+      "H2_serialized_feature_replay": "passed",
+      "topology": "legacy"
+    },
+    {
+      "H2_serialized_feature_replay": "passed",
+      "topology": "node_local_pp"
+    }
+  ],
+  "model": {
+    "bytes": 34524,
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/frozen/r11_kernel_match_v3/model.json",
+    "sha256": "2ccaef19d82ee27ec58e1a2d41fbbebee2a9a1ec9b76429fb86eb3f32667682c"
+  },
+  "provenance": [
+    {
+      "bytes": 130928,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/exploration/r11_development_v3_features/feature_receipt.json",
+      "sha256": "6a3729674ca20e6fbd82b178f6ba1f2ce39a0377b8640651ce84bf7bb2deebb2"
+    },
+    {
+      "bytes": 13652,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/exploration/r11_development_v3/prediction_hashes.json",
+      "sha256": "eea0952f3392abfcc992ccba5aaa7e4dc6edf4b81d1f17c8563ac6a0be22b10f"
+    },
+    {
+      "bytes": 4655,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/exploration/r11_development_v3/calibration.json",
+      "sha256": "fd9c54b1492771a90d635e6c9870c788cafd8d1ad8b062b6dd63142d477be893"
+    },
+    {
+      "bytes": 21840,
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/evaluation/r11_development_v3/alarm_evaluation.json",
+      "sha256": "d6dcf8b68115e44ed568d8197641b641ea0750b4b90c97c22b1e51f8f129e40b"
+    }
+  ],
+  "saved_decision_replays_passed": 24,
+  "source_files": [
+    {
+      "bytes": 13087,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/frozen_localizer.py",
+      "sha256": "930fa01be06c0662cbd5d66d2d4c73da14ca24040d2af2770e228534fd91f016"
+    },
+    {
+      "bytes": 36723,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/offline_localizer.py",
+      "sha256": "0dc71228be86b11039aa46b86eef01f5cda02227afa92a91a8e0feaa40cb115c"
+    },
+    {
+      "bytes": 9196,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/kernel_match_candidate.py",
+      "sha256": "f51d49234705688ef7ae1067971fceefa748484e6ebd4705b62e98e7c9c42643"
+    },
+    {
+      "bytes": 8089,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/health_noise_fusion.py",
+      "sha256": "a1125abadf6b7f57661e400dc7a4eb084d6f2d29eea9db3290a61952e36d7be6"
+    },
+    {
+      "bytes": 10656,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/health_centered_fusion.py",
+      "sha256": "2e5b5ddb59b1569dde6503f0e6cfefecc93ed4532437577a21b3b8c2502aa3b5"
+    },
+    {
+      "bytes": 10869,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/batch_development_score.py",
+      "sha256": "a10c6314326d6607e4b8eff9473ae50552b803d9c2fc000dce6af1da8238f10a"
+    }
+  ],
+  "validation_policy": "one pass, all scheduled cases, failed windows preserved, no refitting from validation",
+  "validation_read_before_freeze": false
+}

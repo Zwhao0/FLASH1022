@@ -1,0 +1,18 @@
+{
+  "case": "r100_k02",
+  "primary": "collection_failure",
+  "alarm_rank": 9,
+  "planned_target_rank": 4,
+  "wrong_planned_target_alarm": true,
+  "monitor_end_records": 11,
+  "training_nodes_completed": false,
+  "profile_window": [
+    52,
+    59
+  ],
+  "prediction_during_training": true,
+  "external_activity_evidence": "r100_pp_failed_activity.json",
+  "external_SM_max": 99,
+  "causality_proved": false,
+  "partial_injection_and_failure_not_waived": true
+}

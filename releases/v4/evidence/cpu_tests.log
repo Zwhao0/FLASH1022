@@ -1,0 +1,198 @@
+test_window_is_training_only_and_not_given_to_mps (test_actor_environment.PrivateActorEnvironmentTests) ... ok
+test_window_without_actor_is_rejected_before_gpu_start (test_actor_environment.PrivateActorEnvironmentTests) ... ok
+test_consume_rows_passes_only_timing_fields_and_returns_count (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_duplicate_iteration_propagates_detector_error (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_jsonl_buffer_holds_partial_line_until_newline (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_trigger_publishes_unique_request_and_stops (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_trigger_returns_first_event_and_stops_consuming_batch (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_untriggered_worker_summarizes_and_exits (test_bocd_monitor.BOCdMonitorTests) ... ok
+test_worker_records_detector_exception_and_returns_nonzero (test_bocd_monitor.BOCdMonitorTests) ... RuntimeError: test detector failure
+ok
+test_deadline_and_oversized_event (test_collection_contract.ObservationTests) ... ok
+test_eighth_iteration_is_allowed_ninth_is_not (test_collection_contract.ObservationTests) ... ok
+test_hard_byte_limit_stays_closed_after_overflow (test_collection_contract.ObservationTests) ... ok
+test_paired_sampling_does_not_use_rank_identity (test_collection_contract.ObservationTests) ... ok
+test_truth_fields_and_hidden_nested_payload_are_rejected (test_collection_contract.ObservationTests) ... ok
+test_clock_mode_cannot_be_confused_with_mps_quota (test_collection_contract.ProtocolTests) ... ok
+test_device_leakage_is_rejected (test_collection_contract.ProtocolTests) ... ok
+test_mps_matrix_uses_independent_fault_sessions_and_bounded_budget (test_collection_contract.ProtocolTests) ... ok
+test_multiple_quota_settings_in_one_session_are_rejected (test_collection_contract.ProtocolTests) ... ok
+test_quota_requests_distinguish_development_from_unseen_validation (test_collection_contract.ProtocolTests) ... ok
+test_seed_reuse_and_premature_blind_draw_are_rejected (test_collection_contract.ProtocolTests) ... ok
+test_clean_fixed_episode_qualifies_without_alarm_or_target (test_episode_qualification.QualificationTests) ... ok
+test_intermediate_timestamp_and_profile_metadata_must_be_valid (test_episode_qualification.QualificationTests) ... ok
+test_profile_missing_duplicate_or_invalid_timing_rejected (test_episode_qualification.QualificationTests) ... ok
+test_time_budget_and_unstable_baseline_rejected (test_episode_qualification.QualificationTests) ... ok
+test_weak_burst_cannot_pass_as_sustained_main_positive (test_episode_qualification.QualificationTests) ... ok
+test_apps_resolves_truncated_pmon_name_and_ignores_own_mps (test_external_activity.ExternalActivityTests) ... ok
+test_failed_pmon_is_unavailable (test_external_activity.ExternalActivityTests) ... ok
+test_idle_and_missing_metrics_do_not_prove_absence (test_external_activity.ExternalActivityTests) ... ok
+test_another_topology_cannot_change_legacy_calibration (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_equal_sustained_candidates_are_rejected (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_insufficient_iterations_and_transient_spikes_cannot_alarm (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_no_hardcoded_fault_rank_or_validation_inputs (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_positive_compute_evidence_survives_a_negative_other_branch (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_rank_relabeling_preserves_localization (test_health_centered_fusion.CalibrationMechanismTests) ... ok
+test_counts_skips_coverage_comparability_and_communicators (test_inspect_pilot.PilotInspectorTests) ... ok
+test_iteration_presence_cannot_certify_deadline_truncated_or_legacy_window (test_inspect_pilot.PilotInspectorTests) ... ok
+test_over_limit_file_is_not_parsed_and_output_is_exclusive (test_inspect_pilot.PilotInspectorTests) ... ok
+test_skip_only_is_no_valid_sample (test_inspect_pilot.PilotInspectorTests) ... ok
+test_any_rank_can_have_the_same_detectable_deviation (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_common_slowdown_does_not_create_a_slow_rank (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_fitted_regression_has_priority (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_fixed_shape_family_needs_no_shape_regression (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_no_extrapolation_or_retraining_from_condition (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_support_requires_multiple_ranks_and_six_iterations (test_kernel_match_candidate.ExactKernelTests) ... ok
+test_healthy_samples_do_not_trigger (test_monitor_policy.MonitorPolicyTests) ... ok
+test_invalid_healthy_values_are_ignored_and_eight_valid_are_required (test_monitor_policy.MonitorPolicyTests) ... ok
+test_invalid_or_missing_recent_sample_prevents_trigger (test_monitor_policy.MonitorPolicyTests) ... ok
+test_one_spike_does_not_trigger (test_monitor_policy.MonitorPolicyTests) ... ok
+test_three_sustained_slow_samples_trigger (test_monitor_policy.MonitorPolicyTests) ... ok
+test_threshold_and_trigger_are_scale_invariant (test_monitor_policy.MonitorPolicyTests) ... ok
+test_failed_schedule_does_not_mark_iteration_complete (test_observer_runtime.MegatronScheduleHookTests) ... ok
+test_forward_only_schedule_is_rejected_without_counting_or_execution (test_observer_runtime.MegatronScheduleHookTests) ... ok
+test_patch_is_installed_after_groups_and_schedule_calls_are_transparent (test_observer_runtime.MegatronScheduleHookTests) ... ok
+test_runtime_install_does_not_replace_or_read_delay_callback (test_observer_runtime.MegatronScheduleHookTests) ... ok
+test_sampling_window_counts_training_schedule_calls_four_through_eleven (test_observer_runtime.MegatronScheduleHookTests) ... ok
+test_missing_preload_and_unbounded_requests_are_rejected (test_observer_runtime.ObserverWindowTests) ... ok
+test_monitor_never_enables_gpu_event_collection (test_observer_runtime.ObserverWindowTests) ... ok
+test_profile_stays_inside_requested_complete_iteration_window (test_observer_runtime.ObserverWindowTests) ... ok
+test_kernel_model_predicts_a_grid_size_not_seen_in_health (test_offline_localizer.OfflineLocalizerMathTests) ... ok
+test_nnls_predicts_a_shape_not_present_in_training_rows (test_offline_localizer.OfflineLocalizerMathTests) ... ok
+test_three_robust_reweight_rounds_limit_one_extreme_outlier (test_offline_localizer.OfflineLocalizerMathTests) ... ok
+test_automatic_manual_and_healthy_control_paths (test_online_driver.ControlIntegrityTests) ... ok
+test_duplicate_rank_cannot_replace_missing_rank (test_online_driver.ControlIntegrityTests) ... ok
+test_monitor_failure_or_partial_profile_fails (test_online_driver.ControlIntegrityTests) ... ok
+test_no_profile_does_not_hide_monitor_failure (test_online_driver.ControlIntegrityTests) ... ok
+test_profile_requires_real_earlier_bocd_request (test_online_driver.ControlIntegrityTests) ... ok
+test_terminal_bootstrap_failure_preserves_collection_failure_result (test_online_driver.ControlIntegrityTests) ... ok
+test_actor_checks_include_warmup_and_reject_wrong_rank_or_caps (test_online_evaluate.OutcomeTests) ... ok
+test_distinct_detection_and_localization_outcomes (test_online_evaluate.OutcomeTests) ... ok
+test_case_timeout_is_explicit_and_bounded (test_online_harness.LaunchPreflightTests) ... ok
+test_early_bootstrap_failure_keeps_log_and_exit_code (test_online_harness.LaunchPreflightTests) ... ok
+test_invalid_private_actor_never_dispatches_or_creates_case (test_online_harness.LaunchPreflightTests) ... ok
+test_native_build_budget_rejected_before_remote_execution (test_online_harness.LaunchPreflightTests) ... ok
+test_run_identity_uses_full_release_and_case (test_online_harness.LaunchPreflightTests) ... ok
+test_strong_actor_requires_explicit_plan_budget (test_online_harness.LaunchPreflightTests) ... ok
+test_valid_bounded_actor_and_frozen_private_hash (test_online_harness.LaunchPreflightTests) ... ok
+test_cpu_consumer_never_inherits_gpu_probe_or_private_payload (test_online_runtime.ProfileControlTests) ... ok
+test_invalid_request_is_broadcast_as_error_before_raising (test_online_runtime.ProfileControlTests) ... ok
+test_ready_marker_follows_native_flush_and_no_monitor_cuda_calls (test_online_runtime.ProfileControlTests) ... ok
+test_same_eight_iteration_window_and_permanent_cooldown (test_online_runtime.ProfileControlTests) ... ok
+test_skipped_or_repeated_iteration_fails_closed (test_online_runtime.ProfileControlTests) ... ok
+test_missing_timing_baseline_pollution_and_invalid_profile_rejected (test_online_strength.StrengthTests) ... ok
+test_profile_cost_never_enters_strength (test_online_strength.StrengthTests) ... ok
+test_untriggered_weak_signal_is_not_validated_by_no_profile (test_online_strength.StrengthTests) ... ok
+test_deadline_without_shutdown_also_rejects_late_ready (test_profile_finalize.FinalizeTests) ... ok
+test_device_failure_never_enters_native (test_profile_finalize.FinalizeTests) ... ok
+test_existing_ready_never_overwritten (test_profile_finalize.FinalizeTests) ... ok
+test_existing_temp_never_deleted (test_profile_finalize.FinalizeTests) ... ok
+test_failed_publish_no_ready (test_profile_finalize.FinalizeTests) ... ok
+test_joined_failure_audit_marks_profile_incomplete (test_profile_finalize.FinalizeTests) ... ok
+test_monitor_has_no_finalizer_thread_or_device_work (test_profile_finalize.FinalizeTests) ... ok
+test_native_failure_no_ready (test_profile_finalize.FinalizeTests) ... ok
+test_normal_order_atomic_ready_one_native_owner (test_profile_finalize.FinalizeTests) ... ok
+test_online_native_end_before_background_device_and_no_budget_reapply (test_profile_finalize.FinalizeTests) ... ok
+test_online_timeout_does_not_close_audit_or_reflush_native (test_profile_finalize.FinalizeTests) ... ok
+test_opt_in_contract_online_and_supervised_only (test_profile_finalize.FinalizeTests) ... ok
+test_overlap_cancel_does_not_stop_native_or_publish_late (test_profile_finalize.FinalizeTests) ... ok
+test_partial_and_oversize_summary_rejected (test_profile_finalize.FinalizeTests) ... ok
+test_summary_missing_incomplete_dropped_or_bad_pool_rejected (test_profile_finalize.FinalizeTests) ... ok
+test_thread_start_failure_no_owner_or_ready (test_profile_finalize.FinalizeTests) ... ok
+test_timeout_keeps_owner_live_and_never_publishes_late (test_profile_finalize.FinalizeTests) ... ok
+test_low_signal_is_a_hypothesis_not_a_correct_detection (test_quick_diagnostics.TimingDiagnosisTests) ... ok
+test_pretrigger_and_partial_window_are_reported (test_quick_diagnostics.TimingDiagnosisTests) ... ok
+test_profile_overhead_is_excluded_from_monitor_signal (test_quick_diagnostics.TimingDiagnosisTests) ... ok
+test_strong_untriggered_signal_requires_detector_review (test_quick_diagnostics.TimingDiagnosisTests) ... ok
+test_invalid_harness_opt_in_never_dispatches (test_rank_progress.ProgressContracts) ... ok
+test_receipts_reject_wrong_identity_invalid_stale_and_regression (test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_invalid_wrong_node_oversize_and_missing (test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_regressed_iteration_and_terminal_stops (test_rank_progress.ProgressContracts) ... ok
+test_stream_rejects_timestamp_regression (test_rank_progress.ProgressContracts) ... ok
+test_stream_uses_rank12_without_train_log_then_rejects_stale (test_rank_progress.ProgressContracts) ... ok
+test_valid_harness_opt_in_propagates_identity_to_both_nodes (test_rank_progress.ProgressContracts) ... ok
+test_writer_only_publishes_successful_schedule_ends_and_closes_atomically (test_rank_progress.ProgressContracts) ... ok
+test_writer_rejects_wrong_local_rank_and_iteration_budget (test_rank_progress.ProgressContracts) ... ok
+test_fault_time_budget_restores_even_without_end_iteration (test_rank_progress.WatcherCleanup) ... ok
+test_invalid_progress_before_lower_never_changes_clock (test_rank_progress.WatcherCleanup) ... ok
+test_rank12_normal_lower_restore_and_cleanup (test_rank_progress.WatcherCleanup) ... ok
+test_stale_host_pipe_progress_never_lowers_clock (test_rank_progress.WatcherCleanup) ... ok
+test_stream_rejection_after_lower_restores_and_cleans (test_rank_progress.WatcherCleanup) ... ok
+test_cleanup_targets_only_clients_returned_by_private_daemon (test_shared_node.PrivateMpsTests) ... ok
+test_empty_private_daemon_does_not_issue_any_termination (test_shared_node.PrivateMpsTests) ... ok
+test_empty_ratio_map_enables_all_rank_sham_and_actor_absence_stays_off (test_shared_node.PrivateMpsTests) ... ok
+test_nonzero_training_exit_terminates_private_clients_before_private_quit (test_shared_node.PrivateMpsTests) ... ok
+test_observer_preload_precedes_actor_for_full_call_envelope (test_shared_node.PrivateMpsTests) ... ok
+test_physical_uuid_binding_rejects_duplicate_or_missing_devices (test_shared_node.PrivateMpsTests) ... ok
+test_pre_service_failure_confirms_nothing_started_without_quit (test_shared_node.PrivateMpsTests) ... ok
+test_private_quit_is_still_attempted_if_client_cleanup_fails (test_shared_node.PrivateMpsTests) ... ok
+test_rejects_nonprivate_or_path_run_names (test_shared_node.PrivateMpsTests) ... ok
+test_shared_actor_environment_rejects_low_mps_quota_or_missing_library (test_shared_node.PrivateMpsTests) ... ok
+test_successful_exit_skips_client_termination_and_reaps_private_service (test_shared_node.PrivateMpsTests) ... ok
+test_delayed_bounded_window_keeps_calibration_and_faults_40_through_71 (test_stream_delay_runtime.NativeBindingTests) ... ok
+test_install_uses_startup_window_and_defaults_for_older_startup_objects (test_stream_delay_runtime.NativeBindingTests) ... ok
+test_native_configure_failure_is_reported_without_enabling (test_stream_delay_runtime.NativeBindingTests) ... ok
+test_zero_ratio_sham_uses_native_config_and_warmup_fault_window (test_stream_delay_runtime.NativeBindingTests) ... ok
+test_actor_composes_outside_existing_observer_schedule_adapter (test_stream_delay_runtime.ScheduleHookTests) ... ok
+test_forward_only_is_rejected_before_actor_iteration_counter (test_stream_delay_runtime.ScheduleHookTests) ... ok
+test_collection_and_fault_entry_flags_are_rejected (test_train_entry.EntryArgumentTests) ... ok
+test_healthy_arguments_forward_as_fixed_pp2_ep2 (test_train_entry.EntryArgumentTests) ... ok
+test_unsupported_future_arguments_are_not_forwarded (test_train_entry.EntryArgumentTests) ... ok
+test_allocator_budget_is_process_local_and_recorded_without_quota (test_train_entry.RuntimeAdapterTests) ... ok
+test_best_effort_exit_synchronizes_only_an_initialized_cuda_context (test_train_entry.RuntimeAdapterTests) ... ok
+test_metadata_records_adapter_types_without_quota_or_fault_values (test_train_entry.RuntimeAdapterTests) ... ok
+test_missing_uuid_is_allowed_but_missing_sm_count_fails (test_train_entry.RuntimeAdapterTests) ... ok
+test_noop_delay_does_not_inspect_model_or_register_hooks (test_train_entry.RuntimeAdapterTests) ... ok
+test_null_redis_writer_has_close_compatible_resources (test_train_entry.RuntimeAdapterTests) ... ok
+test_preimported_pipeline_is_rejected (test_train_entry.RuntimeAdapterTests) ... ok
+test_private_evidence_is_written_once_after_device_and_allocator_setup (test_train_entry.RuntimeAdapterTests) ... ok
+test_training_module_is_patched_before_pipeline_import (test_train_entry.RuntimeAdapterTests) ... ok
+test_empty_stream_delay_mapping_enables_all_rank_sham (test_train_entry.StartupEnvironmentTests) ... ok
+test_legacy_probe_preload_is_rejected (test_train_entry.StartupEnvironmentTests) ... ok
+test_private_actor_window_is_consumed_and_saved_as_bounded_fields (test_train_entry.StartupEnvironmentTests) ... ok
+test_private_actor_window_requires_actor_and_rejects_invalid_windows (test_train_entry.StartupEnvironmentTests) ... ok
+test_private_actuation_path_is_consumed_and_separate_from_training_output (test_train_entry.StartupEnvironmentTests) ... ok
+test_private_mapping_is_removed_even_when_invalid_and_is_not_echoed (test_train_entry.StartupEnvironmentTests) ... ok
+test_private_rank_quota_is_consumed_and_missing_ranks_get_full_share (test_train_entry.StartupEnvironmentTests) ... ok
+test_quota_mapping_rejects_bad_rank_and_out_of_range_value (test_train_entry.StartupEnvironmentTests) ... ok
+test_stream_delay_mapping_is_consumed_and_uses_zero_ratio_shams (test_train_entry.StartupEnvironmentTests) ... ok
+test_stream_delay_rejects_invalid_ratios_without_echoing_mapping (test_train_entry.StartupEnvironmentTests) ... ok
+test_stream_delay_requires_private_path_and_full_mps_quota (test_train_entry.StartupEnvironmentTests) ... ok
+test_strong_development_ratio_has_a_finite_hard_limit (test_train_entry.StartupEnvironmentTests) ... ok
+test_world_and_local_world_sizes_are_fixed (test_train_entry.StartupEnvironmentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 161 tests in 0.257s
+
+OK
+node dispatched
+node dispatched
+CPU C++ harnesses: 4
+compile flash_v4/tests/test_observer_event_pool.cpp: exit=0
+run flash_v4/tests/test_observer_event_pool.cpp: exit=0
+event pool CPU test passed
+compile flash_v4/tests/test_observer_identity_cache.cpp: exit=0
+run flash_v4/tests/test_observer_identity_cache.cpp: exit=-6
+Assertion failed: (!cache.get(first, false, value)), function main, file test_observer_identity_cache.cpp, line 24.
+compile flash_v4/tests/test_observer_output_buffer.cpp: exit=0
+run flash_v4/tests/test_observer_output_buffer.cpp: exit=0
+observer output buffer CPU tests passed
+compile flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+run flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+CPU C++ summary: 3/4 harnesses passed
+FAILURES: flash_v4/tests/test_observer_identity_cache.cpp run
+Corrected identity-cache follow-up: recompile and rerun current collision semantics
+compile flash_v4/tests/test_observer_identity_cache.cpp: exit=0
+run flash_v4/tests/test_observer_identity_cache.cpp: exit=-6
+Assertion failed: (cache.get(collisions[i], false, value)), function main, file test_observer_identity_cache.cpp, line 36.
+compile flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+run flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+Corrected related C++ summary: 1/2 harnesses passed
+FAILURES: flash_v4/tests/test_observer_identity_cache.cpp run
+Identity-cache isolation adjustment: rerun collision retention, same-key update, and capacity checks
+compile flash_v4/tests/test_observer_identity_cache.cpp: exit=0
+run flash_v4/tests/test_observer_identity_cache.cpp: exit=0
+identity cache CPU test passed
+compile flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+run flash_v4/tests/test_observer_r55_caches.cpp: exit=0
+Identity-cache final related summary: 2/2 harnesses passed

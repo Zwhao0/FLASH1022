@@ -1,0 +1,196 @@
+{
+  "nodes": [
+    {
+      "node": 1,
+      "ports": [
+        {
+          "port": 36708,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36710,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36712,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36714,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36716,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36718,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36720,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36802,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36804,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27121,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27123,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27125,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27127,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27129,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27131,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27133,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27135,
+          "bind_ok": true,
+          "error": null
+        }
+      ],
+      "socket_states": [],
+      "ephemeral_range": "32768\t60999"
+    },
+    {
+      "node": 0,
+      "ports": [
+        {
+          "port": 36708,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36710,
+          "bind_ok": false,
+          "error": "[Errno 98] Address already in use"
+        },
+        {
+          "port": 36712,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36714,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36716,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36718,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36720,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36802,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 36804,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27121,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27123,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27125,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27127,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27129,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27131,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27133,
+          "bind_ok": true,
+          "error": null
+        },
+        {
+          "port": 27135,
+          "bind_ok": true,
+          "error": null
+        }
+      ],
+      "socket_states": [
+        {
+          "table": "tcp",
+          "local_port": 36710,
+          "state": "01"
+        }
+      ],
+      "ephemeral_range": "32768\t60999"
+    }
+  ],
+  "temporary_bind_only": true,
+  "no_external_process_changed": true
+}

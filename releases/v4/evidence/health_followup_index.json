@@ -1,0 +1,28 @@
+{
+  "acceptance": "Both nodes complete all work,16rank MONITOR complete with Store contract,no natural trigger,no alarm,no injection or forcedPROFILE,cleanup passed.",
+  "frozen_before_GPU": true,
+  "no_algorithm_tuning": true,
+  "plans": [
+    {
+      "case": "h01",
+      "first": null,
+      "group": "healthy",
+      "order": 1,
+      "plan": {
+        "bytes": 18958,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r99_plan_01.json",
+        "sha256": "f8bd5d759956d3dcd4b0e504ab3385f9c713a7db10344278cb8a2191616043d1"
+      },
+      "release": "v4_online_20261028_r99_health_port",
+      "requested_SM_MHz": null,
+      "target_rank": null,
+      "topology": "legacy"
+    }
+  ],
+  "retained_pretraining_failure": "R97 z04; EADDRINUSE36708; not a healthy negative observation",
+  "source": {
+    "bytes": 3661,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/health_followup.py",
+    "sha256": "dbc8939ed829e2254e295a1740c5c6e2185640a95cb3be82bcfddd43d27736fd"
+  }
+}

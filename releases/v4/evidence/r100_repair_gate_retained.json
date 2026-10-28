@@ -1,0 +1,302 @@
+{
+  "version": "v4",
+  "engineering_release_passed": false,
+  "latest_independent_repair_validation_passed": false,
+  "original_matrix_passed": false,
+  "original_matrix_accepted": 6,
+  "cumulative_planned": 15,
+  "cumulative_recorded": 15,
+  "cumulative_qualified": 10,
+  "cumulative_counts": {
+    "correct_alarm": 9,
+    "injection_failure": 1,
+    "collection_failure": 3,
+    "healthy_no_trigger": 2
+  },
+  "historical_failed_cases": [
+    {
+      "case": "z02",
+      "group": "simulated",
+      "topology": "node_local_pp",
+      "outcome": "injection_failure",
+      "detector_outcome": "correct_alarm",
+      "clock_interval": null,
+      "error": null,
+      "isolated_fixture": true
+    },
+    {
+      "case": "z04",
+      "group": "healthy",
+      "topology": "legacy",
+      "outcome": "collection_failure",
+      "detector_outcome": "collection_failure",
+      "clock_interval": null,
+      "error": null,
+      "isolated_fixture": true
+    },
+    {
+      "case": "z05",
+      "group": "simulated",
+      "topology": "legacy",
+      "outcome": "collection_failure",
+      "detector_outcome": null,
+      "clock_interval": null,
+      "error": {
+        "message": "[Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_05/z05/final/node0/training/train.jsonl'",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/henry/Desktop/FLASH1022/work/final_r97/run.py\", line 215, in run\n    result=plain_case(path,item);rc=0\n  File \"/Users/henry/Desktop/FLASH1022/work/final_r97/run.py\", line 152, in plain_case\n    timing = [json.loads(s) for s in (h.LOCAL/item['case']/'final/node0/training/train.jsonl').read_text().splitlines()]\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1256, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1242, in open\n    return io.open(self, mode, buffering, encoding, errors, newline,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1110, in _opener\n    return self._accessor.open(self, flags, mode)\nFileNotFoundError: [Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_05/z05/final/node0/training/train.jsonl'\n",
+        "type": "FileNotFoundError"
+      },
+      "isolated_fixture": true
+    },
+    {
+      "case": "z07",
+      "group": "real_clock",
+      "topology": "node_local_pp",
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+              "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+              "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+              "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+              "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+              "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+              "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+              "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5"
+            ],
+            "node_rank": 0
+          },
+          "expected_gpu_uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+          "expected_node_rank": 0,
+          "kind": "physical_binding",
+          "local_rank": 4,
+          "observed_gpu_uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+          "observed_node_rank": 0,
+          "reasons": [],
+          "target_rank": 4,
+          "transport_helper": 1,
+          "verified": true,
+          "wall_time": 1793169131.001331
+        },
+        "first": 42,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 73,
+        "lower_after_iteration": 41,
+        "lowered_sm_mhz": 345,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 345,
+        "qualified": false,
+        "reasons": [
+          "watcher_reported_error"
+        ],
+        "restore_after_iteration": 105,
+        "target_rank": 4
+      },
+      "error": null,
+      "isolated_fixture": false
+    }
+  ],
+  "historical_failures_reclassified_or_replaced": false,
+  "changes": "Watcher exits only after full planned interval restoration; finally restore/watchdog/stream cleanup remains. Test ports outside ephemeral range with two-node bind precheck. Simulation seq256 contract restored. Detector/localizer/training unchanged.",
+  "historical_fixture_diagnoses": {
+    "z02": {
+      "isolated": true,
+      "files": 16,
+      "unexpected": [],
+      "cap_hits": 0,
+      "time_budget_hits": 923468,
+      "actual_target_delayed_iterations": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "missing_steps_with_budget_hits": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "original_sequence_length": 1024,
+      "corrected_followup_sequence_length": 256,
+      "classification": "test injection budget/fixture, not a successful qualified case"
+    },
+    "z04": {
+      "isolated": true,
+      "classification": "torchrun rendezvous port collision before any training rank/observations; no healthy FPR observation",
+      "no_training_records": true,
+      "no_observations": true,
+      "private_clients_seen": [
+        0,
+        0
+      ],
+      "port_in_trace": 36708,
+      "fresh_health_port": 27121,
+      "external_processes_not_changed": true
+    },
+    "z05": {
+      "isolated": true,
+      "classification": "torchrun rendezvous port collision before any training rank/observations; no healthy FPR observation",
+      "no_training_records": true,
+      "no_observations": true,
+      "private_clients_seen": [
+        0,
+        0
+      ],
+      "port_in_trace": 36710,
+      "fresh_health_port": 27121,
+      "external_processes_not_changed": true
+    },
+    "z07": {
+      "isolated": false
+    }
+  },
+  "repair_summary": {
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r100_final_test_summary.json",
+    "bytes": 32880,
+    "sha256": "87603e7a2a4cde87ff534aa2cbf071039f247c45a611e21bd953b918e067a79e"
+  },
+  "historical_gate": {
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r99_final_release_gate.json",
+    "bytes": 7735,
+    "sha256": "0b0cd239aea1cd4d854730f08ea71853ea4b7d61409b5d69230b9a030a01a261"
+  },
+  "watcher_CPU": {
+    "passed": true,
+    "run": 15,
+    "failures": 0,
+    "errors": 0,
+    "existing_safety_contracts_preserved": true,
+    "new_postrestore_regression": true,
+    "training_monitor_and_localizer_changed": false
+  },
+  "public_bundle_checks": {
+    "passed": true,
+    "isolated_clone": true,
+    "tests": [
+      {
+        "command": [
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "flash_v4/tests",
+          "-p",
+          "test*.py"
+        ],
+        "returncode": 0,
+        "tail": [
+          ".........................................................................................................................................................",
+          "----------------------------------------------------------------------",
+          "Ran 161 tests in 0.264s",
+          "",
+          "OK"
+        ]
+      },
+      {
+        "command": [
+          "releases/v4/watcher_cpu_r100.py"
+        ],
+        "returncode": 0,
+        "tail": [
+          "node dispatched",
+          "node dispatched",
+          "{\"passed\": true, \"run\": 15, \"failures\": 0, \"errors\": 0, \"existing_safety_contracts_preserved\": true, \"new_postrestore_regression\": true, \"training_monitor_and_localizer_changed\": false}"
+        ]
+      }
+    ],
+    "no_GPU_or_remote": true
+  },
+  "port_checks": [
+    {
+      "at_unix": 1793170603.28855,
+      "nodes": [
+        {
+          "bind_ok": true,
+          "ephemeral_range": [
+            32768,
+            60999
+          ],
+          "error": null,
+          "node": 1,
+          "outside_ephemeral": true,
+          "port": 27231
+        },
+        {
+          "bind_ok": true,
+          "ephemeral_range": [
+            32768,
+            60999
+          ],
+          "error": null,
+          "node": 0,
+          "outside_ephemeral": true,
+          "port": 27231
+        }
+      ],
+      "passed": true,
+      "temporary_probe": true
+    },
+    {
+      "at_unix": 1793170753.483616,
+      "nodes": [
+        {
+          "bind_ok": true,
+          "ephemeral_range": [
+            32768,
+            60999
+          ],
+          "error": null,
+          "node": 1,
+          "outside_ephemeral": true,
+          "port": 27233
+        },
+        {
+          "bind_ok": true,
+          "ephemeral_range": [
+            32768,
+            60999
+          ],
+          "error": null,
+          "node": 0,
+          "outside_ephemeral": true,
+          "port": 27233
+        }
+      ],
+      "passed": true,
+      "temporary_probe": true
+    }
+  ],
+  "source_algorithm_tuning": false,
+  "formal_blind_executed": false,
+  "all_rank_coverage_claimed": false,
+  "population_FPR_claimed": false,
+  "acceptance_scope": "Engineering release after independent controller repair validation. Original13 retain9qualified/4failures; new2 reported separately. No replay or restored historical pass."
+}

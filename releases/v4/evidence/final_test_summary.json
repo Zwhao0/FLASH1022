@@ -1,0 +1,4224 @@
+{
+  "schema": "r97_final_engineering_release_gate",
+  "planned": 10,
+  "recorded": 10,
+  "dispatched": 10,
+  "training_started": 8,
+  "counts": {
+    "correct_alarm": 6,
+    "injection_failure": 1,
+    "collection_failure": 2,
+    "healthy_no_trigger": 1
+  },
+  "accepted": 6,
+  "passed_online": false,
+  "cpu_audit": {
+    "schema": "flash_v4_r97_cpu_release_audit_v1",
+    "date": "2026-10-28",
+    "scope": {
+      "instructions_read": [
+        "agent.md",
+        "handoff.md",
+        "flash_v4/AGENTS.md",
+        "flash_v4/PROTOCOL.md"
+      ],
+      "forbidden_inputs_not_read": [
+        "/tmp/flash_v4_remote.py",
+        "server.md",
+        "Git history",
+        "old FLASH"
+      ],
+      "production_code_changed": false,
+      "test_file_changed": "flash_v4/tests/test_observer_identity_cache.cpp"
+    },
+    "cpu_tests": {
+      "python_unittest": {
+        "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=. python3 -m unittest discover -s flash_v4/tests -p 'test*.py' -v",
+        "exit_code": 0,
+        "run": 161,
+        "failures": 0,
+        "errors": 0,
+        "result": "passed"
+      },
+      "cpp_cpu_harnesses": {
+        "compile_flags": [
+          "c++",
+          "-std=c++17",
+          "-O2"
+        ],
+        "gpu_or_remote_execution": false,
+        "source_files": [
+          "flash_v4/tests/test_observer_event_pool.cpp",
+          "flash_v4/tests/test_observer_identity_cache.cpp",
+          "flash_v4/tests/test_observer_output_buffer.cpp",
+          "flash_v4/tests/test_observer_r55_caches.cpp"
+        ],
+        "final_passed": 4,
+        "final_failed": 0,
+        "original_failure": {
+          "file": "flash_v4/tests/test_observer_identity_cache.cpp",
+          "cause": "The prior harness expected a colliding put to evict the first key. The current cache probes up to 16 slots and keeps both keys when space remains.",
+          "original_result": "assertion failure; preserved in the CPU test log"
+        },
+        "test_maintenance": {
+          "updated_semantics": [
+            "16 colliding keys remain retrievable",
+            "a seventeenth key in a full probe set is not cached and does not evict existing entries",
+            "updating an existing key replaces its value without evicting neighbors"
+          ],
+          "related_r55_harness_rerun": "passed",
+          "log_retains_initial_and_corrected_runs": true
+        }
+      },
+      "log": "results/v4/preflight/r97_cpu_tests.log"
+    },
+    "release_dependencies": {
+      "minimal_runtime": [
+        "Python 3 standard library",
+        "Current flash_v1 modules: analysis.py, train.py, train_pipeline.py, megatron_adapter.py, pipeline_adapter.py, tensor_parallel.py, rank_layout.py",
+        "Megatron-Core pipeline schedule API used by the schedule hooks",
+        "For online distributed execution: PyTorch, torch.distributed, torchrun, CUDA and NCCL/Gloo/Store-capable runtime across two 8-GPU nodes",
+        "For observer native build: C++17 compiler, pthread, CUDA toolkit/cudart, NCCL headers; set CUDA_HOME and NCCL_INCLUDE_DIR",
+        "For stream-delay native build: nvcc and compatible CUDA architecture; build script defaults FLASH_V4_DELAY_CUDA_ARCH to 90"
+      ],
+      "validated_platform_limit": "handoff.md reports the r92 Store interface verified only with PyTorch 2.7.0a0 nv25.03 for supervised 16-rank runs; arbitrary versions and unbounded sessions are not established.",
+      "cross_tree_test_or_tool_imports": [
+        "results.v4.preflight.real_clock_host_watch_r66",
+        "results.v4.preflight.online_r23_legacy_diagnostic_run"
+      ],
+      "external_transport": {
+        "referenced_by": "flash_v4/online_harness.py",
+        "helper_path": "/tmp/flash_v4_remote.py",
+        "inspected": false,
+        "recommendation": "Keep the private transport helper and its credentials outside the GitHub release."
+      }
+    },
+    "frozen_inference_portability": {
+      "entrypoint": "flash_v4/online_infer.py",
+      "model_root": "results/v4/frozen/r11_kernel_match_v3",
+      "required_artifacts": [
+        "model.json",
+        "freeze_receipt.json"
+      ],
+      "model_sha256": "2ccaef19d82ee27ec58e1a2d41fbbebee2a9a1ec9b76429fb86eb3f32667682c",
+      "receipt_verified_source_files": [
+        "flash_v4/frozen_localizer.py",
+        "flash_v4/offline_localizer.py",
+        "flash_v4/kernel_match_candidate.py",
+        "flash_v4/health_noise_fusion.py",
+        "flash_v4/health_centered_fusion.py",
+        "flash_v4/batch_development_score.py"
+      ],
+      "paths_in_receipt_absolute": true,
+      "path_root_embedded": "/Users/henry/Desktop/FLASH1022",
+      "verification_behavior": "online_infer.run verifies receipt['model'] plus receipt['source_files'] by hashing Path(item['path']) directly; it does not resolve relative to the checkout.",
+      "portability_result": "A normal clone or relocated checkout will fail verification unless the original absolute path is reproduced.",
+      "inference_input_shape": "node*/observations/rank_*.jsonl",
+      "reproduction_note": "For portable inference, resolve relative paths from a declared repo/model root and regenerate a matching receipt; full freeze/validation reproduction also requires the receipt provenance artifacts and R11 source data."
+    },
+    "credential_audit": {
+      "scope": "text scan of flash_v4 source/test/build files only",
+      "common_literal_key_token_password_patterns_found": false,
+      "external_private_helper_and_private_results_not_scanned": true,
+      "conclusion": "No common embedded credential pattern found in flash_v4; this does not audit the external helper or private execution plans."
+    },
+    "documentation_gaps": [
+      "No README or user-facing install/run guide under flash_v4.",
+      "No requirements.txt, pyproject.toml, setup.py, setup.cfg, or tox.ini dependency/packaging manifest.",
+      "PROTOCOL.md describes experimental constraints but does not provide a reproducible environment/build/deployment recipe."
+    ],
+    "candidate_release_scope": [
+      "flash_v4 Python source, native source/includes/build scripts, tests, and PROTOCOL.md as one unit",
+      "Required current flash_v1 runtime modules or a separately pinned/package-declared dependency",
+      "R11 model and receipt plus the six hash-pinned source files for frozen inference",
+      "Input observation files for each reproduced inference; provenance and R11 evidence artifacts for full experiment reproduction"
+    ]
+  },
+  "parent_wait": {
+    "returncode": 0,
+    "pid": 37727,
+    "parent_pid": 37726,
+    "begin_unix": 1793168020.467836,
+    "end_unix": 1793169732.054155,
+    "at_utc": "2026-10-28T06:42:12.054452+00:00"
+  },
+  "final_postcheck": {
+    "nodes": [
+      {
+        "node": 0,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      },
+      {
+        "node": 1,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "cases": [
+    {
+      "order": 1,
+      "case": "z01",
+      "group": "real_clock",
+      "topology": "node_local_pp",
+      "target_rank": 0,
+      "requested_SM_MHz": 360,
+      "first": 50,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": true,
+      "alarm_rank": 0,
+      "profile_triggered": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "request_iteration": 53,
+      "request_delay_iterations": 3,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 17.639432191848755,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 0,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z01",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 198140,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793168160.419695,
+        "window": [
+          60,
+          67
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.5583710000015571,
+          "median": 2.2631465000024775,
+          "max": 3.8448669999979757
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.098448108881712,
+          "median": 15.920311328954995,
+          "max": 16.953094862401485
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3069817
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+              "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+              "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+              "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+              "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+              "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+              "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+              "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5"
+            ],
+            "node_rank": 0
+          },
+          "expected_gpu_uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+          "expected_node_rank": 0,
+          "kind": "physical_binding",
+          "local_rank": 0,
+          "observed_gpu_uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+          "observed_node_rank": 0,
+          "reasons": [],
+          "target_rank": 0,
+          "transport_helper": 1,
+          "verified": true,
+          "wall_time": 1793168056.222713
+        },
+        "first": 50,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 81,
+        "lower_after_iteration": 49,
+        "lowered_sm_mhz": 360,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 360,
+        "qualified": true,
+        "reasons": [],
+        "restore_after_iteration": 115,
+        "target_rank": 0
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            50,
+            57
+          ],
+          [
+            74,
+            81
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.023623560544686808,
+            "block_median_increases": [
+              0.15637406433834578,
+              0.13088158375543602
+            ],
+            "mean_increase": 0.19809600685988715,
+            "median_increase": 0.1488433366237618
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.023540144768444557,
+            "block_median_increases": [
+              0.1486535957180617,
+              0.12335079146486216
+            ],
+            "mean_increase": 0.19352960000959207,
+            "median_increase": 0.14120175564310666
+          }
+        },
+        "qualified": false,
+        "reasons": [
+          "time_ms_outside_primary_band",
+          "time_ms_not_sustained",
+          "wall_iteration_ms_outside_primary_band",
+          "wall_iteration_ms_not_sustained"
+        ],
+        "wall_seconds": 25.076448678970337
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.17910063407583676,
+          "median_increase": 0.15008012196661347,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.17462023131167115,
+          "median_increase": 0.14243066603209598,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 80,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_01_result.json"
+    },
+    {
+      "order": 2,
+      "case": "z02",
+      "group": "simulated",
+      "topology": "node_local_pp",
+      "target_rank": 15,
+      "requested_SM_MHz": null,
+      "first": 50,
+      "outcome": "injection_failure",
+      "detector_outcome": "correct_alarm",
+      "accepted": false,
+      "alarm_rank": 15,
+      "profile_triggered": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "request_iteration": 52,
+      "request_delay_iterations": 2,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 22.35255241394043,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 15,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z02",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 197151,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793168328.3722646,
+        "window": [
+          60,
+          67
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.609485999988891,
+          "median": 1.857531999997164,
+          "max": 4.408483000002406
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.7881370149552822,
+          "median": 16.51446451433003,
+          "max": 17.8849371150136
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3070109
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": null,
+      "clock_restored": null,
+      "actuation": {
+        "delayed_iterations_by_rank": {
+          "15": [
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77
+          ]
+        },
+        "errors": 923468,
+        "passed": false,
+        "strength_verified": false
+      },
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            50,
+            57
+          ],
+          [
+            74,
+            81
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.04825575084228577,
+            "block_median_increases": [
+              0.4903165428144691,
+              0.37262414730389826
+            ],
+            "mean_increase": 0.40824998619562036,
+            "median_increase": 0.47960746336611115
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.048105892267880104,
+            "block_median_increases": [
+              0.4944723547919956,
+              0.3739625032731999
+            ],
+            "mean_increase": 0.4080634535022378,
+            "median_increase": 0.48171939009952713
+          }
+        },
+        "qualified": false,
+        "reasons": [
+          "episode_exceeds_time_budget"
+        ],
+        "wall_seconds": 33.54955053329468
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.4609975814466629,
+          "median_increase": 0.4899339789492796,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.4607055997899234,
+          "median_increase": 0.49164122692929757,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 88,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_02_result.json"
+    },
+    {
+      "order": 3,
+      "case": "z03",
+      "group": "real_clock",
+      "topology": "legacy",
+      "target_rank": 0,
+      "requested_SM_MHz": 375,
+      "first": 58,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": true,
+      "alarm_rank": 0,
+      "profile_triggered": true,
+      "profile_window": [
+        84,
+        91
+      ],
+      "request_iteration": 82,
+      "request_delay_iterations": 24,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 30.481412887573242,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 0,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z03",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 187335,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793168480.2030876,
+        "window": [
+          84,
+          91
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            84,
+            91
+          ],
+          "4": [
+            84,
+            91
+          ],
+          "0": [
+            84,
+            91
+          ],
+          "2": [
+            84,
+            91
+          ],
+          "5": [
+            84,
+            91
+          ],
+          "7": [
+            84,
+            91
+          ],
+          "3": [
+            84,
+            91
+          ],
+          "1": [
+            84,
+            91
+          ],
+          "11": [
+            84,
+            91
+          ],
+          "13": [
+            84,
+            91
+          ],
+          "15": [
+            84,
+            91
+          ],
+          "12": [
+            84,
+            91
+          ],
+          "10": [
+            84,
+            91
+          ],
+          "14": [
+            84,
+            91
+          ],
+          "9": [
+            84,
+            91
+          ],
+          "8": [
+            84,
+            91
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            84,
+            91
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          84,
+          91
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          84,
+          91
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 11,
+          "4": 11,
+          "0": 11,
+          "2": 11,
+          "5": 11,
+          "7": 11,
+          "3": 11,
+          "1": 11,
+          "11": 11,
+          "13": 11,
+          "15": 11,
+          "12": 11,
+          "10": 11,
+          "14": 11,
+          "9": 11,
+          "8": 11
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.9113929999790003,
+          "median": 2.4921884999926647,
+          "max": 5.244177999994548
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.559489570558071,
+          "median": 18.03209097124636,
+          "max": 20.10398544371128
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 2956742
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+              "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+              "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+              "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+              "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+              "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+              "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+              "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5"
+            ],
+            "node_rank": 0
+          },
+          "expected_gpu_uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+          "expected_node_rank": 0,
+          "kind": "physical_binding",
+          "local_rank": 0,
+          "observed_gpu_uuid": "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+          "observed_node_rank": 0,
+          "reasons": [],
+          "target_rank": 0,
+          "transport_helper": 1,
+          "verified": true,
+          "wall_time": 1793168374.0605679
+        },
+        "first": 58,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 89,
+        "lower_after_iteration": 57,
+        "lowered_sm_mhz": 375,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 375,
+        "qualified": true,
+        "reasons": [],
+        "restore_after_iteration": 115,
+        "target_rank": 0
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            58,
+            65
+          ],
+          [
+            66,
+            73
+          ],
+          [
+            74,
+            81
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 24,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.03142293011221043,
+            "block_median_increases": [
+              0.14153409084397794,
+              0.14296303153457268,
+              0.14992115510273085
+            ],
+            "mean_increase": 0.16336920947259248,
+            "median_increase": 0.14413966526881206
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.030878187134496343,
+            "block_median_increases": [
+              0.13692935151503494,
+              0.13837117772281138,
+              0.14527151768949365
+            ],
+            "mean_increase": 0.15935788492462044,
+            "median_increase": 0.13953751181969598
+          }
+        },
+        "qualified": false,
+        "reasons": [
+          "time_ms_outside_primary_band",
+          "time_ms_not_sustained",
+          "wall_iteration_ms_outside_primary_band",
+          "wall_iteration_ms_not_sustained"
+        ],
+        "wall_seconds": 25.24468731880188
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.15955398516785801,
+          "median_increase": 0.14522917844658578,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.15555656596922796,
+          "median_increase": 0.1406436931092898,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 80,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_03_result.json"
+    },
+    {
+      "order": 4,
+      "case": "z04",
+      "group": "healthy",
+      "topology": "legacy",
+      "target_rank": null,
+      "requested_SM_MHz": null,
+      "first": null,
+      "outcome": "collection_failure",
+      "detector_outcome": "collection_failure",
+      "accepted": false,
+      "alarm_rank": null,
+      "profile_triggered": null,
+      "profile_window": null,
+      "request_iteration": null,
+      "request_delay_iterations": null,
+      "pre_injection_trigger": null,
+      "wrong_target_alarm": false,
+      "prediction_during_training": null,
+      "prediction_delay_from_fault_start_seconds": null,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "case": "z04",
+        "error": null,
+        "nodes_completed": false,
+        "quality_error": "FileNotFoundError: [Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_04/z04/final/node0/training/train.jsonl'",
+        "quality_passed": false
+      },
+      "control_audit": {
+        "status": "incomplete",
+        "control_file_count": 0,
+        "control_rank_ids": [],
+        "missing_control_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "monitor_start_count": 0,
+        "monitor_end_count": 0,
+        "all_16_monitor_start_end_present": false,
+        "missing_start_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_end_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {},
+        "control_contract_match_count": 0,
+        "all_16_control_contract_match": false,
+        "extra_cuda_events_by_rank": {},
+        "all_16_extra_cuda_events_zero": false,
+        "profile_start_count_by_rank": {},
+        "profile_window_by_rank": {},
+        "profile_unique_windows": [],
+        "profile_validation_status": "pending_or_unknown",
+        "common_profile_window": null,
+        "common_profile_window_length": null,
+        "all_16_ranks_same_profile_window": null,
+        "all_16_ranks_same_8_iteration_window": null,
+        "quality_profile_window": null,
+        "profile_window_matches_quality": null,
+        "check_count_by_rank": {},
+        "final_monitor_status_by_rank": {},
+        "final_monitor_status_counts": {},
+        "worker_returncode_by_rank": {},
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "control_wall_ms_distribution": {
+          "count": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 0,
+          "parsed_file_count": 0,
+          "rank_count": 0,
+          "ranks": [],
+          "all_ranks_0_to_15": false,
+          "row_schemas": [],
+          "all_compute_compact_v1": false,
+          "strides": [],
+          "all_stride_64": false,
+          "dropped_total": null,
+          "skipped_total": null,
+          "event_pool_cleanup_all": null,
+          "output_bytes": 0
+        },
+        "native_16_rank_summaries_complete": false,
+        "native_16_rank_no_drops": false,
+        "native_missing_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": null,
+      "clock_restored": null,
+      "actuation": null,
+      "strength_diagnostic": null,
+      "full_episode_timing": {},
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 124,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": false,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_04_result.json"
+    },
+    {
+      "order": 5,
+      "case": "z05",
+      "group": "simulated",
+      "topology": "legacy",
+      "target_rank": 14,
+      "requested_SM_MHz": null,
+      "first": 50,
+      "outcome": "collection_failure",
+      "detector_outcome": null,
+      "accepted": false,
+      "alarm_rank": null,
+      "profile_triggered": null,
+      "profile_window": null,
+      "request_iteration": null,
+      "request_delay_iterations": null,
+      "pre_injection_trigger": null,
+      "wrong_target_alarm": false,
+      "prediction_during_training": null,
+      "prediction_delay_from_fault_start_seconds": null,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "case": "z05",
+        "error": null,
+        "nodes_completed": false,
+        "quality_error": "FileNotFoundError: [Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_05/z05/final/node0/training/train.jsonl'",
+        "quality_passed": false
+      },
+      "control_audit": {
+        "status": "incomplete",
+        "control_file_count": 0,
+        "control_rank_ids": [],
+        "missing_control_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "monitor_start_count": 0,
+        "monitor_end_count": 0,
+        "all_16_monitor_start_end_present": false,
+        "missing_start_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_end_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {},
+        "control_contract_match_count": 0,
+        "all_16_control_contract_match": false,
+        "extra_cuda_events_by_rank": {},
+        "all_16_extra_cuda_events_zero": false,
+        "profile_start_count_by_rank": {},
+        "profile_window_by_rank": {},
+        "profile_unique_windows": [],
+        "profile_validation_status": "pending_or_unknown",
+        "common_profile_window": null,
+        "common_profile_window_length": null,
+        "all_16_ranks_same_profile_window": null,
+        "all_16_ranks_same_8_iteration_window": null,
+        "quality_profile_window": null,
+        "profile_window_matches_quality": null,
+        "check_count_by_rank": {},
+        "final_monitor_status_by_rank": {},
+        "final_monitor_status_counts": {},
+        "worker_returncode_by_rank": {},
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "control_wall_ms_distribution": {
+          "count": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 0,
+          "parsed_file_count": 0,
+          "rank_count": 0,
+          "ranks": [],
+          "all_ranks_0_to_15": false,
+          "row_schemas": [],
+          "all_compute_compact_v1": false,
+          "strides": [],
+          "all_stride_64": false,
+          "dropped_total": null,
+          "skipped_total": null,
+          "event_pool_cleanup_all": null,
+          "output_bytes": 0
+        },
+        "native_16_rank_summaries_complete": false,
+        "native_16_rank_no_drops": false,
+        "native_missing_ranks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": null,
+      "clock_restored": null,
+      "actuation": null,
+      "strength_diagnostic": null,
+      "full_episode_timing": {},
+      "error": {
+        "message": "[Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_05/z05/final/node0/training/train.jsonl'",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/henry/Desktop/FLASH1022/work/final_r97/run.py\", line 215, in run\n    result=plain_case(path,item);rc=0\n  File \"/Users/henry/Desktop/FLASH1022/work/final_r97/run.py\", line 152, in plain_case\n    timing = [json.loads(s) for s in (h.LOCAL/item['case']/'final/node0/training/train.jsonl').read_text().splitlines()]\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1256, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1242, in open\n    return io.open(self, mode, buffering, encoding, errors, newline,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 1110, in _opener\n    return self._accessor.open(self, flags, mode)\nFileNotFoundError: [Errno 2] No such file or directory: 'results/v4/online/v4_online_20261028_r97_final_05/z05/final/node0/training/train.jsonl'\n",
+        "type": "FileNotFoundError"
+      },
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 124,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": null,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": false,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_05_result.json"
+    },
+    {
+      "order": 6,
+      "case": "z06",
+      "group": "real_clock",
+      "topology": "node_local_pp",
+      "target_rank": 11,
+      "requested_SM_MHz": 375,
+      "first": 42,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": true,
+      "alarm_rank": 11,
+      "profile_triggered": true,
+      "profile_window": [
+        52,
+        59
+      ],
+      "request_iteration": 45,
+      "request_delay_iterations": 3,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 16.09878635406494,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 11,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z06",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 194703,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793169069.227946,
+        "window": [
+          52,
+          59
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            52,
+            59
+          ],
+          "4": [
+            52,
+            59
+          ],
+          "0": [
+            52,
+            59
+          ],
+          "2": [
+            52,
+            59
+          ],
+          "5": [
+            52,
+            59
+          ],
+          "7": [
+            52,
+            59
+          ],
+          "3": [
+            52,
+            59
+          ],
+          "1": [
+            52,
+            59
+          ],
+          "11": [
+            52,
+            59
+          ],
+          "13": [
+            52,
+            59
+          ],
+          "15": [
+            52,
+            59
+          ],
+          "12": [
+            52,
+            59
+          ],
+          "10": [
+            52,
+            59
+          ],
+          "14": [
+            52,
+            59
+          ],
+          "9": [
+            52,
+            59
+          ],
+          "8": [
+            52,
+            59
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            52,
+            59
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          52,
+          59
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          52,
+          59
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 7,
+          "4": 7,
+          "0": 7,
+          "2": 7,
+          "5": 7,
+          "7": 7,
+          "3": 7,
+          "1": 7,
+          "11": 7,
+          "13": 7,
+          "15": 7,
+          "12": 7,
+          "10": 7,
+          "14": 7,
+          "9": 7,
+          "8": 7
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.3093130000036979,
+          "median": 1.4909410000019108,
+          "max": 3.5397099999947557
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.7450740560889244,
+          "median": 15.203417744487524,
+          "max": 16.00080030038953
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3045018
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-514342e8-d7fc-3a89-91fe-50c5289967ca",
+              "GPU-a1e51276-ec8f-0f55-687c-a27c8ac3a14b",
+              "GPU-6d230dde-62b7-e3bf-8673-903fae938ead",
+              "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+              "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+              "GPU-3d359ec0-4de6-9360-8faf-eb1d70685d4b",
+              "GPU-054b90ab-93bd-a0ab-15e1-1e54202ede83",
+              "GPU-9b8794c0-638b-8da7-f071-5b11f3b54cb0"
+            ],
+            "node_rank": 1
+          },
+          "expected_gpu_uuid": "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+          "expected_node_rank": 1,
+          "kind": "physical_binding",
+          "local_rank": 3,
+          "observed_gpu_uuid": "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+          "observed_node_rank": 1,
+          "reasons": [],
+          "target_rank": 11,
+          "transport_helper": 0,
+          "verified": true,
+          "wall_time": 1793168966.1767135
+        },
+        "first": 42,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 73,
+        "lower_after_iteration": 41,
+        "lowered_sm_mhz": 375,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 375,
+        "qualified": true,
+        "reasons": [],
+        "restore_after_iteration": 115,
+        "target_rank": 11
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            42,
+            49
+          ],
+          [
+            66,
+            73
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.02534795830085887,
+            "block_median_increases": [
+              0.11235811859145062,
+              0.09370964614208188
+            ],
+            "mean_increase": 0.09541434837889073,
+            "median_increase": 0.10334936164764263
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.02531852372234474,
+            "block_median_increases": [
+              0.1434975917246477,
+              0.12497577721841369
+            ],
+            "mean_increase": 0.1258783887495767,
+            "median_increase": 0.1346700418967386
+          }
+        },
+        "qualified": false,
+        "reasons": [
+          "time_ms_outside_primary_band",
+          "time_ms_not_sustained",
+          "wall_iteration_ms_outside_primary_band",
+          "wall_iteration_ms_not_sustained"
+        ],
+        "wall_seconds": 24.789185047149658
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.10543208965038953,
+          "median_increase": 0.10937983503089033,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.13588254754246476,
+          "median_increase": 0.14064829714410898,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 80,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_06_result.json"
+    },
+    {
+      "order": 7,
+      "case": "z07",
+      "group": "real_clock",
+      "topology": "node_local_pp",
+      "target_rank": 4,
+      "requested_SM_MHz": 345,
+      "first": 42,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": false,
+      "alarm_rank": 4,
+      "profile_triggered": true,
+      "profile_window": [
+        52,
+        59
+      ],
+      "request_iteration": 44,
+      "request_delay_iterations": 2,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 18.80757236480713,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 4,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z07",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 177750,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793169270.3032384,
+        "window": [
+          52,
+          59
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            52,
+            59
+          ],
+          "4": [
+            52,
+            59
+          ],
+          "0": [
+            52,
+            59
+          ],
+          "2": [
+            52,
+            59
+          ],
+          "5": [
+            52,
+            59
+          ],
+          "7": [
+            52,
+            59
+          ],
+          "3": [
+            52,
+            59
+          ],
+          "1": [
+            52,
+            59
+          ],
+          "11": [
+            52,
+            59
+          ],
+          "13": [
+            52,
+            59
+          ],
+          "15": [
+            52,
+            59
+          ],
+          "12": [
+            52,
+            59
+          ],
+          "10": [
+            52,
+            59
+          ],
+          "14": [
+            52,
+            59
+          ],
+          "9": [
+            52,
+            59
+          ],
+          "8": [
+            52,
+            59
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            52,
+            59
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          52,
+          59
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          52,
+          59
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 7,
+          "4": 7,
+          "0": 7,
+          "2": 7,
+          "5": 7,
+          "7": 7,
+          "3": 7,
+          "1": 7,
+          "11": 7,
+          "13": 7,
+          "15": 7,
+          "12": 7,
+          "10": 7,
+          "14": 7,
+          "9": 7,
+          "8": 7
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.2707320000053812,
+          "median": 1.5325794999974107,
+          "max": 3.728723000001821
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.7348062247037888,
+          "median": 14.251497574150562,
+          "max": 14.94124298915267
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 2779259
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+              "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+              "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+              "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+              "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+              "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+              "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+              "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5"
+            ],
+            "node_rank": 0
+          },
+          "expected_gpu_uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+          "expected_node_rank": 0,
+          "kind": "physical_binding",
+          "local_rank": 4,
+          "observed_gpu_uuid": "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+          "observed_node_rank": 0,
+          "reasons": [],
+          "target_rank": 4,
+          "transport_helper": 1,
+          "verified": true,
+          "wall_time": 1793169131.001331
+        },
+        "first": 42,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 73,
+        "lower_after_iteration": 41,
+        "lowered_sm_mhz": 345,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 345,
+        "qualified": false,
+        "reasons": [
+          "watcher_reported_error"
+        ],
+        "restore_after_iteration": 105,
+        "target_rank": 4
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            42,
+            49
+          ],
+          [
+            66,
+            73
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.049550688405143775,
+            "block_median_increases": [
+              0.3062471245130345,
+              0.2722412461252015
+            ],
+            "mean_increase": 0.2700072009343266,
+            "median_increase": 0.28331020293189946
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.0490997276268525,
+            "block_median_increases": [
+              0.30960823835698204,
+              0.2755243162756027
+            ],
+            "mean_increase": 0.27339507927983675,
+            "median_increase": 0.28656229325032734
+          }
+        },
+        "qualified": true,
+        "reasons": [],
+        "wall_seconds": 27.782684326171875
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.27705440613020005,
+          "median_increase": 0.28777546309735835,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.28042888398826427,
+          "median_increase": 0.29110250770592816,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 100,
+      "external_active_worker_rows": 112,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_07_result.json"
+    },
+    {
+      "order": 8,
+      "case": "z08",
+      "group": "healthy",
+      "topology": "node_local_pp",
+      "target_rank": null,
+      "requested_SM_MHz": null,
+      "first": null,
+      "outcome": "healthy_no_trigger",
+      "detector_outcome": "healthy_no_trigger",
+      "accepted": true,
+      "alarm_rank": null,
+      "profile_triggered": false,
+      "profile_window": null,
+      "request_iteration": null,
+      "request_delay_iterations": null,
+      "pre_injection_trigger": null,
+      "wrong_target_alarm": false,
+      "prediction_during_training": false,
+      "prediction_delay_from_fault_start_seconds": null,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": null,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": false,
+        "case": "z08",
+        "complete_ranks": 0,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 1884,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": false,
+        "profile_triggered": false,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793169413.216012,
+        "window": null
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "profile_window_by_rank": {},
+        "profile_unique_windows": [],
+        "profile_validation_status": "not_triggered",
+        "common_profile_window": null,
+        "common_profile_window_length": null,
+        "all_16_ranks_same_profile_window": null,
+        "all_16_ranks_same_8_iteration_window": null,
+        "quality_profile_window": null,
+        "profile_window_matches_quality": null,
+        "check_count_by_rank": {
+          "6": 14,
+          "4": 14,
+          "0": 14,
+          "2": 14,
+          "5": 14,
+          "7": 14,
+          "3": 14,
+          "1": 14,
+          "11": 14,
+          "13": 14,
+          "15": 14,
+          "12": 14,
+          "10": 14,
+          "14": 14,
+          "9": 14,
+          "8": 14
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 2.6198729999897807,
+          "median": 3.058178499992792,
+          "max": 8.257986000028694
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.751573920249939,
+          "median": 28.07864686474204,
+          "max": 30.883015133440495
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 30054
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": null,
+      "clock_restored": null,
+      "actuation": null,
+      "strength_diagnostic": null,
+      "full_episode_timing": {},
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 76,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_08_result.json"
+    },
+    {
+      "order": 9,
+      "case": "z09",
+      "group": "real_clock",
+      "topology": "legacy",
+      "target_rank": 3,
+      "requested_SM_MHz": 360,
+      "first": 50,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": true,
+      "alarm_rank": 3,
+      "profile_triggered": true,
+      "profile_window": [
+        60,
+        67
+      ],
+      "request_iteration": 53,
+      "request_delay_iterations": 3,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 15.867714881896973,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 3,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z09",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 197459,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793169563.4058568,
+        "window": [
+          60,
+          67
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            60,
+            67
+          ],
+          "4": [
+            60,
+            67
+          ],
+          "0": [
+            60,
+            67
+          ],
+          "2": [
+            60,
+            67
+          ],
+          "5": [
+            60,
+            67
+          ],
+          "7": [
+            60,
+            67
+          ],
+          "3": [
+            60,
+            67
+          ],
+          "1": [
+            60,
+            67
+          ],
+          "11": [
+            60,
+            67
+          ],
+          "13": [
+            60,
+            67
+          ],
+          "15": [
+            60,
+            67
+          ],
+          "12": [
+            60,
+            67
+          ],
+          "10": [
+            60,
+            67
+          ],
+          "14": [
+            60,
+            67
+          ],
+          "9": [
+            60,
+            67
+          ],
+          "8": [
+            60,
+            67
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            60,
+            67
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          60,
+          67
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          60,
+          67
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 8,
+          "4": 8,
+          "0": 8,
+          "2": 8,
+          "5": 8,
+          "7": 8,
+          "3": 8,
+          "1": 8,
+          "11": 8,
+          "13": 8,
+          "15": 8,
+          "12": 8,
+          "10": 8,
+          "14": 8,
+          "9": 8,
+          "8": 8
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.4800769999787633,
+          "median": 2.165799499994847,
+          "max": 5.354898000000219
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 1.7822738736867905,
+          "median": 11.679915362037718,
+          "max": 13.246833812445402
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3078350
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-a17d04f4-3674-c1bc-c3f8-2189ea56fcb1",
+              "GPU-53793bfd-0c74-13bd-2209-3afc070c2f10",
+              "GPU-60b56423-d365-0851-1913-e07785e8b16a",
+              "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+              "GPU-3e60a8e7-2982-6d8a-b34f-5e76ae173f45",
+              "GPU-ed8170d0-b2c3-5c0b-714e-1befa83e432d",
+              "GPU-6e7c62c2-354f-2cc7-da1d-a18f5b07de64",
+              "GPU-6a51ce14-d531-d5fe-8fea-db29230410e5"
+            ],
+            "node_rank": 0
+          },
+          "expected_gpu_uuid": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+          "expected_node_rank": 0,
+          "kind": "physical_binding",
+          "local_rank": 3,
+          "observed_gpu_uuid": "GPU-02d3ce23-a079-d334-eb97-62fe0c9ab3b8",
+          "observed_node_rank": 0,
+          "reasons": [],
+          "target_rank": 3,
+          "transport_helper": 1,
+          "verified": true,
+          "wall_time": 1793169458.046797
+        },
+        "first": 50,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 81,
+        "lower_after_iteration": 49,
+        "lowered_sm_mhz": 360,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 360,
+        "qualified": true,
+        "reasons": [],
+        "restore_after_iteration": 115,
+        "target_rank": 3
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            50,
+            57
+          ],
+          [
+            74,
+            81
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.025397730680747646,
+            "block_median_increases": [
+              0.12175430138623344,
+              0.10899832522265407
+            ],
+            "mean_increase": 0.1538054704915004,
+            "median_increase": 0.1170593346531641
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.02539180832265925,
+            "block_median_increases": [
+              0.14935732466369567,
+              0.1365955053760597
+            ],
+            "mean_increase": 0.18106830940063268,
+            "median_increase": 0.14443756196534108
+          }
+        },
+        "qualified": false,
+        "reasons": [
+          "time_ms_outside_primary_band",
+          "time_ms_not_sustained",
+          "wall_iteration_ms_outside_primary_band",
+          "wall_iteration_ms_not_sustained"
+        ],
+        "wall_seconds": 25.22916531562805
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.13904767204699953,
+          "median_increase": 0.1245169767159433,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.1663340910727189,
+          "median_increase": 0.15220355288124066,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 80,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_09_result.json"
+    },
+    {
+      "order": 10,
+      "case": "z10",
+      "group": "real_clock",
+      "topology": "legacy",
+      "target_rank": 12,
+      "requested_SM_MHz": 345,
+      "first": 58,
+      "outcome": "correct_alarm",
+      "detector_outcome": "correct_alarm",
+      "accepted": true,
+      "alarm_rank": 12,
+      "profile_triggered": true,
+      "profile_window": [
+        68,
+        75
+      ],
+      "request_iteration": 61,
+      "request_delay_iterations": 3,
+      "pre_injection_trigger": false,
+      "wrong_target_alarm": false,
+      "prediction_during_training": true,
+      "prediction_delay_from_fault_start_seconds": 18.714475870132446,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": 12,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": true,
+        "case": "z10",
+        "complete_ranks": 16,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 195999,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": true,
+        "profile_triggered": true,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793169719.085717,
+        "window": [
+          68,
+          75
+        ]
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 1,
+          "4": 1,
+          "0": 1,
+          "2": 1,
+          "5": 1,
+          "7": 1,
+          "3": 1,
+          "1": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1,
+          "12": 1,
+          "10": 1,
+          "14": 1,
+          "9": 1,
+          "8": 1
+        },
+        "profile_window_by_rank": {
+          "6": [
+            68,
+            75
+          ],
+          "4": [
+            68,
+            75
+          ],
+          "0": [
+            68,
+            75
+          ],
+          "2": [
+            68,
+            75
+          ],
+          "5": [
+            68,
+            75
+          ],
+          "7": [
+            68,
+            75
+          ],
+          "3": [
+            68,
+            75
+          ],
+          "1": [
+            68,
+            75
+          ],
+          "11": [
+            68,
+            75
+          ],
+          "13": [
+            68,
+            75
+          ],
+          "15": [
+            68,
+            75
+          ],
+          "12": [
+            68,
+            75
+          ],
+          "10": [
+            68,
+            75
+          ],
+          "14": [
+            68,
+            75
+          ],
+          "9": [
+            68,
+            75
+          ],
+          "8": [
+            68,
+            75
+          ]
+        },
+        "profile_unique_windows": [
+          [
+            68,
+            75
+          ]
+        ],
+        "profile_validation_status": "complete",
+        "common_profile_window": [
+          68,
+          75
+        ],
+        "common_profile_window_length": 8,
+        "all_16_ranks_same_profile_window": true,
+        "all_16_ranks_same_8_iteration_window": true,
+        "quality_profile_window": [
+          68,
+          75
+        ],
+        "profile_window_matches_quality": true,
+        "check_count_by_rank": {
+          "6": 9,
+          "4": 9,
+          "0": 9,
+          "2": 9,
+          "5": 9,
+          "7": 9,
+          "3": 9,
+          "1": 9,
+          "11": 9,
+          "13": 9,
+          "15": 9,
+          "12": 9,
+          "10": 9,
+          "14": 9,
+          "9": 9,
+          "8": 9
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 1.5374920000006398,
+          "median": 2.2862430000163414,
+          "max": 4.175287999995447
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.1643764339387417,
+          "median": 14.929537195712328,
+          "max": 16.070975922048092
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 3015818
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": {
+        "binding_event": {
+          "binding": {
+            "local_rank_to_gpu_uuid": [
+              "GPU-514342e8-d7fc-3a89-91fe-50c5289967ca",
+              "GPU-a1e51276-ec8f-0f55-687c-a27c8ac3a14b",
+              "GPU-6d230dde-62b7-e3bf-8673-903fae938ead",
+              "GPU-b66ba04d-1c64-bea1-e881-2182804607f3",
+              "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+              "GPU-3d359ec0-4de6-9360-8faf-eb1d70685d4b",
+              "GPU-054b90ab-93bd-a0ab-15e1-1e54202ede83",
+              "GPU-9b8794c0-638b-8da7-f071-5b11f3b54cb0"
+            ],
+            "node_rank": 1
+          },
+          "expected_gpu_uuid": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+          "expected_node_rank": 1,
+          "kind": "physical_binding",
+          "local_rank": 4,
+          "observed_gpu_uuid": "GPU-e457c3f5-32d8-1444-7af0-24f7db939712",
+          "observed_node_rank": 1,
+          "reasons": [],
+          "target_rank": 12,
+          "transport_helper": 0,
+          "verified": true,
+          "wall_time": 1793169611.051533
+        },
+        "first": 58,
+        "hardware_frequency_quantization_allowance_mhz": 15,
+        "last": 89,
+        "lower_after_iteration": 57,
+        "lowered_sm_mhz": 345,
+        "observed_lowered_application_sm_mhz": 1980,
+        "observed_lowered_current_sm_mhz": 345,
+        "qualified": true,
+        "reasons": [],
+        "restore_after_iteration": 115,
+        "target_rank": 12
+      },
+      "clock_restored": true,
+      "actuation": null,
+      "strength_diagnostic": {
+        "clean_blocks": [
+          [
+            58,
+            65
+          ],
+          [
+            82,
+            89
+          ]
+        ],
+        "interpretation": "fixed clean blocks only; not full-episode uninstrumented timing or measured physical slowdown",
+        "measured_unprofiled_steps": 16,
+        "metrics": {
+          "time_ms": {
+            "baseline_cv": 0.02511439206644392,
+            "block_median_increases": [
+              0.33007047134110024,
+              0.319147947472481
+            ],
+            "mean_increase": 0.32596360104210564,
+            "median_increase": 0.3241201156699205
+          },
+          "wall_iteration_ms": {
+            "baseline_cv": 0.025164518413834283,
+            "block_median_increases": [
+              0.33551681524341337,
+              0.3243660808392552
+            ],
+            "mean_increase": 0.3309037607909291,
+            "median_increase": 0.3296289678019966
+          }
+        },
+        "qualified": true,
+        "reasons": [],
+        "wall_seconds": 29.03345799446106
+      },
+      "full_episode_timing": {
+        "time_ms": {
+          "mean_increase": 0.34778587779941894,
+          "median_increase": 0.32563875928591535,
+          "includes_PROFILE": true
+        },
+        "wall_iteration_ms": {
+          "mean_increase": 0.3528545114999362,
+          "median_increase": 0.3309552206029336,
+          "includes_PROFILE": true
+        }
+      },
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 80,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_case_10_result.json"
+    }
+  ],
+  "formal_blind_claimed": false,
+  "population_FPR_claimed": false,
+  "all_rank_coverage_claimed": false,
+  "historical_evidence": [
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r92_r96_monitor_optimization_result.json",
+      "bytes": 22916,
+      "sha256": "c0c75b4a0ceb57b819683e468b9681f10568489aa17b13c9356c8044407a8877"
+    },
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r86_r87_profile_optimization_result.json",
+      "bytes": 6557,
+      "sha256": "61002e55b8dcdf52f96103c62e2014aa64dec1b882e6552ffb213baa8f529804"
+    },
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r88_r91_quicktest_completion.json",
+      "bytes": 3286,
+      "sha256": "e953902547123760d387473908e0dab0689be47c6fcd1ea1c9e26ec2be4ddad4"
+    }
+  ],
+  "limits": [
+    "All planned failures retained; no tuning, substitution or replay.",
+    "Old accepted cost evidence, no extra overhead acceptance matrix.",
+    "Shared activity snapshots do not prove isolation or causal attribution."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "scope": "Isolated directory with explicit100-file public bundle plus existing v1 dependency; no original results/preflight fallback",
+  "last_lines": [
+    "test_world_and_local_world_sizes_are_fixed (test_train_entry.StartupEnvironmentTests) ... ok",
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 161 tests in 0.260s",
+    "",
+    "OK"
+  ]
+}

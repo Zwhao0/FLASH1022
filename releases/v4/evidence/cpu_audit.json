@@ -1,0 +1,122 @@
+{
+  "schema": "flash_v4_r97_cpu_release_audit_v1",
+  "date": "2026-10-28",
+  "scope": {
+    "instructions_read": [
+      "agent.md",
+      "handoff.md",
+      "flash_v4/AGENTS.md",
+      "flash_v4/PROTOCOL.md"
+    ],
+    "forbidden_inputs_not_read": [
+      "/tmp/flash_v4_remote.py",
+      "server.md",
+      "Git history",
+      "old FLASH"
+    ],
+    "production_code_changed": false,
+    "test_file_changed": "flash_v4/tests/test_observer_identity_cache.cpp"
+  },
+  "cpu_tests": {
+    "python_unittest": {
+      "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=. python3 -m unittest discover -s flash_v4/tests -p 'test*.py' -v",
+      "exit_code": 0,
+      "run": 161,
+      "failures": 0,
+      "errors": 0,
+      "result": "passed"
+    },
+    "cpp_cpu_harnesses": {
+      "compile_flags": [
+        "c++",
+        "-std=c++17",
+        "-O2"
+      ],
+      "gpu_or_remote_execution": false,
+      "source_files": [
+        "flash_v4/tests/test_observer_event_pool.cpp",
+        "flash_v4/tests/test_observer_identity_cache.cpp",
+        "flash_v4/tests/test_observer_output_buffer.cpp",
+        "flash_v4/tests/test_observer_r55_caches.cpp"
+      ],
+      "final_passed": 4,
+      "final_failed": 0,
+      "original_failure": {
+        "file": "flash_v4/tests/test_observer_identity_cache.cpp",
+        "cause": "The prior harness expected a colliding put to evict the first key. The current cache probes up to 16 slots and keeps both keys when space remains.",
+        "original_result": "assertion failure; preserved in the CPU test log"
+      },
+      "test_maintenance": {
+        "updated_semantics": [
+          "16 colliding keys remain retrievable",
+          "a seventeenth key in a full probe set is not cached and does not evict existing entries",
+          "updating an existing key replaces its value without evicting neighbors"
+        ],
+        "related_r55_harness_rerun": "passed",
+        "log_retains_initial_and_corrected_runs": true
+      }
+    },
+    "log": "results/v4/preflight/r97_cpu_tests.log"
+  },
+  "release_dependencies": {
+    "minimal_runtime": [
+      "Python 3 standard library",
+      "Current flash_v1 modules: analysis.py, train.py, train_pipeline.py, megatron_adapter.py, pipeline_adapter.py, tensor_parallel.py, rank_layout.py",
+      "Megatron-Core pipeline schedule API used by the schedule hooks",
+      "For online distributed execution: PyTorch, torch.distributed, torchrun, CUDA and NCCL/Gloo/Store-capable runtime across two 8-GPU nodes",
+      "For observer native build: C++17 compiler, pthread, CUDA toolkit/cudart, NCCL headers; set CUDA_HOME and NCCL_INCLUDE_DIR",
+      "For stream-delay native build: nvcc and compatible CUDA architecture; build script defaults FLASH_V4_DELAY_CUDA_ARCH to 90"
+    ],
+    "validated_platform_limit": "handoff.md reports the r92 Store interface verified only with PyTorch 2.7.0a0 nv25.03 for supervised 16-rank runs; arbitrary versions and unbounded sessions are not established.",
+    "cross_tree_test_or_tool_imports": [
+      "results.v4.preflight.real_clock_host_watch_r66",
+      "results.v4.preflight.online_r23_legacy_diagnostic_run"
+    ],
+    "external_transport": {
+      "referenced_by": "flash_v4/online_harness.py",
+      "helper_path": "/tmp/flash_v4_remote.py",
+      "inspected": false,
+      "recommendation": "Keep the private transport helper and its credentials outside the GitHub release."
+    }
+  },
+  "frozen_inference_portability": {
+    "entrypoint": "flash_v4/online_infer.py",
+    "model_root": "results/v4/frozen/r11_kernel_match_v3",
+    "required_artifacts": [
+      "model.json",
+      "freeze_receipt.json"
+    ],
+    "model_sha256": "2ccaef19d82ee27ec58e1a2d41fbbebee2a9a1ec9b76429fb86eb3f32667682c",
+    "receipt_verified_source_files": [
+      "flash_v4/frozen_localizer.py",
+      "flash_v4/offline_localizer.py",
+      "flash_v4/kernel_match_candidate.py",
+      "flash_v4/health_noise_fusion.py",
+      "flash_v4/health_centered_fusion.py",
+      "flash_v4/batch_development_score.py"
+    ],
+    "paths_in_receipt_absolute": true,
+    "path_root_embedded": "/Users/henry/Desktop/FLASH1022",
+    "verification_behavior": "online_infer.run verifies receipt['model'] plus receipt['source_files'] by hashing Path(item['path']) directly; it does not resolve relative to the checkout.",
+    "portability_result": "A normal clone or relocated checkout will fail verification unless the original absolute path is reproduced.",
+    "inference_input_shape": "node*/observations/rank_*.jsonl",
+    "reproduction_note": "For portable inference, resolve relative paths from a declared repo/model root and regenerate a matching receipt; full freeze/validation reproduction also requires the receipt provenance artifacts and R11 source data."
+  },
+  "credential_audit": {
+    "scope": "text scan of flash_v4 source/test/build files only",
+    "common_literal_key_token_password_patterns_found": false,
+    "external_private_helper_and_private_results_not_scanned": true,
+    "conclusion": "No common embedded credential pattern found in flash_v4; this does not audit the external helper or private execution plans."
+  },
+  "documentation_gaps": [
+    "No README or user-facing install/run guide under flash_v4.",
+    "No requirements.txt, pyproject.toml, setup.py, setup.cfg, or tox.ini dependency/packaging manifest.",
+    "PROTOCOL.md describes experimental constraints but does not provide a reproducible environment/build/deployment recipe."
+  ],
+  "candidate_release_scope": [
+    "flash_v4 Python source, native source/includes/build scripts, tests, and PROTOCOL.md as one unit",
+    "Required current flash_v1 runtime modules or a separately pinned/package-declared dependency",
+    "R11 model and receipt plus the six hash-pinned source files for frozen inference",
+    "Input observation files for each reproduced inference; provenance and R11 evidence artifacts for full experiment reproduction"
+  ]
+}

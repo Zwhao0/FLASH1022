@@ -1,0 +1,175 @@
+{
+  "acceptance": "All8 fault attempts correct online; complete16rank PROFILE/no drops; all real injection intervals qualified and restored; simulated actuation valid; both health no natural trigger/no alarm; all10 collection/control complete and cleanup confirmed; CPU checks pass. Any failure blocks automatic upload.",
+  "case_count": 10,
+  "frozen_before_GPU": true,
+  "healthy": 2,
+  "limits": [
+    "Representative engineering release only, not32/32 or populationFPR<=5%.",
+    "Historical failures and previous accepted cost evidence retained separately; no new overhead matrix.",
+    "Shared GPU sampled load, not exclusivity; no estimated noise subtraction."
+  ],
+  "plans": [
+    {
+      "case": "z01",
+      "first": 50,
+      "group": "real_clock",
+      "order": 1,
+      "plan": {
+        "bytes": 18770,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_01.json",
+        "sha256": "42ef5cf8a323dc1bcb0e956329931061b06e26d17d4ef21f1b77158de578f105"
+      },
+      "release": "v4_online_20261028_r97_final_01",
+      "requested_SM_MHz": 360,
+      "target_rank": 0,
+      "topology": "node_local_pp"
+    },
+    {
+      "case": "z02",
+      "first": 50,
+      "group": "simulated",
+      "order": 2,
+      "plan": {
+        "bytes": 18969,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_02.json",
+        "sha256": "6a1d29f57bf9a7c6549861483f1b65522ba4d4195f14e331702c85e8f3c71e2e"
+      },
+      "ratio": 6.0,
+      "release": "v4_online_20261028_r97_final_02",
+      "requested_SM_MHz": null,
+      "target_rank": 15,
+      "topology": "node_local_pp"
+    },
+    {
+      "case": "z03",
+      "first": 58,
+      "group": "real_clock",
+      "order": 3,
+      "plan": {
+        "bytes": 18763,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_03.json",
+        "sha256": "3b392fb8f112fe810f606b520c7404922036b3084360b9d76eb223d5734aba41"
+      },
+      "release": "v4_online_20261028_r97_final_03",
+      "requested_SM_MHz": 375,
+      "target_rank": 0,
+      "topology": "legacy"
+    },
+    {
+      "case": "z04",
+      "first": null,
+      "group": "healthy",
+      "order": 4,
+      "plan": {
+        "bytes": 18726,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_04.json",
+        "sha256": "6f43cf8b9672a3308c1496db97c25587152d63d7f73f2136158d9bca184a2597"
+      },
+      "release": "v4_online_20261028_r97_final_04",
+      "requested_SM_MHz": null,
+      "target_rank": null,
+      "topology": "legacy"
+    },
+    {
+      "case": "z05",
+      "first": 50,
+      "group": "simulated",
+      "order": 5,
+      "plan": {
+        "bytes": 18962,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_05.json",
+        "sha256": "80672b711607af29373a10111365ef9221d6cb97a860477ce0da721cb77d6f72"
+      },
+      "ratio": 6.0,
+      "release": "v4_online_20261028_r97_final_05",
+      "requested_SM_MHz": null,
+      "target_rank": 14,
+      "topology": "legacy"
+    },
+    {
+      "case": "z06",
+      "first": 42,
+      "group": "real_clock",
+      "order": 6,
+      "plan": {
+        "bytes": 18772,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_06.json",
+        "sha256": "fd59f4daa0c46e9f9280d291a82bf28904d33771fe7f58edbf2134f2d427f0df"
+      },
+      "release": "v4_online_20261028_r97_final_06",
+      "requested_SM_MHz": 375,
+      "target_rank": 11,
+      "topology": "node_local_pp"
+    },
+    {
+      "case": "z07",
+      "first": 42,
+      "group": "real_clock",
+      "order": 7,
+      "plan": {
+        "bytes": 18770,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_07.json",
+        "sha256": "116b32657f8022d2464e724adb0b2f28d3ecfd9e256861ddba943a5539c90f85"
+      },
+      "release": "v4_online_20261028_r97_final_07",
+      "requested_SM_MHz": 345,
+      "target_rank": 4,
+      "topology": "node_local_pp"
+    },
+    {
+      "case": "z08",
+      "first": null,
+      "group": "healthy",
+      "order": 8,
+      "plan": {
+        "bytes": 18733,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_08.json",
+        "sha256": "e156a93f659f9eb0b1ced2fd392f547bb5227cac3eaefeaa4e9c081b465f2c70"
+      },
+      "release": "v4_online_20261028_r97_final_08",
+      "requested_SM_MHz": null,
+      "target_rank": null,
+      "topology": "node_local_pp"
+    },
+    {
+      "case": "z09",
+      "first": 50,
+      "group": "real_clock",
+      "order": 9,
+      "plan": {
+        "bytes": 18763,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_09.json",
+        "sha256": "70feb2aca61d620e6b0ae2b31d4825159dc24fc7ef9333ea93d4b3b60629951e"
+      },
+      "release": "v4_online_20261028_r97_final_09",
+      "requested_SM_MHz": 360,
+      "target_rank": 3,
+      "topology": "legacy"
+    },
+    {
+      "case": "z10",
+      "first": 58,
+      "group": "real_clock",
+      "order": 10,
+      "plan": {
+        "bytes": 18766,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r97_plan_10.json",
+        "sha256": "ab4034843447b6723f8f74830fc27edbed8c8c18ea6b4de8394eb9cafa5107cc"
+      },
+      "release": "v4_online_20261028_r97_final_10",
+      "requested_SM_MHz": 345,
+      "target_rank": 12,
+      "topology": "legacy"
+    }
+  ],
+  "random_seed": 202610289701,
+  "real_clock": 6,
+  "retry_policy": "No replay or replacement; preserve every planned outcome. Environment may wait at most180s before each case; deferred cases cannot pass.",
+  "rules": "Store r92_store_v1; BOCD10%; check stride8; R86 stride64/heavy GEMM all/kernel256/window8; frozen r11 scorer",
+  "simulated": 2,
+  "source": {
+    "bytes": 13391,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/run.py",
+    "sha256": "c05d544fdc3e717639065b1b6ad7e45ab20dec37bbbc296ba4b3fb21324ada55"
+  }
+}

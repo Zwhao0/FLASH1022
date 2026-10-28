@@ -1,0 +1,178 @@
+{
+  "schema": "r86_r87_sparse_compute_PROFILE_result",
+  "at_local": "2026-10-28T12:24:42.298080+08:00",
+  "status": "adopted_after_expanded_regression_1percent_not_stably_demonstrated",
+  "optimization": [
+    "light GEMM stride16->64; heavy GEMM all, kernel256 and eight iterations retained",
+    "omit stream/comm_id/numel/group/timing_scope in compute rows; original general formatter and commented communication path retained"
+  ],
+  "monitor_and_scorer_unchanged": true,
+  "default_old_plans_stride16_preserved": true,
+  "future_run_configuration": {
+    "observer_library_artifact": "results/v4/build/libflash_v4_observer_r86_compact.so",
+    "sample_stride": 64,
+    "profile_finalize": "r68_async_finalize_v1",
+    "monitor_degradation": 0.1,
+    "kernel_profile": 1,
+    "field_scope": "observer_library_artifact at plan root; sample_stride/profile_finalize/monitor_degradation on each case"
+  },
+  "applied_sources": [
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/native/observer.cpp",
+      "sha256": "1347eefa157672c1581bd5848217b7cd94e4fccbf7c9bb2844df91a61ec282f9"
+    },
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/native/observer_row_format.inc",
+      "sha256": "2183a31140efa6efd573cc4712cc488e7e9d67773161cb6a661dfe28e25f1a8b"
+    }
+  ],
+  "time": [
+    {
+      "topology": "legacy",
+      "valid_PROFILE_sessions": 2,
+      "PROFILE_window_percent": [
+        0.018805432578661296,
+        1.5064925981834287
+      ],
+      "PROFILE_window_mean_percent": 0.762649015381045,
+      "node_full_elapsed_percent": [
+        [
+          0.6655621893001173,
+          0.6619358248291629
+        ],
+        [
+          2.1914731600524373,
+          2.2365469034754115
+        ]
+      ],
+      "node_equal_weight_mean_percent": [
+        1.4285176746762773,
+        1.4492413641522872
+      ],
+      "all_valid_points_within1_percent": false,
+      "baseline": "same-round MONITOR; PP has only one valid PROFILE contrast"
+    },
+    {
+      "topology": "node_local_pp",
+      "valid_PROFILE_sessions": 1,
+      "PROFILE_window_percent": [
+        1.3146950469194563
+      ],
+      "PROFILE_window_mean_percent": 1.3146950469194563,
+      "node_full_elapsed_percent": [
+        [
+          -2.790705638721014,
+          -2.74563032720313
+        ]
+      ],
+      "node_equal_weight_mean_percent": [
+        -2.790705638721014,
+        -2.74563032720313
+      ],
+      "all_valid_points_within1_percent": false,
+      "baseline": "same-round MONITOR; PP has only one valid PROFILE contrast"
+    }
+  ],
+  "resources": [
+    {
+      "topology": "legacy",
+      "mean_JSONL_output_bytes": 3072092.5,
+      "mean_native_events": 15017,
+      "output_change_percent_vs_R84": -68.1000165206203,
+      "event_change_percent_vs_R84": -56.966414488766624,
+      "event_pool_highwater_peak": 13,
+      "max_single_rank_file_bytes": 197965,
+      "CPU_and_RSS": "See per-node paired raw values; no stable overall CPU/RSS reduction claimed",
+      "comparison_limit": "Cross-round different-seed resource description; no causal time gain claimed"
+    },
+    {
+      "topology": "node_local_pp",
+      "mean_JSONL_output_bytes": 3045268,
+      "mean_native_events": 14872,
+      "output_change_percent_vs_R84": -67.94174648943012,
+      "event_change_percent_vs_R84": -56.807620817843876,
+      "event_pool_highwater_peak": 11,
+      "max_single_rank_file_bytes": 194388,
+      "CPU_and_RSS": "See per-node paired raw values; no stable overall CPU/RSS reduction claimed",
+      "comparison_limit": "Cross-round different-seed resource description; no causal time gain claimed"
+    }
+  ],
+  "healthy": {
+    "natural_attempts": 2,
+    "natural_triggers": 0,
+    "natural_alarms": 0,
+    "increased": false,
+    "forced_PROFILE_cost_attempts": 4,
+    "forced_PROFILE_alarms": 0,
+    "full_session_valid": 3,
+    "retained_training_timeout_with_16rank_native_complete": 1
+  },
+  "accuracy": {
+    "fresh_fault_attempts": 6,
+    "correct": 6,
+    "accepted": 6,
+    "wrong_rank": 0,
+    "not_triggered": 0,
+    "abstained": 0,
+    "collection_failed": 0,
+    "ranks": [
+      0,
+      4,
+      12
+    ],
+    "SM_MHz": [
+      345,
+      420
+    ],
+    "finding": "no observed quick-regression degradation; not population equivalence proof"
+  },
+  "retained_failures": {
+    "cost_training_timeout": 1,
+    "case": "pp_p01_profile_sparse",
+    "external_numeric_GPU_activity_observed": true,
+    "unique_cause_proven": false,
+    "no_retry": true,
+    "CPU_only_preparation_failures_retained": true
+  },
+  "historical": {
+    "random_success": 30,
+    "random_attempts": 32,
+    "random_timeouts": 2,
+    "real_SM_previous_success": 22,
+    "real_SM_previous_attempts": 26,
+    "real_SM_success_now": 28,
+    "real_SM_attempts_now": 32,
+    "all_failures_retained": true
+  },
+  "evidence": {
+    "cost": "results/v4/preflight/r86_profile_cost_summary.json",
+    "faults": "results/v4/preflight/r87_regression_summary.json",
+    "CPU_replay": "results/v4/preflight/r86_cpu_sampling_compact_replay.json",
+    "formatter": "results/v4/preflight/r86_native_formatter_cpu.json",
+    "build": "results/v4/preflight/observer_binary_r86_compact.json",
+    "timeout": "results/v4/preflight/r86_shared_timeout_record.json",
+    "postcheck": "results/v4/preflight/r86_r87_postcheck.json"
+  },
+  "limits": [
+    "No fresh off baseline: incremental PROFILE vs MONITOR only.",
+    "One MON baseline per topology; repeated contrasts are not independent.",
+    "1% end-to-end target not stably met, no estimated-noise subtraction; valid points remain within5%.",
+    "PP first PROFILE training timeout excluded from valid cost comparisons but retained in all-attempt counts.",
+    "GPU memory and utilization are shared observations; no clear GPU-memory or overall CPU/RSS saving claimed.",
+    "Consumed validation not reused; model/threshold unchanged; no claim of global minimal evidence or population FPR<=5%."
+  ],
+  "sampling_compatibility": {
+    "passed": true,
+    "CPU_only": true,
+    "valid_inputs": 4,
+    "invalid_inputs": 8,
+    "default16_and_tested64_unchanged": true,
+    "explicit32_backwards_compatibility": true,
+    "source": {
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/profile_sampling.py",
+      "sha256": "6ce23d6cdd7a5c5b3f8a54e9960a248adee048f246b5c527d6623c15cf62a2f0"
+    },
+    "note": "Post-regression accepted-input extension for prior R81 stride32; tested64 and default16 values unchanged; no additional GPU/healthy sessions"
+  },
+  "training_and_frozen_execution_sources_verified_after_tests": true
+}

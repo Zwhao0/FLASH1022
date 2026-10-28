@@ -1,0 +1,3021 @@
+{
+  "external_active_samples": [
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 14
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170828.6584568,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 98
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170828.7076347,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 98
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 98
+    },
+    {
+      "time": 1793170834.444979,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170834.5204613,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170840.4737852,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170840.5411563,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170846.5624385,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 16
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 16
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170846.6024897,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170852.594566,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170852.6501725,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170858.6272526,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 98
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170858.6770234,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 24
+    },
+    {
+      "time": 1793170864.7009556,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170864.7405686,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170870.8033538,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 24
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 88
+    },
+    {
+      "time": 1793170870.8704412,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170876.826288,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 98
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170876.8654933,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170882.9034836,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 84
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170882.9434488,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170889.2584443,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 16
+    },
+    {
+      "time": 1793170889.310401,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 86
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 86
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170895.0025601,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 88
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170895.0394738,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 24
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 74
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170901.037169,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 22
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 22
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170901.083263,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 37
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 89
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170907.1121764,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 24
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170907.1360068,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170913.1365423,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 61
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170913.156765,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 16
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170919.2140527,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 77
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 69
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 55
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170919.2780175,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 16
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170925.2797277,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 44
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 59
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170925.3285198,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 9
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 45
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 65
+    },
+    {
+      "time": 1793170937.324291,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 65
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 11
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 8
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 19
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 33
+    },
+    {
+      "time": 1793170937.3733013,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 36
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170943.423244,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 79
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 39
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 82
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 66
+    },
+    {
+      "time": 1793170943.4839716,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 70
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 56
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 28
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 43
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 49
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 65
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 42
+    },
+    {
+      "time": 1793170949.8697376,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 86
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170949.9102283,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 0,
+      "pid": 2818680,
+      "process_name": "VLLM::Worker_PP0_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 1,
+      "pid": 2818681,
+      "process_name": "VLLM::Worker_PP0_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 2,
+      "pid": 2818682,
+      "process_name": "VLLM::Worker_PP0_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 3,
+      "pid": 2818683,
+      "process_name": "VLLM::Worker_PP0_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 4,
+      "pid": 2818684,
+      "process_name": "VLLM::Worker_PP0_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 5,
+      "pid": 2818685,
+      "process_name": "VLLM::Worker_PP0_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 6,
+      "pid": 2818686,
+      "process_name": "VLLM::Worker_PP0_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.5116754,
+      "node": 0,
+      "target": "host",
+      "gpu": 7,
+      "pid": 2818687,
+      "process_name": "VLLM::Worker_PP0_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 0,
+      "pid": 342998,
+      "process_name": "VLLM::Worker_PP1_TP0_EP0 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 1,
+      "pid": 343019,
+      "process_name": "VLLM::Worker_PP1_TP1_EP1 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 2,
+      "pid": 343020,
+      "process_name": "VLLM::Worker_PP1_TP2_EP2 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 3,
+      "pid": 343024,
+      "process_name": "VLLM::Worker_PP1_TP3_EP3 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 4,
+      "pid": 343025,
+      "process_name": "VLLM::Worker_PP1_TP4_EP4 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 5,
+      "pid": 343026,
+      "process_name": "VLLM::Worker_PP1_TP5_EP5 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 6,
+      "pid": 343028,
+      "process_name": "VLLM::Worker_PP1_TP6_EP6 VLLM::Worker_PP",
+      "sm_percent": 99
+    },
+    {
+      "time": 1793170955.553154,
+      "node": 1,
+      "target": "host",
+      "gpu": 7,
+      "pid": 343030,
+      "process_name": "VLLM::Worker_PP1_TP7_EP7 VLLM::Worker_PP",
+      "sm_percent": 98
+    }
+  ],
+  "training_last": 97,
+  "largest_step_ms": 4192.330770660192
+}

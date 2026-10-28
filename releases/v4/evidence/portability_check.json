@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "original model SHA preserved",
+    "six inference source SHAs preserved",
+    "relocated receipt verifies in fresh temporary clone",
+    "same installation idempotent"
+  ],
+  "model_refitted": false,
+  "production_code_modified": false
+}

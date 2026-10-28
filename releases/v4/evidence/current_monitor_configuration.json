@@ -1,0 +1,53 @@
+{
+  "adopted_for_fresh_supervised_16rank_plans": true,
+  "alternative_collective_control": "r92_gloo1_v1",
+  "application": "Explicit per-case monitor_control for new plans; retain old source pins/results and never replay consumed plans.",
+  "control_check_stride": 8,
+  "monitor_control": "r92_store_v1",
+  "monitor_degradation": 0.1,
+  "observer_library_artifact": "results/v4/build/libflash_v4_observer_r86_compact.so",
+  "old_omitted_control_behavior": "legacy Gloo remains unchanged",
+  "profile_finalize": "r68_async_finalize_v1",
+  "profile_iterations": 8,
+  "sample_stride": 64,
+  "schema": "v4_current_MONITOR_configuration_r96",
+  "source_pins": [
+    {
+      "bytes": 1551,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/monitor_control.py",
+      "sha256": "de481f8ffe5c056e7abafe4d819bcec2c54002d992d25ff2706ae83052c84a44"
+    },
+    {
+      "bytes": 4703,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/monitor_store.py",
+      "sha256": "c16e3daa9f4155cde3b0ffe019e8cfe5a88d4f96d492906a4be0b4775bfd43c1"
+    },
+    {
+      "bytes": 12571,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/online_runtime.py",
+      "sha256": "1eae755225e0105773d9998873ed3f28f38d5852c4be509896636a5c16c32a44"
+    },
+    {
+      "bytes": 7971,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/observer_runtime.py",
+      "sha256": "329c057c0923fcdbe578f3588292b4f3e56012b5b7ec2696c3594c6d844395ff"
+    },
+    {
+      "bytes": 7416,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/bocd_monitor.py",
+      "sha256": "820f2d7ffccbabb27467a63f6c0233197a0378754a4d1e60f02b3fdedef737f1"
+    },
+    {
+      "bytes": 19361,
+      "path": "/Users/henry/Desktop/FLASH1022/flash_v4/online_harness.py",
+      "sha256": "c3e8d9f1ea3b8e8e727bd1bee3ca918e22ab06b1e9b60923d09fa04b31ef7d0c"
+    }
+  ],
+  "synchronization": "User approved: root publishes per-iteration keys without peer ACK; peers wait at same4mod8 iteration for30s; existing training/supervisor bounds retained",
+  "tested_runtime": "PyTorch2.7.0a0 nv25.03; Store access uses distributed_c10d._get_default_store; explicit16rank contract",
+  "validation": {
+    "bytes": 87551,
+    "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r96_regression_summary.json",
+    "sha256": "a6c9f1a25beb7901f65f996dd451004f1baca965bbef132f76079e730ef0ec94"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "case": "z07",
+  "target_rank": 4,
+  "declared_first": 42,
+  "declared_last": 73,
+  "events": [
+    {
+      "kind": "lowered",
+      "wall_time": 1793169183.7723007,
+      "after_iteration": 41,
+      "requested_mhz": 345,
+      "success": true
+    },
+    {
+      "kind": "restored_iteration",
+      "wall_time": 1793169211.3174195,
+      "after_iteration": 73,
+      "restored": true
+    },
+    {
+      "kind": "error",
+      "wall_time": 1793169236.4053967,
+      "error": "RuntimeError: rank progress rejected: ValueError: stale or future progress timestamp"
+    },
+    {
+      "kind": "final_restore",
+      "wall_time": 1793169236.6157146,
+      "restored": true,
+      "after_iteration": 105
+    }
+  ],
+  "raw_accepted": false,
+  "qualification_preserved_as_failed": true,
+  "clock_evidence_sha256": "fa55c98f5fabb86a46bac2b4b86ae1b7c36c6f0544aaef6d93d1f670411c2e87",
+  "no_error_waiver": true
+}

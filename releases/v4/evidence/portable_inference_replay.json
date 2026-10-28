@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "replayed_case": "r97_z01",
+  "alarm_rank": 0,
+  "exact_decision_and_rank_scores_match": true,
+  "model_refitted": false,
+  "temporary_clone": true,
+  "production_code_changed": false
+}

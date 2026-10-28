@@ -1,0 +1,29 @@
+{
+  "at_unix": 1793171214.094469,
+  "nodes": [
+    {
+      "bind_ok": true,
+      "ephemeral_range": [
+        32768,
+        60999
+      ],
+      "error": null,
+      "node": 1,
+      "outside_ephemeral": true,
+      "port": 27235
+    },
+    {
+      "bind_ok": true,
+      "ephemeral_range": [
+        32768,
+        60999
+      ],
+      "error": null,
+      "node": 0,
+      "outside_ephemeral": true,
+      "port": 27235
+    }
+  ],
+  "passed": true,
+  "temporary_probe": true
+}

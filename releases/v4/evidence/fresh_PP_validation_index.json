@@ -1,0 +1,35 @@
+{
+  "acceptance": "Correct alarm in training; full32step real clock interval/restoration/no watcher errors;16rank completePROFILE/control;cleanup and source pins; no failure waiver.",
+  "conditional_load_gate": "At most180s for2low-load samples15s apart; sharing observed, no exclusivity claim",
+  "maximum_new_attempts": 1,
+  "no_replay": true,
+  "plans": [
+    {
+      "case": "j01",
+      "first": 42,
+      "group": "real_clock",
+      "order": 1,
+      "plan": {
+        "bytes": 19643,
+        "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r101_plan_01.json",
+        "sha256": "7a6efd2a0b29acc7675baa521f6a605917c6b4d275d7364cc9e8bdcc750b1352"
+      },
+      "port": 27235,
+      "release": "v4_online_20261028_r101_fresh_pp",
+      "requested_SM_MHz": 345,
+      "target_rank": 12,
+      "topology": "node_local_pp"
+    }
+  ],
+  "prior_failure_not_replaced": true,
+  "same_candidate_watcher": {
+    "bytes": 20985,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/clock_watch_r100.py",
+    "sha256": "d20d71ed49cc6d49870e64843687bed8a0563375f533f9782a7a1d25c3a638b7"
+  },
+  "source": {
+    "bytes": 4503,
+    "path": "/Users/henry/Desktop/FLASH1022/work/final_r97/continue_r101.py",
+    "sha256": "a72497cf284917fc9e207b4f87378446545d627f3d8b026a6de622ff83c267b6"
+  }
+}

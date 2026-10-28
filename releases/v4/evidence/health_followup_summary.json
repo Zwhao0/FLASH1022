@@ -1,0 +1,502 @@
+{
+  "schema": "r99_final_engineering_release_gate",
+  "planned": 1,
+  "recorded": 1,
+  "dispatched": 1,
+  "training_started": 1,
+  "counts": {
+    "healthy_no_trigger": 1
+  },
+  "accepted": 1,
+  "passed_online": true,
+  "cpu_audit": {
+    "schema": "flash_v4_r97_cpu_release_audit_v1",
+    "date": "2026-10-28",
+    "scope": {
+      "instructions_read": [
+        "agent.md",
+        "handoff.md",
+        "flash_v4/AGENTS.md",
+        "flash_v4/PROTOCOL.md"
+      ],
+      "forbidden_inputs_not_read": [
+        "/tmp/flash_v4_remote.py",
+        "server.md",
+        "Git history",
+        "old FLASH"
+      ],
+      "production_code_changed": false,
+      "test_file_changed": "flash_v4/tests/test_observer_identity_cache.cpp"
+    },
+    "cpu_tests": {
+      "python_unittest": {
+        "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=. python3 -m unittest discover -s flash_v4/tests -p 'test*.py' -v",
+        "exit_code": 0,
+        "run": 161,
+        "failures": 0,
+        "errors": 0,
+        "result": "passed"
+      },
+      "cpp_cpu_harnesses": {
+        "compile_flags": [
+          "c++",
+          "-std=c++17",
+          "-O2"
+        ],
+        "gpu_or_remote_execution": false,
+        "source_files": [
+          "flash_v4/tests/test_observer_event_pool.cpp",
+          "flash_v4/tests/test_observer_identity_cache.cpp",
+          "flash_v4/tests/test_observer_output_buffer.cpp",
+          "flash_v4/tests/test_observer_r55_caches.cpp"
+        ],
+        "final_passed": 4,
+        "final_failed": 0,
+        "original_failure": {
+          "file": "flash_v4/tests/test_observer_identity_cache.cpp",
+          "cause": "The prior harness expected a colliding put to evict the first key. The current cache probes up to 16 slots and keeps both keys when space remains.",
+          "original_result": "assertion failure; preserved in the CPU test log"
+        },
+        "test_maintenance": {
+          "updated_semantics": [
+            "16 colliding keys remain retrievable",
+            "a seventeenth key in a full probe set is not cached and does not evict existing entries",
+            "updating an existing key replaces its value without evicting neighbors"
+          ],
+          "related_r55_harness_rerun": "passed",
+          "log_retains_initial_and_corrected_runs": true
+        }
+      },
+      "log": "results/v4/preflight/r97_cpu_tests.log"
+    },
+    "release_dependencies": {
+      "minimal_runtime": [
+        "Python 3 standard library",
+        "Current flash_v1 modules: analysis.py, train.py, train_pipeline.py, megatron_adapter.py, pipeline_adapter.py, tensor_parallel.py, rank_layout.py",
+        "Megatron-Core pipeline schedule API used by the schedule hooks",
+        "For online distributed execution: PyTorch, torch.distributed, torchrun, CUDA and NCCL/Gloo/Store-capable runtime across two 8-GPU nodes",
+        "For observer native build: C++17 compiler, pthread, CUDA toolkit/cudart, NCCL headers; set CUDA_HOME and NCCL_INCLUDE_DIR",
+        "For stream-delay native build: nvcc and compatible CUDA architecture; build script defaults FLASH_V4_DELAY_CUDA_ARCH to 90"
+      ],
+      "validated_platform_limit": "handoff.md reports the r92 Store interface verified only with PyTorch 2.7.0a0 nv25.03 for supervised 16-rank runs; arbitrary versions and unbounded sessions are not established.",
+      "cross_tree_test_or_tool_imports": [
+        "results.v4.preflight.real_clock_host_watch_r66",
+        "results.v4.preflight.online_r23_legacy_diagnostic_run"
+      ],
+      "external_transport": {
+        "referenced_by": "flash_v4/online_harness.py",
+        "helper_path": "/tmp/flash_v4_remote.py",
+        "inspected": false,
+        "recommendation": "Keep the private transport helper and its credentials outside the GitHub release."
+      }
+    },
+    "frozen_inference_portability": {
+      "entrypoint": "flash_v4/online_infer.py",
+      "model_root": "results/v4/frozen/r11_kernel_match_v3",
+      "required_artifacts": [
+        "model.json",
+        "freeze_receipt.json"
+      ],
+      "model_sha256": "2ccaef19d82ee27ec58e1a2d41fbbebee2a9a1ec9b76429fb86eb3f32667682c",
+      "receipt_verified_source_files": [
+        "flash_v4/frozen_localizer.py",
+        "flash_v4/offline_localizer.py",
+        "flash_v4/kernel_match_candidate.py",
+        "flash_v4/health_noise_fusion.py",
+        "flash_v4/health_centered_fusion.py",
+        "flash_v4/batch_development_score.py"
+      ],
+      "paths_in_receipt_absolute": true,
+      "path_root_embedded": "/Users/henry/Desktop/FLASH1022",
+      "verification_behavior": "online_infer.run verifies receipt['model'] plus receipt['source_files'] by hashing Path(item['path']) directly; it does not resolve relative to the checkout.",
+      "portability_result": "A normal clone or relocated checkout will fail verification unless the original absolute path is reproduced.",
+      "inference_input_shape": "node*/observations/rank_*.jsonl",
+      "reproduction_note": "For portable inference, resolve relative paths from a declared repo/model root and regenerate a matching receipt; full freeze/validation reproduction also requires the receipt provenance artifacts and R11 source data."
+    },
+    "credential_audit": {
+      "scope": "text scan of flash_v4 source/test/build files only",
+      "common_literal_key_token_password_patterns_found": false,
+      "external_private_helper_and_private_results_not_scanned": true,
+      "conclusion": "No common embedded credential pattern found in flash_v4; this does not audit the external helper or private execution plans."
+    },
+    "documentation_gaps": [
+      "No README or user-facing install/run guide under flash_v4.",
+      "No requirements.txt, pyproject.toml, setup.py, setup.cfg, or tox.ini dependency/packaging manifest.",
+      "PROTOCOL.md describes experimental constraints but does not provide a reproducible environment/build/deployment recipe."
+    ],
+    "candidate_release_scope": [
+      "flash_v4 Python source, native source/includes/build scripts, tests, and PROTOCOL.md as one unit",
+      "Required current flash_v1 runtime modules or a separately pinned/package-declared dependency",
+      "R11 model and receipt plus the six hash-pinned source files for frozen inference",
+      "Input observation files for each reproduced inference; provenance and R11 evidence artifacts for full experiment reproduction"
+    ]
+  },
+  "parent_wait": {
+    "begin_unix": 1793170066.078002,
+    "end_unix": 1793170209.724007,
+    "parent_pid": 46238,
+    "pid": 46239,
+    "returncode": 0
+  },
+  "final_postcheck": {
+    "nodes": [
+      {
+        "node": 0,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      },
+      {
+        "node": 1,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "cases": [
+    {
+      "order": 1,
+      "case": "h01",
+      "group": "healthy",
+      "topology": "legacy",
+      "target_rank": null,
+      "requested_SM_MHz": null,
+      "first": null,
+      "outcome": "healthy_no_trigger",
+      "detector_outcome": "healthy_no_trigger",
+      "accepted": true,
+      "alarm_rank": null,
+      "profile_triggered": false,
+      "profile_window": null,
+      "request_iteration": null,
+      "request_delay_iterations": null,
+      "pre_injection_trigger": null,
+      "wrong_target_alarm": false,
+      "prediction_during_training": false,
+      "prediction_delay_from_fault_start_seconds": null,
+      "latency_limit": "cross-host wall clocks not calibrated; rough observation only",
+      "quality": {
+        "alarm_rank": null,
+        "automatic_detection_success_claimed": false,
+        "automatic_profile_completed": false,
+        "case": "h01",
+        "complete_ranks": 0,
+        "control_integrity_passed": true,
+        "error": null,
+        "manual_integration_only": false,
+        "max_rank_bytes": 1884,
+        "monitor_end_records": 16,
+        "nodes_completed": true,
+        "prediction_during_training": false,
+        "profile_triggered": false,
+        "quality_passed": true,
+        "rank_files": 16,
+        "training_end_rank0_wall_time": 1793170196.8474767,
+        "window": null
+      },
+      "control_audit": {
+        "status": "complete",
+        "control_file_count": 16,
+        "control_rank_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "missing_control_ranks": [],
+        "monitor_start_count": 16,
+        "monitor_end_count": 16,
+        "all_16_monitor_start_end_present": true,
+        "missing_start_ranks": [],
+        "missing_end_ranks": [],
+        "expected_control_contract": "r92_store_v1",
+        "control_contract_by_rank": {
+          "6": "r92_store_v1",
+          "4": "r92_store_v1",
+          "0": "r92_store_v1",
+          "2": "r92_store_v1",
+          "5": "r92_store_v1",
+          "7": "r92_store_v1",
+          "3": "r92_store_v1",
+          "1": "r92_store_v1",
+          "11": "r92_store_v1",
+          "13": "r92_store_v1",
+          "15": "r92_store_v1",
+          "12": "r92_store_v1",
+          "10": "r92_store_v1",
+          "14": "r92_store_v1",
+          "9": "r92_store_v1",
+          "8": "r92_store_v1"
+        },
+        "control_contract_match_count": 16,
+        "all_16_control_contract_match": true,
+        "extra_cuda_events_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "all_16_extra_cuda_events_zero": true,
+        "profile_start_count_by_rank": {
+          "6": 0,
+          "4": 0,
+          "0": 0,
+          "2": 0,
+          "5": 0,
+          "7": 0,
+          "3": 0,
+          "1": 0,
+          "11": 0,
+          "13": 0,
+          "15": 0,
+          "12": 0,
+          "10": 0,
+          "14": 0,
+          "9": 0,
+          "8": 0
+        },
+        "profile_window_by_rank": {},
+        "profile_unique_windows": [],
+        "profile_validation_status": "not_triggered",
+        "common_profile_window": null,
+        "common_profile_window_length": null,
+        "all_16_ranks_same_profile_window": null,
+        "all_16_ranks_same_8_iteration_window": null,
+        "quality_profile_window": null,
+        "profile_window_matches_quality": null,
+        "check_count_by_rank": {
+          "6": 14,
+          "4": 14,
+          "0": 14,
+          "2": 14,
+          "5": 14,
+          "7": 14,
+          "3": 14,
+          "1": 14,
+          "11": 14,
+          "13": 14,
+          "15": 14,
+          "12": 14,
+          "10": 14,
+          "14": 14,
+          "9": 14,
+          "8": 14
+        },
+        "final_monitor_status_by_rank": {
+          "6": "peer_completed",
+          "4": "peer_completed",
+          "0": "completed",
+          "2": "peer_completed",
+          "5": "peer_completed",
+          "7": "peer_completed",
+          "3": "peer_completed",
+          "1": "peer_completed",
+          "11": "peer_completed",
+          "13": "peer_completed",
+          "15": "peer_completed",
+          "12": "peer_completed",
+          "10": "peer_completed",
+          "14": "peer_completed",
+          "9": "peer_completed",
+          "8": "peer_completed"
+        },
+        "final_monitor_status_counts": {
+          "peer_completed": 15,
+          "completed": 1
+        },
+        "worker_returncode_by_rank": {
+          "6": null,
+          "4": null,
+          "0": 0,
+          "2": null,
+          "5": null,
+          "7": null,
+          "3": null,
+          "1": null,
+          "11": null,
+          "13": null,
+          "15": null,
+          "12": null,
+          "10": null,
+          "14": null,
+          "9": null,
+          "8": null
+        },
+        "worker_returncode_anomalies": [],
+        "monitor_status_anomalies": [],
+        "control_cpu_ms_distribution": {
+          "count": 16,
+          "min": 2.3942589999954578,
+          "median": 2.9902065000051437,
+          "max": 8.158643999991
+        },
+        "control_wall_ms_distribution": {
+          "count": 16,
+          "min": 2.845124341547489,
+          "median": 25.894945370964706,
+          "max": 26.904345024377108
+        },
+        "native": {
+          "applicable": true,
+          "file_count": 16,
+          "parsed_file_count": 16,
+          "rank_count": 16,
+          "ranks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_ranks_0_to_15": true,
+          "row_schemas": [
+            "compute_compact_v1"
+          ],
+          "all_compute_compact_v1": true,
+          "strides": [
+            64
+          ],
+          "all_stride_64": true,
+          "dropped_total": 0.0,
+          "skipped_total": 0.0,
+          "event_pool_cleanup_all": true,
+          "output_bytes": 30054
+        },
+        "native_16_rank_summaries_complete": true,
+        "native_16_rank_no_drops": true,
+        "native_missing_ranks": [],
+        "anomalies": [],
+        "parse_errors": []
+      },
+      "clock_interval": null,
+      "clock_restored": null,
+      "actuation": null,
+      "strength_diagnostic": null,
+      "full_episode_timing": {},
+      "error": null,
+      "postcheck": {
+        "nodes": [
+          {
+            "node": 0,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          },
+          {
+            "node": 1,
+            "owner_exists": false,
+            "passed": true,
+            "rows": [
+              "0, 1980, 2619",
+              "1, 1980, 2619",
+              "2, 1980, 2619",
+              "3, 1980, 2619",
+              "4, 1980, 2619",
+              "5, 1980, 2619",
+              "6, 1980, 2619",
+              "7, 1980, 2619"
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "telemetry_sample_records": 76,
+      "external_active_worker_rows": 0,
+      "telemetry_failed": false,
+      "identity_valid": true,
+      "record_present": true,
+      "dispatched": true,
+      "training_started": true,
+      "case_record": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r99_case_01_result.json"
+    }
+  ],
+  "formal_blind_claimed": false,
+  "population_FPR_claimed": false,
+  "all_rank_coverage_claimed": false,
+  "historical_evidence": [
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r92_r96_monitor_optimization_result.json",
+      "bytes": 22916,
+      "sha256": "c0c75b4a0ceb57b819683e468b9681f10568489aa17b13c9356c8044407a8877"
+    },
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r86_r87_profile_optimization_result.json",
+      "bytes": 6557,
+      "sha256": "61002e55b8dcdf52f96103c62e2014aa64dec1b882e6552ffb213baa8f529804"
+    },
+    {
+      "path": "/Users/henry/Desktop/FLASH1022/results/v4/preflight/r88_r91_quicktest_completion.json",
+      "bytes": 3286,
+      "sha256": "e953902547123760d387473908e0dab0689be47c6fcd1ea1c9e26ec2be4ddad4"
+    }
+  ],
+  "limits": [
+    "All planned failures retained; no tuning, substitution or replay.",
+    "Old accepted cost evidence, no extra overhead acceptance matrix.",
+    "Shared activity snapshots do not prove isolation or causal attribution."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "run": 15,
+  "failures": 0,
+  "errors": 0,
+  "existing_safety_contracts_preserved": true,
+  "new_postrestore_regression": true,
+  "training_monitor_and_localizer_changed": false
+}

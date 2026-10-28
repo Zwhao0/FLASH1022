@@ -1,0 +1,267 @@
+{
+  "GPU_jobs_running": false,
+  "all_historical_failures_retained": true,
+  "node_terminal_records": [
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_03",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_03",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_04",
+      "returncode": 1,
+      "status": "failed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_04",
+      "returncode": -15,
+      "status": "timeout"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_05",
+      "returncode": 1,
+      "status": "failed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_05",
+      "returncode": -15,
+      "status": "timeout"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_06",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_06",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_07",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_07",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_08",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_08",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_09",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_09",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_10",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r97_final_10",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r98_sim_contract_02",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r99_health_port",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r99_health_port",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r100_repair_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r100_repair_01",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r100_repair_02",
+      "returncode": 1,
+      "status": "timeout"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r100_repair_02",
+      "returncode": 1,
+      "status": "timeout"
+    },
+    {
+      "node": 0,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r101_fresh_pp",
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "node": 1,
+      "private_mps_stopped": true,
+      "release": "v4_online_20261028_r101_fresh_pp",
+      "returncode": 0,
+      "status": "completed"
+    }
+  ],
+  "passed": true,
+  "postcheck": {
+    "nodes": [
+      {
+        "node": 0,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      },
+      {
+        "node": 1,
+        "owner_exists": false,
+        "passed": true,
+        "rows": [
+          "0, 1980, 2619",
+          "1, 1980, 2619",
+          "2, 1980, 2619",
+          "3, 1980, 2619",
+          "4, 1980, 2619",
+          "5, 1980, 2619",
+          "6, 1980, 2619",
+          "7, 1980, 2619"
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "source_model_and_training_pins_verified": true
+}
